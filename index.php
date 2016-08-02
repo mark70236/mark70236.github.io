@@ -19,6 +19,6 @@
 	</script>
 </head>
 	<body class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
-		<? require ("/wrap.php") ?>
+		<? require ("wrap.php") ?>
 	</body>
 </html>
