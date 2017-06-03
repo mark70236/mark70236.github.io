@@ -1,0 +1,559 @@
+/* header -----------------------------------------------*/
+header{
+	margin: 0px 0 0;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image:url(http://i.colopl.co.jp/dragonproject/image/top/main_bg_01_1.jpg);
+}
+
+
+.navi{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 70px;
+	background-repeat: repeat-x;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/menu_btn_bg.png);
+	z-index: 100;
+}
+nav{
+	position: relative;
+	margin: 0 auto;
+	width: 1000px;
+	height: 70px;
+}
+.mainNav{
+	display: block;
+	margin: 0 0 0 60px;
+	height: 70px;
+
+}
+.mainNav>li{
+	display: inline-block;
+	margin: 0 20px 0 0;
+	height: 70px;
+}
+.mainNav>li>a{
+	display: block;
+	width: 200px;
+	height: 70px;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/menu_btn_top.png);
+}
+.mainNav>li:nth-child(1)>a:hover,
+.mainNav>li:nth-child(2)>a:hover,
+.mainNav>li:nth-child(3)>a:hover,
+.mainNav>li:nth-child(4)>a:hover{
+	background-position-y:bottom;
+}
+.mainNav>li:nth-child(1)>a{width: 235px;background-position: -60px 0px;}
+.mainNav>li:nth-child(2)>a{width: 120px;background-position: -315px 0px;}
+.mainNav>li:nth-child(3)>a{width: 137px;background-position: -472px 0px;}
+.mainNav>li:nth-child(4)>a{width: 134px;background-position: -640px 0px;}
+
+
+.headerInn{
+	height: 1252px;
+}
+.headerInn>h1{
+	position: absolute;
+	top: 160px;
+	left: 232px;
+}
+
+.playerCount{
+	position: absolute;
+	top: 370px;
+	right: -30px;
+}
+.banner1,
+.banner2{
+	position: absolute;
+}
+.banner1{bottom: 64px;left: 78px;}
+.banner2{top: 1359px;right: 20px; z-index:98;}
+
+.banner1{
+	width: 358px;
+	height: 219px;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/bnr_twitter_2.png);
+}
+.banner1 a{
+	position: relative;
+	display: block;
+	margin: 40px 0px 0 20px;
+	width: 310px;
+	height: 166px;
+}
+.banner1 a span{
+	position: absolute;
+	bottom: 13px;
+	right: 13px;
+	display: inline-block;
+	-webkit-transition: all 400ms linear;
+	transition: all 400ms linear;
+}
+.banner1 a:hover span{
+	-webkit-transform: scale(0.96) ;
+	transform: scale(0.96) ;
+}
+
+#effect{
+ 	position: absolute;
+ 	top: 270px;
+ 	width: 100%;
+    height: 500px;
+}
+#tmode_area{
+	position:absolute;
+	top:737px;
+	margin:0 auto;
+	left:0;
+	right:0;
+	width:100%;
+	height:561px;
+	z-index:98;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/t_event_banner.png);
+}
+#tmode_mediaplay_area{
+	position:absolute;
+	top:1265px;
+	margin:0 auto;
+	left:0;
+	right:0;
+	width:100%;
+	height:256px;
+	z-index:97;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url(/dragonproject/image/top/media_play_frame.png);
+}
+#tmode_area p{
+	position:absolute;
+	top:390px;
+	margin:0 auto;
+	left:0;
+	right:0;
+	width:871px;
+	height:129px;
+}
+#tmode_area p a{
+       -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+}
+#tmode_area p a:hover{
+-webkit-transform: scale(0.97);
+    transform: scale(0.97);
+}
+#tmode_mediaplay_area p a{
+       -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+}
+#tmode_mediaplay_area p a:hover{
+-webkit-transform: scale(0.97);
+    transform: scale(0.97);
+}
+#tmode_mediaplay_area ul{
+	text-align:center;
+	font-size:0;
+	padding:101px 0 0 0;
+	}
+	
+#tmode_mediaplay_area ul li{
+	display:inline-block;
+	position: relative;
+	margin:0 -2px 0 -2px;
+	}
+#tmode_mediaplay_area ul li p{
+	position:absolute;
+	top:61px;
+	left:0;
+	right:3px;
+	margin:0 auto;
+	width:195px;
+	height:57px;
+	
+	}
+
+.topCmWrap{
+	position: absolute;
+	top: 516px;
+	left: -17px;
+	width: 615px;
+	height: 183px;
+	z-index:99;
+}
+.topCmWrap > p{
+	display: inline-block;
+}
+
+.topDownload{
+	position: absolute;
+	top: 533px;
+	right: -6px;
+	width: 426px;
+	height: 164px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/main_btn_bg3.png);
+	z-index: 99;
+}
+.topDownload > h2{
+	position: absolute;
+	top: -1px;
+	right: 15px;
+}
+.topDownload > h3{
+	position: absolute;
+	top: -18px;
+	left: 20px;
+}
+.topDownload > ul{
+	position: absolute;
+	top: 80px;
+	left: 20px;
+	width: 388px;
+	height: 62px;
+
+}
+.topDownload > ul > li,
+.topDownload > ul > li>a{
+	display: inline-block;
+}
+.topDownload > ul > li>a{
+	-webkit-transition: all 400ms linear;
+	transition: all 400ms linear;
+}
+.topDownload > ul > li>a:hover{
+	-webkit-transform: scale(0.96) ;
+	transform: scale(0.96) ;
+}
+
+.topTwitter{
+	position: absolute;
+	top: 1359px;
+	left: 0px;
+	padding: 72px 50px 0;
+	width: 396px;
+	height: 464px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/timeline_bg.png);
+	z-index: 10;
+}
+.btnFollow{
+	position: absolute;
+	bottom: 22px;
+	left: 38px;
+}
+
+
+#report{
+	position: absolute;
+	top: 1638px;
+	right: -8px;
+	width: 500px;
+	height: 257px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/report_bg3.png);
+	z-index: 10;
+}
+#report>h1{
+	position: relative;
+	margin: -27px auto 0px;
+	text-align: center;
+	z-index: 1;
+}
+#report ul{
+	position: relative;
+	margin: 0 auto;
+	/*padding:45px 0 0; */
+	/*width: 1030px;*/
+	/*height: 236px;*/
+	
+	z-index: 0;
+}
+#report ul li{
+	position: relative;
+	margin: 0 auto;
+	width: 449px;
+	height: 99px;
+}
+#report ul li h2{
+	position: relative;
+	width: 449px;
+	height: 99px;
+	line-height: 99px;
+	text-align: center;
+	vertical-align: middle;
+	overflow: hidden;
+}
+#report ul li h2>img{
+	/*display: inline-block;
+	margin: 5% 0 0 -19%;
+	width: 135%;*/
+}
+#report ul li>p{
+	position: absolute;
+	top: 17px;
+	right: 26px;
+	display: inline-block;
+}
+#report ul li p a {
+	display: inline-block;
+	-webkit-transition: all 300ms ease-in;
+	transition: all 300ms ease-in;
+}
+#report ul li p a:hover{
+	-webkit-transform: scale(0.97);
+	transform: scale(0.97);
+}
+
+
+.infoWrap{
+	position: absolute;
+	top: 544px;
+	margin: 0 auto;
+	padding: 20px;
+	width: 384px;
+	height: 132px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/news_bg.png);
+}
+.info{
+	position: relative;
+	padding: 0 5px; 
+	width: 374px;
+	height: 130px;
+	color: #fff;
+	overflow: auto;
+}
+.info > h2{
+	padding: 4px 0;
+	border-bottom: 1px #fff dashed;
+	font-size: 15px;
+	line-height: 24px;
+}
+.info > p{
+	display: inline-block;
+	padding-top: 6px;
+	font-size: 12px;
+	line-height: 18px;
+}
+.info > p em{
+	color: #DF8C30;
+}
+
+/*----------------------------------------------- header */
+
+.contentsWrap{
+	position: relative;
+	margin: -150px 0 0;
+	padding: 330px 0 0;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/paper_bg_bottom_02.png);
+}
+.contentsWrap:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-background-size: 320px;
+	background-size: 320px;
+	background-position: center top;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/net.png);
+	z-index: -1;
+	opacity: 0.5;
+}
+#bgMovieWrap{
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: block;
+	margin: 0;
+	padding: 0; 
+	width: 100%;
+	height: 100%;
+	z-index: -5;
+}
+#bgMovie{
+	position: relative;
+	margin: 0 auto;
+	display: block;
+}
+
+#about,
+#story,
+#weapon{
+	margin: 0 auto;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center top;
+	z-index: 5;
+}
+#about{
+	height: 1090px;
+}
+#about>.sectionInn{
+	margin: 40px auto 0;
+	height: 780px;
+	background-repeat: no-repeat;
+	background-position: center 150px;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/about_poin1_bg.png);
+}
+#about>.sectionInn>.btnMovie{
+	margin: 40px auto 0px;
+}
+#about>.sectionInn>.btnMore{
+	margin: 150px auto 0px;
+}
+
+#about .btnMore{
+	margin: 14px auto 0;
+}
+
+#story{
+	height: 1150px;
+	background-repeat: no-repeat;
+	background-position: center 180px;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/about_poin2_bg1.png);
+}
+#story:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center 960px;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/about_poin2_bg2.png);
+	z-index: -1;
+}
+#story>.sectionInn{
+}
+#story>.sectionInn>.btnMovie{
+	margin: 570px auto 0px;
+}
+#story>.sectionInn>.btnMore{
+	margin: 30px auto 0px;
+}
+
+#weapon{
+	padding: 32px 0 0;
+	height: 984px;
+	background-repeat: no-repeat;
+	background-position: center -120px;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/about_poin3_bg2.png);
+}
+#weapon>.sectionInn{
+/*	margin: 40px auto 0;
+	height: 780px;*/
+/*	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/about_poin3_bg1.png);*/
+}
+#weapon>.sectionInn>.btnMovie{
+	margin: 10px auto 20px;
+}
+#weapon>.sectionInn>.btnMore{
+	margin: 30px auto 0px;
+}
+
+#about h1,
+#about p,
+#story h1,
+#story p,
+#weapon h1,
+#weapon p{
+	display: inline-block;
+	width: 1000px;
+	text-align: center;
+}
+/*#about .overWidth{
+	margin: 0 0 0 -50px;
+	width: 1100px;
+}
+*/
+#weapon p.caution{
+	margin: 40px 0 0;
+}
+
+/* friendCam --------------------------------------------*/
+#friendCam{
+	height:650px;
+	margin: -313px 0 0;
+	padding: 313px 0 0px;
+	background-repeat: no-repeat;
+	background-position: center 60px;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/cam_bg.jpg)
+}
+
+
+
+#friendCam>.sectionInn{
+	padding: 70px 0 0; 
+	width: 1030px;
+	height: 1400px;
+	text-align: center;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/present_contents_bg.png)
+}
+#friendCam>.sectionInn>h1{
+	margin: 0 auto 30px;
+}
+#friendCam>.sectionInn>p{
+	display: inline-block;
+}
+.presentCaution{
+	position: absolute;
+	display: block;
+	left: 10px;
+	bottom: 40px;
+	width: 1000px;
+	font-size: 17px;
+	line-height: 24px;
+	z-index: 1;
+}
+
+
+/*-------------------------------------------- friendCam */
+
+
+#secFriendCam{
+	background-image: none;
+}
+#spec{
+	background-color: rgba(0,0,0,.0);
+}
+
+/* secDownload ------------------------------------------*/
+#secDownload{
+	background:none;
+}
+
+
+.bottomWrap{
+	margin: -950px 0 0;
+	padding: 930px 0 0;
+	background-color:transparent;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url(http://i.colopl.co.jp/dragonproject/image/top/spec_bg4.png);
+}
+
+.sectionInn>p.copyright {
+	margin: 30px 0;
+}

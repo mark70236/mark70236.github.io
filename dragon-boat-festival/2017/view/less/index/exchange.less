@@ -1,0 +1,163 @@
+.action-bg.action-4 { margin-bottom: 280px; }
+.gift {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	li {
+		float: left;
+		width: 25%;
+		height: 300px;
+		margin-top: 30px;
+		cursor: pointer;
+		position: relative;
+		.gift-bg {
+			position: relative;
+			width: 220px;
+			height: 220px;
+			margin: 0 auto;
+			border-radius: 200px;
+			overflow: hidden;
+			background-color: #1d7511;
+			box-shadow: 0 0 12px #5ed64e,0 0 12px #5ed64e;
+			.trs(0.30s);
+			.box {
+				width: 195px;
+				height: 155px;
+				margin: 23px 0 0 17px;
+				transform-origin: 100px 150px;
+				background-image: url("@{image}exchange/box.png");
+				.trs(0.30s);
+			}
+		}
+		.gift-name {
+			position: relative;
+			width: 70%;
+			height: 35px;
+			line-height: 36px;
+			margin: 0 auto;
+			top: -41px;
+			font-size: 18px;
+			font-weight: bolder;
+			text-align: center;
+			border-radius: 5px;
+			background-color: rgba(52, 38, 27, 0.9);
+			box-shadow: 0 0 10px #ffde5b, 0 0 10px #ffde5b, 0 0 10px #ffde5b, 0 0 10px #ffde5b;
+		}
+		.price {
+			width: 160px;
+			height: 60px;
+			position: absolute;
+			top: 220px;
+			left: 43px;
+			background-image: url("@{image}exchange/price.png");
+		}
+		&:hover {
+			.gift-bg {
+				background-color: #fbd84b;
+				box-shadow: inset 0 0 12px #ffffff, 0 0 12px #ffffff, 0 0 12px #ffffff, 0 0 12px #ffffff, 0 0 12px #ffffff;
+			}
+			.box {
+				transform: scale(1.1);
+			}
+		}
+	}
+	li.gift-1 {
+		.price { background-position: 0 -180px; }
+	}
+	li.gift-2 {
+		.price { background-position: 0 -120px; }
+	}
+	li.gift-3 {
+		.price { background-position: 0 -60px; }
+	}
+	li.select {
+		.gift-bg {
+			background-color: #fbd84b;
+			box-shadow: inset 0 0 12px #ffffff, 0 0 12px #ffffff, 0 0 12px #ffffff, 0 0 12px #ffffff, 0 0 12px #ffffff;
+		}
+		.box {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.gift-detail-box {
+	height: 0px;
+	overflow: hidden;
+	.trs(0.7s);
+
+	ul.game-type {
+		width: 760px;
+		height: 310px;
+		opacity: 1;
+		margin: 0 auto;
+		margin-top: 20px;
+		overflow: hidden;
+		position: relative;
+		.trs;
+		li {
+			position: relative;
+			cursor: pointer;
+			float: left;
+			width: 310px;
+			height: 310px;
+			margin: 0 35px;
+			text-indent: -600px;
+			border-radius: 350px;
+			background-image: url("@{image}exchange/type.png");
+			.trs;
+			&:hover { background-image: url("@{image}exchange/type-hover.png"); }
+		}
+		span {
+			position: absolute;
+			top: -7px;
+			left: -2px;
+			width: 310px;
+			height: 310px;
+			background-image: url("@{image}exchange/game-type.png");
+		}
+		li.select { background-image: url("@{image}exchange/type-hover.png"); }
+		li.web-game span { background-position: -310px 0; }
+	}
+	ul.game-type.hide {
+		height: 0;
+		opacity: 0;
+	}
+	.game-select-box {
+		height: 150px;
+		opacity: 1;
+		.trs;
+	}
+	.game-select-box.hide {
+		height: 0;
+		opacity: 0;
+		.game-select { margin-bottom: 0; }
+	}
+	.game-select {
+		width: 540px;
+		margin: 0 auto;
+		margin-bottom: 60px;
+		position: relative;
+		select { display: none; position: absolute; }
+		select.select { display: block; }
+	}
+
+	.gift-detail { width: 530px; }
+
+}
+.gift-detail-box.on1 {
+	height: 1080px;
+	.trs(0.7s);
+}
+.gift-detail-box.on2 {
+	height: 590px;
+	.trs(0.7s);
+}
+.gift-detail-anchor {
+	position: relative;
+	top: 25px;
+}
+.gift-detail-anchor2 {
+	position: relative;
+	top: -350px;
+}

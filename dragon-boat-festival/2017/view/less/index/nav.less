@@ -1,0 +1,36 @@
+.nav {
+	display: none;
+	position: fixed;
+	top: 230px;
+	right: 10px;
+	width: 200px;
+	height: 493px;
+	z-index: 5;
+	background-image: url("@{image}_mode/nav.png");
+	@media all and (max-width: 1300px) {
+		& { transform: scale(0.7); right: -54px; }
+	}
+	@media all and (max-width: 1100px) {
+		& { display: none!important; }
+	}
+	ul {
+		width: 100px;
+		overflow: hidden;
+		position: absolute;
+		top: 187px;
+		left: 50px;
+	}
+	li {
+		float: left;
+		cursor: pointer;
+		width: 100px;
+		height: 30px;
+		margin-bottom: 23px;
+		text-indent: -300px;
+		background-image: url("@{image}_mode/nav-text.png");
+	}
+	.nav-btn-2 { background-position: 0 -30px; }
+	.nav-btn-3 { background-position: 0 -60px; }
+	.nav-btn-4 { background-position: 0 -90px; }
+	.nav-btn-5 { background-position: 0 -120px; }
+}

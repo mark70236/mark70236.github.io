@@ -1,0 +1,278 @@
+.wheel-button { position: relative }
+
+.stage {
+	position: relative;
+	z-index: 1;
+	width: 1920px;
+	height: 960px;
+	left: 50%;
+	margin-left: -960px;
+	overflow: hidden;
+	* {
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	.stage-bg {
+		width: 1920px;
+		height: 960px;
+		background-repeat: no-repeat;
+		background-image: url("@{image}stage/bg.jpg");
+	}
+
+	.stage-leaf {
+		width: 2100px;
+		height: 960px;
+		position: absolute;
+		top: -265px;
+		left: -90px;
+		background-image: url("@{image}stage/leaf.png");
+	}
+
+	.stage-tree-left {
+		width: 380px;
+		height: 830px;
+		position: absolute;
+		top: -20px;
+		left: -10px;
+		background-image: url("@{image}stage/tree-left.png");
+	}
+
+	.stage-tree-right {
+		width: 230px;
+		height: 760px;
+		position: absolute;
+		top: -20px;
+		left: 1700px;
+		background-image: url("@{image}stage/tree-right.png");
+	}
+
+	.stage-cloud-1 {
+		width: 160px;
+		height: 70px;
+		position: absolute;
+		top: 127px;
+		left: 240px;
+		background-image: url("@{image}stage/cloud-1.png");
+	}
+
+	.stage-cloud-2 {
+		width: 240px;
+		height: 85px;
+		position: absolute;
+		top: 50px;
+		left: 1400px;
+		background-image: url("@{image}stage/cloud-2.png");
+	}
+
+	.stage-title-1 {
+		width: 920px;
+		height: 240px;
+		position: absolute;
+		top: 30px;
+		left: 480px;
+		background-image: url("@{image}stage/title-1.png");
+	}
+
+	.stage-title-2 {
+		width: 920px;
+		height: 240px;
+		position: absolute;
+		top: 195px;
+		left: 645px;
+		background-image: url("@{image}stage/title-2.png");
+	}
+
+	.stage-date {
+		width: 720px;
+		height: 90px;
+		position: absolute;
+		top: 405px;
+		left: 888px;
+		background-image: url("@{image}stage/date.png");
+	}
+
+	.stage-zongzi-1 {
+		width: 1060px;
+		height: 500px;
+		position: absolute;
+		top: 570px;
+		left: -50px;
+		background-image: url("@{image}stage/zongzi-1.png");
+	}
+
+	.stage-zongzi-2 {
+		width: 530px;
+		height: 450px;
+		position: absolute;
+		top: 490px;
+		left: 1330px;
+		background-image: url("@{image}stage/zongzi-2.png");
+	}
+	.stage-monster-left-box {
+		transform-origin: 245px 900px;
+		position: relative;
+		cursor: pointer;
+		transition: all 0.5s cubic-bezier(0.32, 0.16, 0, 1.24);
+		cursor: url('@{image}stage/hand.png'),default;
+		&:active {
+			margin-top: 20px;
+			transform: scaleY(0.98) scaleX(1.02);
+		}
+	}
+	.stage-monster-left {
+		width: 490px;
+		height: 670px;
+		position: absolute;
+		top: 270px;
+		left: 185px;
+		transform-origin: 245px 550px;
+		transform: rotate(0deg);
+		background-image: url("@{image}stage/monster-left.png");
+		animation: monster-left 10s linear infinite;
+		@keyframes monster-left {
+			0% { transform: rotate(0deg); }
+			30% { transform: rotate(-10deg); }
+			50% { transform: rotate(0deg); }
+			80% { transform: rotate(10deg); }
+			100% { transform: rotate(0deg); }
+		}
+	}
+
+	.basket-box {
+		position: absolute;
+		top: 728px;
+		left: 1430px;
+		transform: rotate(0deg);
+		transform-origin: 170px 175px;
+		animation: basket-box 10s linear infinite;
+		@keyframes basket-box {
+			0% { transform: rotate(0deg); }
+			30% { transform: rotate(-5deg); }
+			50% { transform: rotate(0deg); }
+			80% { transform: rotate(5deg); }
+			100% { transform: rotate(0deg); }
+		}
+	}
+
+	.stage-basket {
+		width: 310px;
+		height: 200px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background-image: url("@{image}stage/basket.png");
+	}
+
+	.monster-right-box {
+		position: absolute;
+		top: -169px;
+		left: 47px;
+		margin-top: 0;
+		cursor: pointer;
+		animation: monster-right-box 3.5s linear infinite;
+		@keyframes monster-right-box {
+			0% { margin-top: 0; }
+			5% { margin-top: -20px; }
+			10% { margin-top: 0; }
+			15% { margin-top: -15px; }
+			20% { margin-top: 0; }
+			100% { margin-top: 0; }
+		}
+		.stage-monster-right {
+			width: 230px;
+			height: 310px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-image: url("@{image}stage/monster-right.png");
+		}
+		.share {
+			width: 210px;
+			height: 150px;
+			position: absolute;
+			top: 17px;
+			left: -182px;
+			background-image: url("@{image}stage/share.png");
+		}
+		.plus-1 {
+			width: 70px;
+			height: 50px;
+			position: absolute;
+			top: 47px;
+			left: -52px;
+			transform: scale(0);
+			background-image: url("@{image}stage/plus.png");
+			animation: plus-1 1.5s linear infinite;
+			@keyframes plus-1 {
+				0% { transform: scale(0); opacity: 1; top: 47px; left: -52px; }
+				15% { transform: scale(1); opacity: 1; top: 13px; left: -42px; }
+				45% { transform: scale(1.2); opacity: 0; top: -43px; left: -49px;}
+				50% { transform: scale(0); opacity: 0; top: 47px; left: -52px; }
+				100% { transform: scale(0); opacity: 0; top: 47px; left: -52px; }
+			}
+		}
+	}
+
+	.stage-score {
+		width: 560px;
+		height: 160px;
+		position: absolute;
+		top: 537px;
+		left: 710px;
+		padding: 45px 125px;
+		box-sizing: border-box;
+		text-align: center;
+		font-size: 46px;
+		font-weight: bolder;
+		color: #fff;
+		background-image: url("@{image}stage/score.png");
+	}
+
+
+	.stage-water-1 {
+		width: 2240px;
+		height: 180px;
+		position: absolute;
+		top: 780px;
+		left: -160px;
+		background-image: url("@{image}stage/water-1.png");
+		animation: water-1 7s linear infinite;
+		@keyframes water-1 {
+			0% { top: 790px; left: -160px; }
+			50% { top: 860px; left: -240px; }
+			100% { top: 790px; left: -160px; }
+		}
+	}
+
+	.stage-water-2 {
+		width: 2240px;
+		height: 180px;
+		position: absolute;
+		top: 790px;
+		left: -160px;
+		background-image: url("@{image}stage/water-2.png");
+		animation: water-2 5s linear infinite;
+		@keyframes water-2 {
+			0% { top: 790px; left: -160px; }
+			50% { top: 820px; left: -110px; }
+			100% { top: 790px; left: -160px; }
+		}
+	}
+
+	.stage-water-3 {
+		width: 2240px;
+		height: 230px;
+		position: absolute;
+		top: 790px;
+		left: -160px;
+		background-image: url("@{image}stage/water-3.png");
+		animation: water-3 5s linear infinite;
+		@keyframes water-3 {
+			0% { top: 790px; left: -160px; }
+			50% { top: 850px; left: -210px; }
+			100% { top: 790px; left: -160px; }
+		}
+	}
+
+}

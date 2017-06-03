@@ -1,0 +1,136 @@
+.action-1 {
+	.daily {
+		width: 100%;
+		overflow: hidden;
+		padding-top: 30px;
+		li {
+			cursor: pointer;
+			float: left;
+			width: 20%;
+			height: 180px;
+			position: relative;
+		}
+		.zongzi-box {
+			transform-origin: 90px 130px;
+
+			.zongzi {
+				width: 180px;
+				height: 155px;
+				margin: 0 auto;
+				background-image: url("@{image}daily/zongzi.png");
+			}
+			.me {
+				width: 65px;
+				height: 45px;
+				position: relative;
+				top: -143px;
+				left: 138px;
+				background-image: url("@{image}daily/me.png");
+			}
+		}
+		.zongzi-box.type1 {
+			animation: type1 4s linear infinite;
+			@keyframes type1 {
+				0% { transform: rotate(0deg); margin-top: 0px; }
+				3% { transform: rotate(13deg); margin-top: -15px; }
+				6% { transform: rotate(0deg); margin-top: 0px; }
+				9% { transform: rotate(-13deg); margin-top: -15px; }
+				12% { transform: rotate(0deg); margin-top: 0px; }
+				20% { transform: rotate(0deg); margin-top: 0px; }
+				23% { transform: rotate(13deg); margin-top: -15px; }
+				26% { transform: rotate(0deg); margin-top: 0px; }
+				29% { transform: rotate(-13deg); margin-top: -15px; }
+				32% { transform: rotate(0deg); margin-top: 0px; }
+				100% { transform: rotate(0deg); margin-top: 0px; }
+			}
+		}
+		.zongzi-box.type2 {
+			animation: type2 4s linear infinite;
+			@keyframes type2 {
+				0% { transform: rotate(0deg); margin-top: 0px; }
+				30% { transform: rotate(0deg); margin-top: 0px; }
+				33% { transform: rotate(-13deg); margin-top: -15px; }
+				36% { transform: rotate(0deg); margin-top: 0px; }
+				39% { transform: rotate(13deg); margin-top: -15px; }
+				42% { transform: rotate(0deg); margin-top: 0px; }
+				50% { transform: rotate(0deg); margin-top: 0px; }
+				53% { transform: rotate(-13deg); margin-top: -15px; }
+				56% { transform: rotate(0deg); margin-top: 0px; }
+				59% { transform: rotate(13deg); margin-top: -15px; }
+				62% { transform: rotate(0deg); margin-top: 0px; }
+				100% { transform: rotate(0deg); margin-top: 0px; }
+			}
+		}
+		.zongzi-box.type3 {
+			animation: type3 5s linear infinite;
+			@keyframes type3 {
+				0% { margin-top: 0px; }
+				60% { margin-top: 0px; }
+				63% { margin-top: -15px; }
+				66% { margin-top: 0px; }
+				69% { margin-top: -15px; }
+				72% { margin-top: 0px; }
+				80% { margin-top: 0px; }
+				83% { margin-top: -15px; }
+				86% { margin-top: 0px; }
+				89% { margin-top: -15px; }
+				92% { margin-top: 0px; }
+				100% { margin-top: 0px; }
+			}
+		}
+
+		.check {
+			display: none;
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			top: 5px;
+			left: 39px;
+			background-image: url("@{image}daily/check.png");
+		}
+
+		.days {
+			width: 62%;
+			height: 35px;
+			position: absolute;
+			top: 117px;
+			left: 50px;
+			font-size: 25px;
+			font-weight: bolder;
+			color: #fff;
+			text-align: center;
+			border-radius: 5px;
+			background-color: rgba(9, 62, 2, 0.8);
+		}
+		li.checked {
+			.zongzi-box { animation: none; }
+			.me { display: none; }
+			.check	{ display: block; }
+		}
+	}
+	.btn-box {
+		position: relative;
+		width: 70%;
+		margin: 0 auto;
+		margin-top: 20px;
+		margin-bottom: 40px;
+		overflow: hidden;
+		li {
+			float: left;
+			cursor: pointer;
+			width: 300px;
+			height: 70px;
+			font-size: 34px;
+			font-weight: bolder;
+			color: #eee;
+			text-align: center;
+			line-height: 70px;
+			border-radius: 7px;
+			margin: 0 25px;
+			background-color: #15520a;
+			box-shadow: inset 0px -6px 1px rgba(0, 0, 0, 0.35);
+			.trs;
+			&:hover { background-color: #0d3107; }
+		}
+	}
+}

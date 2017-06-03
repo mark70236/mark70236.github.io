@@ -1,0 +1,96 @@
+.loop-box {
+	width: 100%;
+	height: 670px;
+	overflow: hidden;
+	margin-top: 20px;
+	.loop-bg {
+		width: 1250px;
+		height: 670px;
+		position: absolute;
+		left: -105px;
+		background-repeat: no-repeat;
+		background-image: url("@{image}loop/dragon.png");
+	}
+	.loop-bg-move {
+		display: none;
+		opacity: 0;
+		width: 1250px;
+		height: 670px;
+		position: absolute;
+		left: -105px;
+		background-repeat: no-repeat;
+		background-image: url("@{image}loop/dragon-move.png");
+	}
+	.loop-bg-move.on {
+		display: block;
+		opacity: 0;
+		animation: loop-bg-move 0.7s linear infinite;
+		@keyframes loop-bg-move {
+			0% { opacity: 0; }
+			50% { opacity: 1; }
+			100% { opacity: 0; }
+		}
+	}
+	.loop-bg-move.on2 {
+		display: block;
+		opacity: 0;
+		animation: loop-bg-move2 1s linear 1;
+		@keyframes loop-bg-move2 {
+			0% { opacity: 0.5; }
+			100% { opacity: 0; }
+		}
+	}
+	.wheel {
+		position: relative;
+		width: 510px;
+		height: 510px;
+		top: 82px;
+		left: 457px;
+	}
+	.wheel-bg {
+		position: absolute;
+		width: 510px;
+		height: 510px;
+		top: 0;
+		left: 0;
+		background-image: url("@{image}loop/loop.png");
+	}
+	.pointer {
+		cursor: pointer;
+		position: absolute;
+		top: 134px;
+		left: 170px;
+		transform-origin: 84.5px 120.5px!important;
+	}
+	.start {
+		cursor: pointer;
+		position: absolute;
+		width: 90px;
+		height: 100px;
+		position: absolute;
+		top: 201px;
+		left: 207px;
+		background-image: url("@{image}loop/start.png");
+	}
+
+}
+.pay {
+	margin-top: -20px;
+}
+
+
+.action-3 {
+	.table-bg { width: 720px; }
+	table {
+		display: table;
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		th, td {
+			text-indent: 0;
+			text-align: center;
+		}
+		td { line-height: 50px; }
+	}
+
+}

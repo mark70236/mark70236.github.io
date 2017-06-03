@@ -1,0 +1,44 @@
+.black-box-bg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.80);
+}
+
+// 跳窗樣式
+.black-box {
+	width: 800px;
+	height: 640px;
+	position: fixed;
+	left: 50%;
+	margin-left: -400px;
+	margin-top: 170px;
+	z-index: 11;
+	background-repeat: no-repeat;
+	.black-box-close {
+		background-image: url("@{image}page/close.png?v");
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		top: 85px;
+		right: -10px;
+		cursor: pointer;
+	}
+
+	iframe {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.scroll-top {
+	display: none;
+	width: 110px;
+	height: 70px;
+	position: relative;
+	top: 10px;
+	left: 570px;
+	margin: 0 auto;
+	cursor: pointer;
+}

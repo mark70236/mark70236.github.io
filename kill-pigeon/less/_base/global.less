@@ -1,0 +1,58 @@
+html {
+	height: 100%;
+	&.ie7 {
+		overflow-x: hidden;
+		body { overflow-x: visible }
+		em { font-style: normal }
+	}
+}
+
+body {
+	margin: 0;
+	background-repeat: no-repeat;
+	font-size: 12px;
+	color: #fff;
+	background-color: #000;
+	overflow: hidden;
+	height: auto !important;
+
+	a {
+		cursor: pointer;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	p {
+		font-family: "微軟正黑體";
+		font-size: 24px;
+		color: #fff;
+		text-shadow: 0 1px 15px #ff0000;
+		margin: 0 0 5px 0;
+	}
+
+	b { font-size: 28px; font-weight: bolder; }
+
+}
+
+#content > * { display: none }
+
+.anchor { position: absolute; top: 400px; height: 1px }
+
+// 回到頂端
+.scroll {
+	background-image: url("//image.funmily.com/wh2/intro/scroll.png");
+	width: 104px;
+	height: 87px;
+	position: absolute;
+	margin-left: 1460px;
+	bottom: 135px;
+	z-index: 10;
+	cursor: pointer;
+	overflow-x: hidden;
+	text-indent: -200px;
+	.trs(margin-bottom 0.3s ease);
+	&:hover {
+		margin-bottom: -10px;
+		.trs(margin-bottom 0.3s ease);}
+}
+
