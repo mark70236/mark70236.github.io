@@ -17,10 +17,23 @@
 			margin: 55px;
 			cursor: pointer;
 			border: solid 2px #fff;
-			font-family: "EB Garamond","Times New Roman","游明朝","YuMincho","ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","メイリオ","Meiryo",serif;
+			font-family: "EB Garamond","Times New Roman","微軟正黑體","游明朝","YuMincho","ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","メイリオ","Meiryo",serif;
 			background-color: #080808;
 			box-shadow: 0 0 35px #6f7aff, 0 0 15px #fff;
 			.trs(box-shadow 0.7s ease);
+			&:nth-child(2n) {
+				box-shadow: 0 0 35px #9458ff, 0 0 15px #fff;
+			}
+			&:nth-child(2n).hover {
+				animation: project-white-hover 10s linear infinite;
+				@keyframes project-white-hover {
+					0% { box-shadow: 0 0 65px #9458ff, 0 0 25px #fff; }
+					25% { box-shadow: 0 0 65px #59d1ff, 0 0 25px #fff; }
+					50% { box-shadow: 0 0 65px #ffb559, 0 0 25px #fff; }
+					75% { box-shadow: 0 0 65px #59d1ff, 0 0 25px #fff; }
+					100% { box-shadow: 0 0 65px #9458ff, 0 0 25px #fff; }
+				}
+			}
 		}
 		.project.hover {
 			animation: project-hover 10s linear infinite;
@@ -30,20 +43,6 @@
 				50% { box-shadow: 0 0 65px #ffb559, 0 0 25px #fff; }
 				75% { box-shadow: 0 0 65px #59d1ff, 0 0 25px #fff; }
 				100% { box-shadow: 0 0 65px #6f7aff, 0 0 25px #fff; }
-			}
-		}
-
-		.project.white {
-			box-shadow: 0 0 35px #9458ff, 0 0 15px #fff;
-		}
-		.project.white.hover {
-			animation: project-white-hover 10s linear infinite;
-			@keyframes project-white-hover {
-				0% { box-shadow: 0 0 65px #9458ff, 0 0 25px #fff; }
-				25% { box-shadow: 0 0 65px #59d1ff, 0 0 25px #fff; }
-				50% { box-shadow: 0 0 65px #ffb559, 0 0 25px #fff; }
-				75% { box-shadow: 0 0 65px #59d1ff, 0 0 25px #fff; }
-				100% { box-shadow: 0 0 65px #9458ff, 0 0 25px #fff; }
 			}
 		}
 
@@ -89,7 +88,7 @@
 			font-size: 23px;
 			font-style: italic;
 			font-weight: bolder;
-			font-family: "EB Garamond","Times New Roman","游明朝","YuMincho","ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","メイリオ","Meiryo",serif;
+			font-family: "EB Garamond","Times New Roman","微軟正黑體","游明朝","YuMincho","ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","メイリオ","Meiryo",serif;
 			background-color: rgba(255,255,255,0.3);
 			box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
 			.trs(0.7s);
@@ -100,7 +99,7 @@
 			font-size: 10px;
 		}
 	}
-	.project-list2 {
+	.project-list-big {
 		width: 1240px;
 		overflow: hidden;
 		position: relative;
@@ -109,7 +108,7 @@
 		.project {
 			width: 800px;
 			height: 600px;
-			margin: 120px auto 170px auto;
+			margin: 115px auto 300px auto;
 			cursor: pointer;
 			overflow: hidden;
 			text-align: center;
@@ -123,6 +122,11 @@
 				50% { box-shadow: 0 0 65px #ff5959; }
 				75% { box-shadow: 0 0 65px #59d1ff; }
 				100% { box-shadow: 0 0 65px #ffb559; }
+			}
+			a {
+				display: block;
+				width: 100%;
+				height:100%;
 			}
 			img {
 				position: relative;
@@ -159,7 +163,7 @@
 				font-size: 50px;
 				font-style: italic;
 				font-weight: bolder;
-				font-family: "EB Garamond","Times New Roman","游明朝","YuMincho","ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","メイリオ","Meiryo",serif;
+				font-family: "EB Garamond","Times New Roman","微軟正黑體","游明朝","YuMincho","ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","メイリオ","Meiryo",serif;
 				background-color: rgba(255, 255, 255, 0.5);
 				box-shadow: 0 0 35px #1b1b1b;
 				.trs(0.7s);

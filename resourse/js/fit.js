@@ -17,8 +17,8 @@ $(function() {
         rotationZ: 0,
         transformPerspective: 1000
     });
-    $('.project-list .project, .project-list2 .project').mouseover(function() {
-        $('.project-list .project, .project-list2 .project').mousemove(function(e) {
+    $('.project-list .project, .project-list-big .project').mouseover(function() {
+        $('.project-list .project, .project-list-big .project').mousemove(function(e) {
             var x = e.pageX - $(this).offset().left
               , y = e.pageY - $(this).offset().top;
 
