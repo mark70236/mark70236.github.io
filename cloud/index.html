@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>3D雲層效果</title>
+	<link type="image/x-icon" rel="shortcut icon" href="../resourse/images/favicon.ico">
+	<link rel="stylesheet" href="../plugin/reset/min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="../plugin/jquery/1.9.1.min.js"></script>
+	<script src="../plugin/jqueryui/1.10.3.min.js"></script>
+	<script src="plugin/Detector.js"></script>
+	<script src="plugin/three.min.js"></script>
+	<script src="js/index.js"></script>
+</head>
+	<body>
+		<script id="vs">
+			varying vec2 vUv;
+			void main() {
+				vUv = uv;
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+			}
+		</script>
+		<script id="fs">
+			uniform sampler2D map;
+
+			uniform vec3 fogColor;
+			uniform float fogNear;
+			uniform float fogFar;
+
+			varying vec2 vUv;
+
+			void main() {
+				float depth = gl_FragCoord.z / gl_FragCoord.w;
+				float fogFactor = smoothstep( fogNear, fogFar, depth );
+				gl_FragColor = texture2D( map, vUv );
+				gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
+				gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
+			}
+		</script>
+
+		<script>
+
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+			var container;
+			var camera, scene, renderer;
+			var mesh, geometry, material;
+
+			var mouseX = 0, mouseY = 0;
+			var start_time = Date.now();
+
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+
+			init();
+
+		</script>
+		<div class="wrap">
+			<div class="logo"></div>
+		</div>
+
+	</body>
+</html>
