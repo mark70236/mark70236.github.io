@@ -1,16 +1,5 @@
 $(function() {
 
-    $(".project").mouseover(function() {
-        $(".project").removeClass('hover')
-        $(this).children(".text").addClass('close')
-        $(this).addClass('hover')
-
-    });
-    $(".project").mouseleave(function() {
-        $(this).removeClass('hover')
-        $(".text").removeClass('close')
-    });
-
     TweenMax.set($('.project-list .project'), {
         rotationY: 0,
         rotationX: 0,

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js canvas - geometry - birds</title>
+		<meta charset="utf-8">
+		<style>
+			body {
+				color: #808080;
+				font-family:Monospace;
+				font-size:13px;
+				text-align:center;
+				background-color: #000;
+				margin: 0px;
+				overflow: hidden;
+				background-repeat: no-repeat;
+				background-position: top center;
+				background-image: url('images/bg.jpg');
+			}
+			canvas {
+				width: 1920px!important;
+				height: 950px!important;
+				position: absolute;
+				left: 50%;
+				margin-left: -960px;
+			}
+		</style>
+
+		<script src="js/three.min.js"></script>
+		<script src="js/Projector.js"></script>
+		<script src="js/CanvasRenderer.js"></script>
+		<script src="js/stats.min.js"></script>
+		<script src="js/bird.js"></script>
+	</head>
+
+	<body>
+		<script>
+
+			var SCREEN_WIDTH = window.innerWidth,
+			SCREEN_HEIGHT = window.innerHeight,
+			SCREEN_WIDTH_HALF = SCREEN_WIDTH  / 2,
+			SCREEN_HEIGHT_HALF = SCREEN_HEIGHT / 2;
+
+			var camera, scene, renderer,
+			birds, bird;
+
+			var boid, boids;
+
+			var stats;
+
+			init();
+			animate();
+
+		</script>
+
+	</body>
+</html>
