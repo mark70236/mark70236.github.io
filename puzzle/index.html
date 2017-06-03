@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>物件拖曳效果</title>
+	<link type="image/x-icon" rel="shortcut icon" href="../resourse/images/favicon.ico">
+	<link rel="stylesheet" href="../plugin/reset/min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="../plugin/jquery/1.9.1.min.js"></script>
+	<script src="../plugin/jqueryui/1.10.3.min.js"></script>
+	<script>
+		function AllowDrop(event){
+			event.preventDefault();
+		}
+		function Drag(event){
+			event.dataTransfer.setData("text",event.currentTarget.id);
+		}
+		function Drop(event){
+			event.preventDefault();
+			var data=event.dataTransfer.getData("text");
+			event.currentTarget.appendChild(document.getElementById(data));
+		}
+	</script>
+</head>
+	<body>
+		<div class="wrap">
+
+			<ul class="test1">
+				<li class="t1" ondrop="Drop(event)" ondragover="AllowDrop(event)"><img id="t1" src="//203.67.80.132/mark/puzzle/images/01.png" draggable="true" ondragstart="Drag(event)"></li>
+				<li class="t2" ondrop="Drop(event)" ondragover="AllowDrop(event)"><img id="t2" src="//203.67.80.132/mark/puzzle/images/02.png" draggable="true" ondragstart="Drag(event)"></li>
+				<li class="t3" ondrop="Drop(event)" ondragover="AllowDrop(event)"><img id="t3" src="//203.67.80.132/mark/puzzle/images/03.png" draggable="true" ondragstart="Drag(event)"></li>
+				<li class="t4" ondrop="Drop(event)" ondragover="AllowDrop(event)"><img id="t4" src="//203.67.80.132/mark/puzzle/images/04.png" draggable="true" ondragstart="Drag(event)"></li>
+				<li class="t5" ondrop="Drop(event)" ondragover="AllowDrop(event)"><img id="t5" src="//203.67.80.132/mark/puzzle/images/05.png" draggable="true" ondragstart="Drag(event)"></li>
+				<li class="t6" ondrop="Drop(event)" ondragover="AllowDrop(event)"><img id="t6" src="//203.67.80.132/mark/puzzle/images/06.png" draggable="true" ondragstart="Drag(event)"></li>
+				<li class="t7" ondrop="Drop(event)" ondragover="AllowDrop(event)"><img id="t7" src="//203.67.80.132/mark/puzzle/images/07.png" draggable="true" ondragstart="Drag(event)"></li>
+				<li class="t8" ondrop="Drop(event)" ondragover="AllowDrop(event)"><img id="t8" src="//203.67.80.132/mark/puzzle/images/08.png" draggable="true" ondragstart="Drag(event)"></li>
+			</ul>
+
+			<ul class="result">
+				<li id="li1" ondrop="Drop(event)" ondragover="AllowDrop(event)"></li>
+				<li id="li2" ondrop="Drop(event)" ondragover="AllowDrop(event)"></li>
+				<li id="li3" ondrop="Drop(event)" ondragover="AllowDrop(event)"></li>
+				<li id="li4" ondrop="Drop(event)" ondragover="AllowDrop(event)"></li>
+				<li id="li5" ondrop="Drop(event)" ondragover="AllowDrop(event)"></li>
+				<li id="li6" ondrop="Drop(event)" ondragover="AllowDrop(event)"></li>
+				<li id="li7" ondrop="Drop(event)" ondragover="AllowDrop(event)"></li>
+				<li id="li8" ondrop="Drop(event)" ondragover="AllowDrop(event)"></li>
+			</ul>
+		</div>
+		<div class="footer"></div>
+	</body>
+</html>

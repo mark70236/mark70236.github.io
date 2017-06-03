@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="HTML5 Windy Rain Effect">
+<meta name="keywords" content="Weather,Rain,Wind,Animation,Effect">
+<meta name="author" content="Hakan SARIER">
+<title>HTML5 Windy Rain Effect</title>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+    #myCanvas {
+        background: url('images/rain.jpg') no-repeat #000; /*Your background image*/
+    }
+    .menu_simple {
+	margin: 20px;
+	padding: 20px;
+	position: fixed;
+	top: 50px;
+	right: 15px;
+	background: rgb(167,184,200);
+	border-radius: 3px;
+	font-family: "Calibri";
+	box-shadow: 0px 0px 10px rgb(167,184,200);;
+	min-width: 347px;
+	}
+	.menu_simple ul{
+		list-style-type: none;
+	}
+	.menu_simple li{
+		height: 30px;
+	}
+</style>
+</head>
+<body>
+    <canvas id="myCanvas" width="590" height="370" rainDrops="1000" windPower="1" direction="left"></canvas>
+    <div class="menu_simple">
+		<ul>
+			<li>Width: <input type="text" value="590" id="input_width" style="float:right;"></li>
+			<li>Height: <input type="text" value="370" id="input_height" style="float:right;"></li>
+			<li>Number of Droplets: <input type="text" value="1000" id="input_droplets" style="float:right;"></li>
+			<li>Wind Power: <input type="text" value="1" id="input_wind" style="float:right;"></li>
+			<li>Direction:
+				<select id="select" style="float:right;" onchange="selectFunction()">
+				  <option value="left">Left</option>
+				  <option value="right">Right</option>
+				  <option value="vertical">Vertical</option>
+				</select>
+			</li>
+			<li><button onclick="myFunction()" style="float:right;">Refresh</button></li>
+		</ul>
+	</div>
+    <script src="plugin/weather.js"></script>
+    <script type="text/javascript">
+    function myFunction(){
+    	width = document.getElementById("input_width").value;
+ 		height = document.getElementById("input_height").value;
+    	rainDrops = document.getElementById("input_droplets").value;
+ 		wind = document.getElementById("input_wind").value;
+ 		direction = document.getElementById("select").value;
+ 		document.getElementById("myCanvas").setAttribute("width",width);
+ 		document.getElementById("myCanvas").setAttribute("height",height);
+ 		document.getElementById("myCanvas").setAttribute("rainDrops",rainDrops);
+ 		cancelAnimationFrame(globalID);
+ 		circles.length=0;
+ 		drawCircles();
+    }
+    function selectFunction(){
+    	var myDirection = document.getElementById("select").value;
+    	if(myDirection == "vertical")
+    		document.getElementById("input_wind").setAttribute('disabled','disabled');
+    	else
+    		document.getElementById("input_wind").removeAttribute("disabled");
+    }
+    </script>
+</body>
+</html>

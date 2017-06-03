@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>Slicebox | 測試網頁4</title>
+	<link type="image/x-icon" rel="shortcut icon" href="../resourse/images/favicon.ico">
+	<link rel="stylesheet" href="../plugin/reset/min.css">
+	<link rel="stylesheet" href="plugin/slicebox/slicebox.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="../plugin/jquery/1.9.1.min.js"></script>
+	<script src="../plugin/jqueryui/1.10.3.min.js"></script>
+
+
+	<script src="plugin/slicebox/modernizr.js"></script>
+	<script src="plugin/slicebox/slicebox.js"></script>
+
+	<script>
+
+	</script>
+</head>
+	<body>
+		<div class="wrap">
+			<div class="container">
+				<div class="wrapper">
+					<ul id="sb-slider" class="sb-slider">
+						<li><a href="#" target="_blank"><img src="images/1.png"/></a></li>
+						<li><a href="#" target="_blank"><img src="images/2.png"/></a></li>
+						<li><a href="#" target="_blank"><img src="images/3.png"/></a></li>
+						<li><a href="#" target="_blank"><img src="images/4.png"/></a></li>
+						<li><a href="#" target="_blank"><img src="images/5.png"/></a></li>
+					</ul>
+					<div id="nav-arrows" class="nav-arrows">
+						<a href="#">Next</a>
+						<a href="#">Previous</a>
+					</div>
+				</div>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="index.php">Effect 1</a></li>
+					<li><a href="index2.php">Effect 2</a></li>
+					<li><a href="index3.php">Effect 3</a></li>
+					<li><a href="index4.php">Effect 4</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(function() {
+			var Page = (function() {
+				var $navArrows = $( '#nav-arrows' ).hide(),
+					$shadow = $( '#shadow' ).hide(),
+					slicebox = $( '#sb-slider' ).slicebox( {
+						onReady : function() {
+							$navArrows.show();
+							$shadow.show();
+						},
+						orientation : 'r',
+						cuboidsRandom : true,
+						disperseFactor : 30
+					} ),
+					init = function() {
+						initEvents();
+					},
+					initEvents = function() {
+						// add navigation events
+						$navArrows.children( ':first' ).on( 'click', function() {
+							slicebox.next();
+							return false;
+						} );
+						$navArrows.children( ':last' ).on( 'click', function() {
+							slicebox.previous();
+							return false;
+						} );
+					};
+					return { init : init };
+			})();
+			Page.init();
+		});
+	</script>
+</html>

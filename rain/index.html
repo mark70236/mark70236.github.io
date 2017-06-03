@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas 下雨特效</title>
+	<link type="image/x-icon" rel="shortcut icon" href="../resourse/images/favicon.ico">
+	<link rel="stylesheet" href="../plugin/reset/min.css">
+	<link rel="stylesheet" href="../plugin/animate/animate.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="../plugin/jquery/1.9.1.min.js"></script>
+	<script src="../plugin/jqueryui/1.10.3.min.js"></script>
+	<script src="../plugin/animate/wow.js"></script>
+	<script src="js/index.js"></script>
+    	<script>
+		function myFunction(){
+		width = document.getElementById("input_width").value;
+		height = document.getElementById("input_height").value;
+		rainDrops = document.getElementById("input_droplets").value;
+		wind = document.getElementById("input_wind").value;
+		direction = document.getElementById("select").value;
+	 		document.getElementById("myCanvas").setAttribute("width",width);
+	 		document.getElementById("myCanvas").setAttribute("height",height);
+	 		document.getElementById("myCanvas").setAttribute("rainDrops",rainDrops);
+	 		cancelAnimationFrame(globalID);
+	 		circles.length=0;
+	 		drawCircles();
+		}
+		function selectFunction(){
+			var myDirection = document.getElementById("select").value;
+			if(myDirection == "vertical")
+				document.getElementById("input_wind").setAttribute('disabled','disabled');
+			else
+				document.getElementById("input_wind").removeAttribute("disabled");
+		}
+	</script>
+
+</head>
+	<body>
+		<div class="cover"></div>
+		<div class="wow flash bg2"></div>
+		<div class="mask"></div>
+		<div class="wow fadeOutRightBig cloud1"></div>
+		<canvas id="myCanvas" class="myCanvas1" width="1920" height="955" raindrops="1500" windpower="2" direction="left"></canvas>
+		<script src="plugin/weather.js"></script>
+		<div class="wrap">
+
+
+		</div>
+		<div class="footer"></div>
+
+
+
+	</body>
+</html>
