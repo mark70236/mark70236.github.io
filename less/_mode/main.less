@@ -1,480 +1,171 @@
-.bg {
-	position: absolute;
-	left: 50%;
-	margin-left: -960px;
-	width: 1920px;
-	height: 960px;
-	background-image: url("@{image}bg.jpg");
-	-webkit-animation-delay: 0s;
-	animation: bg-scale 30s linear 1;
-	-webkit-animation: bg-scale 30s linear 1;
-	animation-fill-mode: both;
-	-webkit-animation-fill-mode: both;
-}
 .wrap {
-	width: 1280px;
+	width: 1200px;
 	position: relative;
 	margin: 0 auto;
-	.border {
-		width: 1920px;
-		height: 964px;
-		position: relative;
+
+	.project-list {
+		width: 1250px;
 		overflow: hidden;
-		left: 50%;
-		margin-left: -960px;
-	}
-	.lightball {
-		position: absolute;
-		top: 206px;
-		left: 619px;
-		width: 725px;
-		height: 725px;
-		border-radius: 500px;
-		opacity: 0;
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
-		background-image: url("@{image}lightball2.png");
-	}
-	.lightball.on {
-		animation: lightball 0.6s 1;
-		-webkit-animation: lightball 0.6s 1;
-		animation-fill-mode: both;
-		-webkit-animation-fill-mode: both;
-	}
-	.circle-box {
-		position: absolute;
-		top: 62px;
-		left: 468px;
-		width: 870px;
-		height: 870px;
-		.circle-inside {
-			position: absolute;
-			top: 70px;
-			left: 70px;
-			width: 730px;
-			height: 730px;
-			background-image: url("@{image}circle-inside.png");
-			animation-delay: 0s;
-			-webkit-animation-delay: 0s;
-			animation: rotate-inside 40s linear infinite;
-			-webkit-animation: rotate-inside 40s linear infinite;
-			animation-fill-mode: both;
-			-webkit-animation-fill-mode: both;
+		position: relative;
+		top: 90px;
+		left: -20px;
+		.project {
+			width: 300px;
+			height: 250px;
+			float: left;
+			overflow: hidden;
+			margin: 55px;
+			cursor: pointer;
+			border: solid 2px #fff;
+			font-family: "EB Garamond","Times New Roman","游明朝","YuMincho","ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","メイリオ","Meiryo",serif;
+			background-color: #080808;
+			box-shadow: 0 0 35px #6f7aff, 0 0 15px #fff;
+			.trs(box-shadow 0.7s ease);
 		}
-    		.circle-outside {
-    			position: absolute;
+		.project.hover {
+			animation: project-hover 10s linear infinite;
+			@keyframes project-hover {
+				0% { box-shadow: 0 0 65px #6f7aff, 0 0 25px #fff; }
+				25% { box-shadow: 0 0 65px #59d1ff, 0 0 25px #fff; }
+				50% { box-shadow: 0 0 65px #ffb559, 0 0 25px #fff; }
+				75% { box-shadow: 0 0 65px #59d1ff, 0 0 25px #fff; }
+				100% { box-shadow: 0 0 65px #6f7aff, 0 0 25px #fff; }
+			}
+		}
+
+		.project.white {
+			box-shadow: 0 0 35px #9458ff, 0 0 15px #fff;
+		}
+		.project.white.hover {
+			animation: project-white-hover 10s linear infinite;
+			@keyframes project-white-hover {
+				0% { box-shadow: 0 0 65px #9458ff, 0 0 25px #fff; }
+				25% { box-shadow: 0 0 65px #59d1ff, 0 0 25px #fff; }
+				50% { box-shadow: 0 0 65px #ffb559, 0 0 25px #fff; }
+				75% { box-shadow: 0 0 65px #59d1ff, 0 0 25px #fff; }
+				100% { box-shadow: 0 0 65px #9458ff, 0 0 25px #fff; }
+			}
+		}
+
+		.shadow {
+			position: absolute;
+			z-index: 2;
 			top: 0;
 			left: 0;
-			width: 870px;
-			height: 870px;
-			background-image: url("@{image}circle-outside.png");
-			animation-delay: 0s;
-			-webkit-animation-delay: 0s;
-			animation: rotate-outside 60s linear infinite;
-			-webkit-animation: rotate-outside 60s linear infinite;
-			animation-fill-mode: both;
-			-webkit-animation-fill-mode: both;
+			width: 100%;
+			height: 100%;
+			box-shadow: inset 0 0 15px #5f3584, inset 0 0 35px #000, inset 0 0 55px #000;
 		}
-    		.circle-light {
-    			position: absolute;
-			top: 59px;
-			left: 70px;
-			width: 730px;
-			height: 730px;
-			background-image: url("@{image}circle-light.png");
-			animation-delay: 0s;
-			-webkit-animation-delay: 0s;
-			animation: light-opacity 3s linear infinite;
-			-webkit-animation: light-opacity 3s linear infinite;
-			animation-fill-mode: both;
-			-webkit-animation-fill-mode: both;
+
+		img {
+			position: relative;
+			top: 0;
+			animation: project-img 45s linear infinite;
+			@keyframes project-img {
+				0% { transform: scale(1); }
+				50% { transform: scale(1.5); }
+				100% { transform: scale(1); }
+			}
+		}
+
+		.text {
+			z-index: 1;
+			position: relative;
+			top: -150px;
+			opacity: 1;
+			width: 100%;
+			height: 50px;
+			overflow: hidden;
+			line-height: 50px;
+			color: #fff;
+			margin: 0 auto;
+			box-sizing: border-box;
+			text-align: center;
+			text-shadow: 0 0 15px #000, 2px 2px 5px #19353b;
+			font-size: 23px;
+			font-style: italic;
+			font-weight: bolder;
+			font-family: "EB Garamond","Times New Roman","游明朝","YuMincho","ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","メイリオ","Meiryo",serif;
+			background-color: rgba(255,255,255,0.3);
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+			.trs(0.7s);
+		}
+		.text.close {
+			opacity: 0;
+			width: 0%;
+			font-size: 10px;
 		}
 	}
-
-	.chr-box {
+	.project-list2 {
+		width: 1240px;
+		overflow: hidden;
 		position: relative;
-
-		.angel-box {
-			position: absolute;
-			top: 160px;
-			left: 450px;
-			.angel {
-				width: 260px;
-				height: 350px;
+		top: 150px;
+		left: -20px;
+		.project {
+			width: 800px;
+			height: 600px;
+			margin: 120px auto 170px auto;
+			cursor: pointer;
+			overflow: hidden;
+			text-align: center;
+			background-color: #fff;
+			border: solid 3px #fff;
+			box-shadow: 0 0 65px #ffb559;
+			animation: project-big 10s linear infinite;
+			@keyframes project-big {
+				0% { box-shadow:  0 0 65px #ffb559; }
+				25% { box-shadow: 0 0 65px #59d1ff; }
+				50% { box-shadow: 0 0 65px #ff5959; }
+				75% { box-shadow: 0 0 65px #59d1ff; }
+				100% { box-shadow: 0 0 65px #ffb559; }
+			}
+			img {
+				position: relative;
+				top: 0;
+				animation: project-img-big 45s linear infinite;
+				@keyframes project-img-big {
+					0% { transform: scale(1); }
+					50% { transform: scale(1.5); }
+					100% { transform: scale(1); }
+				}
+			}
+			.shadow {
 				position: absolute;
+				z-index: 2;
 				top: 0;
 				left: 0;
-				background-image: url("@{image}angel.png");
-				animation-delay: 0s;
-				-webkit-animation-delay: 0s;
-				animation: angel 4s linear infinite;
-				-webkit-animation: angel 4s linear infinite;
-				animation-fill-mode: both;
-				-webkit-animation-fill-mode: both;
+				width: 100%;
+				height: 100%;
+				box-shadow: inset 0 0 65px #000, inset 0 0 75px #000, inset 0 0 155px #000;
 			}
-		}
-
-		.cat-box {
-			position: absolute;
-			top: -30px;
-			left: 345px;
-			.cat {
-				position: absolute;
-				top: 151px;
-				left: -126px;
-				width: 490px;
-				height: 555px;
-				background-image: url("@{image}cat.png");
-				animation-delay: 0s;
-				-webkit-animation-delay: 0s;
-				animation: cat 3s linear infinite;
-				-webkit-animation: cat 3s linear infinite;
-				animation-fill-mode: both;
-				-webkit-animation-fill-mode: both;
+			.text {
+				z-index: 1;
+				position: relative;
+				top: -360px;
+				opacity: 1;
+				width: 100%;
+				height: 100px;
+				overflow: hidden;
+				line-height: 100px;
+				color: #fff;
+				margin: 0 auto;
+				box-sizing: border-box;
+				text-shadow: 0 0 15px #000, 2px 2px 5px #19353b;
+				font-size: 50px;
+				font-style: italic;
+				font-weight: bolder;
+				font-family: "EB Garamond","Times New Roman","游明朝","YuMincho","ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","メイリオ","Meiryo",serif;
+				background-color: rgba(255, 255, 255, 0.5);
+				box-shadow: 0 0 35px #1b1b1b;
+				.trs(0.7s);
 			}
-		}
-
-		.spider-box {
-			position: absolute;
-			top: 358px;
-			left: 107px;
-			.spider {
-				width: 1100px;
-				height: 1050px;
-				position: absolute;
-				top: 0;
-				transform-origin: top;
-				background-image: url("@{image}spider.png");
-				animation-delay: 0s;
-				-webkit-animation-delay: 0s;
-				animation: spider linear 2.5s infinite;
-				-webkit-animation: spider linear 2.5s infinite;
-				animation-fill-mode: both;
-				-webkit-animation-fill-mode: both;
-				-webkit-transition: all 4s easeInBack;
-  				transition:  all 4s easeInBack;
+			.text.close {
+				opacity: 0;
+				width: 0%;
+				font-size: 10px;
 			}
+
 		}
-
-		.princess-box {
-			position: absolute;
-			top: 12px;
-			left: 840px;
-			.princess {
-				width: 1080px;
-				height: 1070px;
-				background-image: url("@{image}princess.png");
-			}
-		}
-
-	}
-	.logo {
-		position: absolute;
-		top: 236px;
-		left: 554px;
-		width: 680px;
-		height: 350px;
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-image: url("@{image}logo-big.png");
-		animation-delay: 0s;
-		-webkit-animation-delay: 0s;
-		animation: logo 6s linear 1;
-		-webkit-animation: logo 6s linear 1;
-		animation-fill-mode: both;
-		-webkit-animation-fill-mode: both;
-	}
-	.start-box {
-		position: absolute;
-		top: 705px;
-		left: 743px;
-		.start {
-			cursor: pointer;
-			width: 320px;
-			height: 85px;
-			background-image: url("@{image}start.png");
-			animation-delay: 0s;
-			-webkit-animation-delay: 0s;
-			animation: start-opacity 3s linear infinite;
-			-webkit-animation: start-opacity 3s linear infinite;
-			animation-fill-mode: both;
-			-webkit-animation-fill-mode: both;
-		}
-	}
-	.copyright {
-		opacity: 0.95;
-		position: absolute;
-		bottom: 20px;
-		left: 20px;
-		width: 440px;
-		height: 25px;
-		background-image: url("@{image}copyright.png");
-	}
-
-}
-
-@-webkit-keyframes rotate-outside {
-		0% { transform: rotate(0deg); }
-		100% { transform: rotate(360deg); }
-}
-@keyframes rotate-outside {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-}
-@-webkit-keyframes rotate-inside {
-		0% { transform: rotate(0deg); }
-		100% { transform: rotate(-360deg); }
-}
-@keyframes rotate-inside {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(-360deg); }
-}
-@-webkit-keyframes light-opacity {
-		0% { opacity: 0.5; }
-		50% { opacity: 1; }
-		100% { opacity: 0.5; }
-}
-@keyframes light-opacity {
-	0% { opacity: 0.5; }
-	50% { opacity: 1; }
-	100% { opacity: 0.5; }
-}
-@-webkit-keyframes start-opacity {
-		0% { opacity: 0; }
-		40% { opacity: 1; }
-		65% { opacity: 1; }
-		100% { opacity: 0; }
-}
-@keyframes start-opacity {
-	0% { opacity: 0; }
-	40% { opacity: 1; }
-	65% { opacity: 1; }
-	100% { opacity: 0; }
-}
-@-webkit-keyframes bg-scale {
-	0% { transform: scale(2); }
-	100% { transform: scale(1); }
-}
-@keyframes bg-scale {
-	0% { transform: scale(2); }
-	100% { transform: scale(1); }
-}
-@-webkit-keyframes logo {
-	0% {
-		top: 236px;
-		left: 554px;
-		width: 680px;
-		height: 350px;
-		transform: scale(1);
-	}
-	64% {
-		top: 236px;
-		left: 554px;
-		width: 680px;
-		height: 350px;
-		transform: scale(0.9);
-	}
-	65% {
-		top: 236px;
-		left: 554px;
-		width: 680px;
-		height: 350px;
-		transform: scale(0.9);
-	}
-	75% {
-		top: 270px;
-		transform: scale(0.65);
-	}
-	100% {
-		top: 270px;
-		transform: scale(0.65);
-	}
-}
-@keyframes logo {
-	0% {
-		top: 236px;
-		left: 554px;
-		width: 680px;
-		height: 350px;
-		transform: scale(1);
-	}
-	44% {
-		top: 236px;
-		left: 554px;
-		width: 680px;
-		height: 350px;
-		transform: scale(0.9);
-	}
-	45% {
-		top: 236px;
-		left: 554px;
-		width: 680px;
-		height: 350px;
-		transform: scale(0.9);
-	}
-	55% {
-		top: 270px;
-		transform: scale(0.65);
-	}
-	100% {
-		top: 270px;
-		transform: scale(0.65);
-	}
-}
-@-webkit-keyframes logo2 {
-	0% { top: 270px; left: 554px; transform: scale(0.65); }
-	100% { transform: scale(.7); top: 46px; left: 575px; }
-}
-@keyframes logo2 {
-	0% { top: 270px; left: 554px; transform: scale(0.65); }
-	100% { transform: scale(.7); top: 46px; left: 575px; }
-}
-
-@-webkit-keyframes cat {
-	0% {
-		top: 151px;
-	}
-	53% {
-		top: 151px;
-	}
-	60% {
-		top: 141px;
-	}
-	67% {
-		top: 151px;
-	}
-	100% {
-		top: 151px;
-	}
-}
-@keyframes cat {
-	0% {
-		top: 151px;
-	}
-	23% {
-		top: 151px;
-	}
-	30% {
-		top: 141px;
-	}
-	37% {
-		top: 151px;
-	}
-	100% {
-		top: 151px;
-	}
-}
-@-webkit-keyframes angel {
-	0% {
-		top: 0px;
-	}
-	80% {
-		top: 0px;
-	}
-	85% {
-		top: -20px;
-	}
-	90% {
-		top: 0px;
-	}
-	95% {
-		top: -20px;
-	}
-	100% {
-		top: 0px;
-	}
-}
-@keyframes angel {
-	0% {
-		top: 0px;
-	}
-	80% {
-		top: 0px;
-	}
-	85% {
-		top: -20px;
-	}
-	90% {
-		top: 0px;
-	}
-	95% {
-		top: -20px;
-	}
-	100% {
-		top: 0px;
-	}
-}
-@-webkit-keyframes spider {
-	0% {
-		top: 0px;
-		transform: rotate(0deg);
-	}
-	30% {
-		top: -20px;
-		transform: rotate(-3deg);
-	}
-	70% {
-		top: 10px;
-		transform: rotate(0deg);
-	}
-	100% {
-		top: 0px;
-		transform: rotate(0deg);
-	}
-}
-@keyframes spider {
-	0% {
-		top: 10px;
-		transform: rotate(0deg);
-	}
-	50% {
-		top: -20px;
-		transform: rotate(-3deg);
-	}
-	100% {
-		top: 10px;
-		transform: rotate(0deg);
-	}
-}
-@-webkit-keyframes lightball {
-	0% {
-		opacity: 0;
-		width: 725px;
-		height: 725px;
-	}
-	50% {
-		opacity: 1;
-		width: 963px;
-		height: 963px;
-		top: -34px;
-		left: 429px;
-	}
-	100% {
-		opacity: 0;
-		width: 1500px;
-		height: 1500px;
-		top: -184px;
-		left: 159px;
-	}
-}
-@keyframes lightball {
-	0% {
-		opacity: 0;
-		width: 725px;
-		height: 725px;
-	}
-	50% {
-		opacity: 1;
-		width: 1500px;
-		height: 1500px;
-		top: -254px;
-		left: 179px;
-	}
-	100% {
-		opacity: 0;
-		width: 2000px;
-		height: 2000px;
-		top: -414px;
-		left: -71px;
 	}
 }

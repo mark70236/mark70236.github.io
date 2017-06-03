@@ -2,46 +2,35 @@
 <html lang="zh-tw">
 <head>
 	<meta charset="UTF-8">
-	<title>~精靈國の魔鴿使い~</title>
-	<meta property="og:image" content="//image.funmily.com/klee/open/logo.png">
-	<link type="image/x-icon" rel="shortcut icon" href="//image.funmily.com/klee/favicon.ico">
-	<link rel="stylesheet" href="css/reset.min.css">
-	<link rel="stylesheet" href="css/animate.css">
+	<title>3D 旋轉滑動方塊</title>
+	<link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="plugin/reset.min.css">
 	<link rel="stylesheet" href="css/index.css">
-	<script src="js/1.9.1.min.js"></script>
-	<script src="js/min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="plugin/1.9.1.min.js"></script>
+	<script src="plugin/min.js"></script>
+	<script src="plugin/TweenMax/min.js"></script>
+	<script src="js/fit.js"></script>
 	<script src="js/index.js"></script>
 	<script>
-		$(function() {
-			new WOW().init();
-		});
+
 	</script>
 </head>
-
-	<body class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
-		<div class="bg"></div>
-
+	<body>
 		<div class="wrap">
-			<div class="border">
-				<div class="lightball"></div>
-				<div class="circle-box wow zoomIn" data-wow-duration="0.6s" data-wow-delay="3.3s">
-					<div class="circle-outside"></div>
-					<div class="circle-inside"></div>
-					<div class="circle-light"></div>
+			<div class="project-list">
+				<div class="project n1"><div class="shadow"></div><img src="images/01.png"><div class="text">Chapter 1</div></div>
+				<div class="project white n2"><div class="shadow"></div><img src="images/02.png"><div class="text">Chapter 2</div></div>
+				<div class="project n3"><div class="shadow"></div><img src="images/03.png"><div class="text">Chapter 3</div></div>
+				<div class="project white n4"><div class="shadow"></div><img src="images/04.png"><div class="text">Chapter 4</div></div>
+				<div class="project n5"><div class="shadow"></div><img src="images/05.png"><div class="text">Chapter 5</div></div>
+				<div class="project white n6"><div class="shadow"></div><img src="images/06.png"><div class="text">Chapter 6</div></div>
+			</div>
+			<div class="project-list2">
+				<div class="project">
+					<div class="shadow"></div>
+					<img src="images/big1.png">
+					<div class="text">Shadow Poetry</div>
 				</div>
-				<div class="chr-box">
-
-					<div class="angel-box wow bounceIn" data-wow-duration="1s" data-wow-delay="4.5s"><div class="angel"></div></div>
-					<div class="cat-box wow bounceIn" data-wow-duration="1s" data-wow-delay="4.3s"><div class="cat"></div></div>
-					<div class="spider-box wow fadeInRight" data-wow-duration="1s" data-wow-delay="4.1s"><div class="spider"></div></div>
-					<div class="princess-box wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="3.8s"><div class="princess"></div></div>
-				</div>
-				<div class="logo"></div>
-				<div class="start-box wow fadeInDown" data-wow-duration="1s" data-wow-delay="4.6s">
-					<div class="start"></div>
-				</div>
-				<div class="copyright"></div>
 			</div>
 		</div>
 	</body>
