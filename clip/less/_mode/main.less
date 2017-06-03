@@ -1,0 +1,68 @@
+ body { cursor: none; }
+
+.fb-like {
+	position: absolute!important;
+	width: 400px;
+	height: 35px;
+	z-index: 15;
+	top: 10px;
+	left: 10px;
+	border: solid 1px #f3f3f3;
+	box-shadow: 0 0 5px #bdbdbd;
+	background-color: rgba(255, 255, 255, 0.8);
+	iframe {
+		position: absolute;
+		top: 7px;
+		left: 10px;
+	}
+}
+.wrap {
+	width: 1920px;
+	height: 960px;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	background-color: #fff;
+
+	.bg {
+		width: 1920px;
+		height: 960px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-repeat: no-repeat;
+		background-image: url("../images/bg-1.jpg");
+
+	}
+	.clip-box {
+		width: 262px;
+		height: 262px;
+		position: absolute;
+		border-radius: 400px;
+		overflow: hidden;
+	}
+	.bg-light {
+		width: 1920px;
+		height: 960px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url("../images/bg-light.jpg");
+	}
+	#point {
+		width: 250px;
+		height: 250px;
+		border-radius: 400px;
+		z-index: 10;
+		position: absolute;
+		border: solid 12px #ffffff;
+		box-shadow: inset 0 0 40px #fff, 0 0 40px #000;
+		animation: point1 1s linear infinite;
+		@keyframes point {
+			0% { transform: rotate(0); }
+			100% { transform: rotate(360deg); }
+		}
+	}
+	.bigger { transform: scale(1.5); }
+	.ing { .trs(0.2s); }
+}

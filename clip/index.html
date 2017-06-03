@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>clip應用與放大鏡效果</title>
+	<link type="image/x-icon" rel="shortcut icon" href="../resourse/images/favicon.ico">
+	<link rel="stylesheet" href="../plugin/reset/min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="../plugin/jquery/1.9.1.min.js"></script>
+	<script src="../plugin/jqueryui/1.10.3.min.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+
+	</script>
+</head>
+	<body>
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '601983016674418',
+		      xfbml      : true,
+		      version    : 'v2.8',
+		      status	 : true
+		    });
+		    FB.AppEvents.logPageView();
+		  };
+
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
+
+
+		<div class="wrap">
+			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+			<div class="point" id="point"></div>
+			<!-- <img id="point" src="images/aim.png" width="400" height="400" style="display:block;"> -->
+			<div class="bg"></div>
+			<div class="clip-box" id="clip-box">
+				<div id="bg-light" class="bg-light"></div>
+			</div>
+		</div>
+	</body>
+</html>
