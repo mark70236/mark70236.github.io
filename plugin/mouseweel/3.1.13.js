@@ -11,7 +11,7 @@ $(function() {
 	$html	= $('html');
 		$body = $('body');
 		var scrolly = 0;
-		var speed =  200;
+		var speed =  300;
 		$html.mousewheel(function(event, mov) {
 			if(jQuery.browser.webkit){
 				if (mov >= 0) scrolly =  $body.scrollTop() - speed;
