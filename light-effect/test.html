@@ -11,43 +11,17 @@
 
 <script>
 
-	// 2. This code loads the IFrame Player API code asynchronously.
-	var tag = document.createElement('script')
-	tag.src = "http://www.youtube.com/player_api"
-	var firstScriptTag = document.getElementsByTagName('script')[0]
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 
-	// 3. This function creates an <iframe> (and YouTube player)
-	//    after the API code downloads.
-	var player
-	function onYouTubePlayerAPIReady() {
-		// id="movie"在這裡對應
-		player = new YT.Player("movie", {
-			playerVars: {
-				"autoplay": 1,
-				"autohide": 1,
-				"controls": 0,
-				"rel": 0,
-				"showinfo": 0,
-				"autohide":1,
-				"loop": 1,
-				"wmode": "transparent",
-				"VQ": "HD720",
-				"list": "PLoKBoMVP3nbLdugcXx_wn1eZmMQEvmvtf"
-			},
-			videoId: "qgYUx_AWSQM"
-		})
-	}
 </script>
 <script src="plugin/three.min.js"></script>
-<script src="plugin/effect.js"></script>
+<script src="plugin/effect-test.js"></script>
 <style>
 	body { background-color: #000; }
 	#effect { position: relative; top: -370px; width: 100%; height: 500px; }
 </style>
 
 <body>
-<div id="movie" class="movie"></div>
+<!-- <div id="movie" class="movie"></div> -->
 <div id="effect"></div>
 
 
