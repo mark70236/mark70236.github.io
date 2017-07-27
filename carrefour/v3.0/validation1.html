@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>家樂福</title>
+	<link href="stylesheets/layout.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body id="validation1">
+	<!-- if login -->
+<header id="header"></header>
+	<div class="page-content">
+
+			<div class="breadcrumb clearfix">
+	<div class="container">
+		<div class="breadcrumb-title font-18">驗證成功</div>
+		<ol class="breadcrumb-list font-14 hidden-sm hidden-xs">
+			<li>
+				<a href="index.html">首頁</a>
+			</li>
+			<li>驗證成功</li>
+
+		</ol>
+	</div>
+</div>
+
+
+		<div class="container">
+
+<div class="check-page">
+	<div class="row">
+		<div class="left-block col-md-6 col-sm-12 col-xs-12 relative">
+			<p class="font-24 black">驗證成功</p>
+			<p class="font-15 gray3">謝謝！您的會員帳戶已驗證成功</p>
+			<div class="btn-wrap">
+				<a class="btn btn-primary" href="#">返回首頁</a>
+			</div>
+			<img class="img-responsive img-bg" src="images/page-validation1.png" height="269" width="229" alt="">
+		</div>
+		<div class="right-block col-md-6 col-sm-12 col-xs-12">
+			<img class="img-responsive" src="images/demo/img-page.png" alt="">
+		</div>
+	</div>
+</div>
+		</div>
+	</div>
+<footer id="footer"></footer>
+
+<div class="lightboxs"></div>
+	<!-- ./lightboxs for all page -->
+
+
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nice-select.min.js"></script>
+	<script type="text/javascript" src="js/tmpl.min.js"></script>
+
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/add.js"></script>
+	<script>
+		$(function(){
+			//$("header").load("_mode/header.html");
+			//$("footer").load("_mode/footer.html");
+			//$(".lightboxs").load("_mode/lightboxs.html");
+
+
+			$.ajax({
+				url: "_mode/header.html",
+				dataType:'html',
+				success: function(msg){
+					$.getScript("js/main.js")
+					$("header").append(msg)
+				}
+			});
+
+			$.ajax({
+				url: "_mode/footer.html",
+				dataType:'html',
+				success: function(msg){
+					$("footer").append(msg)
+				}
+			});
+
+			$.ajax({
+				url: "_mode/lightboxs.html",
+				dataType:'html',
+				success: function(msg){
+					$(".lightboxs").append(msg)
+				}
+			});
+
+		});
+	</script>
+
+</body>
+</html>

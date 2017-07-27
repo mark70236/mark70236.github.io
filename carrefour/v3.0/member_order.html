@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>家樂福</title>
+	<link href="stylesheets/layout.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<header id="header"></header>
+
+	<div class="page-content">
+
+			<div class="breadcrumb clearfix">
+				<div class="container">
+					<div class="breadcrumb-title font-18">會員中心</div>
+					<ol class="breadcrumb-list font-14 hidden-sm hidden-xs">
+						<li>首頁</li>
+						<li>會員中心</li>
+
+						<li>訂單查詢</li>
+
+					</ol>
+				</div>
+			</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+					<div class="member-title">
+						<div class="member-title-content">
+							<h4 class="blue font-18">Nancy Lin</h4>
+							<h5 class="font-15">您好</h5>
+						</div>
+						<div class="logout-btn">
+							<a href="" class="btn btn-dark-gray">登出</a>
+						</div>
+					</div>
+					<div class="member-info">
+						<ul>
+							<li class="font-15">上次登入時間<br />2017-03-29 18：50：47</li>
+							<li class="font-15">可用折價券<span class="blue font-18">3</span>張</li>
+						</ul>
+					</div>
+					<div class="member-other-info">
+						<div class="othar-info-item">
+							<h5 class="blue font-15"><img src="images/shopping-cart.png">訂單管理</h5>
+							<ul>
+								<li class="active"><a href="member_order.html">訂單查詢</a></li>
+								<li><a href="member_unsubscribe.html">退訂退款查詢</a></li>
+								<li><a href="member_love.html">我的最愛</a></li>
+							</ul>
+						</div>
+						<div class="othar-info-item">
+							<h5 class="blue font-15"><img src="images/user-circle.png">個人帳戶管理</h5>
+							<ul>
+								<li><a href="member.html">會員資料維護</a></li>
+								<li><a href="member_password.html">密碼修改</a></li>
+								<li><a href="member_coupons.html">折價券查詢</a></li>
+								<li><a href="member_receipt.html">收件人管理</a></li>
+								<li><a href="member_editorial.html">公司統編管理</a></li>
+							</ul>
+						</div>
+						<div class="othar-info-item">
+							<h5 class="blue font-15"><img src="images/envelope.png">顧客服務信箱</h5>
+							<ul>
+								<li><a href="member_contact.html">意見信箱</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+					<div class="member-order-content">
+						<h3>訂單查詢</h3>
+						<div class="member-order-title">
+							<div class="form-group">
+								<select class="form-control">
+									<option value="" selected="">最近三個月訂單</option>
+								</select>
+								<select class="form-control">
+									<option value="" selected="">付款方式</option>
+								</select>
+								<div class="btn-group">
+									<a class="btn btn-dark-blue" href="#">查詢</a>
+								</div>
+							</div>
+							<label>共 8 筆訂單</label>
+						</div>
+						<div class="member-order-details">
+							<div class="member-order-item">
+							<ul>
+								<li>訂單編號</li>
+								<li>訂單日期</li>
+								<li>總價</li>
+								<li>訂單狀態</li>
+								<li>付款方式</li>
+								<li>管理</li>
+							</ul>
+							<ul class="dropdown-style-wrap">
+								<li><a href="member_order_detail.html">B20170312000003</a></li>
+								<li>2017-03-29<br><span class="timec">20 : 17 : 15</span></li>
+								<li>NT$ 1,650</li>
+								<li><div class="situation">已訂貨<br><span class="red">已申請退訂</span></div></li>
+								<li>貨到付款<br><span class="red">未付款</span></li>
+								<li>
+									<div class="blue">管理<img src="images/icon-arrow-down.png" alt=""></div>
+									<ul class="dropdown-list mobile-style-2 dropdown-style-3 dropdown-right">
+										<li><a href="#">重新付款</a></li>
+										<li><a href="#">更改付款方式</a></li>
+										<li><a href="#">訂單取消</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dropdown-style-wrap">
+								<li><a href="member_order_detail.html">B20170312000003</a></li>
+								<li>2017-03-29<br><span class="timec">20 : 17 : 15</span></li>
+								<li>NT$ 750</li>
+								<li>預定</li>
+								<li>信用卡一次付清<br><span class="red">未付款</span></li>
+								<li>
+									<div class="blue">管理<img src="images/icon-arrow-down.png" alt=""></div>
+									<ul class="dropdown-list mobile-style-2 dropdown-style-3 dropdown-right">
+										<li><a href="#">重新付款</a></li>
+										<li><a href="#">更改付款方式</a></li>
+										<li><a href="#">訂單取消</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dropdown-style-wrap">
+								<li><a href="member_order_detail.html">B20170312000003</a></li>
+								<li>2017-03-29<br><span class="timec">20 : 17 : 15</span></li>
+								<li>NT$ 590</li>
+								<li>訂單取消</li>
+								<li>到店取貨付款<br><span class="green">付款確認中</span></li>
+								<li>
+									<div class="blue">管理<img src="images/icon-arrow-down.png" alt=""></div>
+									<ul class="dropdown-list mobile-style-2 dropdown-style-3 dropdown-right">
+										<li><a href="#">重新付款</a></li>
+										<li><a href="#">更改付款方式</a></li>
+										<li><a href="#">訂單取消</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dropdown-style-wrap">
+								<li><a href="member_order_detail.html">B20170312000003</a></li>
+								<li>2017-03-29<br><span class="timec">20 : 17 : 15</span></li>
+								<li>NT$ 590</li>
+								<li>訂單完成</li>
+								<li>信用卡分期(3期)<br><span class="gray4">付款完成</span></li>
+								<li>
+									<div class="blue">管理<img src="images/icon-arrow-down.png" alt=""></div>
+									<ul class="dropdown-list mobile-style-2 dropdown-style-3 dropdown-right">
+										<li><a href="#">重新付款</a></li>
+										<li><a href="#">更改付款方式</a></li>
+										<li><a href="#">訂單取消</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dropdown-style-wrap">
+								<li><a href="member_order_detail.html">B20170312000003</a></li>
+								<li>2017-03-29<br><span class="timec">20 : 17 : 15</span></li>
+								<li>NT$ 590</li>
+								<li>訂單完成</li>
+								<li>貨到付款<br><span class="gray4">付款完成</span></li>
+								<li>
+									<div class="blue">管理<img src="images/icon-arrow-down.png" alt=""></div>
+									<ul class="dropdown-list mobile-style-2 dropdown-style-3 dropdown-right">
+										<li><a href="#">重新付款</a></li>
+										<li><a href="#">更改付款方式</a></li>
+										<li><a href="#">訂單取消</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dropdown-style-wrap">
+								<li><a href="member_order_detail.html">B20170312000003</a></li>
+								<li>2017-03-29<br><span class="timec">20 : 17 : 15</span></li>
+								<li>NT$ 590</li>
+								<li>預定</li>
+								<li>網路ATM<br><span class="red">付款失敗</span></li>
+								<li>
+									<div class="blue">管理<img src="images/icon-arrow-down.png" alt=""></div>
+									<ul class="dropdown-list mobile-style-2 dropdown-style-3 dropdown-right">
+										<li><a href="#">重新付款</a></li>
+										<li><a href="#">更改付款方式</a></li>
+										<li><a href="#">申請退訂</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dropdown-style-wrap">
+								<li><a href="member_order_detail.html">B20170312000003</a></li>
+								<li>2017-03-29<br><span class="timec">20 : 17 : 15</span></li>
+								<li>NT$ 590</li>
+								<li>已訂貨</li>
+								<li>到店取貨付款<br><span class="green">付款確認中</span></li>
+								<li>
+									<div class="blue">管理<img src="images/icon-arrow-down.png" alt=""></div>
+									<ul class="dropdown-list mobile-style-2 dropdown-style-3 dropdown-right">
+										<li><a href="#">重新付款</a></li>
+										<li><a href="#">更改付款方式</a></li>
+										<li><a href="#">訂單取消</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dropdown-style-wrap">
+								<li><a href="member_order_detail.html">B20170312000003</a></li>
+								<li>2017-03-29<br><span class="timec">20 : 17 : 15</span></li>
+								<li>NT$ 1,650</li>
+								<li><div class="situation">訂單完成<br><span class="red">已退訂</span></div></li>
+								<li>貨到付款<br><span class="gray4">無須付款</span></li>
+								<li>
+									<div class="blue">管理<img src="images/icon-arrow-down.png" alt=""></div>
+									<ul class="dropdown-list mobile-style-2 dropdown-style-3 dropdown-right">
+										<li><a href="#">重新付款</a></li>
+										<li><a href="#">更改付款方式</a></li>
+										<li><a href="#">訂單取消</a></li>
+									</ul>
+								</li>
+							</ul>
+							</div>
+						</div>
+
+						<nav aria-label="...">
+							<ul class="pager">
+								<li class="previous"><a href="#"><img src="images/prev-icon.png" /> 上一頁</a></li>
+								<li>
+									<ul class="pagination">
+										<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+									</ul>
+								</li>
+								<li class="next"><a href="#">下一頁 <img src="images/next-icon.png" /></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<footer id="footer"></footer>
+
+<div class="lightboxs"></div>
+	<!-- ./lightboxs for all page -->
+
+
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nice-select.min.js"></script>
+	<script type="text/javascript" src="js/tmpl.min.js"></script>
+
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/add.js"></script>
+	<script>
+		$(function(){
+			//$("header").load("_mode/header.html");
+			//$("footer").load("_mode/footer.html");
+			//$(".lightboxs").load("_mode/lightboxs.html");
+
+
+			$.ajax({
+				url: "_mode/header.html",
+				dataType:'html',
+				success: function(msg){
+					$.getScript("js/main.js")
+					$("header").append(msg)
+				}
+			});
+
+			$.ajax({
+				url: "_mode/footer.html",
+				dataType:'html',
+				success: function(msg){
+					$("footer").append(msg)
+				}
+			});
+
+			$.ajax({
+				url: "_mode/lightboxs.html",
+				dataType:'html',
+				success: function(msg){
+					$(".lightboxs").append(msg)
+				}
+			});
+
+		});
+	</script>
+	<script type="text/javascript" src="js/from-validation.js"></script>
+</body>
+</html>

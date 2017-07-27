@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>家樂福</title>
+	<link href="stylesheets/layout.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<header id="header"></header>
+
+
+	<div class="page-content">
+
+			<div class="breadcrumb clearfix">
+				<div class="container">
+					<div class="breadcrumb-title font-18">會員中心</div>
+					<ol class="breadcrumb-list font-14 hidden-sm hidden-xs">
+						<li>首頁</li>
+						<li>會員中心</li>
+						<li>訂單查詢</li>
+						<li>我要詢問</li>
+
+
+					</ol>
+				</div>
+			</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+					<div class="member-title">
+						<div class="member-title-content">
+							<h4 class="blue font-18">Nancy Lin</h4>
+							<h5 class="font-15">您好</h5>
+						</div>
+						<div class="logout-btn">
+							<a href="" class="btn btn-dark-gray">登出</a>
+						</div>
+					</div>
+					<div class="member-info">
+						<ul>
+							<li class="font-15">上次登入時間<br />2017-03-29 18：50：47</li>
+							<li class="font-15">可用折價券<span class="blue font-18">3</span>張</li>
+						</ul>
+					</div>
+					<div class="member-other-info">
+						<div class="othar-info-item">
+							<h5 class="blue font-15"><img src="images/shopping-cart.png">訂單管理</h5>
+							<ul>
+								<li class="active"><a href="member_order.html">訂單查詢</a></li>
+								<li><a href="member_unsubscribe.html">退訂退款查詢</a></li>
+								<li><a href="member_love.html">我的最愛</a></li>
+							</ul>
+						</div>
+						<div class="othar-info-item">
+							<h5 class="blue font-15"><img src="images/user-circle.png">個人帳戶管理</h5>
+							<ul>
+								<li><a href="member.html">會員資料維護</a></li>
+								<li><a href="member_password.html">密碼修改</a></li>
+								<li><a href="member_coupons.html">折價券查詢</a></li>
+								<li><a href="member_receipt.html">收件人管理</a></li>
+								<li><a href="member_editorial.html">公司統編管理</a></li>
+							</ul>
+						</div>
+						<div class="othar-info-item">
+							<h5 class="blue font-15"><img src="images/envelope.png">顧客服務信箱</h5>
+							<ul>
+								<li><a href="member_contact.html">意見信箱</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+					<div class="member-order-qa-content">
+						<h3>我要詢問</h3>
+						<div class="member-order-qa-title">
+							<h5>訂單編號<span class="blue">B20170312000003</span></h5>
+							<h5>訂購人姓名<span class="blue">周*咪</span></h5>
+						</div>
+						<div class="member-order-qa-details">
+							<form class="" action="">
+								<div class="form-group">
+									<label>請選擇問題類別</label>
+									<div class="category">
+										<select class="form-control">
+											<option value="" selected="">問題反映 Question</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>請再細選您的問題</label>
+									<div class="category">
+										<select class="form-control">
+											<option value="" selected="">其他 Other</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>請選擇詢問商品</label>
+									<ul>
+										<li>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" id="blankCheckbox" value="option0" aria-label="..." onclick="check_all(this,'blankcheckbox')"> 商品名稱
+												</label>
+											</div>
+										</li>
+										<li>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" name="blankcheckbox" id="blankCheckbox1" value="option1"> 家福鳥巢麵 / 6入
+												</label>
+											</div>
+										</li>
+										<li>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" name="blankcheckbox" id="blankCheckbox2" value="option2"> 【紙尿褲】頂級金貝貝超淨乾爽紙尿褲 L
+												</label>
+											</div>
+										</li>
+										<li>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" name="blankcheckbox" id="blankCheckbox3" value="option3"> 奇寶巧克力豆餅
+												</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="form-group">
+									<label>請詳述你的狀況</label>
+									<div><textarea class="form-control" rows="5"></textarea></div>
+								</div>
+								<div class="btn-group">
+									<a class="btn btn-dark-gray" href="#">返回訂單列表頁</a>
+									<a class="btn btn-dark-blue" href="#">確定送出</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<footer id="footer"></footer>
+
+<div class="lightboxs"></div>
+	<!-- ./lightboxs for all page -->
+
+
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nice-select.min.js"></script>
+	<script type="text/javascript" src="js/tmpl.min.js"></script>
+
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/add.js"></script>
+	<script>
+		$(function(){
+			//$("header").load("_mode/header.html");
+			//$("footer").load("_mode/footer.html");
+			//$(".lightboxs").load("_mode/lightboxs.html");
+
+
+			$.ajax({
+				url: "_mode/header.html",
+				dataType:'html',
+				success: function(msg){
+					$.getScript("js/main.js")
+					$("header").append(msg)
+				}
+			});
+
+			$.ajax({
+				url: "_mode/footer.html",
+				dataType:'html',
+				success: function(msg){
+					$("footer").append(msg)
+				}
+			});
+
+			$.ajax({
+				url: "_mode/lightboxs.html",
+				dataType:'html',
+				success: function(msg){
+					$(".lightboxs").append(msg)
+				}
+			});
+
+		});
+	</script>
+	<script type="text/javascript" src="js/from-validation.js"></script>
+	<script type="text/javascript">
+	function check_all(obj,cName)
+	{
+		var checkboxs = document.getElementsByName(cName);
+		for(var i=0;i<checkboxs.length;i++){checkboxs[i].checked = obj.checked;}
+	}
+	</script>
+</body>
+</html>

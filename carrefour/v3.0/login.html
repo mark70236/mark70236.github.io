@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>家樂福</title>
+	<link href="stylesheets/layout.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body id="login">
+	<!-- if login -->
+<header id="header"></header>
+	<div class="page-content">
+
+			<div class="breadcrumb clearfix">
+	<div class="container">
+		<div class="breadcrumb-title font-18">會員登入</div>
+		<ol class="breadcrumb-list font-14 hidden-sm hidden-xs">
+			<li>
+				<a href="index.html">首頁</a>
+			</li>
+			<li>會員登入</li>
+
+		</ol>
+	</div>
+</div>
+
+
+		<div class="container">
+
+<div class="member-action-wrap">
+	<div class="description-block font-15 lh-15">
+		親愛的客戶您好，為了您的使用方便，家樂福正在進行帳號整合作業，您可直接使用家樂福 APP 或家樂福線上購物網站帳號登入。<br>
+		如果您曾經以相同的信箱在以上兩個平台註冊，請採用家樂福線上購物網站帳號之密碼登入。<br>
+		若您尚未擁有以上帳號，請點選下方之 "加入會員"新增帳號，或使用 Facebook 或 Google 帳號登錄。<br>
+		[目前暫不支援使用官網帳號直接登錄。造成不便敬請見諒。]
+	</div>
+	<div class="form-block">
+		<div class="row">
+			<div class="main-form col-md-6 col-sm-12 col-xs-12">
+				<form action="">
+					<div class="input-block">
+						<div  class="input-title font-15 black">Email帳號</div>
+						<div class="form-v">
+							<input class="form-control error" type="text">
+							<div class="error-txt red">
+								電子信箱格式錯誤，請重新輸入
+							</div>
+						</div>
+					</div>
+					<div class="input-block">
+						<div  class="input-title font-15 black">密碼</div>
+						<div class="form-v">
+							<input class="form-control error" type="password">
+							<div class="error-txt red">
+								密碼格式錯誤，請重新輸入
+							</div>
+						</div>
+					</div>
+					<div class="input-block clearfix">
+						<div  class="input-title font-15 black">驗證碼</div>
+						<div class="captcha-wrap form-v relative">
+							<div class="error-txt red">
+								驗證碼錯誤
+							</div>
+							<input class="form-control error" type="text">
+							<div class="captcha-block">
+								<a class="btn-refresh" href="#">
+									<img src="images/icon-refresh.png" height="25" width="30" alt="">
+								</a>
+								<img class="img-captcha img-responsive" src="images/img-cap.png" height="36" width="84" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="font-15 row">
+						<div class="col-md-8 col-sm-12">
+							<label>
+								<input type="checkbox">
+								<span class="inline-block gray3 vertical-middle">保持我的登入狀態</span>
+							</abel>
+							<a class="forget-link red margin-left-10 inline-block vertical-middle" href="forget.html">忘記密碼？</a>
+						</div>
+						<div class="form-btn col-md-4 col-sm-12">
+							<a class="btn btn-primary btn-lg btn-regular" href="#">登入</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="sub-form col-md-6 col-sm-12 col-xs-12">
+				<div class="social-login">
+					<div class="col-md-2 col-sm-12 col-xs-12"></div>
+					<div class="col-md-8 col-sm-12 col-xs-12">
+						<a class="btn btn-lg btn-fb" href="#">
+							使用<img class="inline-block vertical-middle margin-h-5" src="images/logo-fb-text.png" style="margin-top: -5px;" height="17" width="88" alt="">
+							登入
+						</a>
+						<a class="btn btn-lg btn-google" href="#">
+							使用<img class="inline-block vertical-middle margin-h-5" src="images/logo-google-text.png" height="25" width="89" alt="">登入
+						</a>
+						<a class="btn btn-lg btn-gray" href="#">加入會員</a>
+					</div>
+					<div class="col-md-2 col-sm-12 col-xs-12"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		</div>
+	</div>
+<footer id="footer"></footer>
+
+<div class="lightboxs"></div>
+	<!-- ./lightboxs for all page -->
+
+
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nice-select.min.js"></script>
+	<script type="text/javascript" src="js/tmpl.min.js"></script>
+
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/add.js"></script>
+	<script>
+		$(function(){
+			//$("header").load("_mode/header.html");
+			//$("footer").load("_mode/footer.html");
+			//$(".lightboxs").load("_mode/lightboxs.html");
+
+
+			$.ajax({
+				url: "_mode/header.html",
+				dataType:'html',
+				success: function(msg){
+					$.getScript("js/main.js")
+					$("header").append(msg)
+				}
+			});
+
+			$.ajax({
+				url: "_mode/footer.html",
+				dataType:'html',
+				success: function(msg){
+					$("footer").append(msg)
+				}
+			});
+
+			$.ajax({
+				url: "_mode/lightboxs.html",
+				dataType:'html',
+				success: function(msg){
+					$(".lightboxs").append(msg)
+				}
+			});
+
+		});
+	</script>
+
+</body>
+</html>
