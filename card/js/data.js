@@ -1,5 +1,7 @@
 
 $(window).load(function() {
+	// 此為得獎資料，"priceName"跟"sort"為獎項跟組別，
+	// 請將得獎名單與團隊名稱填寫至"teamName"、"teamCompany"、"teamFrom"三處
 	var data = {
 		"Array" : [
 			{},
