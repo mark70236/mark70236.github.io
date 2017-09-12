@@ -422,7 +422,7 @@ a {
   color: #ff0;
 }
 .wrap h1 {
-  margin-bottom: 60px;
+  margin-bottom: 45px;
 }
 .wrap h2,
 .wrap h3,
@@ -437,7 +437,7 @@ a {
   position: relative;
   width: 600px;
   height: 490px;
-  margin: 60px auto;
+  margin: 45px auto;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -456,13 +456,14 @@ a {
   position: absolute;
 }
 .back-box .btn-back {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   position: absolute;
-  top: 25px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   border-radius: 10px;
   z-index: 10;
+  background-size: contain;
   background-color: #1b1b1b;
   background-image: url('../images/btn-back.png');
 }
