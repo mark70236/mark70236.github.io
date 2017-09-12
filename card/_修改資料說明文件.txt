@@ -1,0 +1,25 @@
+1. 修改得獎資料、參賽隊伍資料請至 js/data.js 修改
+
+範例：
+此為一筆資料
+{
+	"priceName" : "網路人氣獎",
+	"h2" : "winner-h2-1",
+	"h3" : "winner-h3-1",
+	"sort" : "高中職組",
+	"teamName" : "文化真理志工團隊",
+	"teamCompany" : "出磺口農場",
+	"teamFrom" : "真理大學"
+}
+根據 "priceName" 及 "sort" 對應，可找出此筆資料是對應某一獎項的某一名次。這是固定資料
+而需要填寫的是 "teamName" "teamCompany" "teamFrom" 三項
+
+
+2. 更改得獎佳作數量請至 ew-1.html ew-2.html 修改
+
+高中職組-佳作得獎列表：ew-1.html
+大專校院組-佳作得獎列表：ew-2.html
+
+舉例：如果 "高中職組-佳作" 只需要5個佳作，請至 ew-1.html 內，把以下結構刪除：
+          <!-- 佳作六 -->
+          <li><a href="winner.html?type=16"><img src="images/li-12.png"></a></li>
