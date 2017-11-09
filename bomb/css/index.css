@@ -101,11 +101,10 @@ body > .coming-soon .close:hover {
   width: 1200px;
   height: 1200px;
   background: #fff;
-  margin: 20px auto;
-  box-shadow: 0 0 30px #FEF;
-  border: solid 1px #000;
-  border-right: 0;
-  border-bottom: 0;
+  margin: 30px auto;
+  box-shadow: 0 0 60px #ff9500;
+  border: solid 15px #000;
+  border-radius: 10px;
 }
 .wrap .area ul li {
   display: block;
@@ -122,7 +121,7 @@ body > .coming-soon .close:hover {
   display: block;
   float: left;
   cursor: pointer;
-  color: #888;
+  color: #484848;
   font-size: 28px;
   text-align: center;
   line-height: 60px;
