@@ -8,7 +8,7 @@ $(function() {
 		}
 	}
 	//開始放炸彈
-	for (var i = 1; i <11; i++) {
+	for (var i = 1; i <21; i++) {
 		var a = getRandomInt (1, 10);
 		var b = getRandomInt (1, 10);
 		console.log("炸彈放置在 ("+a+","+b+") 座標");
@@ -75,6 +75,7 @@ $(function() {
 				var thisY6 = thisY-1;
 				var thisY7 = thisY;
 				var thisY8 = thisY+1;
+
 				$(".area li:nth-child("+thisX1+") span:nth-child("+thisY1+") span:nth-child(1)").addClass('open').removeClass('unknow');
 				$(".area li:nth-child("+thisX2+") span:nth-child("+thisY2+") span:nth-child(1)").addClass('open').removeClass('unknow');
 				$(".area li:nth-child("+thisX3+") span:nth-child("+thisY3+") span:nth-child(1)").addClass('open').removeClass('unknow');
