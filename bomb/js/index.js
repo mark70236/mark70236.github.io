@@ -1,5 +1,5 @@
 $(function() {
-
+	var allBombNums = 80;
 	//創建格子
 	for (var l = 1; l <21; l++) {
 		$(".area >ul").append('<li data-li-'+l+'></li>')
@@ -8,7 +8,7 @@ $(function() {
 		}
 	}
 	//開始放炸彈
-	for (var i = 1; i <41; i++) {
+	for (var i = 1; i <allBombNums+1; i++) {
 		var a = getRandomInt (1, 20);
 		var b = getRandomInt (1, 20);
 		console.log("炸彈放置在 ("+a+","+b+") 座標");
