@@ -1,9 +1,9 @@
 $(function() {
 
 	//創建格子
-	for (var l = 1; l <11; l++) {
+	for (var l = 1; l <21; l++) {
 		$(".area >ul").append('<li data-li-'+l+'></li>')
-		for (var k = 1; k <11; k++) {
+		for (var k = 1; k <21; k++) {
 			$("[data-li-"+l+"]").append('<span data-x="'+l+'" data-y="'+k+'"><span class="unknow"></span><span></span></span>')
 		}
 	}
@@ -24,9 +24,9 @@ $(function() {
 	//逐格賦予提示數字
 	var x;
 	var y;
-	for (var t = 1; t <11; t++) {
+	for (var t = 1; t <21; t++) {
 		x = t;
-		for (var s = 1; s <11; s++) {
+		for (var s = 1; s <21; s++) {
 			y = s;
 			var targetSpan = $(".area li:nth-child("+x+") >span:nth-child("+y+")")
 			checkAround (targetSpan,x,y)

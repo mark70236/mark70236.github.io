@@ -98,11 +98,10 @@ body > .coming-soon .close:hover {
   margin: 0 auto;
 }
 .wrap .area {
-  width: 600px;
-  height: 600px;
+  width: 1200px;
+  height: 1200px;
   background: #fff;
-  margin: 0 auto;
-  margin-top: 100px;
+  margin: 20px auto;
   box-shadow: 0 0 30px #FEF;
   border: solid 1px #000;
   border-right: 0;
