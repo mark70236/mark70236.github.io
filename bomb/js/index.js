@@ -8,9 +8,9 @@ $(function() {
 		}
 	}
 	//開始放炸彈
-	for (var i = 1; i <21; i++) {
-		var a = getRandomInt (1, 10);
-		var b = getRandomInt (1, 10);
+	for (var i = 1; i <41; i++) {
+		var a = getRandomInt (1, 20);
+		var b = getRandomInt (1, 20);
 		console.log("炸彈放置在 ("+a+","+b+") 座標");
 		if ($(".area li:nth-child("+a+") span:nth-child("+b+")").hasClass('bomb')) {
 			i--;
