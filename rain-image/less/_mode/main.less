@@ -3,19 +3,35 @@
 	height: 100%;
 	position: absolute;
 	top: 0;
-	opacity: 0.5;
+	opacity: 0.1;
 	background-color: rgba(255, 0, 0, 0.2);
 	animation:  bgcolor 10s linear infinite;
 	.img-box {
 		width: 100%;
 		height: 100%;
-		background-image: url('../images/rain.png');
+		background-image: url('../images/01.png');
 		animation: rain 2s linear infinite;
 	}
 }
+.front-box {
+	position: fixed;
+	top: 9%;
+	width: 1200px;
+	height: 700px;
+	left: 50%;
+	opacity: 0.1;
+	margin-left: -631px;
+	background-position:0px 75px;
+	background-image: url('../images/01.png');
+	animation: rain2 3s linear infinite;
+}
 @keyframes rain {
-	0%{ background-position:0px 0px }
-	100%{ background-position:500px 1000px }
+	0%{ background-position:0px 0px; }
+	100%{ background-position:0px 1050px }
+}
+@keyframes rain2 {
+	0%{ background-position: 0px 75px; }
+	100%{ background-position: 0px 1125px }
 }
 @keyframes bgcolor {
 	0%{ background-color: rgba(255, 0, 0, 0.2); }
@@ -40,14 +56,16 @@
 			margin-bottom: .6em;
 			color: #fff;
 		}
-		h1,h4,a {
+		h1,h4 {
 			font-size: 30px;
 			font-family: "Raleway", sans-serif;
 			margin-bottom: 30px;
 		}
-		h1 { font-size: 50px; }
+		h1 { font-size: 50px; text-shadow: 0 0 30px rgba(255, 255, 255, 0.7); }
 		h3 {
 			font-family: "Dancing Script", sans-serif;
+			text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 		}
+		h4 { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
 	}
 }
