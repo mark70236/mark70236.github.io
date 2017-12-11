@@ -1,14 +1,17 @@
 .wrap {
-	width: 1200px;
+	width: 100%;
 	height: 950px;
 	position: relative;
 	margin: 0 auto;
 	.comparison-box {
-		width: 1200px;
+		width: 100%;
 		height: 525px;
 		position: relative;
-		top: 100px;
+		top: 10%;
 		background-color: #fff;
+		@media (max-width: 991px) {
+			& { max-height: 300px; }
+		}
 		.scrollbar {
 			position: relative;
 			top: 0;
@@ -18,24 +21,30 @@
 			background: #000;
 			z-index: 100;
 			.btn-box {
-				width: 500px;
+				width: 320px;
 				height: 525px;
 				position: relative;
-				left: -247px;
+				left: -157px;
 				top: 0;
 				text-align: center;
 				cursor: pointer;
 				font-size: 14px;
 				color: #000;
+				@media (max-width: 991px) {
+					& { max-height: 300px; }
+				}
 				.btn {
 					width: 40px;
 					height: 40px;
 					position: absolute;
 					top: 242px;
-					left: 230px;
+					left: 140px;
 					border-radius: 40px;
 					line-height: 40px;
 					background-color: #000;
+					@media (max-width: 991px) {
+						& {top: 100px; }
+					}
 				}
 			}
 		}
@@ -44,6 +53,7 @@
 			height: 100%;
 			position: absolute;
 			top: 0;
+			background-size: 100% 100%;
 			background-image: url('../images/01.jpg');
 		}
 		.image-box-2 {
@@ -51,6 +61,7 @@
 			height: 100%;
 			position: absolute;
 			top: 0;
+			background-size: 100% 100%;
 			background-image: url('../images/02.jpg');
 		}
 	}
