@@ -33,8 +33,9 @@ $(function() {
 	});
 
 	$(".scrollbar").on('touchmove',function(e){
-		//console.log("123")
 		canMove = 1;
+		containerWidth = container.width();
+		containerHeightString = container.height()+"px";
 		if (canMove==1) {
 			var moveX = (e.originalEvent.touches[0].pageX - $(".wrap").offset().left)/containerWidth*100+"%";
 			var moveChangeX = e.originalEvent.touches[0].pageX - $(".wrap").offset().left+"px";
