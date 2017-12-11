@@ -7,6 +7,8 @@ $(function() {
 	//按下左鍵
 	$(".scrollbar").mousedown(function(e) {
 		canMove = 1;
+		containerWidth = container.width();
+		containerHeightString = container.height()+"px";
 		var firstX = (e.pageX - $(".wrap").offset().left)/containerWidth*100+"%";
 		var firstClipChangeX = e.pageX - $(".wrap").offset().left+"px";
 		$(this).css('left', firstX);
@@ -28,8 +30,8 @@ $(function() {
 				console.log(moveX)
 			}
 		});
-
 	});
+
 	$(".scrollbar").on('touchmove',function(e){
 		//console.log("123")
 		canMove = 1;
@@ -44,6 +46,7 @@ $(function() {
 				moveX = 100+"%";
 				moveChangeX = containerWidth+"px";
 			}
+
 			$(this).css('left', moveX);
 			$(".image-box-2").css('clip', "rect(0,"+moveChangeX+","+containerHeightString+",0)");
 
@@ -53,11 +56,28 @@ $(function() {
 	//放開左鍵
 	$(".scrollbar").mouseup(function(e) {
 		canMove = 0;
-		console.log("up")
+		console.log("up");
 	});
 
 	//移出瀏覽器
 	$(document).mouseleave(function() {
 		canMove = 0;
 	});
+
+	var resizeTimer = false;
+	$(window).on("resize", function() {
+		if (resizeTimer) {
+			clearTimeout(resizeTimer);
+		}
+		resizeTimer = setTimeout(initContainer,100);
+	});
 })
+
+function initContainer() {
+	var container = $(".comparison-box");
+	var containerWidth = container.width();
+	var containerHeightString = container.height()+"px";
+	var canMove = 0;
+	$(".scrollbar").css('left', '50%');
+	$(".image-box-2").css('clip', "auto");
+}
