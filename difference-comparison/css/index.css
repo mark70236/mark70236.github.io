@@ -98,15 +98,18 @@ body > .coming-soon .close:hover {
   margin: 0 auto;
 }
 .wrap .comparison-box {
-  width: 100%;
+  width: 90%;
   height: 525px;
   position: relative;
   top: 10%;
+  left: 5%;
   background-color: #fff;
+  border: solid 10px #fff;
 }
 @media (max-width: 991px) {
   .wrap .comparison-box {
     max-height: 300px;
+    border: solid 4px #fff;
   }
 }
 .wrap .comparison-box .scrollbar {
@@ -115,7 +118,7 @@ body > .coming-soon .close:hover {
   left: 50%;
   width: 6px;
   height: 100%;
-  background: #000;
+  background-color: #ce4848;
   z-index: 100;
 }
 .wrap .comparison-box .scrollbar .btn-box {
@@ -135,18 +138,23 @@ body > .coming-soon .close:hover {
   }
 }
 .wrap .comparison-box .scrollbar .btn-box .btn {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: absolute;
-  top: 242px;
-  left: 140px;
-  border-radius: 40px;
-  line-height: 40px;
-  background-color: #000;
+  top: 237px;
+  left: 131px;
+  border-radius: 50px;
+  line-height: 50px;
+  background-color: #ce4848;
+  border: solid 4px #fff;
 }
 @media (max-width: 991px) {
   .wrap .comparison-box .scrollbar .btn-box .btn {
-    top: 100px;
+    width: 30px;
+    height: 30px;
+    top: 130px;
+    left: 143px;
+    border: solid 2px #fff;
   }
 }
 .wrap .comparison-box .image-box-1 {

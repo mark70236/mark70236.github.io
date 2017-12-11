@@ -1,23 +1,29 @@
 $(function() {
-	var container = $(".comparison-box")
+	var bodyWidth = $("body").width();
+	var container = $(".comparison-box");
 	var containerWidth = container.width();
 	var containerHeightString = container.height()+"px";
 	var canMove = 0;
+	var deviation = (bodyWidth-containerWidth)/2;
+	var deviationPercent = (bodyWidth-containerWidth)/bodyWidth/2*100;
 
 	//按下左鍵
 	$(".scrollbar").mousedown(function(e) {
 		canMove = 1;
+		bodyWidth = $("body").width();
 		containerWidth = container.width();
 		containerHeightString = container.height()+"px";
-		var firstX = (e.pageX - $(".wrap").offset().left)/containerWidth*100+"%";
-		var firstClipChangeX = e.pageX - $(".wrap").offset().left+"px";
+		deviation = (bodyWidth-containerWidth)/2-10;
+		deviationPercent = (bodyWidth-containerWidth)/bodyWidth/2*100;
+		var firstX = (e.pageX - $(".wrap").offset().left)/containerWidth*100-deviationPercent+"%";
+		var firstClipChangeX = e.pageX - $(".wrap").offset().left-deviation+"px";
 		$(this).css('left', firstX);
 		$(".image-box-2").css('clip', "rect(0,"+firstClipChangeX+","+containerHeightString+",0)");
 		console.log("down")
 		$(".scrollbar").mousemove(function(e) {
 			if (canMove==1) {
-				var moveX = (e.pageX - $(".wrap").offset().left)/containerWidth*100+"%";
-				var moveChangeX = e.pageX - $(".wrap").offset().left+"px";
+				var moveX = (e.pageX - $(".wrap").offset().left)/containerWidth*100-deviationPercent+"%";
+				var moveChangeX = e.pageX - $(".wrap").offset().left-deviation+"px";
 				if(e.pageX - $(".wrap").offset().left<0) {
 					moveX = 0+"%";
 					moveChangeX = 0+"px";
@@ -33,12 +39,16 @@ $(function() {
 	});
 
 	$(".scrollbar").on('touchmove',function(e){
+		e.preventDefault();
 		canMove = 1;
+		bodyWidth = $("body").width();
 		containerWidth = container.width();
 		containerHeightString = container.height()+"px";
+		deviation = (bodyWidth-containerWidth)/2-5;
+		deviationPercent = (bodyWidth-containerWidth)/bodyWidth/2*100;
 		if (canMove==1) {
-			var moveX = (e.originalEvent.touches[0].pageX - $(".wrap").offset().left)/containerWidth*100+"%";
-			var moveChangeX = e.originalEvent.touches[0].pageX - $(".wrap").offset().left+"px";
+			var moveX = (e.originalEvent.touches[0].pageX - $(".wrap").offset().left)/containerWidth*100-deviationPercent+"%";
+			var moveChangeX = e.originalEvent.touches[0].pageX - $(".wrap").offset().left-deviation+"px";
 
 			if(e.originalEvent.touches[0].pageX - $(".wrap").offset().left<0) {
 				moveX = 0+"%";
