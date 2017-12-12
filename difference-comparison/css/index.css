@@ -100,6 +100,7 @@ body > .coming-soon .close:hover {
 .wrap .comparison-box {
   width: 100%;
   position: relative;
+  overflow-x: hidden;
   background-color: #fff;
 }
 .wrap .comparison-box .scrollbar {
@@ -124,23 +125,23 @@ body > .coming-soon .close:hover {
 }
 @media (max-width: 800px) {
   .wrap .comparison-box .scrollbar .btn-box {
-    width: 100px;
-    left: -50px;
+    width: 1000px;
+    left: -500px;
   }
 }
 .wrap .comparison-box .scrollbar .btn-box .btn {
   width: 50px;
   height: 50px;
   position: absolute;
-  top: 237px;
-  left: 131px;
+  top: 80px;
+  left: 135px;
 }
 @media (max-width: 800px) {
   .wrap .comparison-box .scrollbar .btn-box .btn {
     width: 35px;
     height: 35px;
-    top: 130px;
-    left: 35px;
+    top: 210px;
+    left: 485px;
   }
 }
 .wrap .comparison-box .scrollbar .btn-box .btn img {
