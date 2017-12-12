@@ -88,7 +88,12 @@ $(function() {
 
 	//放開左鍵
 	$(".scrollbar").mouseup(function(e) {
+		// $(".scrollbar, .image-box-2").css('transition-duration', '0.4s');
+		// setTimeout(function() {
+		// 	$(".scrollbar, .image-box-2").css('transition-duration', '0.15s');
+		// },400)
 		canMove = 0;
+
 	});
 
 	//移出瀏覽器

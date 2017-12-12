@@ -111,12 +111,13 @@ body > .coming-soon .close:hover {
   height: 100%;
   background-color: #ce4848;
   z-index: 100;
+  transition: left 0.5s ease;
 }
 .wrap .comparison-box .scrollbar .btn-box {
-  width: 320px;
+  width: 1000px;
   height: 100%;
   position: relative;
-  left: -157px;
+  left: -500px;
   top: 0;
   text-align: center;
   cursor: pointer;
@@ -134,7 +135,7 @@ body > .coming-soon .close:hover {
   height: 50px;
   position: absolute;
   top: 80px;
-  left: 135px;
+  left: 478px;
 }
 @media (max-width: 800px) {
   .wrap .comparison-box .scrollbar .btn-box .btn {
@@ -184,6 +185,7 @@ body > .coming-soon .close:hover {
   height: 100%;
   position: absolute;
   top: 0;
+  transition: clip 0.5s ease;
 }
 .wrap .comparison-box .image-box-2 img {
   display: block;
