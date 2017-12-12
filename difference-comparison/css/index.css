@@ -111,7 +111,7 @@ body > .coming-soon .close:hover {
   height: 100%;
   background-color: #ce4848;
   z-index: 100;
-  transition: left 0.5s ease;
+  transition: left 0.3s linear;
 }
 .wrap .comparison-box .scrollbar .btn-box {
   width: 1000px;
@@ -149,6 +149,10 @@ body > .coming-soon .close:hover {
   pointer-events: none;
   display: block;
   width: 100%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .wrap .comparison-box .image-box-1 {
   width: 100%;
@@ -185,7 +189,7 @@ body > .coming-soon .close:hover {
   height: 100%;
   position: absolute;
   top: 0;
-  transition: clip 0.5s ease;
+  transition: clip 0.3s linear;
 }
 .wrap .comparison-box .image-box-2 img {
   display: block;
