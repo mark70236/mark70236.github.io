@@ -172,7 +172,7 @@ body > .coming-soon .close:hover {
 }
 @media (max-width: 800px) {
   .wrap .comparison-box .image-box-1 .word {
-    right: 50%;
+    padding-left: 0;
     top: 27%;
     margin-right: -136px;
     font-size: 16px;
@@ -202,7 +202,7 @@ body > .coming-soon .close:hover {
 }
 @media (max-width: 800px) {
   .wrap .comparison-box .image-box-2 .word {
-    right: 50%;
+    padding-left: 0;
     top: 27%;
     margin-right: -136px;
     font-size: 16px;
