@@ -113,6 +113,11 @@ body > .coming-soon .close:hover {
   z-index: 100;
   transition: left 0.3s linear;
 }
+@media (max-width: 800px) {
+  .wrap .comparison-box .scrollbar {
+    transition: left 0.1s linear;
+  }
+}
 .wrap .comparison-box .scrollbar .btn-box {
   width: 1000px;
   height: 100%;
@@ -190,6 +195,11 @@ body > .coming-soon .close:hover {
   position: absolute;
   top: 0;
   transition: clip 0.3s linear;
+}
+@media (max-width: 800px) {
+  .wrap .comparison-box .image-box-2 {
+    transition: clip 0.1s linear;
+  }
 }
 .wrap .comparison-box .image-box-2 img {
   display: block;
