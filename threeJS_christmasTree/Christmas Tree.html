@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Christmas Tree</title>
+	<link rel="stylesheet" href="plugin/reset/min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="plugin/jquery/1.9.1.min.js"></script>
+	<script src="plugin/jqueryui/1.10.3.min.js"></script>
+	<script src="plugin/three.min.js"></script>
+	<script src="plugin/OBJLoader.js"></script>
+
+</head>
+<body>
+	<div style="text-align: center;">
+		<p style="display: inline-block; padding: 1rem; font-family: 'serif'; margin-top: 1rem; border: 1px solid #aaa; font-family: Garamond, Georgia, serif; font-weight: 300; color: #fff">Press Any key to start the music...</p>
+	</div>
+	<div class="snowbox"></div>
+	<audio src="images/jingle-bell.mp3"></audio>
+</body>
+	<script src="js/christmas-special-bundle.js"></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/82015/three.js'></script>
+	<script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/82015/snow.js'></script>
+	<script src="js/index.js"></script>
+	<script>
+		$(function(){
+			snow();
+		})
+	</script>
+</html>
