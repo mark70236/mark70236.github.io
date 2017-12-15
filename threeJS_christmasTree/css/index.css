@@ -16,9 +16,16 @@ body {
   background-repeat: no-repeat;
   font-size: 12px;
   color: #fff;
-  background-color: #000;
+  background-image: url('../images/bg2.jpg');
+  background-size: 100% 100%;
+  background-position: center center;
   overflow-x: hidden;
   height: auto !important;
+}
+@media (max-width: 1400px) {
+  body {
+    background-size: auto 100%;
+  }
 }
 body a {
   cursor: pointer;
