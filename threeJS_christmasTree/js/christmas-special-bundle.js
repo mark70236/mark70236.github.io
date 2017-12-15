@@ -105,7 +105,7 @@
 	loader.load('images/star.obj', function (obj) {
 		object = obj;
 
-		obj.children[2].position.set(0, 28, 5);
+		obj.children[2].position.set(0, 25, 5);
 		obj.children[2].material = new THREE.MeshPhongMaterial({ color: 0xF3BB02 });
 		scene.add(obj.children[2]);
 		scene.add(tree.body);
@@ -158,14 +158,14 @@
 		this.body.receiveShadow = true;
 		this.body.name = 'tree';
 
-		var geometry = new THREE.ConeGeometry(10, 20, 17);
+		var geometry = new THREE.ConeGeometry(10, 16, 17);
 		var material = new THREE.MeshPhongMaterial({ color: 0x0d7753, shading: THREE.FlatShading });
 		var cone = new THREE.Mesh(geometry, material);
 
-		var box = new THREE.BoxGeometry(2, 20, 1.5);
+		var box = new THREE.CylinderGeometry( 2, 2, 21, 32 );
 		var boxMaterial = new THREE.MeshPhongMaterial({ color: 0x743300 });
 		var boxMesh = new THREE.Mesh(box, boxMaterial);
-		boxMesh.position.set(0, -20, 0);
+		boxMesh.position.set(0, -24, 0);
 
 		for (var i = 0; i < 10; i++) {
 			var redBall = new _Ball2.default(1);
@@ -178,18 +178,26 @@
 		cone.receiveShadow = true;
 		var cone2 = cone.clone();
 		var cone3 = cone.clone();
-		cone.name = 'tree';
-		cone.position.set(0, 20, 0);
-		cone2.scale.set(1.2, 1.2, 1.2);
-		cone2.position.set(0, 10, 0);
+		var cone4 = cone.clone();
 
-		cone3.scale.set(1.5, 1.5, 1.5);
-		cone3.position.set(0, 0, 0);
+		cone.name = 'tree';
+		cone.scale.set(0.8, 0.8, 0.8);
+		cone.position.set(0, 20, 0);
+
+		cone2.scale.set(1.1, 1.1, 1.1);
+		cone2.position.set(0, 13, 0);
+
+		cone3.scale.set(1.3, 1.3, 1.3);
+		cone3.position.set(0, 5, 0);
+
+		cone4.scale.set(1.5, 1.5, 1.5);
+		cone4.position.set(0, -3, 0);
 
 		this.body.add(boxMesh);
 		this.body.add(cone);
 		this.body.add(cone2);
 		this.body.add(cone3);
+		this.body.add(cone4);
 
 		return this;
 	}

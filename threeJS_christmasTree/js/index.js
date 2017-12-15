@@ -7,6 +7,7 @@ function snow() {
 	var container;
 
 	var particle;
+	var particleNums = 100; //雪花數量
 	var mouseX = 0;
 	var mouseY = 0;
 	var windowHalfX = window.innerWidth / 2;
@@ -34,7 +35,7 @@ function snow() {
 		renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 		var material = new THREE.ParticleBasicMaterial( { map: new THREE.Texture(particleImage) } );
 
-		for (var i = 0; i < 1000; i++) {
+		for (var i = 0; i < particleNums; i++) {
 
 			particle = new Particle3D( material);
 			particle.position.x = Math.random() * 2000 - 1000;
