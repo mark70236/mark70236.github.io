@@ -249,7 +249,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var texture = THREE.ImageUtils.loadTexture('../../../assets/snowflake.png');
+	var texture = THREE.ImageUtils.loadTexture('../images/snowflake.png');
 	var clock = new THREE.Clock();
 	function SnowSystem() {
 		var numParticles = 1000,
