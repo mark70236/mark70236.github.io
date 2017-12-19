@@ -106,6 +106,15 @@ jQuery(function() {
 		}
 		resizeTimer = setTimeout(initContainer,100);
 	});
+
+
+	var explorer = window.navigator.userAgent ;
+	if(explorer.indexOf("Chrome") >= 0){
+
+      }else {
+      	$(".image-box-2, .scrollbar").css('transition', 'none');
+      }
+
 })
 
 //初始化
