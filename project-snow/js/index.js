@@ -191,7 +191,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	}
 	function reStart() {
-
+		SCREEN_WIDTH = screen.width;
+		SCREEN_HEIGHT = screen.height;
 		document.body.removeChild(document.getElementById('snow-container'))
 
 		var node = document.createElement("div");
