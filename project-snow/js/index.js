@@ -30,10 +30,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	window.addEventListener("orientationchange",onOrientationchange ,false);
 	function onOrientationchange() {
 		if (window.orientation === 180 || window.orientation === 0) {
-			document.querySelector('.test-box').click();
+			setTimeout(function() {
+				document.querySelector('.test-box').click();
+			},3000)
 		}
 		if (window.orientation === 90 || window.orientation === -90 ){
-			document.querySelector('.test-box').click();
+			setTimeout(function() {
+				document.querySelector('.test-box').click();
+			},3000)
 		}
 	}
 
