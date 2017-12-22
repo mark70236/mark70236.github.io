@@ -26,14 +26,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var particleNums2 = 10;
 	var particleImage2 = new Image();
 	particleImage2.src = 'images/particle_snowflake2.png';
-	window.addEventListener('devicemotion',  function(){
-		alert("devicemotion")
-		reStart();
-	});
-	window.addEventListener('deviceorientation',  function(){
-		alert("deviceorientation")
-		reStart();
-	});
+
+	window.addEventListener("orientationchange",onOrientationchange ,false);
+	function onOrientationchange() {
+		if (window.orientation === 180 || window.orientation === 0) {
+			reStart();
+		}
+		if (window.orientation === 90 || window.orientation === -90 ){
+			reStart();
+		}
+	}
+
 	document.querySelector('.test-box').addEventListener("click", function() {
 		reStart();
 	});
