@@ -30,9 +30,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	window.addEventListener("orientationchange",onOrientationchange ,false);
 	function onOrientationchange() {
 		if (window.orientation === 180 || window.orientation === 0) {
+			alert();
 			reStart();
 		}
 		if (window.orientation === 90 || window.orientation === -90 ){
+			alert();
 			reStart();
 		}
 	}
@@ -46,6 +48,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	//anime();
 
 	function init() {
+		SCREEN_WIDTH = window.innerWidth;
+		SCREEN_HEIGHT = window.innerHeight;
+
 		container = document.getElementById('snow-container');
 		document.body.appendChild(container);
 
