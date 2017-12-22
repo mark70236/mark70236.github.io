@@ -28,23 +28,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	particleImage2.src = 'images/particle_snowflake2.png';
 
 	window.onresize=function() {
-		//alert();
 		reStart();
 	}
-
-	// window.addEventListener("orientationchange",onOrientationchange ,false);
-	// function onOrientationchange() {
-	// 	if (window.orientation === 180 || window.orientation === 0) {
-	// 		setTimeout(function() {
-	// 			document.querySelector('.test-box').click();
-	// 		},3000)
-	// 	}
-	// 	if (window.orientation === 90 || window.orientation === -90 ){
-	// 		setTimeout(function() {
-	// 			document.querySelector('.test-box').click();
-	// 		},3000)
-	// 	}
-	// }
 
 	document.querySelector('.test-box').addEventListener("click", function() {
 		reStart();
