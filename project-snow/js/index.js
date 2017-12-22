@@ -4,16 +4,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	node.setAttribute("id","snow-container");
 	document.querySelector('body').appendChild(node);
 
-	var SCREEN_WIDTH = screen.width;
-	var SCREEN_HEIGHT = screen.height;
+	var SCREEN_WIDTH = document.documentElement.clientWidth;
+	var SCREEN_HEIGHT = document.documentElement.clientHeight;
 
 	var container;
 
 	var particle;
 	var mouseX = 0;
 	var mouseY = 0;
-	var windowHalfX = window.innerWidth / 2;
-	var windowHalfY = window.innerHeight / 2;
+	var windowHalfX = document.documentElement.clientWidth / 2;
+	var windowHalfY = document.documentElement.clientHeight / 2;
 
 	//第一種粒子
 	var particles = [];
@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	//anime();
 
 	function init() {
-		SCREEN_WIDTH = screen.width;
-		SCREEN_HEIGHT = screen.height;
+		SCREEN_WIDTH = document.documentElement.clientWidth;
+		SCREEN_HEIGHT = document.documentElement.clientHeight;
 
 		container = document.getElementById('snow-container');
 		document.body.appendChild(container);
@@ -196,8 +196,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	}
 	function reStart() {
-		SCREEN_WIDTH = screen.width;
-		SCREEN_HEIGHT = screen.height;
+		SCREEN_WIDTH = document.documentElement.clientWidth;
+		SCREEN_HEIGHT = document.documentElement.clientHeight;
 		document.body.removeChild(document.getElementById('snow-container'))
 
 		var node = document.createElement("div");
