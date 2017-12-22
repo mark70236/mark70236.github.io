@@ -30,14 +30,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	window.addEventListener("orientationchange",onOrientationchange ,false);
 	function onOrientationchange() {
 		if (window.orientation === 180 || window.orientation === 0) {
-			setTimeout(function() {
-				reStart();
-			},2000)
+			reStart();
+			reStart();
 		}
 		if (window.orientation === 90 || window.orientation === -90 ){
-			setTimeout(function() {
-				reStart();
-			},2000)
+			reStart();
+			reStart();
 		}
 	}
 
