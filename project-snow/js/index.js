@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	node.setAttribute("id","snow-container");
 	document.querySelector('body').appendChild(node);
 
-	var SCREEN_WIDTH = window.innerWidth;
-	var SCREEN_HEIGHT = window.innerHeight;
+	var SCREEN_WIDTH = screen.width;
+	var SCREEN_HEIGHT = screen.height;
 
 	var container;
 
@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	//anime();
 
 	function init() {
-		SCREEN_WIDTH = window.innerWidth;
-		SCREEN_HEIGHT = window.innerHeight;
+		SCREEN_WIDTH = screen.width;
+		SCREEN_HEIGHT = screen.height;
 
 		container = document.getElementById('snow-container');
 		document.body.appendChild(container);
