@@ -1,0 +1,31 @@
+.wrap {
+	width: 80%;
+	height: 950px;
+	position: relative;
+	margin: 0 auto;
+	background-color: #eee;
+	.banner-box {
+		width: 100%;
+		margin: 0 auto;
+		.item {
+			position: relative;
+			background-color: #ee0;
+			.design-box {
+				display: none;
+				position: absolute;
+				top: 30px;
+				right: 10px;
+				font-size: 20px;
+				color: #000;
+			}
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+		}
+		.item.slick-center {
+			> .design-box { display: block; }
+		}
+	}
+}

@@ -1,0 +1,50 @@
+// 黑色背景
+.black-box-body {
+	margin-left: -140px;
+	position: fixed;
+	left: 50%;
+	top: 10%;
+	z-index: 11;
+	width: 280px;
+	.close {
+		height: 30px;
+		width: 30px;
+		position: absolute;
+		top: -5px;
+		right: 0;
+		cursor: pointer;
+	}
+}
+.black-box-bg {
+	display : none;
+	width : 100%;
+	height : 100%;
+	position : fixed;
+	z-index : 10;
+	background-image : url("http://static.funmily.com/css/images/cinema/b60.png");
+}
+
+// 敬請期待 - 提醒視窗
+body > .coming-soon {
+	display: none;
+	position: fixed;
+	.close {
+		top: -5px;
+		right: -5px;
+		color: #EEE;
+		font-size: 30px;
+		font-weight: bold;
+		&:hover { color: @mc-light }
+	}
+}
+
+// 敬請期待
+.coming-soon {
+	position: absolute;
+	z-index: 12;
+	top: 20%;
+	left: 50%;
+	margin-left: -210px;
+	width: 500px;
+	height: 360px;
+}

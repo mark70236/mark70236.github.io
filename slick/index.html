@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>slick測試頁</title>
+	<link rel="stylesheet" href="../plugin/reset/min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="plugin/slick/slick.css">
+	<link rel="stylesheet" href="plugin/slick/slick-theme.css">
+
+	<script src="plugin/jquery/1.9.1.min.js"></script>
+	<script src="plugin/jqueryui/1.10.3.min.js"></script>
+	<script src="plugin/slick/slick.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		$(window).load(function() {
+			$(".banner-box").slick({
+				dots: true,
+				infinite: true,
+				speed: 300,
+				centerPadding: '60px',
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				centerMode: true,
+				autoplay: true,
+				autoplaySpeed: 6000,
+				variableWidth: true,
+			});
+		})
+	</script>
+</head>
+	<body>
+		<div class="wrap">
+			<div class="banner-box">
+				<div class="item"><img src="images/1.jpg"><div class="design-box">客製化區塊1</div></div>
+				<div class="item"><img src="images/2.jpg"><div class="design-box">客製化區塊2</div></div>
+				<div class="item"><img src="images/3.jpg"><div class="design-box">客製化區塊3</div></div>
+				<div class="item"><img src="images/4.jpg"><div class="design-box">客製化區塊4</div></div>
+				<div class="item"><img src="images/5.jpg"><div class="design-box">客製化區塊5</div></div>
+			</div>
+		</div>
+	</body>
+</html>
