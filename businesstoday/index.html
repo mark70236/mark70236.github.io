@@ -390,21 +390,23 @@
 	</body>
 		<script>
 			$(function(){
-				$.ajax({
-					url: "_mode/header.html",
-					dataType:'html',
-					success: function(msg){
-						$("header").append(msg)
-					}
-				});
+				$("header").load("_mode/header.html");
+				$("footer").load("_mode/footer.html");
+				// $.ajax({
+				// 	url: "_mode/header.html",
+				// 	dataType:'html',
+				// 	success: function(msg){
+				// 		$("header").append(msg)
+				// 	}
+				// });
 
-				$.ajax({
-					url: "_mode/footer.html",
-					dataType:'html',
-					success: function(msg){
-						$("footer").append(msg)
-					}
-				});
+				// $.ajax({
+				// 	url: "_mode/footer.html",
+				// 	dataType:'html',
+				// 	success: function(msg){
+				// 		$("footer").append(msg)
+				// 	}
+				// });
 
 			});
 		</script>
