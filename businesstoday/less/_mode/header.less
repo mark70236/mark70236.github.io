@@ -1,0 +1,125 @@
+header {
+	width: 100%;
+	height: 150px;
+	position: relative;
+	z-index: 10;
+	.top-head {
+		width: 100%;
+		height: 32px;
+		.member-panel {
+			height: 100%;
+			float: right;
+			line-height: 32px;
+			.login {
+				span {
+					display: inline-block;
+					font-size: 16px;
+					color: #4a4a4a;
+					margin: 0 5px;
+				}
+			}
+		}
+	}
+	.main-menu {
+		width: 100%;
+		height: 108px;
+		border-top: solid 1px #ccc;
+		background-image: url("@{image}_mode/header/header-main-menu-bg.jpg");
+		.main {
+			.logo {
+				width: 108px;
+				height: 108px;
+				float: left;
+			}
+			> ul {
+				overflow: hidden;
+				height: 47px;
+				float: left;
+				margin-top: 25px;
+				li {
+					width: 100px;
+					height: 100%;
+					float: left;
+					margin-right: 2px;
+					border-top: solid 3px #ee776d;
+					a {
+						font-size: 18px;
+						color: #4a4a4a;
+						line-height: 47px;
+						text-align: center;
+						position: relative;
+						.trs;
+						.bg-box {
+							display: block;
+							width: 100%;
+							height: 0%;
+							background-color: #ee776d;
+							.trs;
+						}
+						.text {
+							display: block;
+							position: absolute;
+							top: 0;
+							width: 100%;
+							text-align: center;
+							i {
+								display: inline-block;
+								width: 22px;
+								height: 15px;
+								background-color: #eee;
+							}
+						}
+					}
+					&:hover {
+						a {
+							color: #fff;
+						}
+						.bg-box { height: 100%; }
+					}
+				}
+				li:nth-child(2) {
+					border-top: solid 3px #e49f65;
+					.bg-box { background-color: #e49f65; }
+				}
+				li:nth-child(3) {
+					border-top: solid 3px #ffdc52;
+					.bg-box { background-color: #ffdc52; }
+				}
+				li:nth-child(4) {
+					border-top: solid 3px #95cd63;
+					.bg-box { background-color: #95cd63; }
+				}
+				li:nth-child(5) {
+					border-top: solid 3px #c269c7;
+					.bg-box { background-color: #c269c7; }
+				}
+				li:nth-child(6) {
+					border-top: solid 3px #d9bc6f;
+					.bg-box { background-color: #d9bc6f; }
+				}
+				li:nth-child(7) {
+					border-top: solid 3px #00bdbb;
+					.bg-box { background-color: #00bdbb; }
+				}
+			}
+			.banner-box {
+				width: 300px;
+				height: 70px;
+				margin-top: 20px;
+				float: right;
+				background-color: #eee;
+			}
+		}
+	}
+	.border-bottom {
+		width: 100%;
+		height: 9px;
+		box-shadow: 0px 5px 10px #656565;
+		background-color: #e49f65;
+	}
+	.main {
+		width: 1290px;
+		height: 100%;
+		margin: 0 auto;
+	}
+}
