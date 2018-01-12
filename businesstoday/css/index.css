@@ -1855,6 +1855,11 @@ body > .wrap {
     border-radius: 0;
   }
 }
+@media all and (max-width: 800px) {
+  .wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li select {
+  text-indent: 10px;
+  }
+}
 @media all and (max-width: 1200px) {
   .wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li.mobile-none {
     display: none;
