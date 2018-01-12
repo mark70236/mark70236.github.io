@@ -831,7 +831,7 @@ body > .wrap {
 }
 @media all and (max-width: 800px) {
   .wrap .sidebar {
-    display: none;
+    display: none!important;
   }
 }
 .wrap .sidebar ul {
