@@ -15,25 +15,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var windowHalfX = document.documentElement.clientWidth / 2;
 	var windowHalfY = document.documentElement.clientHeight / 2;
 
-	//第一種粒子
-	var particles = [];
-	var particleNums = 70;
-	var particleImage = new Image();
-	particleImage.src = 'images/particle_snowflake.png';
+	//圖片檔案夾位置
+	var imageSrc = "https://"+location.hostname+"/wp-content/plugins/Project-Snow/images/";
+	//填入圖片檔名
+	var imageName1 = "particle_snowflake.png";
+	var imageName2 = "particle_snowflake2.png";
 
 	//第一種粒子
+	var particles = [];
+	var particleNums = 50;  //粒子數量
+	var particleImage = new Image();
+	particleImage.src = imageSrc+imageName1;
+	//第一種粒子
 	var particles2 = [];
-	var particleNums2 = 10;
+	var particleNums2 = 5;  //粒子數量
 	var particleImage2 = new Image();
-	particleImage2.src = 'images/particle_snowflake2.png';
+	particleImage2.src = imageSrc+imageName2;
 
 	window.onresize=function() {
 		reStart();
 	}
 
-	document.querySelector('.test-box').addEventListener("click", function() {
-		reStart();
-	});
+	// document.querySelector('.test-box').addEventListener("click", function() {
+	// 	reStart();
+	// });
 
 	init();
 	var interval = setInterval( loop, 1500 / 60 );
@@ -98,18 +103,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		// document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 	}
 
-	function anime() {
-		//console.log(particle2)
-		setInterval(function() {
-			particle2.rotation.x += 500;
-			particle2.rotation.y += 500;
-		},1000)
+	// function anime() {
+	// 	//console.log(particle2)
+	// 	setInterval(function() {
+	// 		particle2.rotation.x += 500;
+	// 		particle2.rotation.y += 500;
+	// 	},1000)
 
-		renderer.render(scene, camera);
-		requestAnimationFrame(function() {
-			anime();
-		});
-	}
+	// 	renderer.render(scene, camera);
+	// 	requestAnimationFrame(function() {
+	// 		anime();
+	// 	});
+	// }
 
 	function onDocumentMouseMove( event ) {
 
