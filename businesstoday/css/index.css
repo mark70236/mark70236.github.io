@@ -377,46 +377,46 @@ header .main-menu .main > ul li:hover .bg-box {
   height: 100%;
 }
 header .main-menu .main > ul li.menu-news .text i {
-  background-image: url('../images/_mode/header/menu/news_icon.png');
+  background-image: url('../images/header/menu/news_icon.png');
 }
 header .main-menu .main > ul li.menu-news:hover .text i {
-  background-image: url('../images/_mode/header/menu/news_icon_hover.png');
+  background-image: url('../images/header/menu/news_icon_hover.png');
 }
 header .main-menu .main > ul li.menu-project .text i {
-  background-image: url('../images/_mode/header/menu/project_icon.png');
+  background-image: url('../images/header/menu/project_icon.png');
 }
 header .main-menu .main > ul li.menu-project:hover .text i {
-  background-image: url('../images/_mode/header/menu/project_icon_hover.png');
+  background-image: url('../images/header/menu/project_icon_hover.png');
 }
 header .main-menu .main > ul li.menu-dream .text i {
-  background-image: url('../images/_mode/header/menu/dream_icon.png');
+  background-image: url('../images/header/menu/dream_icon.png');
 }
 header .main-menu .main > ul li.menu-dream:hover .text i {
-  background-image: url('../images/_mode/header/menu/dream_icon_hover.png');
+  background-image: url('../images/header/menu/dream_icon_hover.png');
 }
 header .main-menu .main > ul li.menu-health .text i {
-  background-image: url('../images/_mode/header/menu/health_icon.png');
+  background-image: url('../images/header/menu/health_icon.png');
 }
 header .main-menu .main > ul li.menu-health:hover .text i {
-  background-image: url('../images/_mode/header/menu/health_icon_hover.png');
+  background-image: url('../images/header/menu/health_icon_hover.png');
 }
 header .main-menu .main > ul li.menu-lohas .text i {
-  background-image: url('../images/_mode/header/menu/lohas_icon.png');
+  background-image: url('../images/header/menu/lohas_icon.png');
 }
 header .main-menu .main > ul li.menu-lohas:hover .text i {
-  background-image: url('../images/_mode/header/menu/lohas_icon_hover.png');
+  background-image: url('../images/header/menu/lohas_icon_hover.png');
 }
 header .main-menu .main > ul li.menu-wealth .text i {
-  background-image: url('../images/_mode/header/menu/wealth_icon.png');
+  background-image: url('../images/header/menu/wealth_icon.png');
 }
 header .main-menu .main > ul li.menu-wealth:hover .text i {
-  background-image: url('../images/_mode/header/menu/wealth_icon_hover.png');
+  background-image: url('../images/header/menu/wealth_icon_hover.png');
 }
 header .main-menu .main > ul li.menu-activity .text i {
-  background-image: url('../images/_mode/header/menu/activity_icon.png');
+  background-image: url('../images/header/menu/activity_icon.png');
 }
 header .main-menu .main > ul li.menu-activity:hover .text i {
-  background-image: url('../images/_mode/header/menu/activity_icon_hover.png');
+  background-image: url('../images/header/menu/activity_icon_hover.png');
 }
 header .main-menu .main > ul li:nth-child(2) {
   border-top: solid 3px #e49f65;
@@ -799,7 +799,7 @@ body > .wrap {
   margin-top: 123px;
 }
 .wrap {
-  background-image: url("../images/_mode/header/header-main-menu-bg.jpg");
+  background-image: url("../images/header/header-main-menu-bg.jpg");
 }
 @media all and (max-width: 1200px) {
   .wrap {
@@ -871,7 +871,7 @@ body > .wrap {
   width: 23px;
   height: 23px;
   margin: 10px auto 5px auto;
-  background-image: url('../images/_mode/header/menu/news_icon.png');
+  background-image: url('../images/header/menu/news_icon.png');
 }
 .wrap .sidebar ul li .btn-box > span span {
   display: block;
