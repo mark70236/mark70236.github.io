@@ -16,7 +16,7 @@
 		<div class="mobile-menu-btn">
 			<i class="fa fa-bars" aria-hidden="true"></i>
 		</div>
-		<div class="logo"><img src="images/_mode/header/logo.png"></img></div>
+		<div class="logo"><a href="../index"><img src="images/header/logo.png"></img></a></div>
 		<ul>
 			<li class="menu-news">
 				<a href="#">
@@ -63,7 +63,7 @@
 		</ul>
 		<div class="header-search-box">
 			<i class="fa fa-search" aria-hidden="true"></i>
-			<div class="search-lightbox">
+			<div class="header-search-lightbox">
 				<form>
 					<input type="text" placeholder="關鍵字...">
 					<input class="btn-submit" type="submit" value="">
@@ -71,7 +71,7 @@
 				</form>
 			</div>
 		</div>
-		<div class="banner-box"><img src="images/_mode/header/300x70.png"></div>
+		<div class="banner-box"><img src="images/header/300x70.png"></div>
 	</div>
 </div>
 
@@ -83,14 +83,14 @@
 
 	$(function() {
 		var hsbOption = 0;
-	      $(".header-search-box i, .search-lightbox").click(function() {
+	      $(".header-search-box i, .header-search-lightbox").click(function() {
 	      	//alert(hsbOption);
 	      	if (hsbOption == 0) {
-				if ($(".search-lightbox").hasClass('active')) {
-					$(".search-lightbox").removeClass('active');
+				if ($(".header-search-lightbox").hasClass('active')) {
+					$(".header-search-lightbox").removeClass('active');
 					hsbOption = 0;
 				}else {
-					$(".search-lightbox").addClass('active');
+					$(".header-search-lightbox").addClass('active');
 					hsbOption = 1;
 					return false;
 				}
@@ -99,7 +99,7 @@
 	      $("body").click(function() {
 	      	//alert("body"+hsbOption);
 	      	if (hsbOption == 1) {
-	      		$(".search-lightbox").removeClass('active');
+	      		$(".header-search-lightbox").removeClass('active');
 	      		hsbOption = 0;
 	      	}
 	      })

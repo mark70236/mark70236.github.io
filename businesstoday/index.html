@@ -11,7 +11,7 @@
 	<script src="plugin/jquery/1.9.1.min.js"></script>
 	<script src="plugin/jqueryui/1.10.3.min.js"></script>
 	<script src="plugin/slick/slick.js"></script>
-
+	<script src="js/header.js"></script>
 	<script src="js/index.js"></script>
 	<script>
 
@@ -35,7 +35,7 @@
 					<div class="mobile-menu-btn">
 						<i class="fa fa-bars" aria-hidden="true"></i>
 					</div>
-					<div class="logo"><img src="images/header/logo.png"></img></div>
+					<div class="logo"><a href="index.html"><img src="images/header/logo.png"></img></a></div>
 					<ul>
 						<li class="menu-news">
 							<a href="#">
@@ -82,7 +82,7 @@
 					</ul>
 					<div class="header-search-box">
 						<i class="fa fa-search" aria-hidden="true"></i>
-						<div class="search-lightbox">
+						<div class="header-search-lightbox">
 							<form>
 								<input type="text" placeholder="關鍵字...">
 								<input class="btn-submit" type="submit" value="">
@@ -90,68 +90,82 @@
 							</form>
 						</div>
 					</div>
-					<div class="banner-box"><img src="images/header/300x70.png"></div>
+					<div class="banner-box"><a href="#"><img src="images/header/300x70.png"></a></div>
 				</div>
 			</div>
 
 			<div class="mobile-menu">
-
+				<ul>
+					<li class="mobile-menu-news">
+						<span class="color"></span>
+						最新話題
+						<i class="fa fa-plus" aria-hidden="true"></i>
+						<ul>
+							<li><a href="#">全部話題</a></li>
+						</ul>
+					</li>
+					<li class="mobile-menu-project">
+						<span class="color"></span>
+						專題
+						<i class="fa fa-plus" aria-hidden="true"></i>
+						<ul>
+							<li><a href="#">全部文章</a></li>
+							<li><a href="#">最新新聞</a></li>
+							<li><a href="#">熱門話題</a></li>
+						</ul>
+					</li>
+					<li class="mobile-menu-dream">
+						<span class="color"></span>
+						圓夢人生
+						<i class="fa fa-plus" aria-hidden="true"></i>
+						<ul>
+							<li><a href="#">全部話題</a></li>
+						</ul>
+					</li>
+					<li class="mobile-menu-health">
+						<span class="color"></span>
+						健康
+						<i class="fa fa-plus" aria-hidden="true"></i>
+						<ul>
+							<li><a href="#">全部文章</a></li>
+							<li><a href="#">照護醫療</a></li>
+							<li><a href="#">養生抗老</a></li>
+							<li><a href="#">長照搜尋</a></li>
+						</ul>
+					</li>
+					<li class="mobile-menu-lohas">
+						<span class="color"></span>
+						樂活
+						<i class="fa fa-plus" aria-hidden="true"></i>
+						<ul>
+							<li><a href="#">全部文章</a></li>
+							<li><a href="#">食尚旅遊</a></li>
+							<li><a href="#">品味人生</a></li>
+							<li><a href="#">學習成長</a></li>
+						</ul>
+					</li>
+					<li class="mobile-menu-wealth">
+						<span class="color"></span>
+						理財
+						<i class="fa fa-plus" aria-hidden="true"></i>
+						<ul>
+							<li><a href="#">全部文章</a></li>
+							<li><a href="#">保險規劃</a></li>
+							<li><a href="#">退休</a></li>
+							<li><a href="#">投資</a></li>
+						</ul>
+					</li>
+					<li class="mobile-menu-activity">
+						<span class="color"></span>
+						活動
+						<i class="fa fa-plus" aria-hidden="true"></i>
+						<ul>
+							<li><a href="#">全部話題</a></li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 			<div class="mobile-black-mask"></div>
-			<script>
-
-				$(function() {
-					var hsbOption = 0;
-				      $(".header-search-box i, .search-lightbox").click(function() {
-				      	//alert(hsbOption);
-				      	if (hsbOption == 0) {
-							if ($(".search-lightbox").hasClass('active')) {
-								$(".search-lightbox").removeClass('active');
-								hsbOption = 0;
-							}else {
-								$(".search-lightbox").addClass('active');
-								hsbOption = 1;
-								return false;
-							}
-				      	}else { return false; }
-				      });
-				      $("body").click(function() {
-				      	//alert("body"+hsbOption);
-				      	if (hsbOption == 1) {
-				      		$(".search-lightbox").removeClass('active');
-				      		hsbOption = 0;
-				      	}
-				      })
-				      $(".mobile-menu-btn").click(function() {
-						if ($(".mobile-menu, .mobile-black-mask").hasClass('active')) {
-							$(".mobile-menu, .mobile-black-mask").removeClass('active');
-						}else {
-							$(".mobile-menu, .mobile-black-mask").addClass('active');
-							return false;
-						}
-				      });
-
-
-
-				      $(window).scroll(function () {
-						var scrollVal = $(this).scrollTop();
-						//console.log(scrollVal);
-						if (scrollVal > 123) {
-							if ($("header").hasClass('hide')) {
-								return false;
-							}else {
-								$("header").addClass('hide');
-								$(".mobile-menu, .mobile-black-mask").addClass('top-mode');
-							}
-						}
-						if (scrollVal < 123) {
-							$("header").removeClass('hide');
-							$(".mobile-menu, .mobile-black-mask").removeClass('top-mode');
-						}
-					})
-				})
-
-			</script>
 		</header>
 		<div class="wrap">
 			<div class="sidebar">
@@ -209,85 +223,92 @@
 					<div class="big-bg">
 						<img class="bg-img" src="images/index/main-banner/bg-img/01.jpg">
 					</div>
-					<div class="full-border">
-						<div class="theme-img">
-							<img src="images/index/main-banner/theme-img/01.jpg">
-						</div>
-						<div class="banner-detail-box">
-							<div class="banner-detail">
-								<h2>高齡職人精神，相守咖啡店41年的上島夫婦</h2>
-								<div class="boder"></div>
-								<p>什麼是友善高齡者持續勞動的場域？什麼是高齡者持續勞動的動機？富山市這家開了41年的咖啡廳，為我們展現了因應高齡社會所常見的幾個概念：<br>尊嚴（Dignity）、<br>自我滿足（Self-fulfilment）、<br>獨立（Independence）、<br>參與（Participation）、<br>照顧（Care）</p>
-								<div class="btn-more">
-									<a href="#">閱讀文章</a>
+					<a href="#">
+						<div class="full-border">
+							<div class="theme-img">
+								<img src="images/index/main-banner/theme-img/01.jpg">
+							</div>
+							<div class="banner-detail-box">
+								<div class="banner-detail">
+										<h2>高齡職人精神，相守咖啡店41年的上島夫婦</h2>
+										<div class="boder"></div>
+										<p>什麼是友善高齡者持續勞動的場域？什麼是高齡者持續勞動的動機？富山市這家開了41年的咖啡廳，為我們展現了因應高齡社會所常見的幾個概念：<br>尊嚴（Dignity）、<br>自我滿足（Self-fulfilment）、<br>獨立（Independence）、<br>參與（Participation）、<br>照顧（Care）</p>
+										<div class="btn-more">
+											閱讀文章
+										</div>
 								</div>
 							</div>
 						</div>
-					</div>
-
+					</a>
 					<div class="black-mask"></div>
 				</div>
 				<div class="banner-col">
 					<div class="big-bg">
 						<img class="bg-img" src="images/index/main-banner/bg-img/01.jpg">
 					</div>
-					<div class="full-border">
-						<div class="theme-img">
-							<img src="images/index/main-banner/theme-img/01.jpg">
-						</div>
-						<div class="banner-detail-box">
-							<div class="banner-detail">
-								<h2>高齡職人精神，相守咖啡店41年的上島夫婦</h2>
-								<div class="boder"></div>
-								<p>什麼是友善高齡者持續勞動的場域？什麼是高齡者持續勞動的動機？富山市這家開了41年的咖啡廳，為我們展現了因應高齡社會所常見的幾個概念：<br>尊嚴（Dignity）、<br>自我滿足（Self-fulfilment）、<br>獨立（Independence）、<br>參與（Participation）、<br>照顧（Care）</p>
-								<div class="btn-more">
-									<a href="#">閱讀文章</a>
+					<a href="#">
+						<div class="full-border">
+							<div class="theme-img">
+								<img src="images/index/main-banner/theme-img/01.jpg">
+							</div>
+							<div class="banner-detail-box">
+								<div class="banner-detail">
+										<h2>高齡職人精神，相守咖啡店41年的上島夫婦</h2>
+										<div class="boder"></div>
+										<p>什麼是友善高齡者持續勞動的場域？什麼是高齡者持續勞動的動機？富山市這家開了41年的咖啡廳，為我們展現了因應高齡社會所常見的幾個概念：<br>尊嚴（Dignity）、<br>自我滿足（Self-fulfilment）、<br>獨立（Independence）、<br>參與（Participation）、<br>照顧（Care）</p>
+										<div class="btn-more">
+											閱讀文章
+										</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 					<div class="black-mask"></div>
 				</div>
 				<div class="banner-col">
 					<div class="big-bg">
 						<img class="bg-img" src="images/index/main-banner/bg-img/01.jpg">
 					</div>
-					<div class="full-border">
-						<div class="theme-img">
-							<img src="images/index/main-banner/theme-img/01.jpg">
-						</div>
-						<div class="banner-detail-box">
-							<div class="banner-detail">
-								<h2>高齡職人精神，相守咖啡店41年的上島夫婦</h2>
-								<div class="boder"></div>
-								<p>什麼是友善高齡者持續勞動的場域？什麼是高齡者持續勞動的動機？富山市這家開了41年的咖啡廳，為我們展現了因應高齡社會所常見的幾個概念：<br>尊嚴（Dignity）、<br>自我滿足（Self-fulfilment）、<br>獨立（Independence）、<br>參與（Participation）、<br>照顧（Care）</p>
-								<div class="btn-more">
-									<a href="#">閱讀文章</a>
+					<a href="#">
+						<div class="full-border">
+							<div class="theme-img">
+								<img src="images/index/main-banner/theme-img/01.jpg">
+							</div>
+							<div class="banner-detail-box">
+								<div class="banner-detail">
+										<h2>高齡職人精神，相守咖啡店41年的上島夫婦</h2>
+										<div class="boder"></div>
+										<p>什麼是友善高齡者持續勞動的場域？什麼是高齡者持續勞動的動機？富山市這家開了41年的咖啡廳，為我們展現了因應高齡社會所常見的幾個概念：<br>尊嚴（Dignity）、<br>自我滿足（Self-fulfilment）、<br>獨立（Independence）、<br>參與（Participation）、<br>照顧（Care）</p>
+										<div class="btn-more">
+											閱讀文章
+										</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 					<div class="black-mask"></div>
 				</div>
 				<div class="banner-col">
 					<div class="big-bg">
 						<img class="bg-img" src="images/index/main-banner/bg-img/01.jpg">
 					</div>
-					<div class="full-border">
-						<div class="theme-img">
-							<img src="images/index/main-banner/theme-img/01.jpg">
-						</div>
-						<div class="banner-detail-box">
-							<div class="banner-detail">
-								<h2>高齡職人精神，相守咖啡店41年的上島夫婦</h2>
-								<div class="boder"></div>
-								<p>什麼是友善高齡者持續勞動的場域？什麼是高齡者持續勞動的動機？富山市這家開了41年的咖啡廳，為我們展現了因應高齡社會所常見的幾個概念：<br>尊嚴（Dignity）、<br>自我滿足（Self-fulfilment）、<br>獨立（Independence）、<br>參與（Participation）、<br>照顧（Care）</p>
-								<div class="btn-more">
-									<a href="#">閱讀文章</a>
+					<a href="#">
+						<div class="full-border">
+							<div class="theme-img">
+								<img src="images/index/main-banner/theme-img/01.jpg">
+							</div>
+							<div class="banner-detail-box">
+								<div class="banner-detail">
+										<h2>高齡職人精神，相守咖啡店41年的上島夫婦</h2>
+										<div class="boder"></div>
+										<p>什麼是友善高齡者持續勞動的場域？什麼是高齡者持續勞動的動機？富山市這家開了41年的咖啡廳，為我們展現了因應高齡社會所常見的幾個概念：<br>尊嚴（Dignity）、<br>自我滿足（Self-fulfilment）、<br>獨立（Independence）、<br>參與（Participation）、<br>照顧（Care）</p>
+										<div class="btn-more">
+											閱讀文章
+										</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 					<div class="black-mask"></div>
 				</div>
 			</div>
@@ -296,7 +317,8 @@
 			<section class="section1">
 				<div class="banner-box top">
 					<div class="control-wrap">
-						<img src="images/index/970x250-2.png">
+						<a href="#"><img class="for-deskop" src="images/index/970x250-1.png"></a>
+						<a href="#"><img class="for-mobile" src="images/index/300x250-1.png"></a>
 					</div>
 				</div>
 
@@ -311,111 +333,131 @@
 							<li>
 								<img src="images/index/news-box/01.png" title="照到底要花多少錢？連居服員也很難算清楚">
 								<span class="article-title-box">
-									<span class="tag-box">
-										<span class="tag">最新新聞</span>
-									</span>
-									<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
-									<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
-									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									<a href="#">
+										<span class="tag-box">
+											<span class="tag">最新新聞</span>
+										</span>
+										<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
+										<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
+										<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									</a>
 								</span>
 							</li>
 							<li>
 								<img src="images/index/news-box/02.png" title="長照到底要花多少錢？連居服員也很難算清楚">
 								<span class="article-title-box">
-									<span class="tag-box">
-										<span class="tag">最新新聞</span>
-									</span>
-									<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
-									<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
-									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									<a href="#">
+										<span class="tag-box">
+											<span class="tag">最新新聞</span>
+										</span>
+										<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
+										<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
+										<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									</a>
 								</span>
 							</li>
 							<li>
 								<img src="images/index/news-box/03.png" title="長照到底要花多少錢？連居服員也很難算清楚">
 								<span class="article-title-box">
-									<span class="tag-box">
-										<span class="tag">最新新聞</span>
-									</span>
-									<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
-									<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
-									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									<a href="#">
+										<span class="tag-box">
+											<span class="tag">最新新聞</span>
+										</span>
+										<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
+										<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
+										<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									</a>
 								</span>
 							</li>
 							<li>
 								<img src="images/index/news-box/04.png" title="長照到底要花多少錢？連居服員也很難算清楚">
 								<span class="article-title-box">
-									<span class="tag-box">
-										<span class="tag">最新新聞</span>
-									</span>
-									<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
-									<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
-									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									<a href="#">
+										<span class="tag-box">
+											<span class="tag">最新新聞</span>
+										</span>
+										<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
+										<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
+										<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									</a>
 								</span>
 							</li>
 							<li>
 								<img src="images/index/news-box/05.png" title="長照到底要花多少錢？連居服員也很難算清楚">
 								<span class="article-title-box">
-									<span class="tag-box">
-										<span class="tag">最新新聞</span>
-									</span>
-									<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
-									<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
-									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									<a href="#">
+										<span class="tag-box">
+											<span class="tag">最新新聞</span>
+										</span>
+										<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
+										<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
+										<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									</a>
 								</span>
 							</li>
 							<li>
 								<img src="images/index/news-box/01.png" title="長照到底要花多少錢？連居服員也很難算清楚">
 								<span class="article-title-box">
-									<span class="tag-box">
-										<span class="tag">最新新聞</span>
-									</span>
-									<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
-									<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
-									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									<a href="#">
+										<span class="tag-box">
+											<span class="tag">最新新聞</span>
+										</span>
+										<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
+										<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
+										<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									</a>
 								</span>
 							</li>
 							<li>
 								<img src="images/index/news-box/02.png" title="長照到底要花多少錢？連居服員也很難算清楚">
 								<span class="article-title-box">
-									<span class="tag-box">
-										<span class="tag">最新新聞</span>
-									</span>
-									<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
-									<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
-									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									<a href="#">
+										<span class="tag-box">
+											<span class="tag">最新新聞</span>
+										</span>
+										<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
+										<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
+										<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									</a>
 								</span>
 							</li>
 							<li>
 								<img src="images/index/news-box/03.png" title="長照到底要花多少錢？連居服員也很難算清楚">
 								<span class="article-title-box">
-									<span class="tag-box">
-										<span class="tag">最新新聞</span>
-									</span>
-									<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
-									<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
-									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									<a href="#">
+										<span class="tag-box">
+											<span class="tag">最新新聞</span>
+										</span>
+										<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
+										<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
+										<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									</a>
 								</span>
 							</li>
 							<li>
 								<img src="images/index/news-box/04.png" title="長照到底要花多少錢？連居服員也很難算清楚">
 								<span class="article-title-box">
-									<span class="tag-box">
-										<span class="tag">最新新聞</span>
-									</span>
-									<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
-									<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
-									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									<a href="#">
+										<span class="tag-box">
+											<span class="tag">最新新聞</span>
+										</span>
+										<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
+										<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
+										<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									</a>
 								</span>
 							</li>
 							<li>
 								<img src="images/index/news-box/05.png" title="長照到底要花多少錢？連居服員也很難算清楚">
 								<span class="article-title-box">
-									<span class="tag-box">
-										<span class="tag">最新新聞</span>
-									</span>
-									<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
-									<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
-									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									<a href="#">
+										<span class="tag-box">
+											<span class="tag">最新新聞</span>
+										</span>
+										<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
+										<p>「君子不可一日無茶」，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</p>
+										<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+									</a>
 								</span>
 							</li>
 						</ul>
@@ -423,6 +465,7 @@
 					<!-- for mobile -->
 					<div class="article-box-mobile">
 						<ul>
+							<!-- 手機版顯示6則 -->
 							<li>
 								<a href="#"><img src="images/index/news-box/01.png" title="照到底要花多少錢？連居服員也很難算清楚"></a>
 								<span class="article-title-box">
@@ -471,6 +514,30 @@
 									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
 								</span>
 							</li>
+							<li>
+								<img src="images/index/news-box/03.png" title="長照到底要花多少錢？連居服員也很難算清楚">
+								<span class="article-title-box">
+									<span class="tag-box">
+										<span class="tag">最新新聞</span>
+										<span class="tag-num">5</span>
+									</span>
+									<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
+									<p><a href="#">君子不可一日無茶，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</a></p>
+									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+								</span>
+							</li>
+							<li>
+								<img src="images/index/news-box/04.png" title="長照到底要花多少錢？連居服員也很難算清楚">
+								<span class="article-title-box">
+									<span class="tag-box">
+										<span class="tag">最新新聞</span>
+										<span class="tag-num">6</span>
+									</span>
+									<h2>長照到底要花多少錢？連居服員也很難算清楚</h2>
+									<p><a href="#">君子不可一日無茶，這是出自嗜茶成癖的清乾隆皇帝的名句，古今中外愛喝茶的名人更是不可勝數。對於每天看診壓力巨大，而且必需保持頭腦清晰的知名中醫師周宗翰來說，也是「寧可一日無食，不可一日無茶」的找「茶」一族。</a></p>
+									<span class="see-detail"><a href="#">閱讀文章  ></a></span>
+								</span>
+							</li>
 						</ul>
 					</div>
 					<div class="btn-more"><a href="#" title="更多最新動態">更多最新動態</a></div>
@@ -486,58 +553,57 @@
 							<div class="nav">
 								<h2>長照機構搜尋</h2>
 								<div class="border"></div>
-								<ul>
-									<li>
-										<select>
-											<option>縣市</option>
-											<option>台北市</option>
-											<option>高雄市</option>
-										</select>
-										<i>▾</i>
-									</li>
-									<li>
-										<select>
-											<option>鄉鎮區</option>
-											<option>文山區</option>
-											<option>大安區</option>
-										</select>
-										<i>▾</i>
-									</li>
-									<li>
-										<select>
-											<option>服務類型</option>
-											<option>類型一</option>
-											<option>類型二</option>
-										</select>
-										<i>▾</i>
-									</li>
-									<li>
-										<select>
-											<option>服務類型</option>
-											<option>類型一</option>
-											<option>類型二</option>
-										</select>
-										<i>▾</i>
-									</li>
-									<li class="mobile-none">
-										<select>
-											<option>評鑑等級</option>
-											<option>等級一</option>
-											<option>等級二</option>
-										</select>
-										<i>▾</i>
-									</li>
-									<li class="mobile-none">
-										<select>
-											<option>網友推薦</option>
-											<option>機構一</option>
-											<option>機構二</option>
-										</select>
-										<i>▾</i>
-									</li>
-									<li class="border-none keyword"><input type="text" name="btn-keyword" placeholder="關鍵字"><i class="fa fa-search" aria-hidden="true"></i></li>
-									<li class="border-none search-btn">搜尋<i class="fa fa-home" aria-hidden="true"></i></li>
-								</ul>
+								<form>
+									<ul>
+										<li>
+											<select id="sel-city">
+												<option value="0">縣市</option>
+												<option value="1">台北市</option>
+												<option value="2">高雄市</option>
+											</select>
+											<i>▾</i>
+										</li>
+										<li>
+											<select id="sel-area">
+												<option value="0">鄉鎮區</option>
+											</select>
+											<i>▾</i>
+										</li>
+										<li>
+											<select id="sel-type-1">
+												<option value="0">服務類型</option>
+												<option value="1">類型一</option>
+												<option value="2">類型二</option>
+											</select>
+											<i>▾</i>
+										</li>
+										<li>
+											<select id="sel-type-2">
+												<option value="0">服務類型</option>
+											</select>
+											<i>▾</i>
+										</li>
+										<li class="mobile-none">
+											<select id="sel-level">
+												<option value="0">評鑑等級</option>
+												<option value="1">等級一</option>
+												<option value="2">等級二</option>
+											</select>
+											<i>▾</i>
+										</li>
+										<li class="mobile-none">
+											<select id="sel-recommend">
+												<option value="0">網友推薦</option>
+												<option value="1">機構一</option>
+												<option value="2">機構二</option>
+											</select>
+											<i>▾</i>
+										</li>
+										<li class="border-none keyword"><input type="text" name="btn-keyword" placeholder="關鍵字"><i class="fa fa-search" aria-hidden="true"></i></li>
+										<li class="border-none search-btn"><input type="submit" value="">搜尋<i class="fa fa-home" aria-hidden="true"></i></li>
+									</ul>
+								</form>
+
 								<form>
 									<div class="search-lightbox">
 											<input type="text" placeholder="輸入關鍵字">
@@ -553,31 +619,37 @@
 								<h2>熱門網友推薦</h2>
 								<ul>
 									<li>
-										<img src="images/index/ltc-box/01.png">
-										<span>
-											<h3>私立彰居老人長期照顧中心</h3>
-											<span class="star">★★☆☆☆</span>
-											<span class="border"></span>
-											<span class="other">彰化縣<span>2017,12月24日</span></span>
-										</span>
+										<a href="#">
+											<img src="images/index/ltc-box/01.png">
+											<span>
+												<h3>私立彰居老人長期照顧中心</h3>
+												<span class="star">★★☆☆☆</span>
+												<span class="border"></span>
+												<span class="other">彰化縣<span>2017,12月24日</span></span>
+											</span>
+										</a>
 									</li>
 									<li>
-										<img src="images/index/ltc-box/02.png">
-										<span>
-											<h3>私立慈美老人長期照顧中心</h3>
-											<span class="star">★★☆☆☆</span>
-											<span class="border"></span>
-											<span class="other">彰化縣<span>2017,12月24日</span></span>
-										</span>
+										<a href="#">
+											<img src="images/index/ltc-box/02.png">
+											<span>
+												<h3>私立慈美老人長期照顧中心</h3>
+												<span class="star">★★☆☆☆</span>
+												<span class="border"></span>
+												<span class="other">彰化縣<span>2017,12月24日</span></span>
+											</span>
+										</a>
 									</li>
 									<li>
-										<img src="images/index/ltc-box/03.png">
-										<span>
-											<h3>私立杏安老人長期照顧中心</h3>
-											<span class="star">★★☆☆☆</span>
-											<span class="border"></span>
-											<span class="other">彰化縣<span>2017,12月24日</span></span>
-										</span>
+										<a href="#">
+											<img src="images/index/ltc-box/03.png">
+											<span>
+												<h3>私立杏安老人長期照顧中心</h3>
+												<span class="star">★★☆☆☆</span>
+												<span class="border"></span>
+												<span class="other">彰化縣<span>2017,12月24日</span></span>
+											</span>
+										</a>
 									</li>
 								</ul>
 							</div>
@@ -642,7 +714,8 @@
 			<section class="section2">
 				<div class="banner-box mid">
 					<div class="control-wrap">
-						<img src="images/index/970x250-2.png">
+						<a href="#"><img class="for-deskop" src="images/index/970x250-2.png"></a>
+						<a href="#"><img class="for-mobile" src="images/index/300x250-2.png"></a>
 					</div>
 				</div>
 				<div class="health-box">
@@ -654,52 +727,52 @@
 						<div class="article-box">
 							<ul>
 								<li>
-									<img src="images/index/health-box/01.png">
+									<a href="#"><img src="images/index/health-box/01.png"></a>
 									<span>
-										<h2>三大錯誤走路方式易跌倒 老年人應重新學走路三大錯誤走路方式易跌倒 老年人應重新學走路三大錯誤走路方式易跌倒 老年人應重新學走路</h2>
+										<h2><a href="#">三大錯誤走路方式易跌倒 老年人應重新學走路三大錯誤走路方式易跌倒 老年人應重新學走路三大錯誤走路方式易跌倒 老年人應重新學走路</a></h2>
 										<span class="tag-box">
-											<span class="tag">養生抗老</span>
+											<span class="tag"><a href="#">養生抗老</a></span>
 										</span>
-										<p>你走路時雙腳內八嗎？行走時重心前傾、腳跟未能著地？走路姿勢不良，小心走出問題。台北醫學大學高齡健康管理學系助理教授曾櫻枝分析銀髮族步態，整理出三大警訊你走路時雙腳內八嗎？行走時重心前傾、腳跟未能著地？走路姿勢不良，小心走出問題。台北醫學大學高齡健康管理學系助理教授曾櫻枝分析銀髮族步態，整理出三大警訊你走路時雙腳內八嗎？行走時重心前傾、腳跟未能著地？走路姿勢不良，小心走出問題。台北醫學大學高齡健康管理學系助理教授曾櫻枝分析銀髮族步態，整理出三大警訊</p>
+										<p><a href="#">你走路時雙腳內八嗎？行走時重心前傾、腳跟未能著地？走路姿勢不良，小心走出問題。台北醫學大學高齡健康管理學系助理教授曾櫻枝分析銀髮族步態，整理出三大警訊你走路時雙腳內八嗎？行走時重心前傾、腳跟未能著地？走路姿勢不良，小心走出問題。台北醫學大學高齡健康管理學系助理教授曾櫻枝分析銀髮族步態，整理出三大警訊你走路時雙腳內八嗎？行走時重心前傾、腳跟未能著地？走路姿勢不良，小心走出問題。台北醫學大學高齡健康管理學系助理教授曾櫻枝分析銀髮族步態，整理出三大警訊</a></p>
 										<span class="btn-detail">
 											<a href="#">閱讀內容</a>
 										</span>
 									</span>
 								</li>
 								<li>
-									<img src="images/index/health-box/02.png">
+									<a href="#"><img src="images/index/health-box/02.png"></a>
 									<span>
-										<h2>東西吃不太下去？小心是吞嚥功能出毛病</h2>
+										<h2><a href="#">三大錯誤走路方式易跌倒 老年人應重新學走路三大錯誤走路方式易跌倒 老年人應重新學走路三大錯誤走路方式易跌倒 老年人應重新學走路</a></h2>
 										<span class="tag-box">
-											<span class="tag">養生抗老</span>
+											<span class="tag"><a href="#">養生抗老</a></span>
 										</span>
-										<p>喜歡美食是人的天性，季媽媽是個美食專家，有好吃的總不會放過。不過，最近感覺心情不是很好、吃不太下，又好像是東西吞到喉嚨就吞不下去</p>
+										<p><a href="#">喜歡美食是人的天性，季媽媽是個美食專家，有好吃的總不會放過。不過，最近感覺心情不是很好、吃不太下，又好像是東西吞到喉嚨就吞不下去</a></p>
 										<span class="btn-detail">
 											<a href="#">閱讀內容</a>
 										</span>
 									</span>
 								</li>
 								<li>
-									<img src="images/index/health-box/03.png">
+									<a href="#"><img src="images/index/health-box/03.png"></a>
 									<span>
-										<h2>守護更年期健康　3招遠離骨鬆及心血管疾病</h2>
+										<h2><a href="#">三大錯誤走路方式易跌倒 老年人應重新學走路三大錯誤走路方式易跌倒 老年人應重新學走路三大錯誤走路方式易跌倒 老年人應重新學走路</a></h2>
 										<span class="tag-box">
-											<span class="tag">養生抗老</span>
+											<span class="tag"><a href="#">養生抗老</a></span>
 										</span>
-										<p>喜歡美食是人的天性，季媽媽是個美食專家，有好吃的總不會放過。不過，最近感覺心情不是很好、吃不太下，又好像是東西吞到喉嚨就吞不下去</p>
+										<p><a href="#">喜歡美食是人的天性，季媽媽是個美食專家，有好吃的總不會放過。不過，最近感覺心情不是很好、吃不太下，又好像是東西吞到喉嚨就吞不下去</a></p>
 										<span class="btn-detail">
 											<a href="#">閱讀內容</a>
 										</span>
 									</span>
 								</li>
 								<li>
-									<img src="images/index/health-box/01.png">
+									<a href="#"><img src="images/index/health-box/01.png"></a>
 									<span>
-										<h2>三大錯誤走路方式易跌倒 老年人應重新學走路三大錯誤走路方式易跌倒 老年人應重新學走路三大錯誤走路方式易跌倒 老年人應重新學走路</h2>
+										<h2><a href="#">三大錯誤走路方式易跌倒 老年人應重新學走路三大錯誤走路方式易跌倒 老年人應重新學走路三大錯誤走路方式易跌倒 老年人應重新學走路</a></h2>
 										<span class="tag-box">
-											<span class="tag">養生抗老</span>
+											<span class="tag"><a href="#">養生抗老</a></span>
 										</span>
-										<p>你走路時雙腳內八嗎？行走時重心前傾、腳跟未能著地？走路姿勢不良，小心走出問題。台北醫學大學高齡健康管理學系助理教授曾櫻枝分析銀髮族步態，整理出三大警訊你走路時雙腳內八嗎？行走時重心前傾、腳跟未能著地？走路姿勢不良，小心走出問題。台北醫學大學高齡健康管理學系助理教授曾櫻枝分析銀髮族步態，整理出三大警訊你走路時雙腳內八嗎？行走時重心前傾、腳跟未能著地？走路姿勢不良，小心走出問題。台北醫學大學高齡健康管理學系助理教授曾櫻枝分析銀髮族步態，整理出三大警訊</p>
+										<p><a href="#">你走路時雙腳內八嗎？行走時重心前傾、腳跟未能著地？走路姿勢不良，小心走出問題。台北醫學大學高齡健康管理學系助理教授曾櫻枝分析銀髮族步態，整理出三大警訊你走路時雙腳內八嗎？行走時重心前傾、腳跟未能著地？走路姿勢不良，小心走出問題。台北醫學大學高齡健康管理學系助理教授曾櫻枝分析銀髮族步態，整理出三大警訊你走路時雙腳內八嗎？行走時重心前傾、腳跟未能著地？走路姿勢不良，小心走出問題。台北醫學大學高齡健康管理學系助理教授曾櫻枝分析銀髮族步態，整理出三大警訊</a></p>
 										<span class="btn-detail">
 											<a href="#">閱讀內容</a>
 										</span>
@@ -710,6 +783,12 @@
 						</div>
 					</div>
 				</div>
+				<div class="banner-box mobile-only">
+					<div class="control-wrap">
+						<a href="#"><img class="for-mobile" src="images/index/300x250-3.png"></a>
+					</div>
+				</div>
+
 				<div class="wealth-box">
 					<div class="main">
 						<div class="main-box">
@@ -719,41 +798,33 @@
 							</div>
 							<div class="article-box">
 								<div class="main-article">
-									<a href="#">
-										<img src="images/index/wealth-box/main-img.png">
-										<span class="detail">
-											<span class="tag">退休</span>
-											<span class="article-title">退休快樂似神仙？小心落入愈活愈窮的六個陷阱退休快樂似神仙？小心落入愈活愈窮的六個陷阱</span>
-										</span>
-									</a>
+									<a href="#"><img src="images/index/wealth-box/main-img.png"></a>
+									<span class="detail">
+										<span class="tag"><a href="#tag">退休</a></span>
+										<span class="article-title"><a href="#">退休快樂似神仙？小心落入愈活愈窮的六個陷阱退休快樂似神仙？小心落入愈活愈窮的六個陷阱</a></span>
+									</span>
 								</div>
 								<div class="right-box">
 									<div class="sub-article">
-										<a href="#">
-											<img src="images/index/wealth-box/sub-img.png">
-											<span class="detail">
-												<span class="tag">投資</span>
-												<span class="article-title">預防失能最後拼圖　長照險一次搞懂</span>
-											</span>
-										</a>
+										<a href="#"><img src="images/index/wealth-box/sub-img.png"></a>
+										<span class="detail">
+											<span class="tag"><a href="#tag">投資</a></span>
+											<span class="article-title"><a href="#">預防失能最後拼圖　長照險一次搞懂</a></span>
+										</span>
 									</div>
 									<div class="other-box">
-										<a href="#">
-											<img src="images/index/wealth-box/other-img-01.png">
-											<span class="detail">
-												<span class="tag">保險規劃</span>
-												<span class="article-title">面對善終　要留給家人的是「財產」還是「負擔」？</span>
-											</span>
-										</a>
+										<a href="#"><img src="images/index/wealth-box/other-img-01.png"></a>
+										<span class="detail">
+											<span class="tag"><a href="#tag">保險規劃</a></span>
+											<span class="article-title"><a href="#">面對善終　要留給家人的是「財產」還是「負擔」？</a></span>
+										</span>
 									</div>
 									<div class="other-box">
-										<a href="#">
-											<img src="images/index/wealth-box/other-img-02.png">
-											<span class="detail">
-												<span class="tag">保險規劃</span>
-												<span class="article-title">面對善終　要留給家人</span>
-											</span>
-										</a>
+										<a href="#"><img src="images/index/wealth-box/other-img-02.png"></a>
+										<span class="detail">
+											<span class="tag"><a href="#tag">保險規劃</a></span>
+											<span class="article-title"><a href="#">面對善終　要留給家人的是「財產」還是「負擔」？</a></span>
+										</span>
 									</div>
 								</div>
 							</div>
@@ -761,9 +832,16 @@
 						<div class="right-banner-box">
 							<a href="#"><img src="images/index/wealth-box/300x600.png"></a>
 						</div>
-						<div class="btn-more"><a href="#" title="更多健康資訊">更多健康資訊</a></div>
+						<div class="btn-more"><a href="#" title="更多理財資訊">更多理財資訊</a></div>
 					</div>
 				</div>
+
+				<div class="banner-box mobile-only">
+					<div class="control-wrap">
+						<a href="#"><img class="for-mobile" src="images/index/300x250-3.png"></a>
+					</div>
+				</div>
+
 				<div class="lohas-box">
 					<div class="main">
 						<div class="title-box lohas">
@@ -785,67 +863,61 @@
 							<div class="other-box">
 								<ul>
 									<li>
-										<a href="#" title="我的室友90歲！超混齡共居時代來了！">
-											<div class="left-box"><img src="images/index/lohas-box/other-img-01.png"></div>
-											<div class="left-box mobile"><img src="images/index/lohas-box/other-img-mobile-01.png"></div>
-											<div class="right-box">
-												<h2>我的室友90歲！超混齡共居時代來了！</h2>
-												<p>新北三峽老街，某藍染體驗手作坊裡，90歲的豆豆奶奶跟著一群20多歲的新北三峽老街，某藍染體驗手作坊裡，90歲的豆豆奶奶跟著一群20多歲的</p>
-												<div class="other-info">
-													<span class="tag">學習成長</span>
-													<span class="article-time">2017-12-25</span>
-												</div>
+										<div class="left-box"><a href="#"><img src="images/index/lohas-box/other-img-01.png"></a></div>
+										<div class="left-box mobile"><a href="#"><img src="images/index/lohas-box/other-img-mobile-01.png"></a></div>
+										<div class="right-box">
+											<h2><a href="#">我的室友90歲！超混齡共居時代來了！</a></h2>
+											<p><a href="#">新北三峽老街，某藍染體驗手作坊裡，90歲的豆豆奶奶跟著一群20多歲的新北三峽老街，某藍染體驗手作坊裡，90歲的豆豆奶奶跟著一群20多歲的</a></p>
+											<div class="other-info">
+												<span class="tag"><a href="#tag">學習成長</a></span>
+												<span class="article-time">2017-12-25</span>
 											</div>
-											<div class="right-box mobile">
-												<div class="other-info">
-													<span class="tag">學習成長</span>
-													<span class="article-time">2017-12-25</span>
-												</div>
-												<h2>我的室友90歲！超混齡共居時代來了！我的室友90歲！超混齡共居時代來了！我的室友90歲！超混齡共居時代來了！</h2>
+										</div>
+										<div class="right-box mobile">
+											<div class="other-info">
+												<span class="tag"><a href="#tag">學習成長</a></span>
+												<span class="article-time">2017-12-25</span>
 											</div>
-										</a>
+											<h2><a href="#">我的室友90歲！超混齡共居時代來了！我的室友90歲！超混齡共居時代來了！我的室友90歲！超混齡共居時代來了！</a></h2>
+										</div>
 									</li>
 									<li>
-										<a href="#" title="三大錯誤走路方式易跌倒 老年人應重新學走路">
-											<div class="left-box"><img src="images/index/lohas-box/other-img-02.png"></div>
-											<div class="left-box mobile"><img src="images/index/lohas-box/other-img-mobile-02.png"></div>
-											<div class="right-box">
-												<h2>三大錯誤走路方式易跌倒 老年人應重新學走路</h2>
-												<p>新北三峽老街，某藍染體驗手作坊裡，90歲的豆豆奶奶跟著一群20多歲的新北三峽老街，某藍染體驗手作坊裡，90歲的豆豆奶奶跟著一群20多歲的</p>
-												<div class="other-info">
-													<span class="tag">學習成長</span>
-													<span class="article-time">2017-12-25</span>
-												</div>
+										<div class="left-box"><a href="#"><img src="images/index/lohas-box/other-img-02.png"></a></div>
+										<div class="left-box mobile"><a href="#"><img src="images/index/lohas-box/other-img-mobile-01.png"></a></div>
+										<div class="right-box">
+											<h2><a href="#">我的室友90歲！超混齡共居時代來了！</a></h2>
+											<p><a href="#">新北三峽老街，某藍染體驗手作坊裡，90歲的豆豆奶奶跟著一群20多歲的新北三峽老街，某藍染體驗手作坊裡，90歲的豆豆奶奶跟著一群20多歲的</a></p>
+											<div class="other-info">
+												<span class="tag"><a href="#tag">學習成長</a></span>
+												<span class="article-time">2017-12-25</span>
 											</div>
-											<div class="right-box mobile">
-												<div class="other-info">
-													<span class="tag">學習成長</span>
-													<span class="article-time">2017-12-25</span>
-												</div>
-												<h2>三大錯誤走路方式易跌倒 老年人應重新學走路</h2>
+										</div>
+										<div class="right-box mobile">
+											<div class="other-info">
+												<span class="tag"><a href="#tag">學習成長</a></span>
+												<span class="article-time">2017-12-25</span>
 											</div>
-										</a>
+											<h2><a href="#">我的室友90歲！超混齡共居時代來了！我的室友90歲！超混齡共居時代來了！我的室友90歲！超混齡共居時代來了！</a></h2>
+										</div>
 									</li>
 									<li>
-										<a href="#" title="99歲爺爺的「不退休」哲學！">
-											<div class="left-box"><img src="images/index/lohas-box/other-img-03.png"></div>
-											<div class="left-box mobile"><img src="images/index/lohas-box/other-img-mobile-03.png"></div>
-											<div class="right-box">
-												<h2>99歲爺爺的「不退休」哲學！</h2>
-												<p>新北三峽老街，某藍染體驗手作坊裡，90歲的豆豆奶奶跟著一群20多歲的新北三峽老街，某藍染體驗手作坊裡，90歲的豆豆奶奶跟著一群20多歲的</p>
-												<div class="other-info">
-													<span class="tag">學習成長</span>
-													<span class="article-time">2017-12-25</span>
-												</div>
+										<div class="left-box"><a href="#"><img src="images/index/lohas-box/other-img-03.png"></a></div>
+										<div class="left-box mobile"><a href="#"><img src="images/index/lohas-box/other-img-mobile-01.png"></a></div>
+										<div class="right-box">
+											<h2><a href="#">我的室友90歲！超混齡共居時代來了！</a></h2>
+											<p><a href="#">新北三峽老街，某藍染體驗手作坊裡，90歲的豆豆奶奶跟著一群20多歲的新北三峽老街，某藍染體驗手作坊裡，90歲的豆豆奶奶跟著一群20多歲的</a></p>
+											<div class="other-info">
+												<span class="tag"><a href="#tag">學習成長</a></span>
+												<span class="article-time">2017-12-25</span>
 											</div>
-											<div class="right-box mobile">
-												<div class="other-info">
-													<span class="tag">學習成長</span>
-													<span class="article-time">2017-12-25</span>
-												</div>
-												<h2>99歲爺爺的「不退休」哲學！</h2>
+										</div>
+										<div class="right-box mobile">
+											<div class="other-info">
+												<span class="tag"><a href="#tag">學習成長</a></span>
+												<span class="article-time">2017-12-25</span>
 											</div>
-										</a>
+											<h2><a href="#">我的室友90歲！超混齡共居時代來了！我的室友90歲！超混齡共居時代來了！我的室友90歲！超混齡共居時代來了！</a></h2>
+										</div>
 									</li>
 								</ul>
 							</div>
@@ -855,18 +927,25 @@
 				</div>
 				<div class="banner-box bottom">
 					<div class="control-wrap">
-						<img src="images/index/970x250-3.png">
+						<a href="#"><img class="for-deskop" src="images/index/970x250-3.png"></a>
 					</div>
 				</div>
 			</section>
 		</div>
 		<footer>
-			<div class="ad-search-box"><p>還找不到適合您家中長輩的長照機構嗎? 幸福熟齡提供您最專業的資訊!</p><div class="footer-btn"> <a href="#">立即搜尋</a></div></div>
+			<div class="ad-search-box">
+				<p class="for-deskop">還找不到適合您家中長輩的長照機構嗎? 幸福熟齡提供您最專業的資訊!</p>
+				<p class="for-mobile">提供您最專業的長照機構資訊!</p>
+				<div class="footer-btn"> <a href="#">立即搜尋</a></div>
+			</div>
 			<div class="footer-detail">
 				<div class="footer-main">
 					<div class="contact-box">
 						<ul>
-							<li class="footer-logo"><img src="images/footer/footer-logo.png" title="幸福熟齡"></img></li>
+							<li class="footer-logo">
+								<img src="images/footer/footer-logo.png" title="幸福熟齡"></img>
+								<img src="images/footer/footer-logo-2.png" title="今周刊"></img>
+							</li>
 							<li>服務電話：(02)2581-6194按1</li>
 							<li>服務時間：週一至五09:00~17:30例假日除外</li>
 							<li>傳真電話：(02)2531-6438</li>
@@ -921,7 +1000,7 @@
 						<div class="search-bar">
 							<form>
 								<input type="text" name="search-tag" placeholder="輸入關鍵字..."></input>
-								<button><i>1</i></button>
+								<button><i class="fa fa-search" aria-hidden="true"></i></button>
 							</form>
 						</div>
 					</div>
@@ -933,7 +1012,7 @@
 		<script>
 			$(function(){
 				// $.ajax({
-				// 	url: "_mode/header.html",
+				// 	url: "header.html",
 				// 	dataType:'html',
 				// 	success: function(msg){
 				// 		$("header").append(msg)

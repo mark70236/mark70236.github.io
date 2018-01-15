@@ -4,6 +4,8 @@ $(function() {
             $("body").addClass('mac-user')
       }
 
+
+      //長照搜尋區塊-關鍵字搜尋彈窗控制
       $(".ltc-box .nav li.keyword input, .ltc-box .nav li.keyword i").click(function() {
       	if ($(".ltc-box .search-lightbox, .ltc-box .mask").hasClass('active')) {
       		return false;
@@ -19,6 +21,59 @@ $(function() {
       	}
      	});
 
+      //長照搜尋區塊-下拉選單聯動控制
+      //市區下拉選單
+      $("#sel-city").change(function(){
+            switch (parseInt($(this).val())){
+                  case 0:
+                        $("#sel-area option").remove();
+                        $("#sel-area").append($("<option value=''>鄉鎮區</option>"));
+                        break;
+                  case 1:
+                        $("#sel-area option").remove();
+                        var array = [ "中山區", "信義區", "文山區", "大安區" ];
+                        //利用each遍歷array中的值並將每個值新增到Select中
+                        $.each(array, function(i, val) {
+                          $("#sel-area").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
+                        });
+                        break;
+                  case 2:
+                        $("#sel-area option").remove();
+                        var array = [ "前鎮區", "鳳山區", "小港區", "永安區" ];
+                        //利用each遍歷array中的值並將每個值新增到Select中
+                        $.each(array, function(i, val) {
+                          $("#sel-area").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
+                        });
+                        break;
+            }
+      })
+      //服務類型下拉選單
+      $("#sel-type-1").change(function(){
+            switch (parseInt($(this).val())){
+                  case 0:
+                        $("#sel-type-2 option").remove();
+                        $("#sel-type-2").append($("<option value=''>服務類型</option>"));
+                        break;
+                  case 1:
+                        $("#sel-type-2 option").remove();
+                        var array = [ "類型1-1", "類型1-2", "類型1-3", "類型1-4" ];
+                        //利用each遍歷array中的值並將每個值新增到Select中
+                        $.each(array, function(i, val) {
+                          $("#sel-type-2").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
+                        });
+                        break;
+                  case 2:
+                        $("#sel-type-2 option").remove();
+                        var array = [ "類型2-1", "類型2-2", "類型2-3", "類型2-4" ];
+                        //利用each遍歷array中的值並將每個值新增到Select中
+                        $.each(array, function(i, val) {
+                          $("#sel-type-2").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
+                        });
+                        break;
+            }
+      })
+
+      //右側導航列根據scrollbar控制
 	$(window).scroll(function () {
 		var scrollVal = $(this).scrollTop();
 		//console.log(scrollVal);
@@ -48,6 +103,12 @@ $(function() {
 		$("html,body").animate({ scrollTop: pos-50 }, 700);
 	});
 
+      //
+      $(".ad-search-box .footer-btn a").click(function() {
+          var pos = $(".ltc-box").offset().top;
+          $("html,body").animate({ scrollTop: pos-100 }, 700);
+      });
+
 
 	$(".main-banner-box").slick({
 		dots: true,
@@ -57,7 +118,7 @@ $(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		centerMode: true,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 4000,
 		nextArrow: '<i class="fa fa-arrow-circle-o-right next"></i>',
 		prevArrow: '<i class="fa fa-arrow-circle-o-left prev"></i>',
@@ -119,8 +180,8 @@ $(function() {
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		centerMode: true,
-		autoplay: true,
-		autoplaySpeed: 4000,
+		autoplay: false,
+		autoplaySpeed: 3000,
 		responsive: [
                 {
                   breakpoint: 1600,
@@ -166,9 +227,10 @@ $(function() {
                   }
                 },
                 {
-                  breakpoint: 420,
+                  breakpoint: 800,
                   settings: {
-                    slidesToShow: 1
+                    slidesToShow: 4,
+                    autoplay: false
                   }
                 }
             ]
