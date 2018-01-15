@@ -41,7 +41,7 @@ $(function() {
           }
       });
 
-      $(".mobile-menu >ul >li").click(function() {
+      $(".mobile-menu >ul >li.parent").click(function() {
           if ($(this).find('ul').hasClass('active')) {
             $(this).find('ul').removeClass('active');
             $(this).find('i').removeClass('fa-minus').addClass('fa-plus');
@@ -50,6 +50,9 @@ $(function() {
             $(this).find('i').removeClass('fa-plus').addClass('fa-minus');
           }
       });
+      $(".mobile-menu >ul >li.parent >ul >li").click(function() {
+          return false;
+      })
 
 
       $(window).scroll(function () {

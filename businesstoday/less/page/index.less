@@ -20,6 +20,10 @@ body > .wrap { margin-top: 123px; }
 		}
 		@media all and (max-width: 800px) {
 			& {
+				display: block!important;
+				opacity: 1!important;
+				width: 100%!important;
+				height: 77px!important;
 				right: 0;
 				top: auto;
 				bottom: 0;
@@ -545,7 +549,7 @@ body > .wrap { margin-top: 123px; }
 							h2 {
 								color: #fff;
 								font-size: 24px;
-								font-weight: bold;
+								font-weight: bolder;
 								line-height: 34px;
 								max-height: 68px;
 								.oe;
@@ -1404,7 +1408,10 @@ body > .wrap { margin-top: 123px; }
 
 		}
 		.banner-box.mobile-only {
-			padding: 0px 0 80px 0;
+			padding: 0;
+			@media all and (max-width: 800px) {
+				& { padding: 0px 0 80px 0; }
+			}
 		}
 
 		.banner-box.bottom {

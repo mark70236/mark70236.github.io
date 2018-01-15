@@ -247,17 +247,22 @@ header {
 	}
 	.mobile-menu {
 		width: 285px;
-		height: ~"calc(100% - 123px)";
+		height: ~"calc(100% - 200px)";
 		position: fixed;
+		overflow: hidden;
 		background: #F8F8F8;
 		left: -285px;
 		top: 123px;
 		z-index: 12;
 		.trs(left 0.5s ease);
+		@media all and (min-width: 800px) and (max-width: 1420px) {
+			&{ height: ~"calc(100% - 123px)"; }
+		}
 		>ul {
 			padding: 10% 0;
 			overflow-y: scroll;
 			max-height: 100%;
+			box-sizing: border-box;
 			>li {
 				cursor: pointer;
 				font-size: 20px;
@@ -287,6 +292,11 @@ header {
 						text-indent: 49px;
 						font-size: 18px;
 						border-bottom: solid 1px #D4D4D4;
+						background-color: #fff;
+						.trs;
+						&:hover {
+							background-color: #eee;
+						}
 					}
 					>li:nth-child(1) {
 						border-top: solid 1px #D4D4D4;
@@ -343,6 +353,9 @@ header {
 		.trs(0.2s);
 		top: 0;
 		height: 100%;
+		@media all and (max-width: 800px) {
+			& { height: ~"calc(100% - 77px)"; }
+		}
 	}
 	.mobile-black-mask.top-mode {.trs(0.2s); top: 0; }
 }

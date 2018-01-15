@@ -546,8 +546,9 @@ header .border-bottom {
 }
 header .mobile-menu {
   width: 285px;
-  height: calc(100% - 123px);
+  height: calc(100% - 200px);
   position: fixed;
+  overflow: hidden;
   background: #F8F8F8;
   left: -285px;
   top: 123px;
@@ -558,10 +559,16 @@ header .mobile-menu {
   -ms-transition: left 0.5s ease;
   transition: left 0.5s ease;
 }
+@media all and (min-width: 800px) and (max-width: 1420px) {
+  header .mobile-menu {
+    height: calc(100% - 123px);
+  }
+}
 header .mobile-menu > ul {
   padding: 10% 0;
   overflow-y: scroll;
   max-height: 100%;
+  box-sizing: border-box;
 }
 header .mobile-menu > ul > li {
   cursor: pointer;
@@ -594,6 +601,15 @@ header .mobile-menu > ul > li > ul > li {
   text-indent: 49px;
   font-size: 18px;
   border-bottom: solid 1px #D4D4D4;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+header .mobile-menu > ul > li > ul > li:hover {
+  background-color: #eee;
 }
 header .mobile-menu > ul > li > ul > li:nth-child(1) {
   border-top: solid 1px #D4D4D4;
@@ -644,6 +660,11 @@ header .mobile-menu.top-mode {
   transition: 0.2s;
   top: 0;
   height: 100%;
+}
+@media all and (max-width: 800px) {
+  header .mobile-menu.top-mode {
+    height: calc(100% - 77px);
+  }
 }
 header .mobile-black-mask.top-mode {
   -webkit-transition: 0.2s;
@@ -934,6 +955,10 @@ body > .wrap {
 }
 @media all and (max-width: 800px) {
   .wrap .sidebar {
+    display: block!important;
+    opacity: 1!important;
+    width: 100%!important;
+    height: 77px!important;
     right: 0;
     top: auto;
     bottom: 0;
@@ -1523,7 +1548,7 @@ body > .wrap {
 .wrap section.section1 .news-box .article-box ul li > span h2 {
   color: #fff;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: bolder;
   line-height: 34px;
   max-height: 68px;
   white-space: nowrap;
@@ -2464,7 +2489,12 @@ body > .wrap {
   }
 }
 .wrap section.section2 .banner-box.mobile-only {
-  padding: 0px 0 80px 0;
+  padding: 0;
+}
+@media all and (max-width: 800px) {
+  .wrap section.section2 .banner-box.mobile-only {
+    padding: 0px 0 80px 0;
+  }
 }
 .wrap section.section2 .banner-box.bottom {
   padding: 70px 0 40px 0;
