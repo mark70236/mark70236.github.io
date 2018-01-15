@@ -118,7 +118,7 @@ $(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		centerMode: true,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 4000,
 		nextArrow: '<i class="fa fa-arrow-circle-o-right next"></i>',
 		prevArrow: '<i class="fa fa-arrow-circle-o-left prev"></i>',
@@ -180,7 +180,7 @@ $(function() {
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		centerMode: true,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 3000,
 		responsive: [
                 {
@@ -242,7 +242,7 @@ $(function() {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		centerMode: true,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 4000,
 		responsive: [
                 {

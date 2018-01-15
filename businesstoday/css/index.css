@@ -2639,7 +2639,7 @@ body > .wrap {
   color: #595959;
   line-height: 20px;
   margin-bottom: 10px;
-  height: 100px;
+  max-height: 100px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
