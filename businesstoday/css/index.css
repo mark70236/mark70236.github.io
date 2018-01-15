@@ -1245,6 +1245,23 @@ body > .wrap {
   -ms-transition: 0.5s;
   transition: 0.5s;
 }
+.wrap .main-banner-box .slick-dots {
+  position: relative;
+  top: -5px;
+}
+@media all and (max-width: 1200px) {
+  .wrap .main-banner-box .slick-dots {
+    display: none!important;
+  }
+}
+.wrap .main-banner-box .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #000;
+}
+.wrap .main-banner-box .slick-dots li button:before {
+  opacity: 1;
+  color: #fff;
+}
 .wrap .main-banner-box .slick-prev {
   left: 10px;
   position: absolute;
