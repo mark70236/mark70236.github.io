@@ -1025,7 +1025,7 @@ body > .wrap { margin-top: 123px; }
 							}
 							li.border-none { border: none; }
 							li.keyword {
-								line-height: 0;
+								//line-height: 0;
 								@media all and (max-width: 1200px) {
 									& {
 										background-color: #fff;
@@ -1033,6 +1033,7 @@ body > .wrap { margin-top: 123px; }
 									}
 								}
 								input {
+									display:none;
 									border-radius: 7px;
 									border: solid 1px #000;
 									width: 100px;
@@ -1042,6 +1043,7 @@ body > .wrap { margin-top: 123px; }
 									text-indent: -15px;
 									@media all and (max-width: 1200px) {
 										& {
+											display: block;
 											width: 100%;
 											border-radius: 0;
 											border: none;
@@ -1051,11 +1053,26 @@ body > .wrap { margin-top: 123px; }
 										}
 									}
 								}
+								.input-btn {
+									width: 100px;
+									height: 30px;
+									margin: 0px auto;
+									padding-top: 0px;
+									border: solid 1px #333;
+									border-radius: 7px;
+									line-height: 30px;
+									text-indent: -10px;
+									@media all and (max-width: 1200px) {
+										& {
+											display: none;
+										}
+									}
+								}
 								i {
 									position: absolute;
-									top: 5px;
-									right: 19px;
-									background: #fff;
+									top: 6px;
+									right: 23px;
+									//background: #fff;
 									width: 23px;
 									@media all and (max-width: 1200px) {
 										& { display: none; }

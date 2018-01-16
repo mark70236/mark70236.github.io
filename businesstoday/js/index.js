@@ -6,7 +6,7 @@ $(function() {
 
 
       //長照搜尋區塊-關鍵字搜尋彈窗控制
-      $(".ltc-box .nav li.keyword input, .ltc-box .nav li.keyword i").click(function() {
+      $(".ltc-box .nav li.keyword .input-btn, .ltc-box .nav li.keyword i").click(function() {
       	if ($(".ltc-box .search-lightbox, .ltc-box .mask").hasClass('active')) {
       		return false;
       	}else {

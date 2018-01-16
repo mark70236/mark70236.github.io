@@ -2088,9 +2088,6 @@ body > .wrap {
 .wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li.border-none {
   border: none;
 }
-.wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li.keyword {
-  line-height: 0;
-}
 @media all and (max-width: 1200px) {
   .wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li.keyword {
     background-color: #fff;
@@ -2098,6 +2095,7 @@ body > .wrap {
   }
 }
 .wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li.keyword input {
+  display: none;
   border-radius: 7px;
   border: solid 1px #000;
   width: 100px;
@@ -2108,6 +2106,7 @@ body > .wrap {
 }
 @media all and (max-width: 1200px) {
   .wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li.keyword input {
+    display: block;
     width: 100%;
     border-radius: 0;
     border: none;
@@ -2116,11 +2115,25 @@ body > .wrap {
     background-color: #fff;
   }
 }
+.wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li.keyword .input-btn {
+  width: 100px;
+  height: 30px;
+  margin: 0px auto;
+  padding-top: 0px;
+  border: solid 1px #333;
+  border-radius: 7px;
+  line-height: 30px;
+  text-indent: -10px;
+}
+@media all and (max-width: 1200px) {
+  .wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li.keyword .input-btn {
+    display: none;
+  }
+}
 .wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li.keyword i {
   position: absolute;
-  top: 5px;
-  right: 19px;
-  background: #fff;
+  top: 6px;
+  right: 23px;
   width: 23px;
 }
 @media all and (max-width: 1200px) {
