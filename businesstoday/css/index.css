@@ -324,7 +324,6 @@ header .main-menu .main .logo {
   }
 }
 header .main-menu .main > ul {
-  overflow: hidden;
   height: 66px;
   float: left;
   margin-top: 9px;
@@ -336,25 +335,25 @@ header .main-menu .main > ul {
   }
 }
 header .main-menu .main > ul li {
+  overflow: hidden;
   width: 100px;
   height: 100%;
   float: left;
   margin-right: 2px;
   border-top: solid 3px #ee776d;
-}
-header .main-menu .main > ul li a {
   font-size: 18px;
   color: #4a4a4a;
   line-height: 66px;
   text-align: center;
   position: relative;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
 }
-header .main-menu .main > ul li a .bg-box {
+header .main-menu .main > ul li .bg-box {
   display: block;
   width: 100%;
   height: 0%;
@@ -365,14 +364,19 @@ header .main-menu .main > ul li a .bg-box {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-header .main-menu .main > ul li a .text {
+header .main-menu .main > ul li .text {
   display: block;
   position: absolute;
   top: 0;
   width: 100%;
   text-align: center;
+  z-index: 1;
+  background-color: #fff;
 }
-header .main-menu .main > ul li a .text i {
+header .main-menu .main > ul li .text:hover {
+  background-color: transparent;
+}
+header .main-menu .main > ul li .text i {
   display: inline-block;
   width: 23px;
   height: 23px;
@@ -385,88 +389,132 @@ header .main-menu .main > ul li a .text i {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-header .main-menu .main > ul li:hover a {
+header .main-menu .main > ul li > ul {
+  opacity: 0;
+  z-index: -10;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+header .main-menu .main > ul li > ul li {
+  border-top: none;
+  background-color: #fff;
+}
+header .main-menu .main > ul li > ul li a {
+  color: #404040;
+}
+header .main-menu .main > ul li > ul li a:hover {
+  color: #F1762D;
+}
+header .main-menu .main > ul li:hover {
   color: #fff;
 }
 header .main-menu .main > ul li:hover .bg-box {
   height: 100%;
 }
+header .main-menu .main > ul li:hover > ul {
+  z-index: 1;
+  opacity: 1;
+}
+header .main-menu .main > ul li.active {
+  color: #fff;
+  overflow: unset;
+}
+header .main-menu .main > ul li.active .bg-box {
+  height: 100%;
+}
+header .main-menu .main > ul li.active .text {
+  background-color: transparent;
+}
+header .main-menu .main > ul li.active > ul {
+  z-index: 1;
+  opacity: 1;
+}
 header .main-menu .main > ul li.menu-news .text i {
   background-image: url('../images/header/menu/news_icon.png');
 }
-header .main-menu .main > ul li.menu-news:hover .text i {
+header .main-menu .main > ul li.menu-news:hover .text i,
+header .main-menu .main > ul li.menu-news.active .text i {
   background-image: url('../images/header/menu/news_icon_hover.png');
 }
 header .main-menu .main > ul li.menu-project .text i {
   background-image: url('../images/header/menu/project_icon.png');
 }
-header .main-menu .main > ul li.menu-project:hover .text i {
+header .main-menu .main > ul li.menu-project:hover .text i,
+header .main-menu .main > ul li.menu-project.active .text i {
   background-image: url('../images/header/menu/project_icon_hover.png');
 }
 header .main-menu .main > ul li.menu-dream .text i {
   background-image: url('../images/header/menu/dream_icon.png');
 }
-header .main-menu .main > ul li.menu-dream:hover .text i {
+header .main-menu .main > ul li.menu-dream:hover .text i,
+header .main-menu .main > ul li.menu-dream.active .text i {
   background-image: url('../images/header/menu/dream_icon_hover.png');
 }
 header .main-menu .main > ul li.menu-health .text i {
   background-image: url('../images/header/menu/health_icon.png');
 }
-header .main-menu .main > ul li.menu-health:hover .text i {
+header .main-menu .main > ul li.menu-health:hover .text i,
+header .main-menu .main > ul li.menu-health.active .text i {
   background-image: url('../images/header/menu/health_icon_hover.png');
 }
 header .main-menu .main > ul li.menu-lohas .text i {
   background-image: url('../images/header/menu/lohas_icon.png');
 }
-header .main-menu .main > ul li.menu-lohas:hover .text i {
+header .main-menu .main > ul li.menu-lohas:hover .text i,
+header .main-menu .main > ul li.menu-lohas.active .text i {
   background-image: url('../images/header/menu/lohas_icon_hover.png');
 }
 header .main-menu .main > ul li.menu-wealth .text i {
   background-image: url('../images/header/menu/wealth_icon.png');
 }
-header .main-menu .main > ul li.menu-wealth:hover .text i {
+header .main-menu .main > ul li.menu-wealth:hover .text i,
+header .main-menu .main > ul li.menu-wealth.active .text i {
   background-image: url('../images/header/menu/wealth_icon_hover.png');
 }
 header .main-menu .main > ul li.menu-activity .text i {
   background-image: url('../images/header/menu/activity_icon.png');
 }
-header .main-menu .main > ul li.menu-activity:hover .text i {
+header .main-menu .main > ul li.menu-activity:hover .text i,
+header .main-menu .main > ul li.menu-activity.active .text i {
   background-image: url('../images/header/menu/activity_icon_hover.png');
 }
-header .main-menu .main > ul li:nth-child(2) {
+header .main-menu .main > ul > li:nth-child(2) {
   border-top: solid 3px #e49f65;
 }
-header .main-menu .main > ul li:nth-child(2) .bg-box {
+header .main-menu .main > ul > li:nth-child(2) .bg-box {
   background-color: #e49f65;
 }
-header .main-menu .main > ul li:nth-child(3) {
+header .main-menu .main > ul > li:nth-child(3) {
   border-top: solid 3px #ffdc52;
 }
-header .main-menu .main > ul li:nth-child(3) .bg-box {
+header .main-menu .main > ul > li:nth-child(3) .bg-box {
   background-color: #ffdc52;
 }
-header .main-menu .main > ul li:nth-child(4) {
+header .main-menu .main > ul > li:nth-child(4) {
   border-top: solid 3px #95cd63;
 }
-header .main-menu .main > ul li:nth-child(4) .bg-box {
+header .main-menu .main > ul > li:nth-child(4) .bg-box {
   background-color: #95cd63;
 }
-header .main-menu .main > ul li:nth-child(5) {
+header .main-menu .main > ul > li:nth-child(5) {
   border-top: solid 3px #c269c7;
 }
-header .main-menu .main > ul li:nth-child(5) .bg-box {
+header .main-menu .main > ul > li:nth-child(5) .bg-box {
   background-color: #c269c7;
 }
-header .main-menu .main > ul li:nth-child(6) {
+header .main-menu .main > ul > li:nth-child(6) {
   border-top: solid 3px #d9bc6f;
 }
-header .main-menu .main > ul li:nth-child(6) .bg-box {
+header .main-menu .main > ul > li:nth-child(6) .bg-box {
   background-color: #d9bc6f;
 }
-header .main-menu .main > ul li:nth-child(7) {
+header .main-menu .main > ul > li:nth-child(7) {
   border-top: solid 3px #00bdbb;
 }
-header .main-menu .main > ul li:nth-child(7) .bg-box {
+header .main-menu .main > ul > li:nth-child(7) .bg-box {
   background-color: #00bdbb;
 }
 header .main-menu .main .header-search-box {
@@ -604,9 +652,13 @@ header .mobile-menu > ul > li > i {
   line-height: 40px;
 }
 header .mobile-menu > ul > li > ul {
-  height: 1px;
+  max-height: 1px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+  -ms-transition: 0.7s;
+  transition: 0.7s;
 }
 header .mobile-menu > ul > li > ul > li {
   text-indent: 49px;
@@ -626,7 +678,7 @@ header .mobile-menu > ul > li > ul > li:nth-child(1) {
   border-top: solid 1px #D4D4D4;
 }
 header .mobile-menu > ul > li > ul.active {
-  height: auto;
+  max-height: 500px;
 }
 header .mobile-menu > ul > li.mobile-menu-news span.color {
   background-color: #EE776D;
@@ -898,6 +950,9 @@ footer .footer-detail .footer-main .tag-cloud .tag-box span {
   text-indent: 1px;
   float: left;
   cursor: pointer;
+}
+footer .footer-detail .footer-main .tag-cloud .tag-box span a {
+  color: #fff;
 }
 footer .footer-detail .footer-main .tag-cloud .search-bar {
   width: 100%;
@@ -2303,6 +2358,12 @@ body > .wrap {
     border-bottom: solid 1px #C5C5C5;
   }
 }
+.wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li a img {
+  transition: opacity 0.3s ease;
+}
+.wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li a img:hover {
+  opacity: 0.8;
+}
 @media all and (max-width: 800px) {
   .wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li a img {
     width: 125px;
@@ -2511,6 +2572,9 @@ body > .wrap {
 }
 .wrap section.section1 .project-box .article-box ul li a img {
   display: block;
+}
+.wrap section.section1 .project-box .article-box ul li a img:hover {
+  opacity: 0.8;
 }
 .wrap section.section1 .project-box .article-box ul li > span {
   position: relative;
@@ -2796,6 +2860,14 @@ body > .wrap {
   font-size: 16px;
   color: #fff;
 }
+.wrap section.section2 .health-box .main .article-box ul li img:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 @media all and (max-width: 1290px) {
   .wrap section.section2 .health-box .main .article-box ul li {
     box-shadow: none;
@@ -2892,7 +2964,7 @@ body > .wrap {
 }
 @media all and (max-width: 800px) {
   .wrap section.section2 .wealth-box .main .main-box .article-box {
-    max-width: 430px;
+    max-width: none;
     margin: 0 auto;
   }
 }
@@ -3365,4 +3437,10 @@ _:lang(x)::x-,
   .wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li select {
     text-indent: -5px;
   }
+}
+/* IE 11 */
+_:lang(x)::-ms-backdrop,
+.wrap section.section1 .news-box .article-box ul li > span > a:nth-child(2) {
+  position: relative;
+  bottom: 20px;
 }

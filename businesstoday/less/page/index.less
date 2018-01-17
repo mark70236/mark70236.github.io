@@ -1219,6 +1219,8 @@ body > .wrap { margin-top: 123px; }
 								}
 								a {
 									img {
+										transition: opacity 0.3s ease;
+										&:hover { opacity: 0.8; }
 										@media all and (max-width: 800px) {
 											& {
 												width: 125px;
@@ -1426,7 +1428,10 @@ body > .wrap { margin-top: 123px; }
 						a {
 							display: inline;
 							position: relative;
-							img { display: block; }
+							img {
+								display: block;
+								&:hover { opacity: 0.8; }
+							}
 						}
 						> span {
 							position: relative;
@@ -1668,6 +1673,13 @@ body > .wrap { margin-top: 123px; }
 										color: #fff;
 									}
 								}
+
+							}
+							img {
+								&:hover {
+									opacity: 0.8;
+									.trs;
+								}
 							}
 							@media all and (max-width: 1290px) {
 								& { box-shadow: none; }
@@ -1748,7 +1760,7 @@ body > .wrap { margin-top: 123px; }
 						height: 545px;
 						@media all and (max-width: 800px) {
 							& {
-								max-width: 430px;
+								max-width: none;
 								margin: 0 auto;
 							}
 						}
@@ -2182,4 +2194,10 @@ _:lang(x)::x-, .wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li 
 	.wrap section.section1 .ltc-box .main .ltc-search-box .nav ul li select {
 		text-indent: -5px;
 	}
+}
+
+/* IE 11 */
+_:lang(x)::-ms-backdrop, .wrap section.section1 .news-box .article-box ul li > span > a:nth-child(2) {
+	position: relative;
+	bottom: 20px;
 }

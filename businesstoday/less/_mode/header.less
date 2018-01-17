@@ -77,7 +77,7 @@ header {
 				}
 			}
 			> ul {
-				overflow: hidden;
+				//overflow: hidden;
 				height: 66px;
 				float: left;
 				margin-top: 9px;
@@ -86,85 +86,123 @@ header {
 					& { display: none; }
 				}
 				li {
+					overflow: hidden;
 					width: 100px;
 					height: 100%;
 					float: left;
 					margin-right: 2px;
 					border-top: solid 3px #ee776d;
-					a {
-						font-size: 18px;
-						color: #4a4a4a;
-						line-height: 66px;
-						text-align: center;
-						position: relative;
+					font-size: 18px;
+					color: #4a4a4a;
+					line-height: 66px;
+					text-align: center;
+					position: relative;
+					cursor: pointer;
+					.trs(0.5s);
+					.bg-box {
+						display: block;
+						width: 100%;
+						height: 0%;
+						background-color: #ee776d;
 						.trs;
-						.bg-box {
-							display: block;
-							width: 100%;
-							height: 0%;
-							background-color: #ee776d;
+					}
+					.text {
+						display: block;
+						position: absolute;
+						top: 0;
+						width: 100%;
+						text-align: center;
+						z-index: 1;
+						background-color: #fff;
+						&:hover { background-color: transparent; }
+						i {
+							display: inline-block;
+							width: 23px;
+							height: 23px;
+							position: relative;
+							top: 5px;
+							margin-right: 3px;
 							.trs;
 						}
-						.text {
-							display: block;
-							position: absolute;
-							top: 0;
-							width: 100%;
-							text-align: center;
-							i {
-								display: inline-block;
-								width: 23px;
-								height: 23px;
-								position: relative;
-								top: 5px;
-								margin-right: 3px;
-								.trs;
+					}
+					>ul {
+						opacity: 0;
+						z-index: -10;
+						.trs(0.5s);
+						li {
+							border-top: none;
+							background-color: #fff;
+							a {
+								color: #404040;
+								&:hover {
+									color: #F1762D;
+								}
 							}
 						}
 					}
+
 					&:hover {
-						a {
-							color: #fff;
-						}
+						color: #fff;
 						.bg-box { height: 100%; }
+						>ul {
+							z-index: 1;
+							opacity: 1;
+						}
+					}
+				}
+				li.active {
+					color: #fff;
+					overflow: unset;
+					.bg-box { height: 100%; }
+					.text { background-color: transparent; }
+					>ul {
+						z-index: 1;
+						opacity: 1;
 					}
 				}
 				li.menu-news .text i { background-image: url('@{image}header/menu/news_icon.png'); }
-				li.menu-news:hover .text i { background-image: url('@{image}header/menu/news_icon_hover.png'); }
+				li.menu-news:hover .text i,
+				li.menu-news.active .text i { background-image: url('@{image}header/menu/news_icon_hover.png'); }
 				li.menu-project .text i { background-image: url('@{image}header/menu/project_icon.png'); }
-				li.menu-project:hover .text i { background-image: url('@{image}header/menu/project_icon_hover.png'); }
+				li.menu-project:hover .text i,
+				li.menu-project.active .text i { background-image: url('@{image}header/menu/project_icon_hover.png'); }
 				li.menu-dream .text i { background-image: url('@{image}header/menu/dream_icon.png'); }
-				li.menu-dream:hover .text i { background-image: url('@{image}header/menu/dream_icon_hover.png'); }
+				li.menu-dream:hover .text i,
+				li.menu-dream.active .text i { background-image: url('@{image}header/menu/dream_icon_hover.png'); }
 				li.menu-health .text i { background-image: url('@{image}header/menu/health_icon.png'); }
-				li.menu-health:hover .text i { background-image: url('@{image}header/menu/health_icon_hover.png'); }
+				li.menu-health:hover .text i,
+				li.menu-health.active .text i { background-image: url('@{image}header/menu/health_icon_hover.png'); }
 				li.menu-lohas .text i { background-image: url('@{image}header/menu/lohas_icon.png'); }
-				li.menu-lohas:hover .text i { background-image: url('@{image}header/menu/lohas_icon_hover.png'); }
+				li.menu-lohas:hover .text i,
+				li.menu-lohas.active .text i { background-image: url('@{image}header/menu/lohas_icon_hover.png'); }
 				li.menu-wealth .text i { background-image: url('@{image}header/menu/wealth_icon.png'); }
-				li.menu-wealth:hover .text i { background-image: url('@{image}header/menu/wealth_icon_hover.png'); }
+				li.menu-wealth:hover .text i,
+				li.menu-wealth.active .text i { background-image: url('@{image}header/menu/wealth_icon_hover.png'); }
 				li.menu-activity .text i { background-image: url('@{image}header/menu/activity_icon.png'); }
-				li.menu-activity:hover .text i { background-image: url('@{image}header/menu/activity_icon_hover.png'); }
+				li.menu-activity:hover .text i,
+				li.menu-activity.active .text i { background-image: url('@{image}header/menu/activity_icon_hover.png'); }
 
-				li:nth-child(2) {
+				>li:nth-child(2) {
 					border-top: solid 3px #e49f65;
 					.bg-box { background-color: #e49f65; }
 				}
-				li:nth-child(3) {
+				>li:nth-child(3) {
 					border-top: solid 3px #ffdc52;
 					.bg-box { background-color: #ffdc52; }
 				}
-				li:nth-child(4) {
+				>li:nth-child(4) {
 					border-top: solid 3px #95cd63;
 					.bg-box { background-color: #95cd63; }
 				}
-				li:nth-child(5) {
+				>li:nth-child(5) {
 					border-top: solid 3px #c269c7;
 					.bg-box { background-color: #c269c7; }
 				}
-				li:nth-child(6) {
+				>li:nth-child(6) {
 					border-top: solid 3px #d9bc6f;
 					.bg-box { background-color: #d9bc6f; }
 				}
-				li:nth-child(7) {
+				>li:nth-child(7) {
 					border-top: solid 3px #00bdbb;
 					.bg-box { background-color: #00bdbb; }
 				}
@@ -289,9 +327,9 @@ header {
 					line-height: 40px;
 				}
 				>ul {
-					height: 1px;
+					max-height: 1px;
 					overflow: hidden;
-					transition: all 0.3s ease;
+					.trs(0.7s);
 					>li {
 						text-indent: 49px;
 						font-size: 18px;
@@ -306,7 +344,7 @@ header {
 						border-top: solid 1px #D4D4D4;
 					}
 				}
-				>ul.active { height: auto; }
+				>ul.active { max-height: 500px; }
 			}
 			>li.mobile-menu-news {
 				span.color { background-color: #EE776D; }

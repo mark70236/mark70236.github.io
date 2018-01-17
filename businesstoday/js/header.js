@@ -22,6 +22,13 @@ $(function() {
           }
       })
 
+      $(".main-menu .main >ul >li").mouseover(function() {
+          $(this).addClass('active');
+      });
+      $(".main-menu .main >ul >li").mouseleave(function() {
+          $(this).removeClass('active');
+      });
+
 
       //手機版選單收合控制
       $(".mobile-menu-btn").click(function() {

@@ -260,23 +260,4 @@ $(function() {
             ]
 	});
 
-      // function getTextWidth(txt) {
-      //   var $elm = $('<span class="tempforSize">'+txt+'</span>').prependTo("body");
-      //   var elmWidth = $elm.width();
-      //   $elm.remove();
-      //   return elmWidth;
-      // }
-      // function centerSelect($elm) {
-      //     var optionWidth = getTextWidth($elm.children(":selected").html())
-      //     var emptySpace =   $elm.width()- optionWidth;
-      //     $elm.css("text-indent", (emptySpace/2)-20);// -10 for some browers to remove the right toggle control width
-      // }
-      // // on start
-      // $('select').each(function(){
-      //   centerSelect($(this));
-      // });
-      // // on change
-      // $('select').on('change', function(){
-      //   centerSelect($(this));
-      // });
 })
