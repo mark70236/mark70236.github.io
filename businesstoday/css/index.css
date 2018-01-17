@@ -192,6 +192,9 @@ body img {
   width: 100%;
   height: auto;
 }
+body select::-ms-expand {
+  display: none;
+}
 body.mac-user h1,
 body.mac-user h2,
 body.mac-user h3,
@@ -746,10 +749,16 @@ footer .ad-search-box .footer-btn {
   line-height: 55px;
   margin-bottom: 20px;
 }
-@media (max-width: 991px) {
+@media (max-width: 1040px) {
   footer .ad-search-box .footer-btn {
     margin-left: 0;
     margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 860px) {
+  footer .ad-search-box .footer-btn {
+    margin-top: 0px;
   }
 }
 footer .ad-search-box .footer-btn a {
@@ -3057,6 +3066,13 @@ body > .wrap {
     box-shadow: none;
   }
 }
+@media all and (max-width: 800px) {
+  .wrap section.section2 .lohas-box .main .article-box .main-box {
+    margin: 0 auto;
+    float: none;
+    box-shadow: none;
+  }
+}
 @media all and (max-width: 690px) {
   .wrap section.section2 .lohas-box .main .article-box .main-box {
     width: 100%;
@@ -3167,6 +3183,13 @@ body > .wrap {
   .wrap section.section2 .lohas-box .main .article-box .other-box {
     width: 58%;
     box-shadow: none;
+  }
+}
+@media all and (max-width: 800px) {
+  .wrap section.section2 .lohas-box .main .article-box .other-box {
+    float: none;
+    margin: 0 auto;
+    width: 690px;
   }
 }
 @media all and (max-width: 690px) {
