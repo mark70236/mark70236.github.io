@@ -421,6 +421,7 @@ header .main-menu .main > ul li:hover > ul {
 header .main-menu .main > ul li.active {
   color: #fff;
   overflow: unset;
+  overflow: visible;
 }
 header .main-menu .main > ul li.active .bg-box {
   height: 100%;
