@@ -55,7 +55,10 @@ header {
 		background-color: #fff;
 		.main {
 			height: 75px;
-			width: auto;
+			width: 1400px;
+			@media all and (max-width: 1400px) {
+				& { width: auto; }
+			}
 			.logo {
 				width: 255px;
 				height: 75px;
@@ -177,7 +180,7 @@ header {
 				}
 				i {
 					font-size: 23px;
-					color: #4A4A4A;
+					color: #E49F65;
 				}
 				.header-search-lightbox {
 					opacity: 0;
@@ -220,6 +223,7 @@ header {
 						position: absolute;
 						top: 20px;
 						right: 30px;
+						color: #4A4A4A;
 					}
 				}
 				.header-search-lightbox.active {

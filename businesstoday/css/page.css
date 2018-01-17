@@ -168,7 +168,9 @@ body td,
 body em,
 body strong,
 body a,
-body i {
+body i,
+body input,
+body select {
   font-family: "微軟正黑體";
 }
 body a {
@@ -294,7 +296,12 @@ header .main-menu {
 }
 header .main-menu .main {
   height: 75px;
-  width: auto;
+  width: 1400px;
+}
+@media all and (max-width: 1400px) {
+  header .main-menu .main {
+    width: auto;
+  }
 }
 header .main-menu .main .logo {
   width: 255px;
@@ -474,7 +481,7 @@ header .main-menu .main .header-search-box {
 }
 header .main-menu .main .header-search-box i {
   font-size: 23px;
-  color: #4A4A4A;
+  color: #E49F65;
 }
 header .main-menu .main .header-search-box .header-search-lightbox {
   opacity: 0;
@@ -522,6 +529,7 @@ header .main-menu .main .header-search-box .header-search-lightbox i {
   position: absolute;
   top: 20px;
   right: 30px;
+  color: #4A4A4A;
 }
 header .main-menu .main .header-search-box .header-search-lightbox.active {
   opacity: 1;
@@ -714,7 +722,7 @@ footer .ad-search-box p {
   }
 }
 footer .ad-search-box p.for-deskop {
-  display: block;
+  display: inline-block;
 }
 @media (max-width: 800px) {
   footer .ad-search-box p.for-deskop {
