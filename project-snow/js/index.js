@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function(event) {
 	var node = document.createElement("div");
 	node.setAttribute("id","snow-container");
@@ -15,20 +14,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var windowHalfX = document.documentElement.clientWidth / 2;
 	var windowHalfY = document.documentElement.clientHeight / 2;
 
-	//圖片檔案夾位置
 	var imageSrc = "https://"+location.hostname+"/wp-content/plugins/Project-Snow/images/";
-	//填入圖片檔名
 	var imageName1 = "particle_snowflake.png";
 	var imageName2 = "particle_snowflake2.png";
 
-	//第一種粒子
+	//蝚砌�蝔桃�鍦��
 	var particles = [];
-	var particleNums = 50;  //粒子數量
+	var particleNums = 50;
 	var particleImage = new Image();
 	particleImage.src = imageSrc+imageName1;
-	//第一種粒子
+	//蝚砌�蝔桃�鍦��
 	var particles2 = [];
-	var particleNums2 = 5;  //粒子數量
+	var particleNums2 = 5;
 	var particleImage2 = new Image();
 	particleImage2.src = imageSrc+imageName2;
 
@@ -36,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		reStart();
 	}
 
-	// document.querySelector('.test-box').addEventListener("click", function() {
-	// 	reStart();
-	// });
+	//document.querySelector('.test-box').addEventListener("click", function() {
+	//	reStart();
+	//});
 
 	init();
 	var interval = setInterval( loop, 1500 / 60 );
@@ -60,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		renderer = new THREE.CanvasRenderer();
 		renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
-		//創建物件1
+		//�肟撱箇�隞�1
 		var material = new THREE.ParticleBasicMaterial( { map: new THREE.Texture(particleImage) } );
 		for (var i = 0; i < particleNums; i++) {
 
@@ -74,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			particles.push(particle);
 		}
 
-		//創建物件2
+		//�肟撱箇�隞�2
 		var material2 = new THREE.ParticleBasicMaterial( { map: new THREE.Texture(particleImage2) } );
 		for (var i = 0; i < particleNums2; i++) {
 
@@ -94,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 		}
 
-		//生成物件
+		//����鞟�隞�
 		container.appendChild( renderer.domElement );
 
 
@@ -103,18 +100,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		// document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 	}
 
-	// function anime() {
-	// 	//console.log(particle2)
-	// 	setInterval(function() {
-	// 		particle2.rotation.x += 500;
-	// 		particle2.rotation.y += 500;
-	// 	},1000)
+	function anime() {
+		//console.log(particle2)
+		setInterval(function() {
+			particle2.rotation.x += 500;
+			particle2.rotation.y += 500;
+		},1000)
 
-	// 	renderer.render(scene, camera);
-	// 	requestAnimationFrame(function() {
-	// 		anime();
-	// 	});
-	// }
+		renderer.render(scene, camera);
+		requestAnimationFrame(function() {
+			anime();
+		});
+	}
 
 	function onDocumentMouseMove( event ) {
 
@@ -176,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		}
 
 
-		//控制滑鼠攝影機轉角
+		//�綉��皛煾�䭾�嘥蔣璈蠘�㕑��
 		camera.position.x += ( mouseX - camera.position.x ) * 0.05;
 		camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
 

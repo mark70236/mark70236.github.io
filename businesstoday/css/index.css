@@ -195,6 +195,9 @@ body img {
 body select::-ms-expand {
   display: none;
 }
+body.page {
+  background-color: #fafafa;
+}
 body.mac-user h1,
 body.mac-user h2,
 body.mac-user h3,
@@ -214,6 +217,12 @@ body.mac-user td,
 body.mac-user a,
 body.mac-user i {
   font-weight: 300;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
 }
 *::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -307,20 +316,21 @@ header .main-menu .main {
   }
 }
 header .main-menu .main .logo {
-  width: 255px;
-  height: 75px;
+  width: 285px;
+  height: 74px;
   float: left;
+  margin-top: -6px;
 }
 @media all and (max-width: 800px) {
   header .main-menu .main .logo {
-    width: 200px;
+    width: 245px;
     height: auto;
     float: none;
     display: inline-block;
     position: relative;
-    top: 7px;
+    top: 11px;
     left: 50%;
-    margin-left: -142px;
+    margin-left: -170px;
   }
 }
 header .main-menu .main > ul {
@@ -1698,9 +1708,10 @@ body > .wrap {
   width: 100%;
 }
 .wrap section.section1 .news-box .article-box ul li > span .tag-box .tag {
-  display: block;
-  width: 68px;
+  display: inline-block;
+  min-width: 58px;
   height: 23px;
+  padding: 0 5px;
   line-height: 25px;
   font-size: 14px;
   color: #3a3a3a;
@@ -1813,9 +1824,10 @@ body > .wrap {
 }
 .wrap section.section1 .news-box .article-box-mobile ul li > span .tag-box .tag,
 .wrap section.section1 .news-box .article-box-mobile ul li > span .tag-box .tag-num {
-  display: block;
-  width: 68px;
+  display: inline-block;
+  min-width: 58px;
   height: 23px;
+  padding: 0 5px;
   line-height: 25px;
   font-size: 14px;
   color: #3a3a3a;
@@ -2820,9 +2832,10 @@ body > .wrap {
   width: 100%;
 }
 .wrap section.section2 .health-box .main .article-box ul li > span .tag-box .tag {
-  display: block;
-  width: 68px;
+  display: inline-block;
+  min-width: 58px;
   height: 23px;
+  padding: 0 5px;
   line-height: 25px;
   font-size: 14px;
   color: #3a3a3a;
@@ -3051,9 +3064,10 @@ body > .wrap {
   }
 }
 .wrap section.section2 .wealth-box .main .main-box .detail .tag {
-  display: block;
-  width: 68px;
+  display: inline-block;
+  min-width: 58px;
   height: 23px;
+  padding: 0 5px;
   line-height: 25px;
   font-size: 14px;
   color: #3a3a3a;
@@ -3188,8 +3202,10 @@ body > .wrap {
   }
 }
 .wrap section.section2 .lohas-box .main .article-box .main-box .article-detail .tag {
-  width: 68px;
+  display: inline-block;
+  min-width: 58px;
   height: 23px;
+  padding: 0 5px;
   font-size: 14px;
   color: #3a3a3a;
   line-height: 25px;
@@ -3374,8 +3390,9 @@ body > .wrap {
   -webkit-line-clamp: 2;
 }
 .wrap section.section2 .lohas-box .main .article-box .other-box ul li .right-box .other-info .tag {
-  width: 68px;
+  min-width: 58px;
   height: 23px;
+  padding: 0 5px;
   background-color: #FFDC52;
   color: #3a3a3a;
   font-size: 14px;
