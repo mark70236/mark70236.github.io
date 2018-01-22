@@ -215,7 +215,8 @@ body.mac-user table,
 body.mac-user th,
 body.mac-user td,
 body.mac-user a,
-body.mac-user i {
+body.mac-user i,
+body.mac-user select {
   font-weight: 300;
 }
 .inline {
