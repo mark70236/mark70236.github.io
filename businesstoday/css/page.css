@@ -1252,6 +1252,7 @@ body > .wrap {
   background-color: #00BDBB;
   border-radius: 5px;
   cursor: pointer;
+  border: none;
 }
 .wrap .article-list {
   width: 1290px;
@@ -1309,6 +1310,7 @@ body > .wrap {
 @media all and (max-width: 1290px) {
   .wrap .article-list .main-box {
     padding: 2%;
+    padding-bottom: 20px;
   }
 }
 .wrap .article-list .main-box .main {
