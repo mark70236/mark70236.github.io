@@ -73,7 +73,7 @@ $(function() {
 		}
 	})
 
-			//右側導航列根據scrollbar控制
+	//右側導航列根據scrollbar控制
 	$(window).scroll(function () {
 		var scrollVal = $(this).scrollTop();
 		//console.log(scrollVal);
