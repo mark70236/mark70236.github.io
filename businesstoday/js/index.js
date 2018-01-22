@@ -120,8 +120,8 @@ $(function() {
 		centerMode: true,
 		autoplay: true,
 		autoplaySpeed: 4000,
-		nextArrow: '<i class="fa fa-arrow-circle-o-right next"></i>',
-		prevArrow: '<i class="fa fa-arrow-circle-o-left prev"></i>',
+		nextArrow: '<i class="fa fa-chevron-circle-right next"></i>',
+		prevArrow: '<i class="fa fa-chevron-circle-left prev"></i>',
 		responsive: [
 			{
 				breakpoint: 1890,

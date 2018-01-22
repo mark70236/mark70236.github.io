@@ -4,10 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>幸福熟齡</title>
+	<link rel="stylesheet" href="plugin/slick/slick.css">
+	<link rel="stylesheet" href="plugin/slick/slick-theme.css">
 	<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/page.css">
 	<script src="plugin/jquery/1.9.1.min.js"></script>
 	<script src="plugin/jqueryui/1.10.3.min.js"></script>
+	<script src="plugin/slick/slick.js"></script>
 	<script src="js/header.js"></script>
 	<script src="js/page.js"></script>
 
@@ -260,7 +263,7 @@
 					<input type="submit" class="search-submit" value="立即搜尋">
 				</form>
 			</div>
-			<div class="article-list">
+			<div class="article-detail">
 				<div class="top-box">
 					<span class="search-type inline-block">
 						搜尋條件：<span>服務類型</span>
@@ -275,10 +278,40 @@
 				</div>
 				<div class="main-box">
 					<div class="main">
-						<ul class="ltc-list-ul">
-							<li class="toei"></li>
-						</ul>
-						<div class="btn-more">看更多＋</div>
+						<div class="title-box">
+							<span class="title">新竹縣  ｜ 私立新埔家園長期照顧中心</span>
+							<span class="level-box">
+								評價比數<span class="level">★★★★☆</span>
+							</span>
+							<div class="main-banner-box">
+								<!-- 焦點大照片，結構要跟下方list-box一樣 -->
+								<div class="focus-box">
+									<ul>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+									</ul>
+								</div>
+								<!-- 列表結構，結構要跟上方focus-box一樣 -->
+								<div class="list-box">
+									<ul>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+										<li><img src="images/page/ltc/detail/1.png"></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="sidebox">
 						<img src="images/page/300x250-1.png">
@@ -350,6 +383,12 @@
 						</div>
 						<img src="images/page/300x250-2.png">
 					</div>
+				</div>
+			</div>
+			<div class="banner-box">
+				<div class="control-wrap">
+					<a href="#"><img class="for-deskop" src="images/index/970x250-3.png"></a>
+					<a href="#"><img class="for-mobile" src="images/index/300x250-1.png"></a>
 				</div>
 			</div>
 		</div>
@@ -431,276 +470,32 @@
 		</footer>
 	</body>
 	<script>
-		$(function() {
-			//長照搜尋區塊-下拉選單聯動控制
-			//市區下拉選單
-			$("#sel-city").change(function(){
-				switch (parseInt($(this).val())){
-					case 0:
-						$("#sel-area option").remove();
-						$("#sel-area").append($("<option value=''>鄉鎮區</option>"));
-						break;
-					case 1:
-						$("#sel-area option").remove();
-						var array = [ "中山區", "信義區", "文山區", "大安區" ];
-						//利用each遍歷array中的值並將每個值新增到Select中
-						$.each(array, function(i, val) {
-							$("#sel-area").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
-						});
-						break;
-					case 2:
-						$("#sel-area option").remove();
-						var array = [ "前鎮區", "鳳山區", "小港區", "永安區" ];
-						//利用each遍歷array中的值並將每個值新增到Select中
-						$.each(array, function(i, val) {
-							$("#sel-area").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
-						});
-						break;
+		 $('.focus-box ul').slick({
+		 	centerPadding: '0px',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			centerMode: true,
+			arrows: false,
+			fade: true,
+			asNavFor: '.list-box ul'
+		});
+		$('.list-box ul').slick({
+			centerPadding: '0px',
+			slidesToShow: 4,
+		 	slidesToScroll: 1,
+			asNavFor: '.focus-box ul',
+			dots: false,
+			nextArrow: '<i class="fa fa-chevron-circle-right next" aria-hidden="true"></i>',
+			prevArrow: '<i class="fa fa-chevron-circle-left prev" aria-hidden="true"></i>',
+			focusOnSelect: true,
+			responsive: [
+				{
+					breakpoint: 960,
+					settings: {
+						slidesToShow: 3
+					}
 				}
-			})
-			//服務類型下拉選單
-			$("#sel-type-1").change(function(){
-				switch (parseInt($(this).val())){
-					case 0:
-						$("#sel-type-2 option").remove();
-						$("#sel-type-2").append($("<option value=''>服務類型</option>"));
-						break;
-					case 1:
-						$("#sel-type-2 option").remove();
-						var array = [ "類型1-1", "類型1-2", "類型1-3", "類型1-4" ];
-						//利用each遍歷array中的值並將每個值新增到Select中
-						$.each(array, function(i, val) {
-							$("#sel-type-2").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
-						});
-						break;
-					case 2:
-						$("#sel-type-2 option").remove();
-						var array = [ "類型2-1", "類型2-2", "類型2-3", "類型2-4" ];
-						//利用each遍歷array中的值並將每個值新增到Select中
-						$.each(array, function(i, val) {
-							$("#sel-type-2").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
-						});
-						break;
-				}
-			})
-		})
-	</script>
-	<script>
-		//此處主要處理js加載長照機構html結構
-		$(function() {
-			var dataLtc = {
-				"ltc1": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心1",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/001.png"
-				},
-				"ltc2": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心2",
-					"level": "★☆☆☆☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/002.png"
-				},
-				"ltc3": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心3",
-					"level": "★★☆☆☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/003.png"
-				},
-				"ltc4": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心4",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/004.png"
-				},
-				"ltc5": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心5",
-					"level": "★★★★★",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/001.png"
-				},
-				"ltc6": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心6",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/001.png"
-				},
-				"ltc7": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心7",
-					"level": "★☆☆☆☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/002.png"
-				},
-				"ltc8": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心8",
-					"level": "★★☆☆☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/003.png"
-				},
-				"ltc9": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心9",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/004.png"
-				},
-				"ltc10": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心10",
-					"level": "★★★★★",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/001.png"
-				},
-				"ltc11": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心11",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/002.png"
-				},
-				"ltc12": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心12",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/003.png"
-				},
-				"ltc13": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心13",
-					"level": "★☆☆☆☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/004.png"
-				},
-				"ltc14": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心14",
-					"level": "★★☆☆☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/005.png"
-				},
-				"ltc15": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心15",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/001.png"
-				},
-				"ltc16": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心16",
-					"level": "★★★★★",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/002.png"
-				},
-				"ltc17": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心17",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/003.png"
-				}
-			}
-			var ltcDataNum = Object.keys(dataLtc).length;
-			var no = 6; //已讀取前五筆,每次for迴圈列出接下來五筆
-
-			//頁面先載入前五筆資料
-			for(i=1;i<6;i++){
-				$(".article-list .main >ul >li:last-child").after('\
-					<li>\
-						<a href="'+dataLtc["ltc"+i].link+'">\
-							<span class="img-box">\
-								<img src="'+dataLtc["ltc"+i].imgSrc+'">\
-							</span>\
-							<span class="detail-box">\
-								<h2>'+dataLtc["ltc"+i].h2+'</h2>\
-								<span class="level">'+dataLtc["ltc"+i].level+'</span>\
-								<span class="area">\
-									<i class="fa fa-map-marker inline-block" aria-hidden="true"></i>\
-									縣市區域：'+dataLtc["ltc"+i].area+'\
-								</span>\
-								<span class="service-type">\
-									<i class="fa fa-server inline-block" aria-hidden="true"></i>\
-									服務類型：'+dataLtc["ltc"+i].serviceType+'\
-								</span>\
-								<p>'+dataLtc["ltc"+i].p+'</p>\
-							</span>\
-						</a>\
-					</li>\
-				')
-			}
-			$(".article-list .main >ul >li.toei").remove(); //移除定位用的空<li>
-
-			//點擊看更多按鈕，新增接下來五筆，直到沒資料
-			$(".article-list .btn-more").click(function() {
-				for(i=no;i<ltcDataNum+1&i<no+5;i++){
-					$(".article-list .main >ul >li:last-child").after('\
-						<li>\
-							<a href="'+dataLtc["ltc"+i].link+'">\
-								<span class="img-box">\
-									<img src="images/page/ltc/list/004.png">\
-								</span>\
-								<span class="detail-box">\
-									<h2>'+dataLtc["ltc"+i].h2+'</h2>\
-									<span class="level">'+dataLtc["ltc"+i].level+'</span>\
-									<span class="area">\
-										<i class="fa fa-map-marker inline-block" aria-hidden="true"></i>\
-										縣市區域：'+dataLtc["ltc"+i].area+'\
-									</span>\
-									<span class="service-type">\
-										<i class="fa fa-server inline-block" aria-hidden="true"></i>\
-										服務類型：'+dataLtc["ltc"+i].serviceType+'\
-									</span>\
-									<p>'+dataLtc["ltc"+i].p+'</p>\
-								</span>\
-							</a>\
-						</li>\
-					')
-				}
-				no= no+5;
-			});
-		})
+			]
+		});
 	</script>
 </html>

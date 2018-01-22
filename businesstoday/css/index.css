@@ -1410,6 +1410,25 @@ body > .wrap {
     color: #fff;
   }
 }
+.wrap .main-banner-box .prev::after {
+  position: absolute;
+  content: '';
+  background: #4f4f4f;
+  z-index: -1;
+  top: 7px;
+  left: 4px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+@media all and (max-width: 1190px) {
+  .wrap .main-banner-box .prev::after {
+    top: 5px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+  }
+}
 .wrap .main-banner-box .next {
   right: 50%;
   margin-right: -620px;
@@ -1424,6 +1443,25 @@ body > .wrap {
 @media all and (max-width: 1190px) {
   .wrap .main-banner-box .next {
     color: #fff;
+  }
+}
+.wrap .main-banner-box .next::after {
+  position: absolute;
+  content: '';
+  background: #4f4f4f;
+  z-index: -1;
+  top: 7px;
+  left: 4px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+@media all and (max-width: 1190px) {
+  .wrap .main-banner-box .next::after {
+    top: 5px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
   }
 }
 .wrap img.for-deskop {

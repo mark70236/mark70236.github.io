@@ -352,6 +352,25 @@ body > .wrap { margin-top: 123px; }
 				}
 			}
 		}
+		.prev::after{
+			position: absolute;
+			content: '';
+			background: #4f4f4f;
+			z-index: -1;
+			top: 7px;
+			left: 4px;
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			@media all and (max-width: 1190px) {
+				& {
+					top: 5px;
+					left: 4px;
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
 		.next {
 			right: 50%;
 			margin-right: -620px;
@@ -365,6 +384,25 @@ body > .wrap { margin-top: 123px; }
 			@media all and (max-width: 1190px) {
 				& {
 					color: #fff;
+				}
+			}
+		}
+		.next::after{
+			position: absolute;
+			content: '';
+			background: #4f4f4f;
+			z-index: -1;
+			top: 7px;
+			left: 4px;
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			@media all and (max-width: 1190px) {
+				& {
+					top: 5px;
+					left: 4px;
+					width: 20px;
+					height: 20px;
 				}
 			}
 		}
