@@ -2,6 +2,7 @@
 <html lang="zh-tw">
 <head>
 	<meta charset="UTF-8">
+	<meta property="fb:admins" content="100000235436113"/>
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>幸福熟齡</title>
 	<link rel="stylesheet" href="plugin/slick/slick.css">
@@ -577,7 +578,12 @@
 
 		//抓取評定幾顆星
 		$("[data-score]").click(function() {
-			alert("您評定了此間機構 "+$(this).attr('data-score')+" 顆星")
+			alert("您評定了此間機構 "+$(this).attr('data-score')+" 顆星");
+			$(".score >ul li").removeClass('light');
+			var scoreNums = Number($(this).attr('data-score'))+1;
+			for (var i = 0; i < scoreNums; i++) {
+				$(".score >ul").find('li:nth-child('+i+')').addClass('light')
+			}
 		});
 
 		$(window).load(function() {

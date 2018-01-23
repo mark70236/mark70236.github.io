@@ -621,14 +621,19 @@ body > .wrap { margin-top: 123px; }
 								height: 50px;
 								vertical-align: top;
 								line-height: 50px;
+								&:hover {
+									li {
+										color: #FFC721;
+									}
+								}
 								li {
 									float: left;
-									color: #fff;
 									margin: 0 2px;
 									cursor: pointer;
+									color: #fff;
 									.trs;
-									&:hover {
-										color: #FFC721;
+									&:hover ~ * {
+										color: #fff;
 									}
 								}
 								li.light { color: #FFC721; }
