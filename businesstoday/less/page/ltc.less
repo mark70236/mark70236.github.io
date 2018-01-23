@@ -578,6 +578,9 @@ body > .wrap { margin-top: 123px; }
 					margin-bottom: 20px;
 					.focus-box {
 						width: 100%;
+						@media all and (max-width: 800px) {
+							& { display: none; }
+						}
 					}
 					.list-box {
 						ul {
@@ -592,15 +595,10 @@ body > .wrap { margin-top: 123px; }
 									width: ~"calc(100% - 4px)";
 									height: ~"calc(100% - 4px)";
 									border: solid 2px #EB5F08;
+									@media all and (max-width: 800px) {
+										& { width: 100%; height: 100%; border: none; }
+									}
 								}
-								// &:after {
-								// 	content: "";
-								// 	position: absolute;
-								// 	width: 100%;
-								// 	height: 100%;
-								// 	top: 0;
-								// 	left: 0;
-								// }
 							}
 						}
 					}

@@ -4,7 +4,6 @@ $(function() {
 		$("body").addClass('mac-user')
 	}
 
-
 	//長照搜尋區塊-關鍵字搜尋彈窗控制
 	$(".ltc-box .nav li.keyword .input-btn, .ltc-box .nav li.keyword i").click(function() {
 		if ($(".ltc-box .search-lightbox, .ltc-box .mask").hasClass('active')) {
