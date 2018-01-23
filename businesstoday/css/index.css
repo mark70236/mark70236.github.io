@@ -140,6 +140,10 @@ html.ie7 body {
 html.ie7 em {
   font-style: normal;
 }
+a[href^=tel] {
+  text-decoration: inherit;
+  color: inherit;
+}
 body {
   margin: 0;
   background-repeat: no-repeat;
