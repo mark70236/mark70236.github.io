@@ -220,7 +220,8 @@ body.mac-user th,
 body.mac-user td,
 body.mac-user a,
 body.mac-user i,
-body.mac-user select {
+body.mac-user select,
+body.mac-user input {
   font-weight: 300;
 }
 .inline {
