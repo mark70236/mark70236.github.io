@@ -1619,7 +1619,7 @@ body > .wrap {
   margin-bottom: 0;
 }
 .wrap .article-detail .main-box {
-  padding: 25px 0px 25px 0px;
+  padding: 25px 0px 0px 0px;
 }
 .wrap .article-detail .main-box .main {
   width: 960px;
@@ -1653,16 +1653,17 @@ body > .wrap {
   color: #FFC721;
   margin-left: 15px;
 }
-.wrap .article-detail .main-box .main .title-box .main-banner-box {
+.wrap .article-detail .main-box .main .main-banner-box {
   margin-top: 15px;
+  margin-bottom: 20px;
 }
-.wrap .article-detail .main-box .main .title-box .main-banner-box .focus-box {
+.wrap .article-detail .main-box .main .main-banner-box .focus-box {
   width: 100%;
 }
-.wrap .article-detail .main-box .main .title-box .main-banner-box .list-box ul {
+.wrap .article-detail .main-box .main .main-banner-box .list-box ul {
   margin-top: 5px;
 }
-.wrap .article-detail .main-box .main .title-box .main-banner-box .list-box ul li {
+.wrap .article-detail .main-box .main .main-banner-box .list-box ul li {
   margin: 0 5px;
   outline: none;
   -webkit-transition: all 0.3s ease;
@@ -1671,9 +1672,104 @@ body > .wrap {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.wrap .article-detail .main-box .main .title-box .main-banner-box .list-box ul li.slick-current {
-  border: solid 2px #eb600a;
-  margin: 0 3px;
+.wrap .article-detail .main-box .main .main-banner-box .list-box ul li.slick-current img {
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: solid 2px #EB5F08;
+}
+.wrap .article-detail .main-box .main .mechanism-details {
+  width: 100%;
+  height: 440px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.24);
+  padding: 40px 30px;
+  box-sizing: border-box;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box {
+  width: 55%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding-right: 25px;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box ul li {
+  font-size: 20px;
+  color: #7E7E7E;
+  margin-bottom: 15px;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box ul li span {
+  display: inline-block;
+  line-height: 26px;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box ul li span:nth-child(1) {
+  width: 135px;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box ul li span:nth-child(1) i {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin-right: 5px;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box ul li span:nth-child(2) {
+  width: calc(100% - 145px);
+  max-height: 52px;
+  word-break: break-all;
+  vertical-align: top;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box .score {
+  width: 100%;
+  height: 50px;
+  background-color: #00BDBB;
+  text-align: center;
+  color: #fff;
+  line-height: 50px;
+  font-size: 20px;
+  margin-top: 27px;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box .score > span {
+  display: inline-block;
+  height: 50px;
+  line-height: 52px;
+  margin-right: 25px;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box .score ul {
+  display: inline-block;
+  height: 50px;
+  vertical-align: top;
+  line-height: 50px;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box .score ul li {
+  float: left;
+  color: #fff;
+  margin: 0 2px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box .score ul li:hover {
+  color: #FFC721;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box .score ul li.light {
+  color: #FFC721;
+}
+.wrap .article-detail .main-box .main .mechanism-details .map-box {
+  width: 45%;
+  height: 100%;
+  float: left;
+}
+.wrap .article-detail .main-box .main .mechanism-details .map-box iframe {
+  width: 100%;
+  height: 100%;
+}
+.wrap .article-detail .main-box .main .fb-comments {
+  width: 100%;
+  margin-top: 40px;
+}
+.wrap .article-detail .main-box .main .fb-comments > span > iframe {
+  left: 0;
 }
 .wrap .banner-box {
   padding: 50px 0;
