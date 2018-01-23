@@ -95,13 +95,16 @@ footer {
 				box-sizing: border-box;
 				margin: 0 0 0 40px;
 				@media (max-width: 760px) {
-					& { margin: 0; padding-left: 10px; }
+					& { margin: 0; }
 				}
 				ul {
 					li {
 						color: #fff;
 						font-size: 14px;
 						line-height: 29px;
+						>span {
+							display: inline-block;
+						}
 					}
 					li.footer-logo {
 						width: 100%;

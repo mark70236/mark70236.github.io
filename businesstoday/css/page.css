@@ -885,13 +885,15 @@ footer .footer-detail .footer-main .contact-box {
 @media (max-width: 760px) {
   footer .footer-detail .footer-main .contact-box {
     margin: 0;
-    padding-left: 10px;
   }
 }
 footer .footer-detail .footer-main .contact-box ul li {
   color: #fff;
   font-size: 14px;
   line-height: 29px;
+}
+footer .footer-detail .footer-main .contact-box ul li > span {
+  display: inline-block;
 }
 footer .footer-detail .footer-main .contact-box ul li.footer-logo {
   width: 100%;
