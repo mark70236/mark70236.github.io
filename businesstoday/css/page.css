@@ -1672,6 +1672,17 @@ body > .wrap {
     border-bottom: solid 1px #C9C9C9;
   }
 }
+@media all and (max-width: 800px) {
+  .wrap .article-detail .main-box .main .title-box .title.city {
+    padding-bottom: 10px;
+    border-bottom: none;
+  }
+}
+@media all and (max-width: 800px) {
+  .wrap .article-detail .main-box .main .title-box .title.dre {
+    display: none;
+  }
+}
 .wrap .article-detail .main-box .main .title-box .level-box {
   float: right;
   font-size: 20px;
