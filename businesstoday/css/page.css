@@ -199,6 +199,12 @@ body img {
 body select::-ms-expand {
   display: none;
 }
+body input {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 body.page {
   background-color: #fafafa;
 }
