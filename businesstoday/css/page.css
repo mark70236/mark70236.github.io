@@ -1790,6 +1790,12 @@ body > .wrap {
   display: inline-block;
   line-height: 26px;
 }
+.wrap .article-detail .main-box .main .mechanism-details .details-box ul li span a {
+  color: #7e7e7e;
+}
+.wrap .article-detail .main-box .main .mechanism-details .details-box ul li span a:hover {
+  color: #4a4a4a;
+}
 .wrap .article-detail .main-box .main .mechanism-details .details-box ul li span:nth-child(1) {
   width: 135px;
 }
