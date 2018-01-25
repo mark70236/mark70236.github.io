@@ -1956,8 +1956,7 @@ body > .wrap {
     display: none;
   }
   .wrap section.section1 .news-box .article-box-mobile ul li > span .tag-box .tag-num {
-    display: block;
-    display: inline-block;
+    display: none;
     margin-bottom: 0;
   }
   .wrap section.section1 .news-box .article-box-mobile ul li > span h2 {
@@ -1976,6 +1975,7 @@ body > .wrap {
     margin-bottom: 0;
     padding-bottom: 3px;
     border-bottom: solid 1px #979797;
+    width: 100%;
   }
   .wrap section.section1 .news-box .article-box-mobile ul li:nth-child(1) {
     height: auto;
@@ -1985,7 +1985,7 @@ body > .wrap {
     display: block;
   }
   .wrap section.section1 .news-box .article-box-mobile ul li:nth-child(1) > span {
-    height: 146px;
+    height: 122px;
     padding: 20px;
     position: absolute;
     background: linear-gradient(to top, #1e1e1e 0%, rgba(255, 255, 255, 0) 100%);
@@ -1997,7 +1997,7 @@ body > .wrap {
     margin-right: auto;
   }
   .wrap section.section1 .news-box .article-box-mobile ul li:nth-child(1) > span .tag-box .tag {
-    display: block;
+    display: inline-block;
   }
   .wrap section.section1 .news-box .article-box-mobile ul li:nth-child(1) > span .tag-box .tag-num {
     display: none;
@@ -2010,6 +2010,11 @@ body > .wrap {
   }
   .wrap section.section1 .news-box .article-box-mobile ul li:nth-child(2) {
     padding-top: 15px;
+  }
+}
+@media all and (max-width: 800px) and all and (max-width: 1200px) {
+  .wrap section.section1 .news-box .article-box-mobile ul li:nth-child(1) > span .tag-box .tag {
+    display: inline-block;
   }
 }
 .wrap section.section1 .ltc-box {
@@ -2673,6 +2678,7 @@ body > .wrap {
 @media all and (max-width: 800px) {
   .wrap section.section1 .project-box .article-box ul li > span h2 {
     font-size: 20px;
+    margin-bottom: 0;
   }
 }
 .wrap section.section1 .project-box .article-box ul li > span p {
