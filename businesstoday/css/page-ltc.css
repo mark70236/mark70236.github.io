@@ -1546,6 +1546,18 @@ body > .wrap {
   font-size: 20px;
   cursor: pointer;
 }
+.wrap .article-list .main-box .main .btn-nomore,
+.wrap .article-detail .main-box .main .btn-nomore {
+  display: none;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  background-color: #eee;
+  color: #545454;
+  font-size: 20px;
+  cursor: default;
+}
 .wrap .article-list .main-box .sidebox,
 .wrap .article-detail .main-box .sidebox {
   width: 300px;
