@@ -1,0 +1,10 @@
+@charset "utf-8";
+body {
+	background-image: url('../images/bg01.jpg');
+}
+#snow-container {
+  position: fixed;
+  top: 0;
+  z-index: 100000;
+  pointer-events: none;
+}

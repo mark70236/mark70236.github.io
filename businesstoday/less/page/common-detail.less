@@ -257,15 +257,21 @@ body > .wrap { margin-top: 123px; }
 				}
 				@media all and (max-width: 800px) {
 					& {
+						width: ~"calc(49% - 3px)";
+						margin-bottom: 20px;
+					}
+				}
+				@media all and (max-width: 640px) {
+					& {
 						width: 100%;
 						margin-bottom: 25px;
 					}
 				}
-				>span {
-					@media all and (max-width: 800px) {
+				a span {
+					@media all and (max-width: 640px) {
 						& {
 							display: block;
-							max-height: 260px;
+							max-height: 300px;
 							overflow: hidden;
 						}
 					}
@@ -284,6 +290,19 @@ body > .wrap { margin-top: 123px; }
 					-webkit-line-clamp: 2;
 				}
 			}
+			li:nth-child(2) {
+				@media all and (max-width: 800px) {
+					& { margin-right: 0; }
+				}
+			}
+			li:nth-child(3) {
+				@media all and (max-width: 800px) {
+					& { display: none; }
+				}
+				@media all and (max-width: 640px) {
+					& { display: block; }
+				}
+			}
 			li:nth-child(4) {
 				@media all and (max-width: 1290px) {
 					& { margin-right: 0; }
@@ -291,7 +310,7 @@ body > .wrap { margin-top: 123px; }
 				@media all and (max-width: 960px) {
 					& { display: none; }
 				}
-				@media all and (max-width: 800px) {
+				@media all and (max-width: 640px) {
 					& { display: block; }
 				}
 			}
@@ -300,7 +319,7 @@ body > .wrap { margin-top: 123px; }
 				@media all and (max-width: 1290px) {
 					& { display: none; }
 				}
-				@media all and (max-width: 800px) {
+				@media all and (max-width: 640px) {
 					& { display: block; }
 				}
 			}
