@@ -101,41 +101,66 @@ body > .wrap { margin-top: 123px; }
 			border-bottom: solid 1px #c9c9c9;
 			font-size: 23px;
 			color: #4E4E4E;
-			width: 960px;
-			padding: 0 20px 7px 20px;
+			padding: 0;
+			padding-bottom: 7px;
 			box-sizing: border-box;
 			position: relative;
-			@media all and (max-width: 1290px) {
-				& { padding: 0 2% 7px 2%; width: 70%; }
-			}
-			@media all and (max-width: 960px) {
-				& { width: 100%; }
-			}
-
 			@media all and (max-width: 800px) {
 				& { font-size: 20px; }
 			}
 			.search-type {
 				overflow: hidden;
 			}
+			.path {
+				font-size: 18px;
+				position: absolute;
+				bottom: 7px;
+				right: 0;
+				@media all and (max-width: 800px) {
+					& { display: none; }
+				}
+				nav {
+					overflow: hidden;
+					a,span { float: left; display: inline-block; width: auto; }
+					.divider { margin: 0 2px; }
+					span { cursor: default; }
+				}
+			}
 			.title-box {
 				display: inline-block;
-				h1 {
-					font-size: 32px;
-					line-height: 44px;
-					color: #4E4E4E;
-					height: 88px;
-					.oe;
-					white-space: normal;
-					display: -webkit-box;
-					-webkit-box-orient: vertical;
-					-webkit-line-clamp: 2;
+				@media all and (max-width: 1290px) {
+					& {
+						width: 880px;
+						margin: 0 auto 20px auto;
+					}
+				}
+				.title {
+					width: 220px;
+					height: 0;
+					border-right: 10px solid transparent;
+					border-bottom: 40px solid #00c1ae;
+					text-align: center;
+					line-height: 42px;
+					font-size: 24px;
+					color: #fff;
+					text-indent: 5px;
+					margin-bottom: 5px;
+					font-weight: bolder;
 					@media all and (max-width: 800px) {
+						& { margin-bottom: -1px; }
+					}
+					@media all and (max-width: 380px) {
 						& {
-							font-size: 24px;
-							line-height: 30px;
-							height: 60px;
+							width: 150px;
 						}
+					}
+				}
+				.title-border {
+					width: 320px;
+					height: 3px;
+					background-color: #c269c7;
+					@media all and (max-width: 800px) {
+						& { display: none; }
 					}
 				}
 			}
@@ -190,10 +215,15 @@ body > .wrap { margin-top: 123px; }
 				}
 				ul.ltc-list-ul {
 					max-height: 100000px;
-
+					overflow: hidden;
 					height: auto;
+					padding: 0 5px;
+					box-sizing: border-box;
 					.trs;
-					li {
+					>li {
+						float: left;
+						width: 49%;
+						margin-right: 2%;
 						margin-bottom: 25px;
 						overflow: hidden;
 						box-shadow: 0 2px 6px rgba(201,201,201,0.5);
@@ -201,154 +231,90 @@ body > .wrap { margin-top: 123px; }
 							.img-box { opacity: 0.8; }
 							.detail-box h2 { color: #F65F12; }
 						}
-						.img-box {
-							width: 320px;
-							height: 230px;
-							float: left;
-							.trs;
-							@media all and (max-width: 1290px) {
-								& {
-									overflow: hidden;
-									width: 40%;
-									height: auto;
-								}
-							}
-							@media all and (max-width: 800px) {
-								& { width: 170px; }
-							}
-							@media all and (max-width: 340px) {
-								& { width: 130px; }
-							}
-							img {
-								@media all and (max-width: 1290px) {
-									& {
-										width: auto;
-										height: 100%;
-									}
-								}
-								@media all and (max-width: 800px) {
-									& {
-										width:  170px;
-										height: 125px;
+						@media all and (max-width: 800px) {
+							& { width: 100%; margin-right: 0; }
+						}
+						.banner {
+							position: relative;
+							display: block;
+							a {
+								>span {
+									position: absolute;
+									bottom: 0;
+									width: 100%;
+									box-sizing: border-box;
+									padding: 15px 20px;
+									h2 {
+										font-size: 24px;
+										color: #fff;
+										line-height: 30px;
+										max-height: 60px;
+										.oe;
+										white-space: normal;
+										display: -webkit-box;
+										-webkit-box-orient: vertical;
+										-webkit-line-clamp: 2;
 									}
 								}
 							}
 						}
-						.detail-box {
-							float: left;
-							width: 640px;
-							padding: 20px 15px;
-							box-sizing: border-box;
-							@media all and (max-width: 1290px) {
-								& {
-									width: 60%;
-								}
-							}
-							@media all and (max-width: 800px) {
-								& {
-									width: ~"calc(100% - 170px)";
-									padding: 2% 1.5%;
-								}
-							}
-							@media all and (max-width: 340px) {
-								& { width: ~"calc(100% - 130px)"; }
-							}
-							h2 {
-								cursor: pointer;
-								height: 24px;
-								font-size: 24px;
-								color: #454545;
-								font-weight: bolder;
-								margin-bottom: 15px;
-								.oe;
-								white-space: normal;
-								display: -webkit-box;
-								-webkit-box-orient: vertical;
-								-webkit-line-clamp: 1;
+						>ul {
+							li {
+								padding: 10px 10px 15px 10px;
+								border-bottom: solid 1px #BBBBBB;
 								.trs;
-								@media all and (max-width: 800px) {
-									& {
+								&:hover {
+									background-color: #f8f8f8;
+								}
+								a {
+									h3 {
+										font-size: 22px;
+										color: #454545;
 										margin-bottom: 15px;
-										font-size: 20px;
 										line-height: 28px;
-										height: 84px;
-										-webkit-line-clamp: 3;
+										height: 56px;
+										.oe;
+										white-space: normal;
+										display: -webkit-box;
+										-webkit-box-orient: vertical;
+										-webkit-line-clamp: 2;
+									}
+									>span.other-data {
+										display: block;
+										overflow: hidden;
+										.area,
+										.service-type {
+											color: #564A42;
+											font-size: 16px;
+										}
+										.area {
+											float: left;
+										}
+										.service-type {
+											float: right;
+										}
+									}
+									>span.border-bottom {
+										border-bottom: solid 1px #BBBBBB;
 									}
 								}
 							}
-							.level {
-								font-size: 20px;
-								color: #FFC721;
-								margin-bottom: 25px;
-								display: block;
-								@media all and (max-width: 800px) {
-									& { margin-bottom: 15px; }
-								}
+						}
+						.more {
+							display: block;
+							font-size: 20px;
+							text-align: center;
+							padding: 16px 0;
+							a {
+								color: #EB5F08;
 							}
-							.area,
-							.service-type {
-								display: inline-block;
-								font-size: 16px;
-								color: #564A42;
-								letter-spacing: 1px;
-								text-indent: 1px;
-								i {
-									width: 16px;
-									height: 16px;
-									text-align: center;
-									margin-right: 4px;
-								}
-							}
-							.area {
-								margin-bottom: 15px;
-								margin-right: 35px;
-								@media all and (max-width: 800px) {
-									& { display: none; }
-								}
-							}
-							.service-type {
-								@media all and (max-width: 800px) {
-									& { margin-bottom: 0px; }
-								}
-							}
-							p {
-								font-size: 18px;
-								color: #595959;
-								letter-spacing: 1px;
-								text-indent: 1px;
-								line-height: 25px;
-								height: 75px;
-								margin-bottom: 20px;
-								.oe;
-								white-space: normal;
-								display: -webkit-box;
-								-webkit-box-orient: vertical;
-								-webkit-line-clamp: 3;
-								@media all and (max-width: 800px) {
-									& { display: none; }
-								}
-							}
-							.tag-box {
-								display: block;
-								width: 100%;
-								height: 25px;
-								overflow: hidden;
-								@media all and (max-width: 800px) {
-									& { display: none; }
-								}
-								.tag {
-									display: inline-block;
-									height: 23px;
-									padding: 0 5px;
-									line-height: 25px;
-									font-size: 14px;
-									color: #EB5F08;
-									text-align: center;
-									border: solid 1px #EB5F08;
-									margin-right: 10px;
-									a { color: #EB5F08; }
-								}
-							}
+						}
+					}
+					>li:nth-child(2n) {
+						width: 49%;
+						margin-right: 0;
+						@media all and (max-width: 800px) {
+							& { width: 100%; }
 						}
 					}
 				}
@@ -372,51 +338,6 @@ body > .wrap { margin-top: 123px; }
 					color: #8e8e8e;
 					font-size: 16px;
 					cursor: default;
-				}
-				.partners-box {
-					margin-top: 40px;
-					ul {
-						overflow: hidden;
-						li {
-							float: left;
-							width: 16%;
-							max-width: 160px;
-							height: 50px;
-							margin: 0 2%;
-							margin-bottom: 30px;
-							@media all and (max-width: 1290px) {
-								& {
-									width: 21%;
-								}
-							}
-							@media all and (max-width: 1000px) {
-								& {
-									width: 29%;
-									margin: 0 2% 30px 2%;
-									max-width: none;
-								}
-							}
-							@media all and (max-width: 540px) {
-								& {
-									width: 44%;
-									margin: 0 3% 30px 3%;
-									max-width: none;
-								}
-							}
-
-							img {
-								width: auto;
-								height: auto;
-								margin: 0 auto;
-								display: block;
-								@media all and (max-width: 400px) {
-								& {
-									width: 100%;
-								}
-							}
-							}
-						}
-					}
 				}
 			}
 			.sidebox {
