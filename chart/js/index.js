@@ -259,7 +259,18 @@ drawCircle('#chart-4',2,chart_4_val,'#circle-2');
 
 
 $(function() {
-
+    $(".btn1").click(function() {
+        var g = Number($("input.chart1").val())
+        chart_1_y = [g,30,g+10,g+30,g,52,32,60];
+        $("path#graph-1").remove();
+        drawLineGraph('#chart-1', chart_1_y, '#graph-1-container', 1);
+    });
+    $(".btn2").click(function() {
+        var g = Number($("input.chart1").val())
+        chart_2_y = [g,30,g+10,g+30,g,g-10,g+11,32];
+        $("path#graph-2").remove();
+        drawLineGraph('#chart-2', chart_2_y, '#graph-2-container', 2);
+    });
     $(".btn3").click(function() {
         chart_3_val = $("input.chart3").val();
         $("path#circle-graph-1").remove();

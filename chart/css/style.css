@@ -317,14 +317,21 @@ body {
 }
 
 .control {
-  width: 1000px;
+  width: 1200px;
   margin: 0 auto;
   margin-top: 25px;
 }
 
 .control li {
-    width: 25%;
+    width: 21%;
     float: left;
+    margin: 0 2%;
+}
+.control li input {
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
 }
 .btn {
     padding: 5px;
@@ -332,6 +339,6 @@ body {
     background: #dfdfdf;
     color: #555;
     width: 130px;
-    margin: 20px auto;
+    margin: 10px auto;
     border: solid 1px #000;
 }
