@@ -238,12 +238,16 @@ body > .wrap { margin-top: 123px; }
 							position: relative;
 							display: block;
 							a {
+								overflow: hidden;
+								transform-origin: center;
+								img { .trs(0.8s); }
 								>span {
 									position: absolute;
 									bottom: 0;
 									width: 100%;
 									box-sizing: border-box;
 									padding: 15px 20px;
+									background: linear-gradient(to top, #000 0, rgba(0,0,0,0) 100%);
 									h2 {
 										font-size: 24px;
 										color: #fff;
@@ -257,6 +261,9 @@ body > .wrap { margin-top: 123px; }
 									}
 								}
 							}
+							&:hover {
+								img { transform: scale(1.05); }
+							}
 						}
 						>ul {
 							li {
@@ -264,7 +271,7 @@ body > .wrap { margin-top: 123px; }
 								border-bottom: solid 1px #BBBBBB;
 								.trs;
 								&:hover {
-									background-color: #f8f8f8;
+									background-color: #F4F4F4;
 								}
 								a {
 									h3 {
@@ -448,7 +455,7 @@ body > .wrap { margin-top: 123px; }
 		margin-bottom: 40px;
 	}
 	.banner-box.page-bottom {
-		background-image: url("@{image}page/banner-bottom-bg.jpg");
+		background-image: url("@{image}page/banner-bottom-bg.png");
 		background-repeat: repeat;
 	}
 	.banner-box.for-mobile { padding: 0; }

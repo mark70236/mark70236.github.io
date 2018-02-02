@@ -1025,7 +1025,7 @@ body > .wrap {
   width: 100%;
   height: 300px;
   background-repeat: repeat;
-  background-image: url("../images/page/banner-bottom-bg.jpg");
+  background-image: url("../images/page/banner-bottom-bg.png");
 }
 @media all and (max-width: 970px) {
   .wrap .main-bg {
@@ -1535,7 +1535,7 @@ body > .wrap {
   margin-bottom: 40px;
 }
 .wrap .banner-box.page-bottom {
-  background-image: url("../images/page/banner-bottom-bg.jpg");
+  background-image: url("../images/page/banner-bottom-bg.png");
   background-repeat: repeat;
 }
 .wrap .banner-box.for-mobile {

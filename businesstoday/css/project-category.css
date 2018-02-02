@@ -1321,12 +1321,24 @@ body > .wrap {
   position: relative;
   display: block;
 }
+.wrap .article-list .main-box .main ul.ltc-list-ul > li .banner a {
+  overflow: hidden;
+  transform-origin: center;
+}
+.wrap .article-list .main-box .main ul.ltc-list-ul > li .banner a img {
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -o-transition: 0.8s;
+  -ms-transition: 0.8s;
+  transition: 0.8s;
+}
 .wrap .article-list .main-box .main ul.ltc-list-ul > li .banner a > span {
   position: absolute;
   bottom: 0;
   width: 100%;
   box-sizing: border-box;
   padding: 15px 20px;
+  background: linear-gradient(to top, #000000 0, rgba(0, 0, 0, 0) 100%);
 }
 .wrap .article-list .main-box .main ul.ltc-list-ul > li .banner a > span h2 {
   font-size: 24px;
@@ -1341,6 +1353,9 @@ body > .wrap {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+.wrap .article-list .main-box .main ul.ltc-list-ul > li .banner:hover img {
+  transform: scale(1.05);
+}
 .wrap .article-list .main-box .main ul.ltc-list-ul > li > ul li {
   padding: 10px 10px 15px 10px;
   border-bottom: solid 1px #BBBBBB;
@@ -1351,7 +1366,7 @@ body > .wrap {
   transition: all 0.3s ease;
 }
 .wrap .article-list .main-box .main ul.ltc-list-ul > li > ul li:hover {
-  background-color: #f8f8f8;
+  background-color: #F4F4F4;
 }
 .wrap .article-list .main-box .main ul.ltc-list-ul > li > ul li a h3 {
   font-size: 22px;
@@ -1543,7 +1558,7 @@ body > .wrap {
   margin-bottom: 40px;
 }
 .wrap .banner-box.page-bottom {
-  background-image: url("../images/page/banner-bottom-bg.jpg");
+  background-image: url("../images/page/banner-bottom-bg.png");
   background-repeat: repeat;
 }
 .wrap .banner-box.for-mobile {
