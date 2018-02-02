@@ -264,7 +264,8 @@ $(function() {
         chart_3_val = $("input.chart3").val();
         $("path#circle-graph-1").remove();
         if (chart_3_val=="") {
-           return false;
+            $("#circle-1 .circle-percentage").text('0%');
+            return false;
         }
         drawCircle('#chart-3',1,Number(chart_3_val),'#circle-1');
     });
@@ -272,7 +273,8 @@ $(function() {
         chart_4_val = $("input.chart4").val();
         $("path#circle-graph-2").remove();
         if (chart_4_val=="") {
-           return false;
+           $("#circle-2 .circle-percentage").text('0%');
+            return false;
         }
         drawCircle('#chart-4',2,Number(chart_4_val),'#circle-2');
     });
