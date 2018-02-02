@@ -1554,8 +1554,8 @@ body > .wrap {
   text-align: center;
   line-height: 45px;
   background-color: #eee;
-  color: #545454;
-  font-size: 20px;
+  color: #8e8e8e;
+  font-size: 16px;
   cursor: default;
 }
 .wrap .article-list .main-box .sidebox,
@@ -1936,6 +1936,11 @@ body > .wrap {
 @media all and (max-width: 800px) {
   .wrap .banner-box img.for-mobile {
     display: block;
+  }
+}
+@media all and (max-width: 340px) {
+  .wrap .banner-box img.for-mobile {
+    width: 100%;
   }
 }
 .wrap .prev,

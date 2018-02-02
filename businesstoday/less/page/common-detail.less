@@ -353,6 +353,9 @@ body > .wrap { margin-top: 123px; }
 			@media all and (max-width: 800px) {
 				& { display: block; }
 			}
+			@media all and (max-width: 340px) {
+				& { width: 100%; }
+			}
 		}
 	}
 	.banner-box.page-top {
@@ -361,7 +364,7 @@ body > .wrap { margin-top: 123px; }
 		}
 	}
 	.banner-box.page-bottom {
-		background-color: #eee;
+		background-image: url("@{image}page/banner-bottom-bg.jpg");
 		background-repeat: repeat;
 	}
 	.banner-box.for-mobile { padding: 0; }

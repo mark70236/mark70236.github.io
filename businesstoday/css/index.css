@@ -1494,6 +1494,11 @@ body > .wrap {
     display: block;
   }
 }
+@media all and (max-width: 340px) {
+  .wrap img.for-mobile {
+    width: 100%;
+  }
+}
 .wrap .main {
   width: 1290px;
   margin: 0 auto;

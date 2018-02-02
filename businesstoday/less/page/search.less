@@ -3,90 +3,13 @@ body > .wrap { margin-top: 123px; }
 	.main-bg {
 		width: 100%;
 		height: 300px;
-		background-position: top center;
-		background-image: url("@{image}page/ltc/main-bg.png");
-		@media all and (max-width: 1290px) {
+		background-repeat: repeat;
+		background-image: url("@{image}page/banner-bottom-bg.jpg");
+		@media all and (max-width: 970px) {
 			& { display: none; }
 		}
 	}
-	.top-article-box {
-		width: 1290px;
-		height: 540px;
-		margin: 0 auto;
-		margin-bottom: 40px;
-		background-color: #fff;
-		position: relative;
-		margin-top: -250px;
-		border-radius: 9px;
-		box-sizing: border-box;
-		z-index: 0;
-		@media all and (min-width: 800px) and (max-width: 1290px) {
-			& { width: 100%; height: auto; margin-top: 0; }
-		}
-		@media all and (max-width: 800px) {
-			& { width: 100%; height: auto; margin-top: 0; border-radius: 0; overflow: hidden; }
-		}
-		&:after {
-			z-index: -1;
-			content: "";
-			display: block;
-			width: ~"calc( 100% + 26px )";
-			height: ~"calc( 100% + 26px )";
-			position: absolute;
-			top: -13px;
-			left: -13px;
-			border-radius: 9px;
-			background-color: rgba(255,255,255,0.5);
-		}
-		img {
-			@media all and (max-width: 800px) {
-				& { width: 130%; margin-left: -15%; }
-			}
-		}
-		.title-box {
-			display: block;
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			padding: 30px 60px;
-			box-sizing: border-box;
-			background: linear-gradient(to top, #000 0, rgba(0,0,0,0) 100%);
-			@media all and (max-width: 1290px) {
-				& { padding: 2% 4%; }
-			}
-			h2 {
-				margin-bottom: 25px;
-				a {
-					font-size: 36px;
-					color: #fff;
-					line-height: 50px;
-					font-weight: bolder;
-					max-height: 100px;
-					.oe;
-					white-space: normal;
-					display: -webkit-box;
-					-webkit-box-orient: vertical;
-					-webkit-line-clamp: 2;
-					@media all and (max-width: 800px) {
-						& { font-size: 23px; margin-bottom: 0; }
-					}
-				}
-			}
-			span {
-				color: #fff;
-				font-size: 16px;
-				display: inline-block;
-				margin-right: 30px;
-				@media all and (max-width: 800px) {
-					& { display: none; }
-				}
-				a { color: #fff; font-size: 16px; }
-			}
-			.article-author,
-			.article-date { cursor: default; }
-		}
 
-	}
 	.article-list {
 		width: 1290px;
 		margin: 0 auto;
@@ -95,12 +18,15 @@ body > .wrap { margin-top: 123px; }
 		}
 		.top-box {
 			border-bottom: solid 1px #c9c9c9;
-			font-size: 23px;
-			color: #4E4E4E;
+			font-size: 20px;
+			color: #4e4e4e;
 			padding: 0;
 			padding-bottom: 7px;
 			box-sizing: border-box;
 			position: relative;
+			@media all and (max-width: 1290px) {
+				& { padding: 0 20px 7px 20px; }
+			}
 			@media all and (max-width: 800px) {
 				& { font-size: 20px; }
 			}
@@ -272,7 +198,9 @@ body > .wrap { margin-top: 123px; }
 								}
 							}
 							@media all and (max-width: 340px) {
-								& { width: ~"calc(100% - 130px)"; }
+								& {
+									width: ~"calc(100% - 130px)";
+								}
 							}
 							h2 {
 								cursor: pointer;
@@ -497,6 +425,14 @@ body > .wrap { margin-top: 123px; }
 			@media all and (max-width: 340px) {
 				& { width: 100%; }
 			}
+		}
+	}
+	.banner-box.main-banner {
+		margin-top: -275px;
+		padding: 0;
+		margin-bottom: 60px;
+		@media all and (max-width: 970px) {
+			& { margin-top: 0; }
 		}
 	}
 	.banner-box.page-top {

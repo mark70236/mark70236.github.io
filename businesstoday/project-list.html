@@ -5,14 +5,14 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>幸福熟齡</title>
 	<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/page-ltc.css">
+	<link rel="stylesheet" href="css/project-list.css">
 	<script src="plugin/jquery/1.9.1.min.js"></script>
 	<script src="plugin/jqueryui/1.10.3.min.js"></script>
 	<script src="js/header.js"></script>
 	<script src="js/page.js"></script>
 
 </head>
-	<body class="page ltc-list">
+	<body class="page common-list">
 		<header>
 			<div class="top-head">
 				<div class="main">
@@ -182,99 +182,39 @@
 		</header>
 		<div class="wrap">
 			<div class="main-bg"></div>
-			<div class="search-box">
-				<h2>長照機構搜尋</h2>
-				<div class="border"></div>
-				<form>
-					<ul>
-						<li class="inline-block">
-							<span class="li-title inline-block">
-								<i class="fa fa-map-marker inline-block" aria-hidden="true"></i>
-								<span class="inline-block">縣市</span>
-							</span>
-							<select id="sel-city">
-								<option value="0">選擇縣市</option>
-								<option value="1">台北市</option>
-								<option value="2">高雄市</option>
-							</select>
-							<i class="arrow">▾</i>
-						</li>
-						<li class="inline-block">
-							<span class="li-title inline-block">
-								<i class="fa fa-map-marker inline-block" aria-hidden="true"></i>
-								<span class="inline-block">鄉鎮區</span>
-							</span>
-							<select id="sel-area">
-								<option value="0">鄉鎮區</option>
-							</select>
-							<i class="arrow">▾</i>
-						</li>
-						<li class="inline-block">
-							<span class="li-title inline-block">
-								<i class="fa fa-server inline-block" aria-hidden="true"></i>
-								<span class="inline-block">服務類型</span>
-							</span>
-							<span class="select-box inline-block">
-								<select id="sel-type-1">
-									<option value="0">服務類型</option>
-									<option value="1">類型1</option>
-									<option value="2">類型2</option>
-								</select>
-								<i class="arrow">▾</i>
-							</span>
-							<span class="select-box inline-block">
-								<select id="sel-type-2">
-									<option value="0">服務類型</option>
-								</select>
-								<i class="arrow">▾</i>
-							</span>
-						</li>
-						<li class="inline-block">
-							<span class="li-title inline-block">
-								<i class="fa fa-thumbs-o-up inline-block" aria-hidden="true"></i>
-								<span class="inline-block">評價</span>
-							</span>
-							<select>
-								<option value="評價">評價</option>
-							</select>
-							<i class="arrow">▾</i>
-						</li>
-						<li class="inline-block">
-							<span class="li-title inline-block">
-								<i class="fa fa-star-o inline-block" aria-hidden="true"></i>
-								<span class="inline-block">網友推薦</span>
-							</span>
-							<select>
-								<option value="網友推薦">網友推薦</option>
-							</select>
-							<i class="arrow">▾</i>
-						</li>
-						<li class="inline-block">
-							<span class="li-title inline-block">
-								<i class="fa fa-pencil inline-block" aria-hidden="true"></i>
-								<span class="inline-block">關鍵字</span>
-							</span>
-							<input type="text" placeholder="輸入長照機構名稱">
-						</li>
-					</ul>
-					<input type="submit" class="search-submit" value="立即搜尋">
-				</form>
+			<div class="top-article-box">
+				<a href="common-detail.html" title="憑著一股不服氣 牽起三個女人的「照顧情」">
+					<img src="images/page/common-list/top-article-banner.png" title="憑著一股不服氣 牽起三個女人的「照顧情」">
+				</a>
+				<span class="title-box">
+					<h2>
+						<a href="dcommon-etail.html" title="憑著一股不服氣 牽起三個女人的「照顧情」">憑著一股不服氣 牽起三個女人的「照顧情」</a>
+					</h2>
+				</span>
 			</div>
-			<div class="banner-box">
+			<div class="banner-box for-mobile page-top">
 				<div class="control-wrap">
 					<a href="#"><img class="for-mobile" src="images/index/300x250-1.png"></a>
 				</div>
 			</div>
 			<div class="article-list">
 				<div class="top-box">
-					<span class="search-type inline-block">
-						搜尋條件：<span>服務類型</span>
-					</span>
+					<!-- 標題模板，請加上class才會有對應顏色
+
+						最新消息：news
+						專題：project
+						健康：health
+						樂活：lohas
+						理財：wealth
+					 -->
+					<div class="title-box">
+						<h1>老後交友 幸福小秘訣  但在生命的關口前，最親的人反而亂了方寸，誤解蔓延</h1>
+					</div>
 					<span class="path inline-block">
 						<nav>
 							<a href="index.html">幸福熟齡</a>
 							<span class="divider">></span>
-							<span>長照機構搜尋</span>
+							<span>專題</span>
 						</nav>
 					</span>
 				</div>
@@ -285,11 +225,25 @@
 						</ul>
 						<div class="btn-more">看更多＋</div>
 						<div class="btn-nomore">已無更多文章</div>
+						<div class="partners-box">
+							<ul>
+								<li><img src="images/page/partners_logo01.png"></li>
+								<li><img src="images/page/partners_logo02.png"></li>
+								<li><img src="images/page/partners_logo01.png"></li>
+								<li><img src="images/page/partners_logo02.png"></li>
+								<li><img src="images/page/partners_logo01.png"></li>
+								<li><img src="images/page/partners_logo02.png"></li>
+								<li><img src="images/page/partners_logo01.png"></li>
+								<li><img src="images/page/partners_logo02.png"></li>
+								<li><img src="images/page/partners_logo01.png"></li>
+								<li><img src="images/page/partners_logo02.png"></li>
+							</ul>
+						</div>
 					</div>
 					<div class="sidebox">
 						<a href="#"><img src="images/page/300x250-1.png"></a>
 						<div class="ranking">
-							<h3>機構搜尋排名</h3>
+							<h3>熱門文章</h3>
 							<div class="border"></div>
 							<ul>
 								<li>
@@ -354,14 +308,14 @@
 								</li>
 							</ul>
 						</div>
-						<a href="#"><img src="images/page/300x250-2.png"></a>
+						<a href="#"><img src="images/page/300x600.png"></a>
 					</div>
 				</div>
 			</div>
-			<div class="banner-box">
+			<div class="banner-box page-bottom">
 				<div class="control-wrap">
-					<a href="#"><img class="for-deskop" src="images/index/970x250-1.png"></a>
-					<a href="#"><img class="for-mobile" src="images/index/300x250-1.png"></a>
+					<a href="#"><img class="for-deskop" src="images/page/970x250.png"></a>
+					<a href="#"><img class="for-mobile" src="images/page/300x250-1.png"></a>
 				</div>
 			</div>
 		</div>
@@ -402,34 +356,34 @@
 					<div class="tag-cloud">
 						<div class="headline">標籤雲</div>
 						<div class="tag-box">
-							<span><a href="#">最新新聞</a></span>
-							<span><a href="#">熱門討論</a></span>
-							<span><a href="#">退休金</a></span>
-							<span><a href="#">保險規劃</a></span>
-							<span><a href="#">投資</a></span>
-							<span><a href="#">照顧與醫療</a></span>
-							<span><a href="#">食療法</a></span>
-							<span><a href="#">最新新聞</a></span>
-							<span><a href="#">熱門討論</a></span>
-							<span><a href="#">退休金</a></span>
-							<span><a href="#">保險規劃</a></span>
-							<span><a href="#">投資</a></span>
-							<span><a href="#">照顧與醫療</a></span>
-							<span><a href="#">食療法</a></span>
-							<span><a href="#">最新新聞</a></span>
-							<span><a href="#">熱門討論</a></span>
-							<span><a href="#">退休金</a></span>
-							<span><a href="#">保險規劃</a></span>
-							<span><a href="#">投資</a></span>
-							<span><a href="#">照顧與醫療</a></span>
-							<span><a href="#">食療法</a></span>
-							<span><a href="#">最新新聞</a></span>
-							<span><a href="#">熱門討論</a></span>
-							<span><a href="#">退休金</a></span>
-							<span><a href="#">保險規劃</a></span>
-							<span><a href="#">投資</a></span>
-							<span><a href="#">照顧與醫療</a></span>
-							<span><a href="#">食療法</a></span>
+							<span><a href="search.html">最新新聞</a></span>
+							<span><a href="search.html">熱門討論</a></span>
+							<span><a href="search.html">退休金</a></span>
+							<span><a href="search.html">保險規劃</a></span>
+							<span><a href="search.html">投資</a></span>
+							<span><a href="search.html">照顧與醫療</a></span>
+							<span><a href="search.html">食療法</a></span>
+							<span><a href="search.html">最新新聞</a></span>
+							<span><a href="search.html">熱門討論</a></span>
+							<span><a href="search.html">退休金</a></span>
+							<span><a href="search.html">保險規劃</a></span>
+							<span><a href="search.html">投資</a></span>
+							<span><a href="search.html">照顧與醫療</a></span>
+							<span><a href="search.html">食療法</a></span>
+							<span><a href="search.html">最新新聞</a></span>
+							<span><a href="search.html">熱門討論</a></span>
+							<span><a href="search.html">退休金</a></span>
+							<span><a href="search.html">保險規劃</a></span>
+							<span><a href="search.html">投資</a></span>
+							<span><a href="search.html">照顧與醫療</a></span>
+							<span><a href="search.html">食療法</a></span>
+							<span><a href="search.html">最新新聞</a></span>
+							<span><a href="search.html">熱門討論</a></span>
+							<span><a href="search.html">退休金</a></span>
+							<span><a href="search.html">保險規劃</a></span>
+							<span><a href="search.html">投資</a></span>
+							<span><a href="search.html">照顧與醫療</a></span>
+							<span><a href="search.html">食療法</a></span>
 						</div>
 						<div class="search-bar">
 							<form>
@@ -444,280 +398,199 @@
 		</footer>
 	</body>
 	<script>
+		//此處主要處理js加載文章列表html結構
 		$(function() {
-			//長照搜尋區塊-下拉選單聯動控制
-			//市區下拉選單
-			$("#sel-city").change(function(){
-				switch (parseInt($(this).val())){
-					case 0:
-						$("#sel-area option").remove();
-						$("#sel-area").append($("<option value=''>鄉鎮區</option>"));
-						break;
-					case 1:
-						$("#sel-area option").remove();
-						var array = [ "中山區", "信義區", "文山區", "大安區" ];
-						//利用each遍歷array中的值並將每個值新增到Select中
-						$.each(array, function(i, val) {
-							$("#sel-area").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
-						});
-						break;
-					case 2:
-						$("#sel-area option").remove();
-						var array = [ "前鎮區", "鳳山區", "小港區", "永安區" ];
-						//利用each遍歷array中的值並將每個值新增到Select中
-						$.each(array, function(i, val) {
-							$("#sel-area").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
-						});
-						break;
-				}
-			})
-			//服務類型下拉選單
-			$("#sel-type-1").change(function(){
-				switch (parseInt($(this).val())){
-					case 0:
-						$("#sel-type-2 option").remove();
-						$("#sel-type-2").append($("<option value=''>服務類型</option>"));
-						break;
-					case 1:
-						$("#sel-type-2 option").remove();
-						var array = [ "類型1-1", "類型1-2", "類型1-3", "類型1-4" ];
-						//利用each遍歷array中的值並將每個值新增到Select中
-						$.each(array, function(i, val) {
-							$("#sel-type-2").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
-						});
-						break;
-					case 2:
-						$("#sel-type-2 option").remove();
-						var array = [ "類型2-1", "類型2-2", "類型2-3", "類型2-4" ];
-						//利用each遍歷array中的值並將每個值新增到Select中
-						$.each(array, function(i, val) {
-							$("#sel-type-2").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
-						});
-						break;
-				}
-			})
-		})
-	</script>
-	<script>
-		//此處主要處理js加載長照機構html結構
-		$(function() {
-			var dataLtc = {
-				"ltc1": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心1",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
+			var dataCommonList = {
+				"article1": {
+					"link": "common-detail.html",
+					"h2": "鬼才導演盧建彰 為爸媽找安養院的驚心歷程",
+					"auchor": "王大雄",
+					"date": "2017年12月14日",
 					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/001.png"
+					"tag":["父母1","專業1"],
+					"imgSrc": "images/page/common-list/01.png"
 				},
-				"ltc2": {
-					"link": "ltc-detail.html",
+				"article2": {
+					"link": "common-detail.html",
 					"h2": "私立新埔家園長期照顧中心2",
-					"level": "★☆☆☆☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
+					"auchor": "張大帥",
+					"date": "2017年12月14日",
 					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/002.png"
+					"tag":["父母2","專業2","照顧家人2"],
+					"imgSrc": "images/page/common-list/02.png"
 				},
-				"ltc3": {
-					"link": "ltc-detail.html",
+				"article3": {
+					"link": "common-detail.html",
 					"h2": "私立新埔家園長期照顧中心3",
-					"level": "★★☆☆☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
+					"auchor": "張大帥",
+					"date": "2017年12月14日",
 					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/003.png"
+					"tag":["父母","專業","照顧家人","父母","專業","父母","專業","照顧家人","父母","專業"],
+					"imgSrc": "images/page/common-list/03.png"
 				},
-				"ltc4": {
-					"link": "ltc-detail.html",
+				"article4": {
+					"link": "common-detail.html",
 					"h2": "私立新埔家園長期照顧中心4",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
+					"auchor": "王大雄",
+					"date": "2017年12月14日",
 					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/004.png"
+					"tag":["父母1","專業1"],
+					"imgSrc": "images/page/common-list/01.png"
 				},
-				"ltc5": {
-					"link": "ltc-detail.html",
+				"article5": {
+					"link": "common-detail.html",
 					"h2": "私立新埔家園長期照顧中心5",
-					"level": "★★★★★",
-					"area": "新竹縣",
-					"serviceType": "養護型",
+					"auchor": "張大帥",
+					"date": "2017年12月14日",
 					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/001.png"
+					"tag":["父母2","專業2","照顧家人2"],
+					"imgSrc": "images/page/common-list/02.png"
 				},
-				"ltc6": {
-					"link": "ltc-detail.html",
+				"article6": {
+					"link": "common-detail.html",
 					"h2": "私立新埔家園長期照顧中心6",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
+					"auchor": "張大帥",
+					"date": "2017年12月14日",
 					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/001.png"
+					"tag":["父母","專業","照顧家人","父母","專業","父母","專業","照顧家人","父母","專業"],
+					"imgSrc": "images/page/common-list/03.png"
 				},
-				"ltc7": {
-					"link": "ltc-detail.html",
+				"article7": {
+					"link": "common-detail.html",
 					"h2": "私立新埔家園長期照顧中心7",
-					"level": "★☆☆☆☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
+					"auchor": "王大雄",
+					"date": "2017年12月14日",
 					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/002.png"
+					"tag":["父母1","專業1"],
+					"imgSrc": "images/page/common-list/01.png"
 				},
-				"ltc8": {
-					"link": "ltc-detail.html",
+				"article8": {
+					"link": "common-detail.html",
 					"h2": "私立新埔家園長期照顧中心8",
-					"level": "★★☆☆☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
+					"auchor": "張大帥",
+					"date": "2017年12月14日",
 					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/003.png"
+					"tag":["父母2","專業2","照顧家人2"],
+					"imgSrc": "images/page/common-list/02.png"
 				},
-				"ltc9": {
-					"link": "ltc-detail.html",
+				"article9": {
+					"link": "common-detail.html",
 					"h2": "私立新埔家園長期照顧中心9",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
+					"auchor": "張大帥",
+					"date": "2017年12月14日",
 					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/004.png"
+					"tag":["父母","專業","照顧家人","父母","專業","父母","專業","照顧家人","父母","專業"],
+					"imgSrc": "images/page/common-list/03.png"
 				},
-				"ltc10": {
-					"link": "ltc-detail.html",
+				"article10": {
+					"link": "common-detail.html",
 					"h2": "私立新埔家園長期照顧中心10",
-					"level": "★★★★★",
-					"area": "新竹縣",
-					"serviceType": "養護型",
+					"auchor": "王大雄",
+					"date": "2017年12月14日",
 					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/001.png"
+					"tag":["父母1","專業1"],
+					"imgSrc": "images/page/common-list/01.png"
 				},
-				"ltc11": {
-					"link": "ltc-detail.html",
+				"article11": {
+					"link": "common-detail.html",
 					"h2": "私立新埔家園長期照顧中心11",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
+					"auchor": "張大帥",
+					"date": "2017年12月14日",
 					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/002.png"
+					"tag":["父母2","專業2","照顧家人2"],
+					"imgSrc": "images/page/common-list/02.png"
 				},
-				"ltc12": {
-					"link": "ltc-detail.html",
+				"article12": {
+					"link": "common-detail.html",
 					"h2": "私立新埔家園長期照顧中心12",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
+					"auchor": "張大帥",
+					"date": "2017年12月14日",
 					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/003.png"
-				},
-				"ltc13": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心13",
-					"level": "★☆☆☆☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/004.png"
-				},
-				"ltc14": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心14",
-					"level": "★★☆☆☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/005.png"
-				},
-				"ltc15": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心15",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/001.png"
-				},
-				"ltc16": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心16",
-					"level": "★★★★★",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/002.png"
-				},
-				"ltc17": {
-					"link": "ltc-detail.html",
-					"h2": "私立新埔家園長期照顧中心17",
-					"level": "★★★★☆",
-					"area": "新竹縣",
-					"serviceType": "養護型",
-					"p": "秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。",
-					"imgSrc": "images/page/ltc/list/003.png"
+					"tag":["父母","專業","照顧家人","父母","專業","父母","專業","照顧家人","父母","專業"],
+					"imgSrc": "images/page/common-list/03.png"
 				}
 			}
-			var ltcDataNum = Object.keys(dataLtc).length;
-			var no = 6; //已讀取前五筆,每次for迴圈列出接下來五筆
-
-			//頁面先載入前五筆資料
-			for(i=1;i<6;i++){
-				$(".article-list .main >ul >li:last-child").after('\
-					<li>\
-						<a href="'+dataLtc["ltc"+i].link+'">\
-							<span class="img-box">\
-								<img src="'+dataLtc["ltc"+i].imgSrc+'">\
-							</span>\
-							<span class="detail-box">\
-								<h2>'+dataLtc["ltc"+i].h2+'</h2>\
-								<span class="level">'+dataLtc["ltc"+i].level+'</span>\
-								<span class="area">\
-									<i class="fa fa-map-marker inline-block" aria-hidden="true"></i>\
-									縣市區域：'+dataLtc["ltc"+i].area+'\
-								</span>\
-								<span class="service-type">\
-									<i class="fa fa-server inline-block" aria-hidden="true"></i>\
-									服務類型：'+dataLtc["ltc"+i].serviceType+'\
-								</span>\
-								<p>'+dataLtc["ltc"+i].p+'</p>\
-							</span>\
-						</a>\
-					</li>\
-				')
-			}
-			$(".article-list .main >ul >li.toei").remove(); //移除定位用的空<li>
-
-			//點擊看更多按鈕，新增接下來五筆，直到沒資料
-			$(".article-list .btn-more").click(function() {
-				for(i=no;i<ltcDataNum+1&i<no+5;i++){
+			var ltcDataNum = Object.keys(dataCommonList).length;
+			var no = 8; //已讀取前五筆,每次for迴圈列出接下來五筆
+			//頁面先載入前7筆資料
+			for(i=1;i<8 ;i++){
+				if (i<ltcDataNum+1) {
 					$(".article-list .main >ul >li:last-child").after('\
-						<li>\
-							<a href="'+dataLtc["ltc"+i].link+'">\
+						<li class="li-'+i+'">\
+							<a href="'+dataCommonList["article"+i].link+'">\
 								<span class="img-box">\
-									<img src="images/page/ltc/list/004.png">\
+									<img src="'+dataCommonList["article"+i].imgSrc+'">\
 								</span>\
 								<span class="detail-box">\
-									<h2>'+dataLtc["ltc"+i].h2+'</h2>\
-									<span class="level">'+dataLtc["ltc"+i].level+'</span>\
+									<h2>'+dataCommonList["article"+i].h2+'</h2>\
 									<span class="area">\
-										<i class="fa fa-map-marker inline-block" aria-hidden="true"></i>\
-										縣市區域：'+dataLtc["ltc"+i].area+'\
+										<i class="fa fa-pencil inline-block" aria-hidden="true"></i>\
+										撰文 '+dataCommonList["article"+i].auchor+'\
 									</span>\
 									<span class="service-type">\
-										<i class="fa fa-server inline-block" aria-hidden="true"></i>\
-										服務類型：'+dataLtc["ltc"+i].serviceType+'\
+										<i class="fa fa-clock-o inline-block" aria-hidden="true"></i>\
+										'+dataCommonList["article"+i].date+'\
 									</span>\
-									<p>'+dataLtc["ltc"+i].p+'</p>\
+									<p>'+dataCommonList["article"+i].p+'</p>\
+									<span class="tag-box">\
+										<span class="tagAnchor"></span>\
+									</span>\
 								</span>\
 							</a>\
 						</li>\
 					')
+					$.each(dataCommonList["article"+i].tag, function(no,val){
+						var a = i+1;
+						$('li:nth-child('+a+') .tag-box .tagAnchor').after('\
+							<span class="tag"><a href="search.html">'+val+'</a></span>\
+						')
+					})
+				}else {
+					return false;
+				}
+			}
+			$(".article-list .main >ul >li.toei").remove(); //移除定位用的空<li>
+
+			//點擊看更多按鈕，新增接下來7筆，直到沒資料
+			$(".article-list .btn-more").click(function() {
+				for(i=no;i<ltcDataNum+1&i<no+7;i++){
+					$(".article-list .main >ul >li:last-child").after('\
+						<li class="li-'+i+'">\
+							<a href="'+dataCommonList["article"+i].link+'">\
+								<span class="img-box">\
+									<img src="'+dataCommonList["article"+i].imgSrc+'">\
+								</span>\
+								<span class="detail-box">\
+									<h2>'+dataCommonList["article"+i].h2+'</h2>\
+									<span class="area">\
+										<i class="fa fa-pencil inline-block" aria-hidden="true"></i>\
+										撰文 '+dataCommonList["article"+i].auchor+'\
+									</span>\
+									<span class="service-type">\
+										<i class="fa fa-clock-o inline-block" aria-hidden="true"></i>\
+										'+dataCommonList["article"+i].date+'\
+									</span>\
+									<p>'+dataCommonList["article"+i].p+'</p>\
+									<span class="tag-box">\
+										<span class="tagAnchor"></span>\
+									</span>\
+								</span>\
+							</a>\
+						</li>\
+					')
+					$.each(dataCommonList["article"+i].tag, function(no,val){
+						var a = i+1;
+						$('li:nth-child('+a+') .tag-box .tagAnchor').after('\
+							<span class="tag">'+val+'</span>\
+						')
+					})
 				}
 				//如果沒資料要顯示”已無資料“
 				if (no > ltcDataNum) {
 					$(".btn-more").hide(0);
 					$(".btn-nomore").show(300);
 				}
-				no= no+5;
+				no= no+7;
 			});
 		})
 	</script>
