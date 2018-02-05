@@ -1280,8 +1280,8 @@ body > .wrap {
 .wrap .article-list .main-box .main ul.activity-list-ul > li:hover .img-box {
   opacity: 0.8;
 }
-.wrap .article-list .main-box .main ul.activity-list-ul > li:hover .detail-box h2 {
-  color: #F65F12;
+.wrap .article-list .main-box .main ul.activity-list-ul > li:hover .detail-box .title {
+  color: #EB5F08;
 }
 .wrap .article-list .main-box .main ul.activity-list-ul > li:hover .banner img {
   transform: scale(1.05);
@@ -1324,7 +1324,6 @@ body > .wrap {
   line-height: 22px;
 }
 .wrap .article-list .main-box .main ul.activity-list-ul > li .detail-box .date > span {
-  cursor: default;
   float: right;
   width: calc(100% - 30px);
   vertical-align: top;
@@ -1342,6 +1341,11 @@ body > .wrap {
   overflow: hidden;
   font-size: 25px;
   color: #564A42;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -o-transition: 0.8s;
+  -ms-transition: 0.8s;
+  transition: 0.8s;
 }
 .wrap .article-list .main-box .main ul.activity-list-ul > li .detail-box .title i {
   line-height: 34px;
