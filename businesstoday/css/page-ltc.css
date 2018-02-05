@@ -144,6 +144,11 @@ a[href^=tel] {
   text-decoration: inherit;
   color: inherit;
 }
+::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
 body {
   margin: 0;
   background-repeat: no-repeat;
@@ -229,6 +234,9 @@ body.mac-user i,
 body.mac-user select,
 body.mac-user input {
   font-weight: 300;
+}
+.block {
+  display: block;
 }
 .inline {
   display: inline;
@@ -1577,7 +1585,7 @@ body > .wrap {
 }
 .wrap .article-list .ranking,
 .wrap .article-detail .ranking {
-  padding: 15px 0 9px 0;
+  padding: 15px 0 0 0;
   box-sizing: border-box;
   margin: 20px 0;
   border: solid 1px #E4E4E4;
@@ -1646,6 +1654,7 @@ body > .wrap {
 .wrap .article-list .ranking ul li:last-child,
 .wrap .article-detail .ranking ul li:last-child {
   margin-bottom: 0;
+  border-bottom: none;
 }
 @media all and (max-width: 960px) {
   .wrap .article-detail {

@@ -85,9 +85,6 @@ body > .wrap { margin-top: 123px; }
 					height: 25px;
 					padding: 0 20px;
 					overflow: hidden;
-					@media all and (max-width: 800px) {
-						& { display: none; }
-					}
 					span {
 						display: inline-block;
 						height: 23px;
@@ -154,64 +151,65 @@ body > .wrap { margin-top: 123px; }
 		}
 	}
 	.ranking {
-		padding: 15px 0 9px 0;
-		box-sizing: border-box;
-		margin: 20px 0;
-		border: solid 1px #E4E4E4;
-		h3 {
-			font-size: 20px;
-			color: #4E4E4E;
-			font-weight: bolder;
-			letter-spacing: 1px;
-			padding: 0 15px 9px 15px;
-		}
-		.border {
-			width: 100%;
-			height: 2px;
-			background-color: #4e4e4e;
-		}
-		ul {
-			li {
-				overflow: hidden;
-				padding: 15px 8px 10px 8px;
-				border-bottom: solid 1px #d8d8d8;
-				.trs;
-				&:hover {
-					background-color: #F4F4F4;
-				}
-				a {
+			padding: 15px 0 0 0;
+			box-sizing: border-box;
+			margin: 20px 0;
+			border: solid 1px #E4E4E4;
+			h3 {
+				font-size: 20px;
+				color: #4E4E4E;
+				font-weight: bolder;
+				letter-spacing: 1px;
+				padding: 0 15px 9px 15px;
+			}
+			.border {
+				width: 100%;
+				height: 2px;
+				background-color: #4e4e4e;
+			}
+			ul {
+				li {
 					overflow: hidden;
+					padding: 15px 8px 10px 8px;
+					border-bottom: solid 1px #d8d8d8;
+					.trs;
+					&:hover {
+						background-color: #F4F4F4;
+					}
+					a {
+						overflow: hidden;
+					}
+					.num {
+						float: left;
+						font-size: 44px;
+						color: #EB5F08;
+						font-weight: 600;
+						width: 50px;
+						margin-right: 5px;
+						text-align: center;
+					}
+					.title {
+						float: left;
+						width: ~"calc(100% - 55px)";
+						font-size: 18px;
+						color: #4E4E4E;
+						line-height: 24px;
+						max-height: 48px;
+						letter-spacing: 1px;
+						font-weight: 400;
+						.oe;
+						white-space: normal;
+						display: -webkit-box;
+						-webkit-box-orient: vertical;
+						-webkit-line-clamp: 2;
+					}
 				}
-				.num {
-					float: left;
-					font-size: 44px;
-					color: #EB5F08;
-					font-weight: 600;
-					width: 50px;
-					margin-right: 5px;
-					text-align: center;
+				li:last-child{
+					margin-bottom: 0;
+					border-bottom: none;
 				}
-				.title {
-					float: left;
-					width: ~"calc(100% - 55px)";
-					font-size: 18px;
-					color: #4E4E4E;
-					line-height: 24px;
-					max-height: 48px;
-					letter-spacing: 1px;
-					font-weight: 400;
-					.oe;
-					white-space: normal;
-					display: -webkit-box;
-					-webkit-box-orient: vertical;
-					-webkit-line-clamp: 2;
-				}
-			}
-			li:last-child{
-				margin-bottom: 0;
 			}
 		}
-	}
 	.ranking.for-mobile {
 		display: none;
 		@media all and (max-width: 800px) {

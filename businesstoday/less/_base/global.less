@@ -21,6 +21,11 @@ a[href^=tel] {
 	text-decoration:inherit;
 	color: inherit;
 }
+::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
 body {
 	margin: 0;
 	background-repeat: no-repeat;
@@ -67,7 +72,7 @@ body.page {
 body.mac-user {
 	h1,h2,h3,h4,h5,h6,p,b,span,div,ul,ol,li,table,th,td,a,i,select,input { font-weight: 300; }
 }
-
+.block { display: block; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
 
