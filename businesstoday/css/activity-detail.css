@@ -1266,6 +1266,7 @@ body > .wrap {
 .wrap .article-detail .main-box .main .detail-box .text table td {
   text-align: center;
   border: solid 1px #4E4E4E;
+  padding: 5px;
 }
 .wrap .article-detail .main-box .main .detail-box .introduction-box ul li {
   width: 100%;
