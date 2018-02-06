@@ -1103,6 +1103,7 @@ body > .wrap {
 .wrap .top-article-box .title-box h2 a {
   font-size: 36px;
   line-height: 50px;
+  letter-spacing: 2px;
   color: #fff;
   font-weight: bolder;
   max-height: 100px;
@@ -1155,7 +1156,7 @@ body > .wrap {
   font-size: 23px;
   color: #4E4E4E;
   width: 960px;
-  padding: 13px 20px 7px 20px;
+  padding: 13px 0px 7px 0px;
   box-sizing: border-box;
   position: relative;
 }
@@ -1185,7 +1186,7 @@ body > .wrap {
   font-size: 32px;
   line-height: 44px;
   color: #4E4E4E;
-  height: 88px;
+  max-height: 88px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
