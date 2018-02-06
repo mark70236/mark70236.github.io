@@ -1304,6 +1304,7 @@ body > .wrap {
   width: 25%;
   display: inline-block;
   vertical-align: top;
+  text-align: center;
 }
 .wrap .article-detail .main-box .main .btn-apply {
   width: 100%;
