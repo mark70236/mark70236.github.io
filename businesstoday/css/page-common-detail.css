@@ -1047,15 +1047,24 @@ body > .wrap {
 }
 @media all and (max-width: 1290px) {
   .wrap .top-box {
-    width: 130%;
-    margin-left: -15%;
+    width: 100%;
+    margin-top: 140px;
+    padding: 0 30px;
+    box-sizing: border-box;
   }
 }
 .wrap .top-box h1 {
   font-size: 34px;
+  line-height: 38px;
   color: #555;
   font-weight: 400;
   margin-bottom: 20px;
+}
+@media all and (max-width: 800px) {
+  .wrap .top-box h1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
 }
 .wrap .top-box .sc-detail {
   margin-bottom: 20px;
@@ -1064,6 +1073,13 @@ body > .wrap {
   font-size: 16px;
   color: #EB5F08;
   margin-right: 25px;
+  line-height: 24px;
+}
+@media all and (max-width: 1290px) {
+  .wrap .top-box .banner {
+    width: 130%;
+    margin-left: -15%;
+  }
 }
 .wrap .article-detail {
   width: 1290px;
@@ -1332,6 +1348,14 @@ body > .wrap {
   background-color: #fff;
   box-shadow: 0 3px 11px #c1c1c1;
 }
+.wrap .further-reading ul li:hover .title {
+  color: #ED6008;
+}
+@media all and (max-width: 800px) {
+  .wrap .further-reading ul li:hover .title {
+    color: #454545;
+  }
+}
 @media all and (max-width: 1290px) {
   .wrap .further-reading ul li {
     width: calc(24% - 3px);
@@ -1368,6 +1392,11 @@ body > .wrap {
   margin: 8px 0;
   padding: 0 10px;
   max-height: 52px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

@@ -1091,13 +1091,13 @@ body > .wrap {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 30px 40px;
+  padding: 140px 40px 30px 40px;
   box-sizing: border-box;
   background: linear-gradient(to top, #000000 0, rgba(0, 0, 0, 0) 100%);
 }
 @media all and (max-width: 1290px) {
   .wrap .top-article-box .title-box {
-    padding: 2% 4%;
+    padding: 12% 4% 2% 4%;
   }
 }
 .wrap .top-article-box .title-box h2 a {
@@ -1336,7 +1336,7 @@ body > .wrap {
   bottom: 0;
   width: 100%;
   box-sizing: border-box;
-  padding: 15px 20px;
+  padding: 65px 20px 15px 20px;
   background: linear-gradient(to top, #000000 0, rgba(0, 0, 0, 0) 100%);
 }
 .wrap .article-list .main-box .main ul.ltc-list-ul > li .banner a > span h2 {
@@ -1351,11 +1351,6 @@ body > .wrap {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-}
-@media all and (max-width: 800px) {
-  .wrap .article-list .main-box .main ul.ltc-list-ul > li .banner a > span h2 {
-    display: none;
-  }
 }
 .wrap .article-list .main-box .main ul.ltc-list-ul > li .banner:hover img {
   transform: scale(1.05);

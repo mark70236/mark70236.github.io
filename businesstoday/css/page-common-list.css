@@ -1091,17 +1091,22 @@ body > .wrap {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 30px 60px;
+  padding: 140px 60px 30px 60px;
   box-sizing: border-box;
   background: linear-gradient(to top, #000000 0, rgba(0, 0, 0, 0) 100%);
 }
 @media all and (max-width: 1290px) {
   .wrap .top-article-box .title-box {
-    padding: 2% 4%;
+    padding: 12% 4% 2% 4%;
   }
 }
 .wrap .top-article-box .title-box h2 {
   margin-bottom: 25px;
+}
+@media all and (max-width: 800px) {
+  .wrap .top-article-box .title-box h2 {
+    margin-bottom: 0;
+  }
 }
 .wrap .top-article-box .title-box h2 a {
   font-size: 36px;
@@ -1120,6 +1125,7 @@ body > .wrap {
 @media all and (max-width: 800px) {
   .wrap .top-article-box .title-box h2 a {
     font-size: 23px;
+    line-height: 30px;
     margin-bottom: 0;
   }
 }
@@ -1187,6 +1193,7 @@ body > .wrap {
   float: left;
   display: inline-block;
   width: auto;
+  color: #4E4E4E;
 }
 .wrap .article-list .top-box .path nav .divider {
   margin: 0 2px;
@@ -1313,6 +1320,11 @@ body > .wrap {
 .wrap .article-list .main-box .main ul.ltc-list-ul li:hover .detail-box h2 {
   color: #F65F12;
 }
+@media all and (max-width: 800px) {
+  .wrap .article-list .main-box .main ul.ltc-list-ul li:hover .detail-box h2 {
+    color: #454545;
+  }
+}
 .wrap .article-list .main-box .main ul.ltc-list-ul li .img-box {
   width: 320px;
   height: 230px;
@@ -1430,6 +1442,7 @@ body > .wrap {
   margin-right: 4px;
 }
 .wrap .article-list .main-box .main ul.ltc-list-ul li .detail-box .area {
+  cursor: default;
   margin-bottom: 15px;
   margin-right: 35px;
 }
@@ -1438,12 +1451,16 @@ body > .wrap {
     display: none;
   }
 }
+.wrap .article-list .main-box .main ul.ltc-list-ul li .detail-box .service-type {
+  cursor: default;
+}
 @media all and (max-width: 800px) {
   .wrap .article-list .main-box .main ul.ltc-list-ul li .detail-box .service-type {
     margin-bottom: 0px;
   }
 }
 .wrap .article-list .main-box .main ul.ltc-list-ul li .detail-box p {
+  cursor: default;
   font-size: 18px;
   color: #595959;
   letter-spacing: 1px;

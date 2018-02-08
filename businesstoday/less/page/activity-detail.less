@@ -24,7 +24,7 @@ body > .wrap { margin-top: 123px; }
 			& { width: 100%; height: auto; margin-top: 0; }
 		}
 		@media all and (max-width: 800px) {
-			& { width: 100%; height: auto; margin-top: 0; border-radius: 0; overflow: hidden; }
+			& { display: none; }
 		}
 		&:after {
 			z-index: -1;
@@ -48,11 +48,11 @@ body > .wrap { margin-top: 123px; }
 			position: absolute;
 			bottom: 0;
 			width: 100%;
-			padding: 30px 40px;
+			padding: 140px 40px 30px 40px;
 			box-sizing: border-box;
 			background: linear-gradient(to top, #000 0, rgba(0,0,0,0) 100%);
 			@media all and (max-width: 1290px) {
-				& { padding: 2% 4%; }
+				& { padding: 12% 4% 2% 4%; }
 			}
 			@media all and (max-width: 800px) {
 				& { display: none; }
@@ -130,15 +130,12 @@ body > .wrap { margin-top: 123px; }
 				}
 				.top-box {
 					border-bottom: solid 1px #c9c9c9;
-					font-size: 23px;
+					font-size: 26px;
 					color: #4E4E4E;
 					width: 100%;
 					box-sizing: border-box;
 					position: relative;
-					margin-bottom: 30px;
-					@media all and (max-width: 800px) {
-						& { font-size: 20px; }
-					}
+					margin-bottom: 20px;
 					.search-type {
 						overflow: hidden;
 					}
@@ -157,13 +154,16 @@ body > .wrap { margin-top: 123px; }
 							-webkit-line-clamp: 2;
 							@media all and (max-width: 800px) {
 								& {
-									font-size: 24px;
+									font-size: 26px;
 									line-height: 30px;
 									max-height: 60px;
 								}
 							}
 						}
 					}
+				}
+				.content-banner {
+					margin-bottom: 20px;
 				}
 				.detail-box {
 					.text {
@@ -413,6 +413,14 @@ body > .wrap { margin-top: 123px; }
 				margin: 0.5%;
 				background-color: #fff;
 				box-shadow: 0 3px 11px #c1c1c1;
+				&:hover {
+					.title {
+						color: #ED6008;
+						@media all and (max-width: 800px) {
+							& { color: #454545; }
+						}
+					}
+				}
 				@media all and (max-width: 1290px) {
 					& {
 						width: ~"calc(24% - 3px)";
@@ -451,6 +459,7 @@ body > .wrap { margin-top: 123px; }
 					margin: 8px 0;
 					padding: 0 10px;
 					height: 52px;
+					.trs;
 					.oe;
 					white-space: normal;
 					display: -webkit-box;
@@ -501,6 +510,9 @@ body > .wrap { margin-top: 123px; }
 	}
 	.banner-box.page-top {
 		margin-bottom: 40px;
+		@media all and (max-width: 800px) {
+			& { margin-top: 40px;}
+		}
 	}
 	.banner-box.page-bottom {
 		background-image: url("@{image}page/banner-bottom-bg.png");

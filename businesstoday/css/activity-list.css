@@ -1091,13 +1091,13 @@ body > .wrap {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 30px 40px;
+  padding: 140px 40px 30px 40px;
   box-sizing: border-box;
   background: linear-gradient(to top, #000000 0, rgba(0, 0, 0, 0) 100%);
 }
 @media all and (max-width: 1290px) {
   .wrap .top-article-box .title-box {
-    padding: 2% 4%;
+    padding: 12% 4% 2% 4%;
   }
 }
 .wrap .top-article-box .title-box h2 a {
@@ -1188,6 +1188,7 @@ body > .wrap {
   float: left;
   display: inline-block;
   width: auto;
+  color: #4E4E4E;
 }
 .wrap .article-list .top-box .path nav .divider {
   margin: 0 2px;

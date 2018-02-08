@@ -48,14 +48,17 @@ body > .wrap { margin-top: 123px; }
 			position: absolute;
 			bottom: 0;
 			width: 100%;
-			padding: 30px 60px;
+			padding: 140px 60px 30px 60px;
 			box-sizing: border-box;
 			background: linear-gradient(to top, #000 0, rgba(0,0,0,0) 100%);
 			@media all and (max-width: 1290px) {
-				& { padding: 2% 4%; }
+				& { padding: 12% 4% 2% 4%; }
 			}
 			h2 {
 				margin-bottom: 25px;
+				@media all and (max-width: 800px) {
+					& { margin-bottom: 0; }
+				}
 				a {
 					font-size: 36px;
 					color: #fff;
@@ -68,7 +71,7 @@ body > .wrap { margin-top: 123px; }
 					-webkit-box-orient: vertical;
 					-webkit-line-clamp: 2;
 					@media all and (max-width: 800px) {
-						& { font-size: 23px; margin-bottom: 0; }
+						& { font-size: 23px; line-height: 30px; margin-bottom: 0; }
 					}
 				}
 			}
@@ -117,7 +120,7 @@ body > .wrap { margin-top: 123px; }
 				}
 				nav {
 					overflow: hidden;
-					a,span { float: left; display: inline-block; width: auto; }
+					a,span { float: left; display: inline-block; width: auto; color: #4E4E4E;}
 					.divider { margin: 0 2px; }
 					span { cursor: default; }
 				}
@@ -219,7 +222,12 @@ body > .wrap { margin-top: 123px; }
 						box-shadow: 0 2px 6px rgba(201,201,201,0.5);
 						&:hover {
 							.img-box { opacity: 0.8; }
-							.detail-box h2 { color: #F65F12; }
+							.detail-box h2 {
+								color: #F65F12;
+								@media all and (max-width: 800px) {
+									& { color: #454545; }
+								}
+							}
 						}
 						.img-box {
 							width: 320px;
@@ -320,6 +328,7 @@ body > .wrap { margin-top: 123px; }
 								}
 							}
 							.area {
+								cursor: default;
 								margin-bottom: 15px;
 								margin-right: 35px;
 								@media all and (max-width: 800px) {
@@ -327,11 +336,13 @@ body > .wrap { margin-top: 123px; }
 								}
 							}
 							.service-type {
+								cursor: default;
 								@media all and (max-width: 800px) {
 									& { margin-bottom: 0px; }
 								}
 							}
 							p {
+								cursor: default;
 								font-size: 18px;
 								color: #595959;
 								letter-spacing: 1px;

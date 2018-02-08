@@ -14,13 +14,25 @@ body > .wrap { margin-top: 123px; }
 		margin: 0 auto;
 		margin-top: -170px;
 		@media all and (max-width: 1290px) {
-			& { width: 130%; margin-left: -15%; }
+			& {
+				width: 100%;
+				margin-top: 140px;
+				padding: 0 30px;
+				box-sizing: border-box;
+			}
 		}
 		h1 {
 			font-size: 34px;
+			line-height: 38px;
 			color: #555;
 			font-weight: 400;
 			margin-bottom: 20px;
+			@media all and (max-width: 800px) {
+				& {
+					font-size: 30px;
+					line-height: 38px;
+				}
+			}
 		}
 		.sc-detail {
 			margin-bottom: 20px;
@@ -28,6 +40,12 @@ body > .wrap { margin-top: 123px; }
 				font-size: 16px;
 				color: #EB5F08;
 				margin-right: 25px;
+				line-height: 24px;
+			}
+		}
+		.banner {
+			@media all and (max-width: 1290px) {
+				& { width: 130%; margin-left: -15%; }
 			}
 		}
 	}
@@ -264,6 +282,14 @@ body > .wrap { margin-top: 123px; }
 				margin-right: 1%;
 				background-color: #fff;
 				box-shadow: 0 3px 11px #c1c1c1;
+				&:hover {
+					.title {
+						color: #ED6008;
+						@media all and (max-width: 800px) {
+							& { color: #454545; }
+						}
+					}
+				}
 				@media all and (max-width: 1290px) {
 					& {
 						width: ~"calc(24% - 3px)";
@@ -302,6 +328,7 @@ body > .wrap { margin-top: 123px; }
 					margin: 8px 0;
 					padding: 0 10px;
 					max-height: 52px;
+					.trs;
 					.oe;
 					white-space: normal;
 					display: -webkit-box;

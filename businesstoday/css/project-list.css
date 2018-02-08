@@ -1091,13 +1091,13 @@ body > .wrap {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 30px 40px;
+  padding: 140px 40px 30px 40px;
   box-sizing: border-box;
   background: linear-gradient(to top, #000000 0, rgba(0, 0, 0, 0) 100%);
 }
 @media all and (max-width: 1290px) {
   .wrap .top-article-box .title-box {
-    padding: 2% 4%;
+    padding: 12% 4% 2% 4%;
   }
 }
 .wrap .top-article-box .title-box h2 a {
@@ -1184,6 +1184,7 @@ body > .wrap {
 }
 .wrap .article-list .top-box .title-box h1 {
   font-size: 32px;
+  font-weight: bolder;
   line-height: 44px;
   color: #4E4E4E;
   max-height: 88px;
@@ -1383,6 +1384,7 @@ body > .wrap {
 }
 .wrap .article-list .main-box .main ul.ltc-list-ul li .detail-box .area,
 .wrap .article-list .main-box .main ul.ltc-list-ul li .detail-box .service-type {
+  cursor: default;
   display: inline-block;
   font-size: 16px;
   color: #564A42;
@@ -1411,6 +1413,7 @@ body > .wrap {
   }
 }
 .wrap .article-list .main-box .main ul.ltc-list-ul li .detail-box p {
+  cursor: default;
   font-size: 18px;
   color: #595959;
   letter-spacing: 1px;
@@ -1639,7 +1642,7 @@ body > .wrap {
 }
 @media all and (max-width: 800px) {
   .wrap .banner-box.page-top {
-    margin-bottom: 40px;
+    margin: 30px 0;
   }
 }
 .wrap .banner-box.page-bottom {
