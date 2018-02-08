@@ -3065,7 +3065,9 @@ body > .wrap {
   -ms-transition: 1s;
   transition: 1s;
 }
-.wrap section.section2 .wealth-box .main .main-box .article-box a:hover img {
+.wrap section.section2 .wealth-box .main .main-box .article-box .main-article:hover img,
+.wrap section.section2 .wealth-box .main .main-box .article-box .sub-article:hover img,
+.wrap section.section2 .wealth-box .main .main-box .article-box .other-box:hover img {
   transform: scale(1.1);
 }
 .wrap section.section2 .wealth-box .main .main-box .article-box .main-article {

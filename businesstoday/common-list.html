@@ -611,7 +611,7 @@
 					$.each(dataCommonList["article"+i].tag, function(no,val){
 						var b = Number(count);
 						$('li:nth-child('+b+') .tag-box .tagAnchor').after('\
-							<span class="tag">'+val+'</span>\
+							<span class="tag"><a href="search.html">'+val+'</a></span>\
 						')
 					})
 					count = count++
