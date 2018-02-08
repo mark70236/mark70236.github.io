@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>空白頁面</title>
+	<link rel="stylesheet" href="../plugin/reset/min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/index.js"></script>
+	<script>
+
+	</script>
+</head>
+	<body>
+		<div class="wrap">
+			<div class="count-box">
+				<div id="num1" class="numbers">0</div>
+				<div id="num2" class="numbers">0</div>
+				<div id="num3" class="numbers">0</div>
+				<div id="btn">點我開始跑動畫</div>
+			</div>
+		</div>
+	</body>
+	<style>
+		.count-box {
+		  width: 80%;
+		  margin: 0 auto;
+		}
+		.numbers {
+		  float: left;
+		  width: 33.33333%;
+		  text-align: center;
+		  font-size: 30px;
+		  height: 100px;
+		  line-height: 100px;
+		  color: #fff;
+		  text-shadow: 2px 2px 5px #666;
+		  background-color: #333;
+		}
+		#btn {
+		  cursor: pointer;
+		  width: 100%;
+		  font-size: 22px;
+		  text-align: center;
+		  background: #808080;
+		  padding: 15px 0;
+		  box-sizing: border-box;
+		  line-height: 30px;
+		  clear: both;
+		  color: #fff;
+		  text-shadow: 2px 2px 5px #5f5f5f;
+		}
+	</style>
+	<script>
+		var targetNum1 = 41233.12382;
+		var targetNum2 = 13686.88721;
+		var targetNum3 = 85212.53482;
+
+		function countUp(elem, endVal, startVal, duration, decimal) {
+			var startTime = 0;
+			var dec = Math.pow(10, decimal);
+			var progress,value;
+			function startCount(timestamp) {
+				startTime = !startTime ? timestamp : startTime;
+				progress = timestamp - startTime;
+				value = startVal + (endVal - startVal) * (progress / duration);
+				value = (value > endVal) ? endVal : value;
+				value = Math.floor(value*dec) / dec;
+				elem.innerHTML = value.toFixed(decimal);
+				progress < duration && requestAnimationFrame(startCount)
+			}
+			requestAnimationFrame(startCount)
+		}
+
+		setTimeout(function(){
+			countUp(document.querySelector('#num1'), targetNum1, 0, 500, 1);
+			countUp(document.querySelector('#num2'), targetNum2, 0, 500, 2);
+			countUp(document.querySelector('#num3'), targetNum3, 0, 500, 3);
+		}, 2000)
+
+		document.querySelector('#btn').onclick = function() {
+			countUp(document.querySelector('#num1'), targetNum1, 0, 500, 1);
+			countUp(document.querySelector('#num2'), targetNum2, 0, 500, 2);
+			countUp(document.querySelector('#num3'), targetNum3, 0, 500, 3);
+		}
+	</script>
+</html>
