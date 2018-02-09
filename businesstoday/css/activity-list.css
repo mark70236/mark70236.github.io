@@ -1171,6 +1171,7 @@ body > .wrap {
 }
 .wrap .article-list .top-box .path {
   font-size: 18px;
+  line-height: 20px;
   position: absolute;
   bottom: 7px;
   right: 0;
