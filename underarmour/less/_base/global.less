@@ -1,0 +1,183 @@
+@image: "../images/";
+@mc-light: #fff;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline}
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block}
+body{line-height:1; font-family:Verdana,Geneva,sans-serif,"微軟正黑體", "細明體-ExtB"}
+ol, ul{list-style:none}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after, q:before, q:after{content:''; content:none}
+table{border-collapse:collapse; border-spacing:0}
+.trs ( @target: all 0.3s ease ) { -webkit-transition:	@target;-moz-transition: @target;-o-transition: @target;-ms-transition:	 @target;transition: @target }
+.oe { white-space: nowrap;overflow: hidden;text-overflow: ellipsis }
+html {
+	height: 100%;
+	&.ie7 {
+		overflow-x: hidden;
+		body { overflow-x: visible }
+		em { font-style: normal }
+	}
+}
+a[href^=tel] {
+	text-decoration:inherit;
+	color: inherit;
+}
+::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+@font-face {
+	font-family: ARMOUR_Bd;
+	src:url('../font/ARMOUR_Bd.eot') format('embedded-opentype'),
+  		url('../font/ARMOUR_Bd.ttf') format('truetype'),
+  		url('../font/ARMOUR_Bd.woff') format('woff'),
+  		url('../font/ARMOUR_Bd.woff2') format('woff2'),
+  		url('../font/ARMOUR_Bd.svg') format('svg');
+}
+@font-face {
+	font-family: ARMOUR_Blk;
+	src:url('../font/ARMOUR_Blk.eot') format('embedded-opentype'),
+  		url('../font/ARMOUR_Blk.ttf') format('truetype'),
+  		url('../font/ARMOUR_Blk.woff') format('woff'),
+  		url('../font/ARMOUR_Blk.woff2') format('woff2'),
+  		url('../font/ARMOUR_Blk.svg') format('svg');
+}
+@font-face {
+	font-family: ARMOUR_Lt;
+	src:url('../font/ARMOUR_Lt.eot') format('embedded-opentype'),
+  		url('../font/ARMOUR_Lt.ttf') format('truetype'),
+  		url('../font/ARMOUR_Lt.woff') format('woff'),
+  		url('../font/ARMOUR_Lt.woff2') format('woff2'),
+  		url('../font/ARMOUR_Lt.svg') format('svg');
+}
+@font-face {
+	font-family: ARMOUR_Md;
+	src:url('../font/ARMOUR_Md.eot') format('embedded-opentype'),
+  		url('../font/ARMOUR_Md.ttf') format('truetype'),
+  		url('../font/ARMOUR_Md.woff') format('woff'),
+  		url('../font/ARMOUR_Md.woff2') format('woff2'),
+  		url('../font/ARMOUR_Md.svg') format('svg');
+}
+@font-face {
+	font-family: ARMOUR_Rg;
+	src:url('../font/ARMOUR_Rg.eot') format('embedded-opentype'),
+  		url('../font/ARMOUR_Rg.ttf') format('truetype'),
+  		url('../font/ARMOUR_Rg.woff') format('woff'),
+  		url('../font/ARMOUR_Rg.woff2') format('woff2'),
+  		url('../font/ARMOUR_Rg.svg') format('svg');
+}
+@font-face {
+	font-family: ARMOUR_XBd;
+	src:url('../font/ARMOUR_XBd.eot') format('embedded-opentype'),
+  		url('../font/ARMOUR_XBd.ttf') format('truetype'),
+  		url('../font/ARMOUR_XBd.woff') format('woff'),
+  		url('../font/ARMOUR_XBd.woff2') format('woff2'),
+  		url('../font/ARMOUR_XBd.svg') format('svg');
+}
+@font-face {
+	font-family: ARMOURCd_Md;
+	src:url('../font/ARMOURCd_Md.eot') format('embedded-opentype'),
+  		url('../font/ARMOURCd_Md.ttf') format('truetype'),
+  		url('../font/ARMOURCd_Md.woff') format('woff'),
+  		url('../font/ARMOURCd_Md.woff2') format('woff2'),
+  		url('../font/ARMOURCd_Md.svg') format('svg');
+}
+@font-face {
+	font-family: ARMOURCd_Rg;
+	src:url('../font/ARMOURCd_Rg.eot') format('embedded-opentype'),
+  		url('../font/ARMOURCd_Rg.ttf') format('truetype'),
+  		url('../font/ARMOURCd_Rg.woff') format('woff'),
+  		url('../font/ARMOURCd_Rg.woff2') format('woff2'),
+  		url('../font/ARMOURCd_Rg.svg') format('svg');
+}
+@font-face {
+	font-family: ARMOURCd_XBd;
+	src:url('../font/ARMOURCd_XBd.eot') format('embedded-opentype'),
+  		url('../font/ARMOURCd_XBd.ttf') format('truetype'),
+  		url('../font/ARMOURCd_XBd.woff') format('woff'),
+  		url('../font/ARMOURCd_XBd.woff2') format('woff2'),
+  		url('../font/ARMOURCd_XBd.svg') format('svg');
+}
+body {
+	margin: 0;
+	background-repeat: no-repeat;
+	font-size: 12px;
+	color: #000;
+	background-color: #fff;
+	overflow-x: hidden;
+	height: auto !important;
+
+	h1,h2,h3,h4,h5,h6,p,b,span,div,ul,ol,li,table,th,td,em,strong,a,i,input,select {
+		font-family: "微軟正黑體";
+	}
+
+	a {
+		cursor: pointer;
+		text-decoration: none;
+		color: #000;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	p {
+		color: #000;
+	}
+
+	b { font-size: 28px; font-weight: bolder; }
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+	select::-ms-expand {
+	    display: none;
+	}
+	input {
+		border-radius: 0;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+}
+body.page {
+	background-color: #fafafa;
+}
+body.mac-user {
+	h1,h2,h3,h4,h5,h6,p,b,span,div,ul,ol,li,table,th,td,a,i,select,input { font-weight: 300; }
+}
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+
+// 字體設定
+.Bd { font-family: ARMOUR_Bd, "微軟正黑體", sans-serif; }
+.Blk { font-family: ARMOUR_Blk, "微軟正黑體", sans-serif; }
+.Lt { font-family: ARMOUR_Lt, "微軟正黑體", sans-serif; }
+.Md { font-family: ARMOUR_Md, "微軟正黑體", sans-serif; }
+.Rg { font-family: ARMOUR_Rg, "微軟正黑體", sans-serif; }
+.XBd { font-family: ARMOUR_XBd, "微軟正黑體", sans-serif; }
+.Cd_Md { font-family: ARMOURCd_Md, "微軟正黑體", sans-serif; }
+.Cd_Rg { font-family: ARMOURCd_Rg, "微軟正黑體", sans-serif; }
+.Cd_XBd { font-family: ARMOURCd_XBd, "微軟正黑體", sans-serif; }
+
+*::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #f5f5f5;
+}
+
+*::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+

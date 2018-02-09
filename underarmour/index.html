@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>UA</title>
+	<link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="plugin/jquery/1.9.1.min.js"></script>
+	<script src="plugin/jqueryui/1.10.3.min.js"></script>
+	<script src="plugin/countUp/countUp.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+
+	</script>
+</head>
+	<body>
+		<header>
+			<div class="logo">
+				<img src="images/_mode/logo.png">
+			</div>
+			<ul class="tool-box">
+				<li class="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></li>
+				<li><a href="#">所有活動列表</a></li>
+				<li><a href="index.html">回首頁</a></li>
+			</ul>
+		</header>
+		<div class="top-box">
+			<div class="main-banner">
+				<img src="images/index/main-banner.png">
+				<div class="main-fuction-box">
+					<div class="bg-dots"></div>
+					<div class="member-data">
+						<div class="member-name">您好，馬克</div>
+						<div class="point">
+							<span>目前已累積的紅利點數</span>
+							<span class="point-num Xbd" id="counter">0</span>
+							<a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+						</div>
+						<!--
+							member-level-1  新星級會員
+							member-level-2  明星級會員
+							member-level-3  巨星級會員
+						-->
+						<div class="progress">
+							<div class="bar-box">
+								<div class="nums-box">
+									<span class="start-point Cd_XBd">0k</span>
+									<span class="end-point Cd_XBd">12k</span>
+								</div>
+								<div class="bar">
+									<div class="gray-bar"></div>
+									<div class="target-bar"></div>
+								</div>
+							</div>
+							<div class="detail-box">
+								<span class="detail"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="wrap">
+
+		</div>
+		<footer>
+
+		</footer>
+	</body>
+		<script>
+			var point = 2342513; //紅利點數
+			var memberLevel_start = 0;
+			var memberLevel_end = 12000;
+			var memberLevel_next = 15000;
+			var progressPercent;
+			$(window).load(function() {
+				var target = new CountUp("counter",0,point,0,2);
+				target.start(); //開始跳動數字
+
+
+				$(".progress .detail-box .detail").addClass('open');
+				$(".progress .detail-box .detail").html('消費累計金額：'+point+' NTD,再累計 '+(memberLevel_next)+' NTD即可展延會員一年')
+				progressPercent = (point) / (memberLevel_end/100)
+				if (progressPercent > 100) {
+					progressPercent = 100;
+					$(".target-bar").css('width', progressPercent+'%');
+				}else {
+					$(".target-bar").css('width', progressPercent+'%');
+				}
+			});
+		</script>
+</html>
