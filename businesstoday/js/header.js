@@ -90,12 +90,12 @@ function getCookie(name) {
 	 if(arr != null) return unescape(arr[2]); return null;
 }
 
-// if(getCookie("sign") == null) {
-// 	var person = prompt("請輸入識別碼");
-// 	if (person == "a83dk4") {
-// 		SetCookie ("sign", true);
-// 	}
-// 	else {
-// 		window.location.href = 'https://www.google.com';
-// 	}
-// }
+if(getCookie("sign") == null) {
+	var person = prompt("請輸入識別碼");
+	if (person == "a83dk4") {
+		SetCookie ("sign", true);
+	}
+	else {
+		window.location.href = 'https://www.google.com';
+	}
+}
