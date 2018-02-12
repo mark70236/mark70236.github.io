@@ -21,28 +21,26 @@
 				<img src="images/logo.png">
 			</div>
 			<ul class="tool-box">
-				<li class="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></li>
+				<li class="icon"><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
 				<li><a href="#">所有活動列表</a></li>
 				<li><a href="index.html">回首頁</a></li>
 			</ul>
 		</header>
 		<div class="top-box">
 			<div class="main-banner">
-				<img src="images/index/main-banner.png">
+				<div class="title-box">
+					<h1 class="XBd">歡迎加入UNDER ARMOUR武裝俱樂部</h1>
+					<h2 class="XBd">WELCOME TO UNDER ARMOUR ATHLETE CLUB</h2>
+				</div>
 				<div class="main-fuction-box">
 					<div class="bg-dots"></div>
 					<div class="member-data">
 						<div class="member-name">您好，馬克</div>
 						<div class="point">
 							<span>目前已累積的紅利點數</span>
-							<span class="point-num Xbd" id="counter">0</span>
+							<span class="point-num XBd XBd" id="counter">0</span>
 							<a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
 						</div>
-						<!--
-							member-level-1  新星級會員
-							member-level-2  明星級會員
-							member-level-3  巨星級會員
-						-->
 						<div class="progress">
 							<div class="bar-box">
 								<div class="nums-box">
@@ -64,25 +62,104 @@
 
 		</div>
 		<div class="wrap">
+			<section class="section1">
+				<div class="all-news inline-block">
+					<a href="#">
+						<div class="black-mask"></div>
+						<div class="dots-box"><div class="bg-dots"></div></div>
+						<div class="hot"><div class="bg-dots"></div></div>
+						<div class="title-box">
+							<h3>查看所有活動</h3>
+							<h4 class="Blk">VIEW ALL NEWS</h4>
+						</div>
+					</a>
+				</div>
+				<div class="exclusive-offer inline-block">
+					<a href="#">
+						<div class="black-mask"></div>
+						<div class="dots-box"><div class="bg-dots"></div></div>
+						<div class="hot"><div class="bg-dots"></div></div>
+						<div class="title-box">
+							<h3>我的專屬優惠</h3>
+							<h4 class="Blk">EXCLUSIVE OFFER</h4>
+						</div>
+					</a>
+				</div>
+				<div class="welcome-box for-mobile">
+					<div class="title-box">
+						<h1 class="XBd">歡迎加入UNDER ARMOUR武裝俱樂部</h1>
+						<h2 class="Cd_Md">WELCOME TO UNDER ARMOUR<br>ATHLETE CLUB</h2>
+					</div>
+				</div>
+			</section>
+			<section class="section2">
+				<div class="news-box">
+					<div class="title">
+						<h2 class="XBd">LATEST EVENT NEWS</h2>
+						<h3>最新活動</h3>
 
+					</div>
+					<ul>
+						<li >
+							<img src="images/index/section2/01.jpg">
+							<div class="title-box">
+								<h2>即刻加入武裝俱樂部，抽東京來回機票</h2>
+								<p>即日起至4月30日止，凡於Under Armour直營門市專櫃憑任一筆消費辦理入會，並登入網站填寫完成會員資料者，即可獲得長榮航空台北-東京來回機票抽獎資格。</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/index/section2/02.jpg">
+							<div class="title-box">
+								<h2>HOVR智能跑鞋，零重力上市</h2>
+								<p>HOVR創新東以技術，挑戰世人對緩震和反應性難以兼顧的假設，開啟前所未有的「零重力」體驗。</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/index/section2/03.jpg">
+							<div class="title-box">
+								<h2> Curry 4 籃球鞋</h2>
+								<p>安德瑪男士籃球鞋類系列最新推出男士UA Curry 4低筒籃球鞋，了解更多男士UA Curry 4低筒籃球鞋價格、圖片等官方信息</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/index/section2/04.jpg">
+							<div class="title-box">
+								<h2>Athlete Recovery運動員恢復睡眠裝備</h2>
+								<p>提供舒適的身體睡眠環境，進而幫助身體恢復！</p>
+							</div>
+						</li>
+					</ul>
+					<div class="btn-more">
+						<a href="#">
+							<div class="bg-dots"></div>
+							查看所有活動<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+				<div class="bottom-logo-box">
+					<img src="images/index/bottom-logo.png" title="UNDER ARMOUR">
+				</div>
+			</section>
 		</div>
 		<footer>
-
+			<p class="Cd_Rg">Copyright 2018© Company name | All Rights Reserved | <nobr>網頁設計公司：振作國際</nobr></p>
 		</footer>
 	</body>
 		<script>
-			var point = 2342513; //紅利點數
+			var point = 8513; //紅利點數
 			var memberLevel_start = 0;
-			var memberLevel_end = 12000;
-			var memberLevel_next = 15000;
+			var memberLevel_end = 12000; //滿額展延會員
+			var memberLevel_next = (memberLevel_end - point);
 			var progressPercent;
 			$(window).load(function() {
-				var target = new CountUp("counter",0,point,0,2);
+				var target = new CountUp("counter",0,point,0,3);
 				target.start(); //開始跳動數字
-
-
-				$(".progress .detail-box .detail").addClass('open');
-				$(".progress .detail-box .detail").html('消費累計金額：'+point+' NTD,再累計 '+(memberLevel_next)+' NTD即可展延會員一年')
+				if (memberLevel_next < 0) {
+					memberLevel_next = 0;
+					$(".progress .detail-box .detail").html('消費累計金額：'+point+' NTD');
+				}else {
+					$(".progress .detail-box .detail").html('消費累計金額：'+point+' NTD,再累計 '+(memberLevel_next)+' NTD即可展延會員一年');
+				}
 				progressPercent = (point) / (memberLevel_end/100)
 				if (progressPercent > 100) {
 					progressPercent = 100;
@@ -90,6 +167,10 @@
 				}else {
 					$(".target-bar").css('width', progressPercent+'%');
 				}
+
+				// $(window).on("resize", function() {
+
+				// })
 			});
 		</script>
 </html>

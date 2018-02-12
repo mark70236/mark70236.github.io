@@ -150,6 +150,19 @@ body.mac-user {
 .inline { display: inline; }
 .inline-block { display: inline-block; }
 
+.for-mobile {
+	display: none;
+	@media all and (max-width: 900px) {
+		& { display: block; }
+	}
+}
+.for-deskop {
+	display: block;
+	@media all and (max-width: 900px) {
+		& { display: none; }
+	}
+}
+
 // 字體設定
 .Bd { font-family: ARMOUR_Bd, "微軟正黑體", sans-serif; }
 .Blk { font-family: ARMOUR_Blk, "微軟正黑體", sans-serif; }

@@ -1,7 +1,7 @@
 header {
 	width: 100%;
 	height: 110px;
-	position: fixed;
+	position: relative;
 	top: 0;
 	z-index: 12;
 	background-color: #000;
@@ -9,13 +9,13 @@ header {
 	padding: 0 8%;
 	box-sizing: border-box;
 	@media all and (max-width: 1500px) {
-		& { padding: 0 3%; }
+		& { padding: 0 3%; height: 80px; }
 	}
 	@media all and (max-width: 1050px) {
 		& { padding: 0 1%; }
 	}
 	@media all and (max-width: 900px) {
-		& { padding: 0 3%; }
+		& { padding: 0 3%; height: 60px; text-align: center; }
 	}
 	.logo {
 		width: 120px;
@@ -24,11 +24,23 @@ header {
 		padding: 20px 0;
 		box-sizing: border-box;
 		float: left;
+		@media all and (max-width: 1500px) {
+			& { width: auto; height: 80px; padding: 15px 5px; }
+		}
+		@media all and (max-width: 900px) {
+			& { width: auto; height: 60px; padding: 12px 5px; float: none; display: inline-block; }
+		}
 		img {
 			width: 115px;
 			height: auto;
 			margin: 0px auto;
 			display: block;
+			@media all and (max-width: 1500px) {
+				& { width: auto; height: 50px; }
+			}
+			@media all and (max-width: 900px) {
+				& { width: auto; height: 34px; }
+			}
 		}
 	}
 	.tool-box {
@@ -36,6 +48,12 @@ header {
 		height: 100%;
 		padding: 25px 0;
 		box-sizing: border-box;
+		@media all and (max-width: 1500px) {
+			& { padding: 1% 0; }
+		}
+		@media all and (max-width: 900px) {
+			& { display: none; }
+		}
 		li {
 			float: right;
 			height: 100%;
@@ -49,6 +67,7 @@ header {
 			width: 60px;
 			text-align: center;
 			background-color: #D0021B;
+			margin-right: 0;
 		}
 	}
 }
