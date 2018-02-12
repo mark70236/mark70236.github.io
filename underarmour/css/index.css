@@ -497,7 +497,7 @@ footer p {
 }
 @media all and (max-width: 400px) {
   .top-box .main-banner {
-    padding-bottom: 72%;
+    padding-bottom: 75%;
   }
 }
 .top-box .main-banner .title-box {
@@ -589,7 +589,7 @@ footer p {
 }
 @media all and (max-width: 900px) {
   .top-box .main-banner .main-fuction-box .member-data {
-    padding: 3%;
+    padding: 5% 3%;
   }
 }
 .top-box .main-banner .main-fuction-box .member-data .member-name {
