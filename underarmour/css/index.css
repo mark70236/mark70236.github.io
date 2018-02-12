@@ -1021,6 +1021,7 @@ footer p {
 .wrap .section2 .news-box ul li:nth-child(4) {
   display: none;
   margin-right: 0;
+  margin-bottom: 0;
 }
 @media all and (max-width: 900px) {
   .wrap .section2 .news-box ul li:nth-child(4) {
