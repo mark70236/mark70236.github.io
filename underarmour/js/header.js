@@ -76,4 +76,27 @@ $(function() {
 	// 		$(".mobile-menu, .mobile-black-mask").removeClass('top-mode');
 	// 	}
 	// })
+
+
+	//cookie
+	function SetCookie(name, value) {
+		var Days = 1; // save 10 day
+		var exp  = new Date();
+		exp.setTime(exp.getTime() + Days*24*60*60*1000);
+		document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+	}
+	function getCookie(name) {
+		var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+		 if(arr != null) return unescape(arr[2]); return null;
+	}
+
+	if(getCookie("uamask") == null) {
+		var person = prompt("請輸入識別碼");
+		if (person == "wakeup") {
+			SetCookie ("uamask", true);
+		}
+		else {
+			window.location.href = 'https://www.google.com';
+		}
+	}
 })
