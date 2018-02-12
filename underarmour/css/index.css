@@ -983,8 +983,8 @@ footer p {
 .wrap .section2 .news-box ul li .title-box h2 {
   font-size: 16px;
   font-weight: bold;
-  line-height: 24px;
-  height: 24px;
+  line-height: 26px;
+  height: 26px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -995,8 +995,8 @@ footer p {
 }
 .wrap .section2 .news-box ul li .title-box p {
   font-size: 14px;
-  line-height: 18px;
-  height: 54px;
+  line-height: 20px;
+  height: 60px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
