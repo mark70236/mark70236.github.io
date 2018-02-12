@@ -135,6 +135,9 @@ body > .wrap { margin-top: 123px; }
 						margin: 0 auto 20px auto;
 					}
 				}
+				@media all and (max-width: 880px) {
+					& { width: 100%; }
+				}
 				.title {
 					width: 220px;
 					height: 0;
@@ -235,6 +238,7 @@ body > .wrap { margin-top: 123px; }
 								img { .trs(0.8s); }
 								>span {
 									position: absolute;
+									left: 0;
 									bottom: 0;
 									width: 100%;
 									box-sizing: border-box;

@@ -17,7 +17,7 @@ body > .wrap { margin-top: 123px; }
 			& {
 				width: 100%;
 				margin-top: 140px;
-				padding: 0 30px;
+				padding: 0;
 				box-sizing: border-box;
 			}
 		}
@@ -27,6 +27,12 @@ body > .wrap { margin-top: 123px; }
 			color: #555;
 			font-weight: 400;
 			margin-bottom: 20px;
+			@media all and (max-width: 1290px) {
+				& {
+					padding: 0 30px;
+					box-sizing: border-box;
+				}
+			}
 			@media all and (max-width: 800px) {
 				& {
 					font-size: 30px;
@@ -36,6 +42,12 @@ body > .wrap { margin-top: 123px; }
 		}
 		.sc-detail {
 			margin-bottom: 20px;
+			@media all and (max-width: 1290px) {
+				& {
+					padding: 0 30px;
+					box-sizing: border-box;
+				}
+			}
 			span {
 				font-size: 16px;
 				color: #EB5F08;
@@ -44,8 +56,12 @@ body > .wrap { margin-top: 123px; }
 			}
 		}
 		.banner {
-			@media all and (max-width: 1290px) {
-				& { width: 130%; margin-left: -15%; }
+			width: 100%;
+			overflow: hidden;
+			img {
+				@media all and (max-width: 1290px) {
+					& { width: 130%; margin-left: -15%; }
+				}
 			}
 		}
 	}

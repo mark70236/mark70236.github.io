@@ -1026,6 +1026,9 @@ footer .copyright {
   color: #dfdfdf;
   font-size: 13px;
 }
+footer .copyright a {
+  color: #dfdfdf;
+}
 body > .wrap {
   margin-top: 123px;
 }
@@ -1049,7 +1052,7 @@ body > .wrap {
   .wrap .top-box {
     width: 100%;
     margin-top: 140px;
-    padding: 0 30px;
+    padding: 0;
     box-sizing: border-box;
   }
 }
@@ -1060,6 +1063,12 @@ body > .wrap {
   font-weight: 400;
   margin-bottom: 20px;
 }
+@media all and (max-width: 1290px) {
+  .wrap .top-box h1 {
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+}
 @media all and (max-width: 800px) {
   .wrap .top-box h1 {
     font-size: 30px;
@@ -1069,14 +1078,24 @@ body > .wrap {
 .wrap .top-box .sc-detail {
   margin-bottom: 20px;
 }
+@media all and (max-width: 1290px) {
+  .wrap .top-box .sc-detail {
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+}
 .wrap .top-box .sc-detail span {
   font-size: 16px;
   color: #EB5F08;
   margin-right: 25px;
   line-height: 24px;
 }
+.wrap .top-box .banner {
+  width: 100%;
+  overflow: hidden;
+}
 @media all and (max-width: 1290px) {
-  .wrap .top-box .banner {
+  .wrap .top-box .banner img {
     width: 130%;
     margin-left: -15%;
   }

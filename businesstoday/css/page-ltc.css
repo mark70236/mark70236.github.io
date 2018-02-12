@@ -1026,6 +1026,9 @@ footer .copyright {
   color: #dfdfdf;
   font-size: 13px;
 }
+footer .copyright a {
+  color: #dfdfdf;
+}
 body > .wrap {
   margin-top: 123px;
 }

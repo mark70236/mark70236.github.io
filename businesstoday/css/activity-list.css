@@ -1026,6 +1026,9 @@ footer .copyright {
   color: #dfdfdf;
   font-size: 13px;
 }
+footer .copyright a {
+  color: #dfdfdf;
+}
 body > .wrap {
   margin-top: 123px;
 }
@@ -1204,6 +1207,11 @@ body > .wrap {
   .wrap .article-list .top-box .title-box {
     width: 880px;
     margin: 0 auto 20px auto;
+  }
+}
+@media all and (max-width: 880px) {
+  .wrap .article-list .top-box .title-box {
+    width: 100%;
   }
 }
 .wrap .article-list .top-box .title-box .title {
