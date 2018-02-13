@@ -8,6 +8,7 @@ header {
 	.trs(0.2s);
 	padding: 0 8%;
 	box-sizing: border-box;
+	overflow: hidden;
 	@media all and (max-width: 1500px) {
 		& { padding: 0 3%; height: 80px; }
 	}
@@ -15,7 +16,30 @@ header {
 		& { padding: 0 1%; }
 	}
 	@media all and (max-width: 900px) {
-		& { padding: 0 3%; height: 60px; text-align: center; }
+		& { padding: 0; height: 60px; text-align: center; }
+	}
+	.member-icon {
+		float: left;
+		width: 60px;
+		height: 60px;
+		border-right: solid 1px #4F4F4F;
+		i {
+			font-size: 20px;
+			color: #fff;
+			line-height: 60px;
+		}
+	}
+	.menu-icon {
+		float: right;
+		width: 60px;
+		height: 60px;
+		cursor: pointer;
+		border-left: solid 1px #4F4F4F;
+		i {
+			font-size: 20px;
+			color: #fff;
+			line-height: 60px;
+		}
 	}
 	.logo {
 		width: 120px;
@@ -69,6 +93,61 @@ header {
 			background-color: #D0021B;
 			margin-right: 0;
 		}
+	}
+	.menu-box {
+		width: 0;
+		height: 100%;
+		z-index: 222;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		background-color: rgba(0, 0, 0, .7);
+		.trs(0.5s);
+		@media all and (max-width: 900px) {
+			& { width: 100%; }
+		}
+		.close {
+			display: none;
+			position: absolute;
+			top: 18px;
+			right: 20px;
+			font-size: 24px;
+			color: #dcdcdc;
+			cursor: pointer;
+			@media all and (max-width: 900px) {
+				& { display: block; }
+			}
+		}
+		.menu {
+			width: 100%;
+			height: 100%;
+			text-align: right;
+			float: right;
+			background-color: rgba(0, 0, 0, 0.7);
+			box-sizing: border-box;
+			padding-top: 60px;
+			.trs();
+			li {
+				cursor: pointer;
+				padding: 15px 10px;
+				box-sizing: border-box;
+				border-bottom: solid 1px #565656;
+				.trs;
+				&:hover {
+					background-color: #1f1f1f;
+				}
+				a {
+					font-size: 18px;
+					line-height: 24px;
+					color: #dcdcdc;
+					text-align: right;
+				}
+			}
+		}
+	}
+	.menu-box.open {
+		right: 0;
+		.menu { width: 40%; }
 	}
 }
 header.hide {

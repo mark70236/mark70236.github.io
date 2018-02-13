@@ -58,45 +58,81 @@ $(function() {
 	// 	}
 	// });
 
+	$(".menu-icon").click(function() {
+		if ($(".menu-box").hasClass('open')) {
+			return false;
+		}else {
+			$(".menu-box").addClass('open')
+		}
+	});
+	$(".close").click(function() {
+		if ($(".menu-box").hasClass('open')) {
+			$(".menu-box").removeClass('open')
+		}else {
+			return false;
+		}
+	});
 
+	$(window).scroll(function () {
+		var fullWidth = $(window).width();
+		var scrollVal = $(this).scrollTop();
+		var headerHeight = $("header").height();
+		var mainBannerHeight = $(".top-box").height();
+		var mainFuctionBoxHeight = $(".main-fuction-box").height();
+		var mainHeight = headerHeight + mainBannerHeight;
+		var mainHeightStart = mainHeight - mainFuctionBoxHeight;
+		var mainHeightEnd = mainHeight - mainFuctionBoxHeight;
 
-	// $(window).scroll(function () {
-	// 	var scrollVal = $(this).scrollTop();
-	// 	//console.log(scrollVal);
-	// 	if (scrollVal > 123) {
-	// 			if ($("header").hasClass('hide')) {
-	// 					return false;
-	// 			}else {
-	// 					$("header").addClass('hide');
-	// 					$(".mobile-menu, .mobile-black-mask").addClass('top-mode');
-	// 			}
-	// 	}
-	// 	if (scrollVal < 123) {
-	// 		$("header").removeClass('hide');
-	// 		$(".mobile-menu, .mobile-black-mask").removeClass('top-mode');
-	// 	}
-	// })
+		if (fullWidth<900) {
+			if ( scrollVal > mainHeight ) {
+					if ($(".main-fuction-box").hasClass('fix-top')) {
+							return false;
+					}else {
+						$(".main-fuction-box").addClass('fix-top');
+					}
+			}
+			if ( scrollVal < mainHeight ) {
+				$(".main-fuction-box").removeClass('fix-top');
+			}
+		}else {
+			if ( scrollVal > mainHeightStart ) {
+					if ($(".main-fuction-box").hasClass('fix-top')) {
+							return false;
+					}else {
+						$(".main-fuction-box").addClass('fix-top');
+					}
+			}
+			if ( scrollVal < mainHeightEnd ) {
+				$(".main-fuction-box").removeClass('fix-top');
+			}
+		}
 
+	})
+
+	//錨點功能 滑到長照搜尋區塊
+	$("[data-gotop]").click(function() {
+		$("html,body").animate({ scrollTop: 0 }, 500);
+	});
 
 	//cookie
-	function SetCookie(name, value) {
-		var Days = 1; // save 10 day
-		var exp  = new Date();
-		exp.setTime(exp.getTime() + Days*24*60*60*1000);
-		document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
-	}
-	function getCookie(name) {
-		var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
-		 if(arr != null) return unescape(arr[2]); return null;
-	}
+	// function SetCookie(name, value) {
+	// 	var Days = 1; // save 10 day
+	// 	var exp  = new Date();
+	// 	exp.setTime(exp.getTime() + Days*24*60*60*1000);
+	// 	document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+	// }
+	// function getCookie(name) {
+	// 	var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+	// 	 if(arr != null) return unescape(arr[2]); return null;
+	// }
 
-	if(getCookie("uamask") == null) {
-		var person = prompt("請輸入識別碼");
-		if (person == "wakeup") {
-			SetCookie ("uamask", true);
-		}
-		else {
-			window.location.href = 'https://www.google.com';
-		}
-	}
+	// if(getCookie("uamask") == null) {
+	// 	var person = prompt("請輸入識別碼");
+	// 	if (person == "wakeup") {
+	// 		SetCookie ("uamask", true);
+	// 	}
+	// 	else {
+	// 		window.location.href = 'https://www.google.com';
+	// 	}
+	// }
 })
