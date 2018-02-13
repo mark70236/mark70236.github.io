@@ -858,6 +858,10 @@ footer p {
   display: none;
   cursor: pointer;
 }
+.top-box .main-banner .main-fuction-box .member-login .login-btn-anchor i {
+  font-size: 20px;
+  margin-left: 5px;
+}
 .top-box .main-banner .main-fuction-box .member-login ul {
   overflow: hidden;
 }
@@ -938,10 +942,10 @@ footer p {
 }
 .top-box .main-banner .main-fuction-box .member-login ul li:nth-child(3) .btn-submit i {
   position: absolute;
-  top: 7px;
+  top: 6px;
   right: 13px;
   color: #000;
-  font-size: 20px;
+  font-size: 22px;
 }
 .top-box .main-banner .main-fuction-box.fix-top {
   position: fixed;
@@ -971,7 +975,8 @@ footer p {
 }
 @media all and (max-width: 900px) {
   .top-box .main-banner .main-fuction-box.fix-top .member-data .point {
-    margin: 0;
+    margin-bottom: 0;
+    margin-top: 3px;
   }
 }
 @media all and (max-width: 900px) {
@@ -1008,7 +1013,12 @@ footer p {
 }
 @media all and (max-width: 900px) {
   .top-box .main-banner .main-fuction-box.login.fix-top {
-    height: 75px;
+    height: 55px;
+  }
+}
+@media all and (max-width: 900px) {
+  .top-box .main-banner .main-fuction-box.login.fix-top .member-login {
+    padding: 10px 3%;
   }
 }
 @media all and (max-width: 900px) {
@@ -1016,7 +1026,7 @@ footer p {
     margin-bottom: 0;
     line-height: 22px;
     display: inline-block;
-    width: 50%;
+    width: 68%;
   }
 }
 @media all and (max-width: 900px) {
@@ -1028,7 +1038,7 @@ footer p {
   .top-box .main-banner .main-fuction-box.login.fix-top .login-btn-anchor {
     display: inline-block;
     float: right;
-    width: 115px;
+    width: 110px;
     height: 35px;
     text-align: center;
     line-height: 35px;
