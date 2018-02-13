@@ -480,6 +480,25 @@ header .tool-box li.icon {
   background-color: #D0021B;
   margin-right: 0;
 }
+header .black-mask {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+header .black-mask.open {
+  opacity: 1;
+  pointer-events: auto;
+}
 header .menu-box {
   width: 0;
   height: 100%;
@@ -487,7 +506,6 @@ header .menu-box {
   position: fixed;
   top: 0;
   right: -100%;
-  background-color: rgba(0, 0, 0, 0.7);
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
@@ -593,8 +611,6 @@ footer p {
 @media all and (max-width: 900px) {
   .top-box .main-banner {
     padding-bottom: 40%;
-    background-size: auto;
-    background-position: center;
   }
 }
 @media all and (max-width: 760px) {
@@ -609,7 +625,7 @@ footer p {
 }
 @media all and (max-width: 400px) {
   .top-box .main-banner {
-    padding-bottom: 75%;
+    padding-bottom: 66%;
   }
 }
 .top-box .main-banner .title-box {
@@ -663,11 +679,6 @@ footer p {
   position: absolute;
   bottom: 0;
   background-color: rgba(35, 25, 22, 0.75);
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 @media all and (max-width: 900px) {
   .top-box .main-banner .main-fuction-box {
@@ -706,9 +717,19 @@ footer p {
     padding: 5% 3%;
   }
 }
+@media all and (max-width: 400px) {
+  .top-box .main-banner .main-fuction-box .member-data {
+    padding: 3% 3%;
+  }
+}
 .top-box .main-banner .main-fuction-box .member-data .member-name {
   font-size: 24px;
   margin-bottom: 25px;
+}
+@media all and (max-width: 400px) {
+  .top-box .main-banner .main-fuction-box .member-data .member-name {
+    margin-bottom: 5px;
+  }
 }
 .top-box .main-banner .main-fuction-box .member-data .point {
   font-size: 16px;
@@ -730,6 +751,12 @@ footer p {
     width: 100%;
     margin-top: 3%;
     margin-bottom: 6%;
+  }
+}
+@media all and (max-width: 400px) {
+  .top-box .main-banner .main-fuction-box .member-data .point {
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
 }
 .top-box .main-banner .main-fuction-box .member-data .point > span:nth-child(1) {
@@ -831,9 +858,6 @@ footer p {
   line-height: 21px;
   display: inline-block;
   letter-spacing: 0.5px;
-  overflow: hidden;
-  word-break: break-all;
-  transition: width 0.5s linear;
 }
 .top-box .main-banner .main-fuction-box .member-data .progress .detail-box .detail.open {
   width: 450px;
@@ -851,6 +875,11 @@ footer p {
 @media all and (max-width: 1500px) {
   .top-box .main-banner .main-fuction-box .member-login {
     padding: 20px 3%;
+  }
+}
+@media all and (max-width: 400px) {
+  .top-box .main-banner .main-fuction-box .member-login {
+    padding: 10px 3%;
   }
 }
 .top-box .main-banner .main-fuction-box .member-login p {
@@ -930,6 +959,12 @@ footer p {
   width: 100%;
   margin-top: 10px;
 }
+@media all and (max-width: 400px) {
+  .top-box .main-banner .main-fuction-box .member-login ul li:nth-child(3) {
+    margin-top: 0;
+    margin-bottom: 3px;
+  }
+}
 .top-box .main-banner .main-fuction-box .member-login ul li:nth-child(3) .btn-submit {
   width: 115px;
   height: 35px;
@@ -961,6 +996,11 @@ footer p {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+@media all and (max-width: 400px) {
+  .top-box .main-banner .main-fuction-box .member-login ul li:nth-child(3) .btn-submit input {
+    padding: 4px 0;
+  }
+}
 .top-box .main-banner .main-fuction-box .member-login ul li:nth-child(3) .btn-submit i {
   position: absolute;
   top: 6px;
@@ -973,6 +1013,11 @@ footer p {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+@media all and (max-width: 400px) {
+  .top-box .main-banner .main-fuction-box .member-login ul li:nth-child(3) .btn-submit i {
+    top: 3px;
+  }
+}
 .top-box .main-banner .main-fuction-box.fix-top {
   position: fixed;
   top: 0;
@@ -980,11 +1025,6 @@ footer p {
   height: 95px;
   z-index: 1;
   background-color: rgba(35, 25, 22, 0.95);
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 @media all and (max-width: 900px) {
   .top-box .main-banner .main-fuction-box.fix-top {
@@ -1056,7 +1096,7 @@ footer p {
     margin-bottom: 0;
     line-height: 22px;
     display: inline-block;
-    width: 68%;
+    width: 60%;
   }
 }
 @media all and (max-width: 900px) {
@@ -1109,6 +1149,10 @@ footer p {
     padding: 0;
     width: 100%;
   }
+}
+.wrap .section1 .all-news,
+.wrap .section1 .exclusive-offer {
+  border-top: solid 1px #fff;
 }
 .wrap .section1 .all-news .black-mask,
 .wrap .section1 .exclusive-offer .black-mask {
@@ -1185,6 +1229,11 @@ footer p {
   background-position: center;
   background-image: url("../images/index/section1/all-news.jpg");
 }
+@media all and (max-width: 1200px) {
+  .wrap .section1 .all-news {
+    height: 200px;
+  }
+}
 .wrap .section1 .all-news:hover .dots-box {
   height: 60%;
   top: 20%;
@@ -1204,13 +1253,13 @@ footer p {
     margin-right: 0;
     float: left;
     height: auto;
-    padding-bottom: 33%;
+    padding-bottom: 26%;
   }
 }
 @media all and (max-width: 500px) {
   .wrap .section1 .all-news {
     width: 100%;
-    padding-bottom: 65%;
+    padding-bottom: 50%;
   }
 }
 .wrap .section1 .exclusive-offer {
@@ -1222,6 +1271,11 @@ footer p {
   overflow: hidden;
   background-position: center;
   background-image: url("../images/index/section1/exclusive-offer.jpg");
+}
+@media all and (max-width: 1200px) {
+  .wrap .section1 .exclusive-offer {
+    height: 200px;
+  }
 }
 .wrap .section1 .exclusive-offer:hover .dots-box {
   height: 60%;
@@ -1241,13 +1295,13 @@ footer p {
     width: 50%;
     margin-left: 0;
     height: auto;
-    padding-bottom: 33%;
+    padding-bottom: 26%;
   }
 }
 @media all and (max-width: 500px) {
   .wrap .section1 .exclusive-offer {
     width: 100%;
-    padding-bottom: 65%;
+    padding-bottom: 50%;
   }
 }
 .wrap .section1 .welcome-box {
@@ -1502,6 +1556,11 @@ footer p {
     font-size: 30px;
   }
 }
+@media all and (max-width: 400px) {
+  .bottom-alert-box .content h2 {
+    font-size: 25px;
+  }
+}
 .bottom-alert-box .content h4 {
   font-size: 18px;
   color: #000;
@@ -1511,6 +1570,11 @@ footer p {
 @media all and (max-width: 900px) {
   .bottom-alert-box .content h4 {
     font-size: 15px;
+  }
+}
+@media all and (max-width: 400px) {
+  .bottom-alert-box .content h4 {
+    font-size: 14px;
   }
 }
 .bottom-alert-box .content > span {

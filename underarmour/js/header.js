@@ -58,16 +58,17 @@ $(function() {
 	// 	}
 	// });
 
+	//控制手機版MENU選單
 	$(".menu-icon").click(function() {
 		if ($(".menu-box").hasClass('open')) {
 			return false;
 		}else {
-			$(".menu-box").addClass('open')
+			$(".menu-box, header .black-mask").addClass('open')
 		}
 	});
 	$(".close").click(function() {
 		if ($(".menu-box").hasClass('open')) {
-			$(".menu-box").removeClass('open')
+			$(".menu-box, header .black-mask").removeClass('open')
 		}else {
 			return false;
 		}
@@ -89,6 +90,7 @@ $(function() {
 							return false;
 					}else {
 						$(".main-fuction-box").addClass('fix-top');
+
 					}
 			}
 			if ( scrollVal < mainHeight ) {

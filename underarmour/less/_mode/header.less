@@ -93,6 +93,21 @@ header {
 			margin-right: 0;
 		}
 	}
+	.black-mask {
+		opacity: 0;
+		pointer-events: none;
+		position: fixed;
+		top: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, .7);
+		.trs(0.5s);
+	}
+	.black-mask.open {
+		opacity: 1;
+		pointer-events: auto;
+	}
 	.menu-box {
 		width: 0;
 		height: 100%;
@@ -100,7 +115,6 @@ header {
 		position: fixed;
 		top: 0;
 		right: -100%;
-		background-color: rgba(0, 0, 0, .7);
 		.trs(0.5s);
 		@media all and (max-width: 900px) {
 			& { width: 100%; }

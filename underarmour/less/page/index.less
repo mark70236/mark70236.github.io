@@ -8,11 +8,7 @@
 		background-size: 100% auto;
 		background-image: url("@{image}index/main-banner.jpg");
 		@media all and (max-width: 900px) {
-			& {
-				padding-bottom: 40%;
-				background-size: auto;
-				background-position: center;
-			}
+			& { padding-bottom: 40%; }
 		}
 		@media all and (max-width: 760px) {
 			& { padding-bottom: 50%; }
@@ -21,7 +17,7 @@
 			& { padding-bottom: 60%; }
 		}
 		@media all and (max-width: 400px) {
-			& { padding-bottom: 75%; }
+			& { padding-bottom: 66%; }
 		}
 		.title-box {
 			position: absolute;
@@ -63,7 +59,7 @@
 			position: absolute;
 			bottom: 0;
 			background-color: rgba(35, 25, 22, .75);
-			.trs;
+			//.trs;
 			@media all and (max-width: 900px) {
 				& { height: 100%; }
 			}
@@ -92,9 +88,15 @@
 				@media all and (max-width: 900px) {
 					& { padding: 5% 3%; }
 				}
+				@media all and (max-width: 400px) {
+					& { padding: 3% 3%; }
+				}
 				.member-name {
 					font-size: 24px;
 					margin-bottom: 25px;
+					@media all and (max-width: 400px) {
+						& { margin-bottom: 5px; }
+					}
 				}
 				.point {
 					font-size: 16px;
@@ -108,6 +110,9 @@
 					}
 					@media all and (max-width: 900px) {
 						& { width: 100%; margin-top: 3%; margin-bottom: 6%; }
+					}
+					@media all and (max-width: 400px) {
+						& { margin-top: 2%; margin-bottom: 2%; }
 					}
 					>span:nth-child(1) {
 						margin-right: 15px;
@@ -193,10 +198,6 @@
 							line-height: 21px;
 							display: inline-block;
 							letter-spacing: 0.5px;
-							overflow: hidden;
-							word-break: break-all;
-							transition: width 0.5s linear;
-
 						}
 						.detail.open {
 							width: 450px;
@@ -215,6 +216,9 @@
 				color: #fff;
 				@media all and (max-width: 1500px) {
 					& { padding: 20px 3%; }
+				}
+				@media all and (max-width: 400px) {
+					& { padding: 10px 3%; }
 				}
 				p {
 					font-size: 16px;
@@ -282,6 +286,9 @@
 					li:nth-child(3) {
 						width: 100%;
 						margin-top: 10px;
+						@media all and (max-width: 400px) {
+							& { margin-top: 0; margin-bottom: 3px; }
+						}
 						.btn-submit {
 							width: 115px;
 							height: 35px;
@@ -309,6 +316,9 @@
 								cursor: pointer;
 								outline: none;
 								.trs;
+								@media all and (max-width: 400px) {
+									& { padding: 4px 0; }
+								}
 							}
 							i {
 								position: absolute;
@@ -317,6 +327,9 @@
 								color: #000;
 								font-size: 22px;
 								.trs;
+								@media all and (max-width: 400px) {
+									& { top: 3px; }
+								}
 							}
 						}
 					}
@@ -331,7 +344,7 @@
 			height: 95px;
 			z-index: 1;
 			background-color: rgba(35, 25, 22, .95);
-			.trs;
+			//.trs;
 			@media all and (max-width: 900px) {
 				& { height: 41px; line-height: 20px; }
 			}
@@ -399,7 +412,7 @@
 							margin-bottom: 0;
 							line-height: 22px;
 							display: inline-block;
-							width: 68%;
+							width: 60%;
 						}
 					}
 				}
@@ -451,6 +464,7 @@
 		}
 		.all-news,
 		.exclusive-offer {
+			border-top: solid 1px #fff;
 			.black-mask {
 				position: absolute;
 				top: 0;
@@ -511,6 +525,9 @@
 			overflow: hidden;
 			background-position: center;
 			background-image: url("@{image}index/section1/all-news.jpg");
+			@media all and (max-width: 1200px) {
+				& { height: 200px; }
+			}
 			&:hover {
 				.dots-box {
 					height: 60%;
@@ -525,10 +542,10 @@
 				& { width: 47%; margin-right: 3%; }
 			}
 			@media all and (max-width: 900px) {
-				& { width: 50%; margin-right: 0; float: left; height: auto; padding-bottom: 33%; }
+				& { width: 50%; margin-right: 0; float: left; height: auto; padding-bottom: 26%; }
 			}
 			@media all and (max-width: 500px) {
-				& { width: 100%; padding-bottom: 65%; }
+				& { width: 100%; padding-bottom: 50%; }
 			}
 		}
 		.exclusive-offer {
@@ -540,6 +557,9 @@
 			overflow: hidden;
 			background-position: center;
 			background-image: url("@{image}index/section1/exclusive-offer.jpg");
+			@media all and (max-width: 1200px) {
+				& { height: 200px; }
+			}
 			&:hover {
 				.dots-box {
 					height: 60%;
@@ -553,10 +573,10 @@
 				& { width: 47%; margin-left: 2.4%; }
 			}
 			@media all and (max-width: 900px) {
-				& { width: 50%; margin-left: 0; height: auto; padding-bottom: 33%; }
+				& { width: 50%; margin-left: 0; height: auto; padding-bottom: 26%; }
 			}
 			@media all and (max-width: 500px) {
-				& { width: 100%; padding-bottom: 65%; }
+				& { width: 100%; padding-bottom: 50%; }
 			}
 		}
 		.welcome-box {
@@ -758,6 +778,9 @@
 			@media all and (max-width: 900px) {
 				& { font-size: 30px; }
 			}
+			@media all and (max-width: 400px) {
+				& { font-size: 25px; }
+			}
 		}
 		h4 {
 			font-size: 18px;
@@ -766,6 +789,9 @@
 			margin-bottom: 20px;
 			@media all and (max-width: 900px) {
 				& { font-size: 15px; }
+			}
+			@media all and (max-width: 400px) {
+				& { font-size: 14px; }
 			}
 		}
 		>span {
