@@ -299,6 +299,9 @@ body.mac-user input {
     display: none;
   }
 }
+.yellow {
+  color: #f8e71c;
+}
 .Bd {
   font-family: ARMOUR_Bd, "微軟正黑體", sans-serif;
 }
@@ -633,6 +636,7 @@ footer p {
   font-size: 36px;
   color: #fff;
   margin-bottom: 15px;
+  text-shadow: 3px 3px 3px rgba(29, 29, 29, 0.7);
 }
 @media all and (max-width: 1100px) {
   .top-box .main-banner .title-box h1 {
@@ -932,6 +936,13 @@ footer p {
   float: right;
   position: relative;
 }
+.top-box .main-banner .main-fuction-box .member-login ul li:nth-child(3) .btn-submit:hover input {
+  background-color: #d0021a;
+  color: #fff;
+}
+.top-box .main-banner .main-fuction-box .member-login ul li:nth-child(3) .btn-submit:hover i {
+  color: #fff;
+}
 .top-box .main-banner .main-fuction-box .member-login ul li:nth-child(3) .btn-submit input {
   background-color: #fff;
   border: none;
@@ -944,6 +955,11 @@ footer p {
   text-indent: -10px;
   cursor: pointer;
   outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .top-box .main-banner .main-fuction-box .member-login ul li:nth-child(3) .btn-submit i {
   position: absolute;
@@ -951,12 +967,17 @@ footer p {
   right: 13px;
   color: #000;
   font-size: 22px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .top-box .main-banner .main-fuction-box.fix-top {
   position: fixed;
   top: 0;
   bottom: auto;
-  height: 120px;
+  height: 95px;
   z-index: 1;
   background-color: rgba(35, 25, 22, 0.95);
   -webkit-transition: all 0.3s ease;
@@ -973,6 +994,9 @@ footer p {
 }
 .top-box .main-banner .main-fuction-box.fix-top .member-name {
   display: none;
+}
+.top-box .main-banner .main-fuction-box.fix-top .member-data {
+  padding: 15px 3%;
 }
 @media all and (max-width: 900px) {
   .top-box .main-banner .main-fuction-box.fix-top .member-data {
@@ -1301,6 +1325,18 @@ footer p {
   width: 32%;
   float: left;
   margin-right: 2%;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  -ms-transition: 0.4s;
+  transition: 0.4s;
+}
+@media all and (min-width: 901px) {
+  .wrap .section2 .news-box ul li:hover .title-box h2 {
+    color: #D0021B;
+  }
 }
 @media all and (max-width: 900px) {
   .wrap .section2 .news-box ul li {
@@ -1315,11 +1351,20 @@ footer p {
     margin-right: 0%;
   }
 }
+.wrap .section2 .news-box ul li .title-box {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
 .wrap .section2 .news-box ul li .title-box h2 {
   font-size: 16px;
   font-weight: bold;
   line-height: 26px;
   height: 26px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1371,6 +1416,14 @@ footer p {
   position: relative;
   margin: 0 auto;
   background-color: #D0021B;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wrap .section2 .news-box .btn-more:hover {
+  background-color: #000;
 }
 .wrap .section2 .news-box .btn-more a {
   display: block;
@@ -1423,7 +1476,7 @@ footer p {
 @media all and (max-width: 900px) {
   .bottom-alert-box .content {
     width: 90%;
-    padding: 15px 0;
+    padding: 20px 0;
   }
 }
 .bottom-alert-box .content img {
@@ -1442,7 +1495,7 @@ footer p {
   color: #000;
   font-weight: bold;
   font-family: "微軟正黑體";
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 }
 @media all and (max-width: 900px) {
   .bottom-alert-box .content h2 {
@@ -1486,11 +1539,11 @@ footer p {
   background-image: url("../images/dots_bg.png");
 }
 .bottom-alert-box.open {
-  height: 280px;
+  height: 210px;
 }
 @media all and (max-width: 900px) {
   .bottom-alert-box.open {
-    height: 210px;
+    height: 160px;
   }
 }
 /* Safari  */

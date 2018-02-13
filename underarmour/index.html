@@ -46,7 +46,7 @@
 		<div class="top-box">
 			<div class="main-banner">
 				<div class="title-box">
-					<h1 class="XBd">歡迎加入UNDER ARMOUR武裝俱樂部</h1>
+					<h1 class="XBd">歡迎加入<span class="XBd yellow">UNDER ARMOUR武裝俱樂部</span></h1>
 					<h2 class="XBd">WELCOME TO UNDER ARMOUR ATHLETE CLUB</h2>
 				</div>
 				<!--
@@ -195,7 +195,6 @@
 		</div>
 		<div class="bottom-alert-box">
 			<div class="content">
-				<img src="images/logo_black.png">
 				<h2>您還未填寫完整註冊資料</h2>
 				<h4>未填寫完整資料，將會無法兌換紅利商品</h4>
 				<span>
@@ -227,6 +226,14 @@
 					mainFuctionBox(loginStatus);
 				});
 
+				// $(".news-box >ul li").mouseover(function() {
+				// 	$(".news-box >ul li").removeClass('not-hover hover');
+				// 	$(".news-box >ul li").addClass('not-hover');
+				// 	$(this).addClass('hover');
+				// });
+				// $(".news-box >ul li").mouseleave(function() {
+				// 	$(".news-box >ul li").removeClass('not-hover hover');
+				// });
 
 				// $(window).on("resize", function() {
 
@@ -241,27 +248,29 @@
 				}else {
 					$(".main-fuction-box").removeClass('login data');
 					$(".main-fuction-box").addClass('data');
+					setTimeout(function() {
+						//開始紅利點數區動畫
+						var target = new CountUp("counter",0,point,0,3);
+						target.start(); //開始跳動數字
+						if (memberLevel_next < 0) {
+							memberLevel_next = 0;
+							$(".progress .detail-box .detail").html('消費累計金額：'+point+' NTD');
+						}else {
+							$(".progress .detail-box .detail").html('消費累計金額：'+point+' NTD,再累計 '+(memberLevel_next)+' NTD 即可展延會員一年');
+						}
+						progressPercent = (point) / (memberLevel_end/100)
+						if (progressPercent > 100) {
+							progressPercent = 100;
+							$(".target-bar").css('width', progressPercent+'%');
+						}else {
+							$(".target-bar").css('width', progressPercent+'%');
+						}
 
-					//開始紅利點數區動畫
-					var target = new CountUp("counter",0,point,0,3);
-					target.start(); //開始跳動數字
-					if (memberLevel_next < 0) {
-						memberLevel_next = 0;
-						$(".progress .detail-box .detail").html('消費累計金額：'+point+' NTD');
-					}else {
-						$(".progress .detail-box .detail").html('消費累計金額：'+point+' NTD,再累計 '+(memberLevel_next)+' NTD 即可展延會員一年');
-					}
-					progressPercent = (point) / (memberLevel_end/100)
-					if (progressPercent > 100) {
-						progressPercent = 100;
-						$(".target-bar").css('width', progressPercent+'%');
-					}else {
-						$(".target-bar").css('width', progressPercent+'%');
-					}
+						if (memberDataComplete==false) {
+							$(".bottom-alert-box").addClass('open');
+						}
+					},50)
 
-					if (memberDataComplete==false) {
-						$(".bottom-alert-box").addClass('open');
-					}
 				}
 			}
 

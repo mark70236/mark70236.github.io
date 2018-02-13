@@ -287,7 +287,8 @@ header .top-head .member-panel {
   float: right;
   line-height: 32px;
 }
-header .top-head .member-panel .login span {
+header .top-head .member-panel .login span,
+header .top-head .member-panel .logged span {
   display: inline-block;
   font-size: 16px;
   color: #4a4a4a;
