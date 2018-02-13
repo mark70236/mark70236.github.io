@@ -193,6 +193,20 @@
 				</div>
 			</section>
 		</div>
+		<div class="bottom-alert-box">
+			<div class="content">
+				<img src="images/logo_black.png">
+				<h2>您還未填寫完整註冊資料</h2>
+				<h4>未填寫完整資料，將會無法兌換紅利商品</h4>
+				<span>
+					<div class="bg-dots"></div>
+					<a href="#">
+						查看所有活動
+						<i class="fa fa-angle-right" aria-hidden="true"></i>
+					</a>
+				</span>
+			</div>
+		</div>
 		<footer>
 			<p class="Cd_Rg">Copyright 2018© Company name | All Rights Reserved | <nobr>網頁設計公司：振作國際</nobr></p>
 		</footer>
@@ -204,6 +218,7 @@
 			var memberLevel_next = (memberLevel_end - point);
 			var progressPercent;
 			var loginStatus = false; //登入狀態
+			var memberDataComplete = false; //是否註冊資料完整，否則彈出置底提示區塊
 
 			$(window).load(function() {
 				mainFuctionBox(loginStatus);
@@ -242,6 +257,10 @@
 						$(".target-bar").css('width', progressPercent+'%');
 					}else {
 						$(".target-bar").css('width', progressPercent+'%');
+					}
+
+					if (memberDataComplete==false) {
+						$(".bottom-alert-box").addClass('open');
 					}
 				}
 			}

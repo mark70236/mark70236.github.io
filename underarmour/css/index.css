@@ -551,6 +551,16 @@ header .menu-box.open {
 header .menu-box.open .menu {
   width: 40%;
 }
+@media all and (max-width: 600px) {
+  header .menu-box.open .menu {
+    width: 60%;
+  }
+}
+@media all and (max-width: 400px) {
+  header .menu-box.open .menu {
+    width: 70%;
+  }
+}
 header.hide {
   height: 0;
   overflow: hidden;
@@ -1373,6 +1383,98 @@ footer p {
   .wrap .section2 .bottom-logo-box img {
     width: 100%;
     height: auto;
+  }
+}
+.bottom-alert-box {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 0px;
+  background-color: rgba(255, 255, 255, 0.95);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+.bottom-alert-box .content {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+@media all and (max-width: 900px) {
+  .bottom-alert-box .content {
+    width: 90%;
+    padding: 15px 0;
+  }
+}
+.bottom-alert-box .content img {
+  width: 83px;
+  height: 48px;
+  margin-bottom: 20px;
+}
+@media all and (max-width: 900px) {
+  .bottom-alert-box .content img {
+    width: 57px;
+    height: 33px;
+  }
+}
+.bottom-alert-box .content h2 {
+  font-size: 36px;
+  color: #000;
+  font-weight: bold;
+  font-family: "微軟正黑體";
+  margin-bottom: 12px;
+}
+@media all and (max-width: 900px) {
+  .bottom-alert-box .content h2 {
+    font-size: 30px;
+  }
+}
+.bottom-alert-box .content h4 {
+  font-size: 18px;
+  color: #000;
+  font-family: "微軟正黑體";
+  margin-bottom: 20px;
+}
+@media all and (max-width: 900px) {
+  .bottom-alert-box .content h4 {
+    font-size: 15px;
+  }
+}
+.bottom-alert-box .content > span {
+  width: 175px;
+  height: 45px;
+  background-color: #D0021B;
+  display: block;
+  position: relative;
+  line-height: 45px;
+  font-size: 16px;
+  margin: 0 auto;
+}
+.bottom-alert-box .content > span a {
+  color: #fff;
+  position: absolute;
+  top: 0;
+}
+.bottom-alert-box .content > span a i {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.bottom-alert-box .content > span .bg-dots {
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  background-image: url("../images/dots_bg.png");
+}
+.bottom-alert-box.open {
+  height: 280px;
+}
+@media all and (max-width: 900px) {
+  .bottom-alert-box.open {
+    height: 210px;
   }
 }
 /* Safari  */

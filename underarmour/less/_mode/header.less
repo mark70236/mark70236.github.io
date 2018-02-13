@@ -147,7 +147,15 @@ header {
 	}
 	.menu-box.open {
 		right: 0;
-		.menu { width: 40%; }
+		.menu {
+			width: 40%;
+			@media all and (max-width: 600px) {
+				& { width: 60%;  }
+			}
+			@media all and (max-width: 400px) {
+				& { width: 70%;  }
+			}
+		}
 	}
 }
 header.hide {
