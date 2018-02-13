@@ -302,6 +302,9 @@ body.mac-user input {
 .yellow {
   color: #f8e71c;
 }
+.red {
+  color: #d0021a;
+}
 .Bd {
   font-family: ARMOUR_Bd, "微軟正黑體", sans-serif;
 }
@@ -679,6 +682,11 @@ footer p {
   position: absolute;
   bottom: 0;
   background-color: rgba(35, 25, 22, 0.75);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 @media all and (max-width: 900px) {
   .top-box .main-banner .main-fuction-box {
@@ -1025,6 +1033,11 @@ footer p {
   height: 95px;
   z-index: 1;
   background-color: rgba(35, 25, 22, 0.95);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 @media all and (max-width: 900px) {
   .top-box .main-banner .main-fuction-box.fix-top {
@@ -1218,11 +1231,12 @@ footer p {
 .wrap .section1 .all-news .title-box h4,
 .wrap .section1 .exclusive-offer .title-box h4 {
   font-size: 14px;
+  letter-spacing: 1px;
 }
 .wrap .section1 .all-news {
   width: 45%;
   height: 250px;
-  margin-right: 5%;
+  margin-left: 4.4%;
   position: relative;
   background-size: 100% auto;
   overflow: hidden;
@@ -1244,14 +1258,13 @@ footer p {
 @media all and (max-width: 1500px) {
   .wrap .section1 .all-news {
     width: 47%;
-    margin-right: 3%;
+    margin-left: 2.4%;
   }
 }
 @media all and (max-width: 900px) {
   .wrap .section1 .all-news {
     width: 50%;
-    margin-right: 0;
-    float: left;
+    margin-left: 0;
     height: auto;
     padding-bottom: 26%;
   }
@@ -1265,7 +1278,7 @@ footer p {
 .wrap .section1 .exclusive-offer {
   width: 45%;
   height: 250px;
-  margin-left: 4.4%;
+  margin-right: 5%;
   position: relative;
   background-size: 100% auto;
   overflow: hidden;
@@ -1287,13 +1300,14 @@ footer p {
 @media all and (max-width: 1500px) {
   .wrap .section1 .exclusive-offer {
     width: 47%;
-    margin-left: 2.4%;
+    margin-right: 3%;
   }
 }
 @media all and (max-width: 900px) {
   .wrap .section1 .exclusive-offer {
     width: 50%;
-    margin-left: 0;
+    margin-right: 0;
+    float: left;
     height: auto;
     padding-bottom: 26%;
   }
@@ -1323,6 +1337,9 @@ footer p {
   color: #000;
   margin-bottom: 15px;
   text-align: right;
+}
+.wrap .section1 .welcome-box .title-box h1 span {
+  font-weight: bold;
 }
 .wrap .section1 .welcome-box .title-box h2 {
   width: 100%;
@@ -1545,6 +1562,7 @@ footer p {
   }
 }
 .bottom-alert-box .content h2 {
+  cursor: default;
   font-size: 36px;
   color: #000;
   font-weight: bold;
@@ -1562,6 +1580,7 @@ footer p {
   }
 }
 .bottom-alert-box .content h4 {
+  cursor: default;
   font-size: 18px;
   color: #000;
   font-family: "微軟正黑體";

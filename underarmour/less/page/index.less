@@ -59,7 +59,7 @@
 			position: absolute;
 			bottom: 0;
 			background-color: rgba(35, 25, 22, .75);
-			//.trs;
+			.trs;
 			@media all and (max-width: 900px) {
 				& { height: 100%; }
 			}
@@ -344,7 +344,7 @@
 			height: 95px;
 			z-index: 1;
 			background-color: rgba(35, 25, 22, .95);
-			//.trs;
+			.trs;
 			@media all and (max-width: 900px) {
 				& { height: 41px; line-height: 20px; }
 			}
@@ -513,42 +513,11 @@
 				}
 				h4 {
 					font-size: 14px;
+					letter-spacing: 1px;
 				}
 			}
 		}
 		.all-news {
-			width: 45%;
-			height: 250px;
-			margin-right: 5%;
-			position: relative;
-			background-size: 100% auto;
-			overflow: hidden;
-			background-position: center;
-			background-image: url("@{image}index/section1/all-news.jpg");
-			@media all and (max-width: 1200px) {
-				& { height: 200px; }
-			}
-			&:hover {
-				.dots-box {
-					height: 60%;
-					top: 20%;
-				}
-				.black-mask {
-					background-color: rgba(0, 0, 0, .1);
-				}
-			}
-
-			@media all and (max-width: 1500px) {
-				& { width: 47%; margin-right: 3%; }
-			}
-			@media all and (max-width: 900px) {
-				& { width: 50%; margin-right: 0; float: left; height: auto; padding-bottom: 26%; }
-			}
-			@media all and (max-width: 500px) {
-				& { width: 100%; padding-bottom: 50%; }
-			}
-		}
-		.exclusive-offer {
 			width: 45%;
 			height: 250px;
 			margin-left: 4.4%;
@@ -556,7 +525,7 @@
 			background-size: 100% auto;
 			overflow: hidden;
 			background-position: center;
-			background-image: url("@{image}index/section1/exclusive-offer.jpg");
+			background-image: url("@{image}index/section1/all-news.jpg");
 			@media all and (max-width: 1200px) {
 				& { height: 200px; }
 			}
@@ -578,6 +547,38 @@
 			@media all and (max-width: 500px) {
 				& { width: 100%; padding-bottom: 50%; }
 			}
+
+		}
+		.exclusive-offer {
+			width: 45%;
+			height: 250px;
+			margin-right: 5%;
+			position: relative;
+			background-size: 100% auto;
+			overflow: hidden;
+			background-position: center;
+			background-image: url("@{image}index/section1/exclusive-offer.jpg");
+			@media all and (max-width: 1200px) {
+				& { height: 200px; }
+			}
+			&:hover {
+				.dots-box {
+					height: 60%;
+					top: 20%;
+				}
+				.black-mask {
+					background-color: rgba(0, 0, 0, .1);
+				}
+			}
+			@media all and (max-width: 1500px) {
+				& { width: 47%; margin-right: 3%; }
+			}
+			@media all and (max-width: 900px) {
+				& { width: 50%; margin-right: 0; float: left; height: auto; padding-bottom: 26%; }
+			}
+			@media all and (max-width: 500px) {
+				& { width: 100%; padding-bottom: 50%; }
+			}
 		}
 		.welcome-box {
 			box-sizing: border-box;
@@ -594,6 +595,7 @@
 					color: #000;
 					margin-bottom: 15px;
 					text-align: right;
+					span { font-weight: bold; }
 				}
 				h2 {
 					width: 100%;
@@ -770,6 +772,7 @@
 			}
 		}
 		h2 {
+			cursor: default;
 			font-size: 36px;
 			color: #000;
 			font-weight: bold;
@@ -783,6 +786,7 @@
 			}
 		}
 		h4 {
+			cursor: default;
 			font-size: 18px;
 			color: #000;
 			font-family: "微軟正黑體";

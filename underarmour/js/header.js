@@ -79,10 +79,10 @@ $(function() {
 		var scrollVal = $(this).scrollTop();
 		var headerHeight = $("header").height();
 		var mainBannerHeight = $(".top-box").height();
-		var mainFuctionBoxHeight = $(".main-fuction-box").height();
+		//var mainFuctionBoxHeight = $(".main-fuction-box").height();
 		var mainHeight = headerHeight + mainBannerHeight;
-		var mainHeightStart = mainHeight - mainFuctionBoxHeight;
-		var mainHeightEnd = mainHeight - mainFuctionBoxHeight;
+		// var mainHeightStart = mainHeight - mainFuctionBoxHeight;
+		// var mainHeightEnd = mainHeight - mainFuctionBoxHeight;
 
 		if (fullWidth<900) {
 			if ( scrollVal > mainHeight ) {
@@ -97,14 +97,14 @@ $(function() {
 				$(".main-fuction-box").removeClass('fix-top');
 			}
 		}else {
-			if ( scrollVal > mainHeightStart ) {
+			if ( scrollVal > mainHeight ) {
 					if ($(".main-fuction-box").hasClass('fix-top')) {
 							return false;
 					}else {
 						$(".main-fuction-box").addClass('fix-top');
 					}
 			}
-			if ( scrollVal < mainHeightEnd ) {
+			if ( scrollVal < mainHeight ) {
 				$(".main-fuction-box").removeClass('fix-top');
 			}
 		}
