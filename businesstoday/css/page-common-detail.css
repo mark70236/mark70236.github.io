@@ -1191,6 +1191,10 @@ body > .wrap {
   text-align: center;
   border: solid 1px #4E4E4E;
 }
+.wrap .article-detail .main-box .main .text-box img,
+.wrap .article-detail .main-box .main .text-box iframe {
+  max-width: 100%;
+}
 .wrap .article-detail .main-box .main .tag-box {
   display: block;
   width: 100%;

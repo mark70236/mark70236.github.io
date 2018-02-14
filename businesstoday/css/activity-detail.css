@@ -1266,6 +1266,10 @@ body > .wrap {
   border: solid 1px #4E4E4E;
   padding: 5px;
 }
+.wrap .article-detail .main-box .main .detail-box .text img,
+.wrap .article-detail .main-box .main .detail-box .text iframe {
+  max-width: 100%;
+}
 .wrap .article-detail .main-box .main .detail-box .introduction-box ul li {
   width: 100%;
   box-sizing: border-box;
