@@ -358,11 +358,6 @@ header {
   top: 0;
   z-index: 12;
   background-color: #000;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  -ms-transition: 0.2s;
-  transition: 0.2s;
   padding: 0 8%;
   box-sizing: border-box;
 }
@@ -589,8 +584,25 @@ header .menu-box.open .menu {
   }
 }
 header.fix-top {
-  position: fixed;
-  top: 0;
+  height: 60px;
+}
+header.fix-top .tool-box {
+  padding: 0;
+}
+header.fix-top .logo {
+  width: 90px;
+  height: 60px;
+  padding: 10px 0;
+}
+header.fix-top .logo img {
+  width: 65px;
+  margin: 0 auto;
+}
+@media all and (max-width: 1500px) {
+  header.fix-top .logo img {
+    width: auto;
+    height: 40px;
+  }
 }
 header.hide {
   height: 0;

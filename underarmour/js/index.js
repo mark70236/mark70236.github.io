@@ -43,6 +43,12 @@ $(function() {
 				$(".main-fuction-box").css('top', 'auto');
 			}
 		}else {
+			if (scrollVal >60) {
+				$("header").addClass('fix-top');
+			}
+			if (scrollVal <60) {
+				$("header").removeClass('fix-top');
+			}
 			if ( scrollVal > mainOffsetTop ) {
 					if ($(".main-fuction-box").hasClass('fix-top')) {
 							return false;

@@ -5,7 +5,6 @@ header {
 	top: 0;
 	z-index: 12;
 	background-color: #000;
-	.trs(0.2s);
 	padding: 0 8%;
 	box-sizing: border-box;
 	@media all and (max-width: 1500px) {
@@ -174,8 +173,22 @@ header {
 	}
 }
 header.fix-top {
-	position: fixed;
-	top: 0;
+	height: 60px;
+	.tool-box {
+		padding: 0;
+	}
+	.logo {
+		width: 90px;
+		height: 60px;
+		padding: 10px 0;
+		img {
+			width: 65px;
+			margin: 0 auto;
+			@media all and (max-width: 1500px) {
+				& { width: auto;  height: 40px; }
+			}
+		}
+	}
 }
 header.hide {
 	height: 0;
