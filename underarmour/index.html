@@ -11,9 +11,6 @@
 	<script src="plugin/countUp/countUp.js"></script>
 	<script src="js/header.js"></script>
 	<script src="js/index.js"></script>
-	<script>
-
-	</script>
 </head>
 	<body>
 		<header>
@@ -210,69 +207,56 @@
 			<p class="Cd_Rg">Copyright 2018© Company name | All Rights Reserved | <nobr>網頁設計公司：振作國際</nobr></p>
 		</footer>
 	</body>
-		<script>
-			var point = 8513; //紅利點數
-			var memberLevel_start = 0;
-			var memberLevel_end = 12000; //滿額展延會員
-			var memberLevel_next = (memberLevel_end - point);
-			var progressPercent;
-			var loginStatus = false; //登入狀態
-			var memberDataComplete = false; //是否註冊資料完整，否則彈出置底提示區塊
+	<script>
+		var point = 8513; //紅利點數
+		var memberLevel_start = 0;
+		var memberLevel_end = 12000; //滿額展延會員
+		var memberLevel_next = (memberLevel_end - point);
+		var progressPercent;
+		var loginStatus = false; //登入狀態
+		var memberDataComplete = false; //是否註冊資料完整，否則彈出置底提示區塊
 
-			$(window).load(function() {
+		$(window).load(function() {
+			mainFuctionBox(loginStatus);
+			$(".member-login").click(function() {
+				loginStatus = true;
 				mainFuctionBox(loginStatus);
-				$(".member-login").click(function() {
-					loginStatus = true;
-					mainFuctionBox(loginStatus);
-				});
-
-				// $(".news-box >ul li").mouseover(function() {
-				// 	$(".news-box >ul li").removeClass('not-hover hover');
-				// 	$(".news-box >ul li").addClass('not-hover');
-				// 	$(this).addClass('hover');
-				// });
-				// $(".news-box >ul li").mouseleave(function() {
-				// 	$(".news-box >ul li").removeClass('not-hover hover');
-				// });
-
-				// $(window).on("resize", function() {
-
-				// })
 			});
+		});
 
 
-			function mainFuctionBox(loginStatus) {
-				if (loginStatus == false) {
-					$(".main-fuction-box").removeClass('login data');
-					$(".main-fuction-box").addClass('login');
-				}else {
-					$(".main-fuction-box").removeClass('login data');
-					$(".main-fuction-box").addClass('data');
-					setTimeout(function() {
-						//開始紅利點數區動畫
-						var target = new CountUp("counter",0,point,0,3);
-						target.start(); //開始跳動數字
-						if (memberLevel_next < 0) {
-							memberLevel_next = 0;
-							$(".progress .detail-box .detail").html('消費累計金額：'+point+' NTD');
-						}else {
-							$(".progress .detail-box .detail").html('消費累計金額：'+point+' NTD,再累計 '+(memberLevel_next)+' NTD 即可展延會員一年');
-						}
-						progressPercent = (point) / (memberLevel_end/100)
-						if (progressPercent > 100) {
-							progressPercent = 100;
-							$(".target-bar").css('width', progressPercent+'%');
-						}else {
-							$(".target-bar").css('width', progressPercent+'%');
-						}
+		function mainFuctionBox(loginStatus) {
+			if (loginStatus == false) {
+				$(".main-fuction-box").removeClass('login data');
+				$(".main-fuction-box").addClass('login');
+			}else {
+				$(".main-fuction-box").removeClass('login data');
+				$(".main-fuction-box").addClass('data');
+				setTimeout(function() {
+					//開始紅利點數區動畫
+					var target = new CountUp("counter",0,point,0,3);
+					target.start(); //開始跳動數字
+					if (memberLevel_next < 0) {
+						memberLevel_next = 0;
+						$(".progress .detail-box .detail").html('消費累計金額：'+point+' NTD');
+					}else {
+						$(".progress .detail-box .detail").html('消費累計金額：'+point+' NTD,再累計 '+(memberLevel_next)+' NTD 即可展延會員一年');
+					}
+					progressPercent = (point) / (memberLevel_end/100)
+					if (progressPercent > 100) {
+						progressPercent = 100;
+						$(".target-bar").css('width', progressPercent+'%');
+					}else {
+						$(".target-bar").css('width', progressPercent+'%');
+					}
 
-						if (memberDataComplete==false) {
-							$(".bottom-alert-box").addClass('open');
-						}
-					},50)
+					if (memberDataComplete==false) {
+						$(".bottom-alert-box").addClass('open');
+					}
+				},50)
 
-				}
 			}
+		}
 
-		</script>
+	</script>
 </html>

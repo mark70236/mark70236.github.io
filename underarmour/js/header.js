@@ -74,44 +74,10 @@ $(function() {
 		}
 	});
 
-	$(window).scroll(function () {
-		var fullWidth = $(window).width();
-		var scrollVal = $(this).scrollTop();
-		var headerHeight = $("header").height();
-		var mainBannerHeight = $(".top-box").height();
-		//var mainFuctionBoxHeight = $(".main-fuction-box").height();
-		var mainHeight = headerHeight + mainBannerHeight;
-		// var mainHeightStart = mainHeight - mainFuctionBoxHeight;
-		// var mainHeightEnd = mainHeight - mainFuctionBoxHeight;
 
-		if (fullWidth<900) {
-			if ( scrollVal > mainHeight ) {
-					if ($(".main-fuction-box").hasClass('fix-top')) {
-							return false;
-					}else {
-						$(".main-fuction-box").addClass('fix-top');
 
-					}
-			}
-			if ( scrollVal < mainHeight ) {
-				$(".main-fuction-box").removeClass('fix-top');
-			}
-		}else {
-			if ( scrollVal > mainHeight ) {
-					if ($(".main-fuction-box").hasClass('fix-top')) {
-							return false;
-					}else {
-						$(".main-fuction-box").addClass('fix-top');
-					}
-			}
-			if ( scrollVal < mainHeight ) {
-				$(".main-fuction-box").removeClass('fix-top');
-			}
-		}
 
-	})
-
-	//錨點功能 滑到長照搜尋區塊
+	//錨點功能
 	$("[data-gotop]").click(function() {
 		$("html,body").animate({ scrollTop: 0 }, 500);
 	});
