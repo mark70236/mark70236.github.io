@@ -1248,12 +1248,23 @@ body > .wrap {
   border-radius: 10px;
   line-height: 50px;
   float: left;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wrap .article-detail .main-box .main .share-box .add-like:hover {
+  background-color: #EB5F08;
 }
 .wrap .article-detail .main-box .main .share-box .add-like i {
   font-size: 28px;
   line-height: 50px;
   margin-right: 5px;
   vertical-align: bottom;
+}
+.wrap .article-detail .main-box .main .share-box .add-like.active {
+  background-color: #EB5F08;
 }
 .wrap .article-detail .main-box .sidebox {
   width: 300px;
