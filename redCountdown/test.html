@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery个性圆圈倒计时特效 - 站长素材</title>
+
+<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery.knob.min.js"></script>
+<script src="js/jquery.ba-throttle-debounce.min.js"></script>
+<script src="js/jquery.redcountdown.js"></script>
+
+<style>
+pre { max-width:100%; height:200px; overflow:scroll; border:1px solid #666; margin:0; }
+body { font-family:'Open Sans'; font-weight:300; padding:0; margin:0; background-color: #000;}
+.redCountdownDemo { margin:0 auto 30px auto; max-width:800px; width:calc(100%;); padding:30px; display:block; }
+section > .wrapper { max-width:800px; margin:0 auto; }
+section.header { background:#e74c3c; color:#FFF; margin-bottom:30px; }
+section.header > .wrapper {  padding:30px 0 30px; }
+pre { margin-bottom:30px; }
+pre.small { height:40px; overflow-y:hidden; }
+h1 { font-size:42px;  font-weight:300; margin:0; }
+h2 { font-size:30px;  font-weight:300; margin:0; }
+b { font-weight:600!important; }
+.options b { display:block; border-bottom:1px solid #666; margin-top:8px; }
+.redCountdownWrapper > div {
+	/*width: calc(50% - 20px)!important;
+	margin: 10px!important;*/
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="rC_PJ" class="redCountdownDemo"></div>
+
+<script type="text/javascript">
+	$('#rC_PJ').redCountdown({
+		preset: "flat-colors-black",
+		end: $.now() + 10000,
+		style: {
+			daysElement: {
+				gauge: {
+					thickness: .15,
+					bgColor: "rgb(51, 47, 8)",
+					fgColor: "rgb(241, 196, 15)"
+				},
+				textCSS: 'color: #fff; font-size: 22px;font-weight:bolder;'
+			},
+			hoursElement: {
+				gauge: {
+					thickness: .15,
+					bgColor: "rgb(51, 47, 8)",
+					fgColor: "rgb(241, 196, 15)"
+				},
+				textCSS: 'color: #fff; font-size: 22px;font-weight:bolder;'
+			},
+			minutesElement: {
+				gauge: {
+					thickness: .15,
+					bgColor: "rgb(51, 47, 8)",
+					fgColor: "rgb(241, 196, 15)"
+				},
+				textCSS: 'color: #fff; font-size: 22px;font-weight:bolder;'
+			},
+			secondsElement: {
+				gauge: {
+					thickness: .15,
+					bgColor: "rgb(51, 47, 8)",
+					fgColor: "rgb(241, 196, 15)"
+				},
+				textCSS: 'color: #fff; font-size: 22px;font-weight:bolder;'
+			}
+		}
+	});
+
+
+</script>
+
+</body>
+</html>
