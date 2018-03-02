@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+<meta charset=utf-8>
+<!-- Use latest PDF.js build from Github -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.6.416/pdf.js"></script>
+</head>
+<style>
+	#pdf-container {
+		width: 1000px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	canvas {
+		width: 100%;
+	}
+</style>
+
+<body>
+	<div id="pdf-container"></div>
+
+	<script>
+		PDFJS.getDocument('test.pdf').then(function(pdf) {
+			for (var pageNum = 1; pageNum < pdf.numPages; ++pageNum) {
+				pdf.getPage(pageNum).then(function(page) {
+					// you can now use *page* here
+
+					var scale = 5;
+					var viewport = page.getViewport(scale);
+					console.log(viewport)
+
+					var canvas = document.createElement('canvas');
+					var context = canvas.getContext('2d');
+					canvas.height = viewport.height;
+					canvas.width = viewport.width;
+
+					var renderContext = {
+						canvasContext: context,
+						viewport: viewport
+					};
+					page.render(renderContext);
+
+					document.getElementById('pdf-container').appendChild(canvas);
+				});
+			}
+		})
+	</script>
+
+</body>
+</html>
