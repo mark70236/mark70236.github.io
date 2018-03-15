@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var windowHalfX = document.documentElement.clientWidth / 2;
 	var windowHalfY = document.documentElement.clientHeight / 2;
 
-	var imageSrc = "https://"+location.hostname+"/wp-content/plugins/Project-Snow/images/";
+	//var imageSrc = "https://"+location.hostname+"/wp-content/plugins/Project-Snow/images/";
+	var imageSrc = "images/";
 	var imageName1 = "particle_snowflake.png";
 	var imageName2 = "particle_snowflake2.png";
 

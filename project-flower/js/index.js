@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var windowHalfX = document.documentElement.clientWidth / 2;
 	var windowHalfY = document.documentElement.clientHeight / 2;
 
-	var imageSrc = "https://"+location.hostname+"/wp-content/plugins/Project-Flower/images/";
-	//var imageSrc = "images/";
+	//var imageSrc = "https://"+location.hostname+"/wp-content/plugins/Project-Flower/images/";
+	var imageSrc = "images/";
 	var imageName1 = "flower01.png";
 	var imageName2 = "flower02.png";
 	var imageName3 = "flower03.png";
