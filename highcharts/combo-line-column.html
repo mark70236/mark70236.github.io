@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>組合圖測試</title>
+        <script src="plugin/highcharts/highcharts.js"></script>
+        <script src="plugin/highcharts/exporting.js"></script>
+        <script src="plugin/highcharts/highcharts-zh_TW.js"></script>
+    </head>
+    <body>
+
+        <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+       <script type="text/javascript">
+            var chartData = {
+                "title": "這是測試接JSON用的圖表",
+                "subtitle": '<a href="#">這是測試副標題，可以加連結</a>',
+                "yAxis": [
+                    { // 左側單位表
+                        "labels": {
+                            "format": '{value}°C',
+                            "style": {
+                                "color": "#000"
+                            }
+                        },
+                        "title": {
+                            "text": '氣溫',
+                            "style": {
+                                "color": "#000"
+                            }
+                        }
+                    },
+                    { // 右側單位表
+                        "opposite": true,//對面顯示
+                        "labels": {
+                            "format": '{value} mm',
+                            "style": {
+                                "color": "#7cb5ec"
+                            }
+                        },
+                        "title": {
+                            "text": '降雨量',
+                            "style": {
+                                "color": "#7cb5ec"
+                            }
+                        }
+                    }
+                ],
+                "xAxis": {
+                    "categories": ['一月', '二月', '三月', '四月', '五月', '六月','七月', '八月', '九月', '十月', '十一月', '十二月'],
+                }
+            }
+            Highcharts.chart('container', {
+                chart: {
+                    zoomType: 'xy'
+                },
+                title: {
+                    text: chartData.title
+                },
+                subtitle: {
+                    text: chartData.subtitle
+                },
+                xAxis: {
+                    categories: chartData.xAxis.categories,
+                    crosshair: true
+                },
+                yAxis: chartData.yAxis,
+                tooltip: {
+                    shared: true
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'left',
+                    verticalAlign: 'top',
+                    x: 120,
+                    y: 50,
+                    floating: true,
+                    backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+                },
+                series: [{
+                    name: '降雨量',
+                    type: 'column',
+                    yAxis: 1,
+                    data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+                    tooltip: {
+                        valueSuffix: ' mm'
+                    }
+
+                }, {
+                    name: '氣溫',
+                    type: 'spline',
+                    data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+                    tooltip: {
+                        valueSuffix: '°C'
+                    }
+                }]
+            });
+       </script>
+    </body>
+</html>
