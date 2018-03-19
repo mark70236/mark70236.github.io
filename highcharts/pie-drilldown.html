@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>圓餅圖測試</title>
+        <script src="plugin/highcharts/highcharts.js"></script>
+        <script src="plugin/highcharts/exporting.js"></script>
+        <script src="plugin/highcharts/drilldown.js"></script>
+    </head>
+    <body>
+        <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+        <script>
+            var chartData = {
+                "title": "這是測試接JSON用的圖表",
+                "series": {
+                    "name": "瀏覽器使用統計",
+                    "data": [
+                        {
+                            "name": 'IE',
+                            "y": 60,
+                            'drilldown': 'IE'
+                        },
+                        {
+                            "name": 'Chrome',
+                            "y": 40
+                        }
+                    ]
+                },
+                "drilldown": {
+                    "series": [
+                        {
+                            "name": 'IE',
+                            "id": 'IE',
+                            "data": [
+                                ['v11.0', 40],
+                                ['v10.0', 10],
+                                ['v9.0', 3],
+                                ['v8.0', 3],
+                                ['v7.0', 2],
+                                ['v6.0', 2]
+                            ]
+                        }
+                    ]
+                }
+            }
+            Highcharts.chart('container', {
+                chart: {
+                    type: 'pie'
+                },
+                title: {
+                    text: chartData.title
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        //控制是否可點擊做注目動畫
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            //可以用{}呼叫參數
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: chartData.series.name,
+                    colorByPoint: true,
+                    data: chartData.series.data
+                }],
+                drilldown: {
+                    series: chartData.drilldown.series
+                }
+            });
+        </script>
+    </body>
+</html>
