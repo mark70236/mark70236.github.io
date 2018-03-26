@@ -1,0 +1,383 @@
+@charset "utf-8";
+* {
+  -webkit-print-color-adjust: exact!important;
+}
+html {
+  height: 100%;
+}
+html.ie7 {
+  overflow-x: hidden;
+}
+html.ie7 body {
+  overflow-x: visible;
+}
+html.ie7 em {
+  font-style: normal;
+}
+body {
+  margin: 0;
+  background-repeat: no-repeat;
+  font-size: 12px;
+  color: #fff;
+  background-color: #fff;
+  overflow-x: hidden;
+  height: auto !important;
+}
+body > * {
+  color: #000;
+}
+body a {
+  cursor: pointer;
+  text-decoration: none;
+}
+body p {
+  font-family: "微軟正黑體";
+  line-height: 2em;
+}
+body b {
+  font-size: 28px;
+  font-weight: bolder;
+}
+body h1,
+body h2 {
+  margin-bottom: 10px;
+}
+.black-box-body {
+  margin-left: -140px;
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  z-index: 11;
+  width: 280px;
+}
+.black-box-body .close {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  cursor: pointer;
+}
+.black-box-bg {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  background-image: url("http://static.funmily.com/css/images/cinema/b60.png");
+}
+body > .coming-soon {
+  display: none;
+  position: fixed;
+}
+body > .coming-soon .close {
+  top: -5px;
+  right: -5px;
+  color: #EEE;
+  font-size: 30px;
+  font-weight: bold;
+}
+body > .coming-soon .close:hover {
+  color: #fff000;
+}
+.coming-soon {
+  position: absolute;
+  z-index: 12;
+  top: 20%;
+  left: 50%;
+  margin-left: -210px;
+  width: 500px;
+  height: 360px;
+}
+td,
+th {
+  border: solid 1px #333;
+  vertical-align: middle;
+}
+.wrap {
+  width: 94%;
+  height: 950px;
+  position: relative;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.wrap section {
+  min-height: 200px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-bottom: solid 1px #dadada;
+}
+.wrap section .title {
+  float: left;
+  width: 15%;
+  height: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  color: #000;
+  letter-spacing: 3px;
+  text-indent: 3px;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.wrap section .right-box {
+  width: 85%;
+  height: 100%;
+  float: right;
+}
+.wrap section #uploader {
+  display: none;
+}
+.wrap section.card-style,
+.wrap section.card-detail {
+  height: auto;
+  overflow: hidden;
+}
+.wrap section.card-style .right-box,
+.wrap section.card-detail .right-box {
+  overflow: scroll;
+}
+.wrap section.card-style .right-box ul,
+.wrap section.card-detail .right-box ul {
+  display: inline-flex;
+  border: solid 2px #dadada;
+  padding: 0.5%;
+  box-sizing: border-box;
+}
+.wrap section.card-style .right-box ul li,
+.wrap section.card-detail .right-box ul li {
+  opacity: 0.4;
+  position: relative;
+  width: 159px;
+  height: 225px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  -ms-transition: 0.4s;
+  transition: 0.4s;
+}
+.wrap section.card-style .right-box ul li img,
+.wrap section.card-detail .right-box ul li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.wrap section.card-style .right-box ul li i,
+.wrap section.card-detail .right-box ul li i {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 26px;
+  color: #d2d2d2;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: #444;
+  font-style: normal;
+}
+.wrap section.card-style .right-box ul li .add-word,
+.wrap section.card-detail .right-box ul li .add-word {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 70px;
+  color: #333;
+}
+.wrap section.card-style .right-box ul li .add-new,
+.wrap section.card-detail .right-box ul li .add-new {
+  width: 39px;
+  height: 39px;
+  border-radius: 40px;
+  border: solid 1px #333;
+  text-align: center;
+  line-height: 41px;
+  font-size: 30px;
+  font-weight: 100;
+  margin: 10px auto;
+}
+.wrap section.card-style .right-box ul li:hover,
+.wrap section.card-detail .right-box ul li:hover {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  -ms-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 1;
+}
+.wrap section.card-style .right-box ul li:hover i,
+.wrap section.card-detail .right-box ul li:hover i {
+  opacity: 0.5;
+}
+.wrap section.card-style .right-box ul li:hover i:hover,
+.wrap section.card-detail .right-box ul li:hover i:hover {
+  opacity: 1;
+}
+.wrap section.card-style .right-box ul li.select,
+.wrap section.card-detail .right-box ul li.select {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  -ms-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 1;
+  box-shadow: 1px 2px 10px #757272,1px 2px 2px #757272;
+}
+.wrap section.card-detail .right-box {
+  min-height: 400px;
+}
+.wrap section.card-detail .right-box .cke_contents {
+  height: 290px!important;
+}
+.wrap section.card-data-type {
+  border: none;
+}
+.wrap section.card-data-type .right-box {
+  padding-top: 10px;
+}
+.wrap section.card-data-type .right-box .select-box {
+  width: 30%;
+  float: left;
+}
+.wrap section.card-data-type .right-box .select-box select {
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  margin-right: 10px;
+}
+.wrap section.card-data-type .right-box .select-box input {
+  cursor: pointer;
+  width: 100px;
+  font-size: 16px;
+  font-weight: 300;
+  background: transparent;
+  border: solid 1px #000;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wrap section.card-data-type .right-box .select-box input:hover {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #f3f3f3;
+}
+.wrap section.card-data-type .right-box .btn-box {
+  width: 70%;
+  float: left;
+}
+.wrap section.card-data-type .right-box .btn-box input {
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+  width: 100px;
+  font-weight: 300;
+  background: transparent;
+  border: solid 1px #000;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wrap section.card-data-type .right-box .btn-box input:hover {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #f3f3f3;
+}
+body.result h1,
+body.result h2,
+body.result h3,
+body.result h4,
+body.result h5,
+body.result p {
+  line-height: 2em;
+}
+body.result .wrap {
+  padding: 0;
+}
+body.result .wrap .bg {
+  width: 730px;
+  height: 1095px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+body.result .wrap .bg .text-box {
+  position: absolute;
+  top: 185px;
+  width: 730px;
+  max-height: 745px;
+  padding: 0 100px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body.result .wrap .bg .text-box img {
+  max-width: 530px;
+}
+body.result .wrap .bg .bg-img img {
+  display: block;
+  width: 730px;
+  height: 1095px;
+}
+body.result .wrap .bg.style2 .text-box {
+  top: 315px;
+  padding: 0 75px;
+}
+body.result .wrap .bg.style3 .text-box {
+  top: 210px;
+}
+body.result .wrap .return {
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+  padding: 5px;
+  width: 100px;
+  font-weight: 300;
+  text-align: center;
+  background: transparent;
+  border: solid 1px #000;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+body.result .wrap .return:hover {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #f3f3f3;
+}
+body.result .wrap .return a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+body.result .print {
+  position: absolute;
+  top: 10px;
+  right: 10%;
+}
