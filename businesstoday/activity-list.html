@@ -2,6 +2,7 @@
 <html lang="zh-tw">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>幸福熟齡</title>
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -190,7 +191,8 @@
 			<div class="main-bg"></div>
 			<div class="top-article-box">
 				<a href="common-detail.html" title="翻轉K線操作觀念 找出最佳買賣點  翻轉K線操作觀念 找出最佳買賣點  ">
-					<img src="images/page/activity-list/top-article-banner.png" title="翻轉K線操作觀念 找出最佳買賣點  翻轉K線操作觀念 找出最佳買賣點  ">
+					<!-- 修改圖片改為css讀入 -->
+					<div style="background-image: url('images/page/activity-list/top-article-banner.png');"></div>
 				</a>
 				<span class="title-box">
 					<h2>
@@ -227,7 +229,30 @@
 				<div class="main-box">
 					<div class="main">
 						<ul class="activity-list-ul">
-							<li class="toei"></li>
+							<li class="li-category">
+								<a href="activity-detail.html">
+									<span class="banner">
+										<!-- 修改圖片改為css讀入 -->
+										<div style="background-image: url('images/page/activity-list/01.png');"></div>
+									</span>
+									<span class="block detail-box">
+										<span class="block date"><i class="fa fa-calendar" aria-hidden="true"></i><span>2018年01月14日, 2018年01月20日, 2018年01月21日</span></span>
+										<span class="block title"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>3老後交友　幸福小秘訣</span></span>
+									</span>
+								</a>
+							</li>
+							<li class="li-category">
+								<a href="activity-detail.html">
+									<span class="banner">
+										<!-- 修改圖片改為css讀入 -->
+										<div style="background-image: url('images/page/activity-list/02.png');"></div>
+									</span>
+									<span class="block detail-box">
+										<span class="block date"><i class="fa fa-calendar" aria-hidden="true"></i><span>2018年01月14日, 2018年01月20日, 2018年01月21日</span></span>
+										<span class="block title"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>3老後交友　幸福小秘訣</span></span>
+									</span>
+								</a>
+							</li>
 						</ul>
 						<div class="btn-more">看更多＋</div>
 						<div class="btn-nomore">已無更多文章</div>
@@ -497,23 +522,23 @@
 			var no = 9; //已讀取前8筆,每次for迴圈列出接下來8筆
 			var listHeight;
 			//頁面先載入前8筆資料
-			for(i=1;i<9 ;i++){
-				if (i<ltcDataNum+1) {
-					$(".article-list .main >ul >li:last-child").after('\
-						<li class="li-category">\
-							<a href="'+dataActivityList['article'+i+''].articleHref+'">\
-								<span class="banner">\
-									<img src="'+dataActivityList['article'+i+''].articleBannerSrc+'">\
-								</span>\
-								<span class="block detail-box">\
-									<span class="block date"><i class="fa fa-calendar" aria-hidden="true"></i><span>'+dataActivityList['article'+i+''].articleDate+'</span></span>\
-									<span class="block title"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>'+dataActivityList['article'+i+''].articleTitle+'</span></span>\
-								</span>\
-							</a>\
-						</li>\
-					')
-				}
-			}
+			// for(i=1;i<9 ;i++){
+			// 	if (i<ltcDataNum+1) {
+			// 		$(".article-list .main >ul >li:last-child").after('\
+			// 			<li class="li-category">\
+			// 				<a href="'+dataActivityList['article'+i+''].articleHref+'">\
+			// 					<span class="banner">\
+			// 						<img src="'+dataActivityList['article'+i+''].articleBannerSrc+'">\
+			// 					</span>\
+			// 					<span class="block detail-box">\
+			// 						<span class="block date"><i class="fa fa-calendar" aria-hidden="true"></i><span>'+dataActivityList['article'+i+''].articleDate+'</span></span>\
+			// 						<span class="block title"><i class="fa fa-chevron-right" aria-hidden="true"></i><span>'+dataActivityList['article'+i+''].articleTitle+'</span></span>\
+			// 					</span>\
+			// 				</a>\
+			// 			</li>\
+			// 		')
+			// 	}
+			// }
 			$("li.toei").addClass('wqeqw').remove(); //移除定位用的空<li>
 			// setTimeout(function() {
 			// 	listHeight = $(".activity-list-ul").height();

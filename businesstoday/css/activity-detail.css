@@ -210,6 +210,32 @@ body input {
   -moz-appearance: none;
   appearance: none;
 }
+body .text-box a {
+  display: initial;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  color: blue;
+}
+body .text-box h1,
+body .text-box h2,
+body .text-box h3,
+body .text-box h4,
+body .text-box h5,
+body .text-box h6,
+body .text-box strong {
+  font-weight: bold;
+  line-height: 1.1em;
+}
+body .text-box h1 {
+  font-size: 2em;
+}
+body .text-box h2 {
+  font-size: 1.5em;
+}
+body .text-box h3 {
+  font-size: 1.17em;
+}
 body.page {
   background-color: #fafafa;
 }
@@ -875,7 +901,7 @@ footer .footer-detail .footer-main {
 }
 @media (max-width: 760px) {
   footer .footer-detail .footer-main {
-    width: 320px;
+    width: 300px;
   }
 }
 footer .footer-detail .footer-main .contact-box,
@@ -1079,6 +1105,14 @@ body > .wrap {
   left: -13px;
   border-radius: 9px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.wrap .top-article-box > a > div {
+  height: 100%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 @media all and (max-width: 800px) {
   .wrap .top-article-box img {
@@ -1349,6 +1383,11 @@ body > .wrap {
   width: 330px;
   height: 320px;
   float: left;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
 }
 @media all and (max-width: 800px) {
   .wrap .article-detail .main-box .main .lector-box .lector-slide .slide-li .img-box {
@@ -1518,6 +1557,15 @@ body > .wrap {
     width: 100%;
     margin-bottom: 25px;
   }
+}
+.wrap .further-activity ul li a span {
+  display: block;
+  padding-bottom: 62%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 @media all and (max-width: 640px) {
   .wrap .further-activity ul li a span {

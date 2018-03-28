@@ -2,6 +2,7 @@
 <html lang="zh-tw">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>幸福熟齡</title>
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -287,7 +288,25 @@
 				<div class="main-box">
 					<div class="main">
 						<ul class="ltc-list-ul">
-							<li class="toei"></li>
+							<!-- 修改圖片改為css讀入 -->
+							<li>
+								<a href="ltc-detail.html">
+									<span class="img-box" style="background-image: url('images/page/ltc/list/001.png');"></span>
+									<span class="detail-box">
+										<h2>私立新埔家園長期照顧中心0</h2>
+										<span class="level">★★★★☆</span>
+										<span class="area">
+											<i class="fa fa-map-marker inline-block" aria-hidden="true"></i>
+											縣市區域：新竹縣
+										</span>
+										<span class="service-type">
+											<i class="fa fa-server inline-block" aria-hidden="true"></i>
+											服務類型：養護型
+										</span>
+										<p>秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。</p>
+									</span>
+								</a>
+							</li>
 						</ul>
 						<div class="btn-more">看更多＋</div>
 						<div class="btn-nomore">已無更多文章</div>
@@ -672,26 +691,26 @@
 			//頁面先載入前五筆資料
 			for(i=1;i<6;i++){
 				$(".article-list .main >ul >li:last-child").after('\
-					<li>\
-						<a href="'+dataLtc["ltc"+i].link+'">\
-							<span class="img-box">\
-								<img src="'+dataLtc["ltc"+i].imgSrc+'">\
-							</span>\
-							<span class="detail-box">\
-								<h2>'+dataLtc["ltc"+i].h2+'</h2>\
-								<span class="level">'+dataLtc["ltc"+i].level+'</span>\
-								<span class="area">\
-									<i class="fa fa-map-marker inline-block" aria-hidden="true"></i>\
+					<li>
+						<a href="'+dataLtc["ltc"+i].link+'">
+							<span class="img-box">
+								<img src="'+dataLtc["ltc"+i].imgSrc+'">
+							</span>
+							<span class="detail-box">
+								<h2>'+dataLtc["ltc"+i].h2+'</h2>
+								<span class="level">'+dataLtc["ltc"+i].level+'</span>
+								<span class="area">
+									<i class="fa fa-map-marker inline-block" aria-hidden="true"></i>
 									縣市區域：'+dataLtc["ltc"+i].area+'\
-								</span>\
-								<span class="service-type">\
-									<i class="fa fa-server inline-block" aria-hidden="true"></i>\
+								</span>
+								<span class="service-type">
+									<i class="fa fa-server inline-block" aria-hidden="true"></i>
 									服務類型：'+dataLtc["ltc"+i].serviceType+'\
-								</span>\
-								<p>'+dataLtc["ltc"+i].p+'</p>\
-							</span>\
-						</a>\
-					</li>\
+								</span>
+								<p>'+dataLtc["ltc"+i].p+'</p>
+							</span>
+						</a>
+					</li>
 				')
 			}
 			$(".article-list .main >ul >li.toei").remove(); //移除定位用的空<li>
@@ -700,26 +719,26 @@
 			$(".article-list .btn-more").click(function() {
 				for(i=no;i<ltcDataNum+1&i<no+5;i++){
 					$(".article-list .main >ul >li:last-child").after('\
-						<li>\
-							<a href="'+dataLtc["ltc"+i].link+'">\
-								<span class="img-box">\
-									<img src="images/page/ltc/list/004.png">\
-								</span>\
-								<span class="detail-box">\
-									<h2>'+dataLtc["ltc"+i].h2+'</h2>\
-									<span class="level">'+dataLtc["ltc"+i].level+'</span>\
-									<span class="area">\
-										<i class="fa fa-map-marker inline-block" aria-hidden="true"></i>\
+						<li>
+							<a href="'+dataLtc["ltc"+i].link+'">
+								<span class="img-box">
+									<img src="images/page/ltc/list/004.png">
+								</span>
+								<span class="detail-box">
+									<h2>'+dataLtc["ltc"+i].h2+'</h2>
+									<span class="level">'+dataLtc["ltc"+i].level+'</span>
+									<span class="area">
+										<i class="fa fa-map-marker inline-block" aria-hidden="true"></i>
 										縣市區域：'+dataLtc["ltc"+i].area+'\
-									</span>\
-									<span class="service-type">\
-										<i class="fa fa-server inline-block" aria-hidden="true"></i>\
+									</span>
+									<span class="service-type">
+										<i class="fa fa-server inline-block" aria-hidden="true"></i>
 										服務類型：'+dataLtc["ltc"+i].serviceType+'\
-									</span>\
-									<p>'+dataLtc["ltc"+i].p+'</p>\
-								</span>\
-							</a>\
-						</li>\
+									</span>
+									<p>'+dataLtc["ltc"+i].p+'</p>
+								</span>
+							</a>
+						</li>
 					')
 				}
 				//如果沒資料要顯示”已無資料“

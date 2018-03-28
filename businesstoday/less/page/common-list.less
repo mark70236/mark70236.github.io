@@ -38,6 +38,14 @@ body > .wrap { margin-top: 123px; }
 			border-radius: 9px;
 			background-color: rgba(255,255,255,0.5);
 		}
+		>a div {
+			height: 100%;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			background-position: center;
+		}
 		img {
 			@media all and (max-width: 800px) {
 				& { width: 130%; margin-left: -15%; }
@@ -250,6 +258,17 @@ body > .wrap { margin-top: 123px; }
 							}
 							@media all and (max-width: 340px) {
 								& { width: 130px; }
+							}
+							>a div {
+								padding-bottom: 72%;
+								-webkit-background-size: cover;
+								-moz-background-size: cover;
+								-o-background-size: cover;
+								background-size: cover;
+								background-size: cover;
+								@media all and (max-width: 1300px) {
+									& { padding-bottom: 83%; }
+								}
 							}
 							img {
 								@media all and (max-width: 1290px) {

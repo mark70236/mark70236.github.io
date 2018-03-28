@@ -210,6 +210,32 @@ body input {
   -moz-appearance: none;
   appearance: none;
 }
+body .text-box a {
+  display: initial;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  color: blue;
+}
+body .text-box h1,
+body .text-box h2,
+body .text-box h3,
+body .text-box h4,
+body .text-box h5,
+body .text-box h6,
+body .text-box strong {
+  font-weight: bold;
+  line-height: 1.1em;
+}
+body .text-box h1 {
+  font-size: 2em;
+}
+body .text-box h2 {
+  font-size: 1.5em;
+}
+body .text-box h3 {
+  font-size: 1.17em;
+}
 body.page {
   background-color: #fafafa;
 }
@@ -875,7 +901,7 @@ footer .footer-detail .footer-main {
 }
 @media (max-width: 760px) {
   footer .footer-detail .footer-main {
-    width: 320px;
+    width: 300px;
   }
 }
 footer .footer-detail .footer-main .contact-box,
@@ -1201,6 +1227,18 @@ body > .wrap {
   position: absolute;
   top: 20px;
   overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+@media all and (max-width: 1190px) {
+  .wrap .main-banner-box .banner-col .big-bg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
 }
 .wrap .main-banner-box .banner-col .big-bg img {
   width: 100%;
@@ -1243,11 +1281,17 @@ body > .wrap {
   -o-transition: 1.5s;
   -ms-transition: 1.5s;
   transition: 1.5s;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
 }
 @media all and (max-width: 1190px) {
   .wrap .main-banner-box .banner-col .theme-img {
     width: 100%;
     height: auto;
+    padding-bottom: 70%;
   }
 }
 .wrap .main-banner-box .banner-col .banner-detail-box {
@@ -1678,7 +1722,9 @@ body > .wrap {
   position: relative;
   margin: 0 2px;
   background-color: #fff;
-  max-height: 520px;
+  height: 465px;
+  background-size: cover;
+  background-position: center;
 }
 .wrap section.section1 .news-box .article-box ul li:hover > span {
   height: 100%;
@@ -2450,17 +2496,25 @@ body > .wrap {
     border-bottom: solid 1px #C5C5C5;
   }
 }
+.wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li a > div {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center;
+}
+@media all and (max-width: 800px) {
+  .wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li a > div {
+    padding-bottom: 0;
+    width: 125px;
+    height: 75px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
 .wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li a img {
   transition: opacity 0.3s ease;
 }
 .wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li a img:hover {
   opacity: 0.8;
-}
-@media all and (max-width: 800px) {
-  .wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li a img {
-    width: 125px;
-    margin-right: 10px;
-  }
 }
 .wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li a > span {
   padding: 10px 20px;
@@ -2482,6 +2536,8 @@ body > .wrap {
   font-size: 20px;
   font-weight: bolder;
   margin-bottom: 5px;
+  line-height: 24px;
+  height: 48px;
 }
 @media all and (max-width: 800px) {
   .wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li a > span h3 {
@@ -2544,8 +2600,11 @@ body > .wrap {
     padding-top: 0;
     border-bottom: none;
   }
-  .wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li:nth-child(1) a img {
+  .wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li:nth-child(1) a > div {
+    padding-bottom: 60%;
     width: 100%;
+    height: auto;
+    display: block;
   }
   .wrap section.section1 .ltc-box .main .ltc-search-box .recommend-box ul li:nth-child(1) a > span {
     width: 100%;
@@ -2661,6 +2720,12 @@ body > .wrap {
 .wrap section.section1 .project-box .article-box ul li a {
   display: inline;
   position: relative;
+}
+.wrap section.section1 .project-box .article-box ul li a > div {
+  width: 100%;
+  padding-bottom: 73%;
+  background-size: cover;
+  background-position: center;
 }
 .wrap section.section1 .project-box .article-box ul li a img {
   display: block;
@@ -2883,6 +2948,20 @@ body > .wrap {
   background-color: #fff;
   margin: 10px 20px 10px 0;
 }
+.wrap section.section2 .health-box .main .article-box ul li > a div {
+  width: 100%;
+  padding-bottom: 56%;
+  background-size: cover;
+  background-position: center;
+}
+.wrap section.section2 .health-box .main .article-box ul li > a div:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 .wrap section.section2 .health-box .main .article-box ul li > span {
   display: inline-block;
   box-sizing: border-box;
@@ -2899,6 +2978,15 @@ body > .wrap {
   line-height: 32px;
   margin-bottom: 10px;
   height: 64px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.wrap section.section2 .health-box .main .article-box ul li > span h2 a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2928,7 +3016,16 @@ body > .wrap {
   color: #595959;
   line-height: 20px;
   margin-bottom: 10px;
-  max-height: 100px;
+  height: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+.wrap section.section2 .health-box .main .article-box ul li > span p a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3037,16 +3134,16 @@ body > .wrap {
   }
   .wrap section.section2 .wealth-box .main .main-box .main-article {
     width: 100%!important;
-    height: auto!important;
+    height: 100%!important;
   }
   .wrap section.section2 .wealth-box .main .main-box .right-box {
     width: 100%!important;
-    height: auto!important;
+    height: 70%!important;
     margin-bottom: 30px;
   }
   .wrap section.section2 .wealth-box .main .main-box .right-box .sub-article {
     width: 100%!important;
-    height: auto!important;
+    height: 100%!important;
   }
   .wrap section.section2 .wealth-box .main .main-box .right-box .other-box {
     display: none;
@@ -3092,6 +3189,11 @@ body > .wrap {
     margin-bottom: 0;
   }
 }
+.wrap section.section2 .wealth-box .main .main-box .article-box .main-article > a div {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
 .wrap section.section2 .wealth-box .main .main-box .article-box .main-article .detail {
   padding: 25px 20px;
 }
@@ -3116,6 +3218,11 @@ body > .wrap {
     width: 100%;
   }
 }
+.wrap section.section2 .wealth-box .main .main-box .article-box .right-box .sub-article > a div {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
 .wrap section.section2 .wealth-box .main .main-box .article-box .right-box .other-box {
   float: left;
   width: 260px;
@@ -3127,6 +3234,11 @@ body > .wrap {
   .wrap section.section2 .wealth-box .main .main-box .article-box .right-box .other-box {
     width: 50%;
   }
+}
+.wrap section.section2 .wealth-box .main .main-box .article-box .right-box .other-box > a div {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 .wrap section.section2 .wealth-box .main .main-box .article-box .right-box .other-box .article-title {
   max-height: 84px;
@@ -3247,6 +3359,11 @@ body > .wrap {
     width: 100%;
     height: auto;
   }
+}
+.wrap section.section2 .lohas-box .main .article-box .main-box > a div {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 .wrap section.section2 .lohas-box .main .article-box .main-box img {
   -webkit-transition: 1s;
@@ -3407,6 +3524,11 @@ body > .wrap {
     display: none;
   }
 }
+.wrap section.section2 .lohas-box .main .article-box .other-box ul li .left-box > a div {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
 .wrap section.section2 .lohas-box .main .article-box .other-box ul li .left-box.mobile {
   display: none;
   width: 128px;
@@ -3419,6 +3541,11 @@ body > .wrap {
   .wrap section.section2 .lohas-box .main .article-box .other-box ul li .left-box.mobile {
     display: block;
   }
+}
+.wrap section.section2 .lohas-box .main .article-box .other-box ul li .left-box.mobile > a div {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 .wrap section.section2 .lohas-box .main .article-box .other-box ul li .right-box {
   float: left;

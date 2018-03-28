@@ -209,7 +209,6 @@ $(function() {
 		centerPadding: '0px',
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		centerMode: true,
 		autoplay: true,
 		autoplaySpeed: 4000,
 		responsive: [
@@ -228,7 +227,7 @@ $(function() {
 			{
 				breakpoint: 800,
 				settings: {
-					slidesToShow: 4,
+					slidesToShow: 5,
 					autoplay: false
 				}
 			}
@@ -241,7 +240,7 @@ $(function() {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		centerMode: true,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 4000,
 		responsive: [
 			{

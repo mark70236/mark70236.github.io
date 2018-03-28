@@ -2,6 +2,7 @@
 <html lang="zh-tw">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>幸福熟齡</title>
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -190,7 +191,8 @@
 			<div class="main-bg"></div>
 			<div class="top-article-box">
 				<a href="common-detail.html" title="憑著一股不服氣 牽起三個女人的「照顧情」">
-					<img src="images/page/common-list/top-article-banner.png" title="憑著一股不服氣 牽起三個女人的「照顧情」">
+					<!-- 修改圖片改為css讀入 -->
+					<div style="background-image: url('images/page/common-list/top-article-banner.png');"></div>
 				</a>
 				<span class="title-box">
 					<h2>
@@ -220,7 +222,31 @@
 				<div class="main-box">
 					<div class="main">
 						<ul class="ltc-list-ul">
-							<li class="toei"></li>
+							<li class="li-1">
+								<span class="img-box">
+									<a href="common-detail.html">
+										<!-- 修改圖片改為css讀入 -->
+										<div style="background-image: url('images/page/common-list/01.png');"></div>
+									</a>
+								</span>
+								<span class="detail-box">
+									<a href="common-detail.html">
+										<h2>1鬼才導演盧建彰 為爸媽找安養院的驚心歷程</h2>
+									</a>
+									<span class="area">
+										<i class="fa fa-pencil inline-block" aria-hidden="true"></i>
+										撰文 王大雄
+									</span>
+									<span class="service-type">
+										<i class="fa fa-clock-o inline-block" aria-hidden="true"></i>
+										2017年12月14日
+									</span>
+									<p>秉著關懷社會，實賤老吾老以及人之老的理念：我們堅持每一個人都該享有被尊重、關懷及滿足生理上的需求，我們提供一座美麗、溫馨、舒適、安全的空間及愛心、專業的護理照顧服務。</p>
+									<span class="tag-box">
+										<span class="tagAnchor"></span>
+									</span>
+								</span>
+							</li>
 						</ul>
 						<div class="btn-more">看更多＋</div>
 						<div class="btn-nomore">已無更多文章</div>
@@ -516,42 +542,42 @@
 			var ltcDataNum = Object.keys(dataCommonList).length;
 			var no = 8; //已讀取前五筆,每次for迴圈列出接下來五筆
 			//頁面先載入前7筆資料
-			for(i=1;i<8 ;i++){
-				if (i<ltcDataNum+1) {
-					$(".article-list .main >ul >li:last-child").after('\
-						<li class="li-'+i+'">\
-							<span class="img-box">\
-								<a href="'+dataCommonList["article"+i].link+'">\
-									<img src="'+dataCommonList["article"+i].imgSrc+'">\
-								</a>\
-							</span>\
-							<span class="detail-box">\
-								<a href="'+dataCommonList["article"+i].link+'">\
-									<h2>'+dataCommonList["article"+i].h2+'</h2>\
-								</a>\
-								<span class="area">\
-									<i class="fa fa-pencil inline-block" aria-hidden="true"></i>\
-									撰文 '+dataCommonList["article"+i].auchor+'\
-								</span>\
-								<span class="service-type">\
-									<i class="fa fa-clock-o inline-block" aria-hidden="true"></i>\
-									'+dataCommonList["article"+i].date+'\
-								</span>\
-								<p>'+dataCommonList["article"+i].p+'</p>\
-								<span class="tag-box">\
-									<span class="tagAnchor"></span>\
-								</span>\
-							</span>\
-						</li>\
-					')
-					$.each(dataCommonList["article"+i].tag, function(no,val){
-						var a = i+1;
-						$('li:nth-child('+a+') .tag-box .tagAnchor').after('\
-							<span class="tag"><a href="search.html">'+val+'</a></span>\
-						')
-					})
-				}
-			}
+			// for(i=1;i<8 ;i++){
+			// 	if (i<ltcDataNum+1) {
+			// 		$(".article-list .main >ul >li:last-child").after('\
+			// 			<li class="li-'+i+'">\
+			// 				<span class="img-box">\
+			// 					<a href="'+dataCommonList["article"+i].link+'">\
+			// 						<img src="'+dataCommonList["article"+i].imgSrc+'">\
+			// 					</a>\
+			// 				</span>\
+			// 				<span class="detail-box">\
+			// 					<a href="'+dataCommonList["article"+i].link+'">\
+			// 						<h2>'+dataCommonList["article"+i].h2+'</h2>\
+			// 					</a>\
+			// 					<span class="area">\
+			// 						<i class="fa fa-pencil inline-block" aria-hidden="true"></i>\
+			// 						撰文 '+dataCommonList["article"+i].auchor+'\
+			// 					</span>\
+			// 					<span class="service-type">\
+			// 						<i class="fa fa-clock-o inline-block" aria-hidden="true"></i>\
+			// 						'+dataCommonList["article"+i].date+'\
+			// 					</span>\
+			// 					<p>'+dataCommonList["article"+i].p+'</p>\
+			// 					<span class="tag-box">\
+			// 						<span class="tagAnchor"></span>\
+			// 					</span>\
+			// 				</span>\
+			// 			</li>\
+			// 		')
+			// 		$.each(dataCommonList["article"+i].tag, function(no,val){
+			// 			var a = i+1;
+			// 			$('li:nth-child('+a+') .tag-box .tagAnchor').after('\
+			// 				<span class="tag"><a href="search.html">'+val+'</a></span>\
+			// 			')
+			// 		})
+			// 	}
+			// }
 			$(".article-list .main >ul >li.toei").remove(); //移除定位用的空<li>
 
 			//點擊看更多按鈕，新增接下來7筆，直到沒資料

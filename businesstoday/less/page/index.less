@@ -144,6 +144,18 @@ body > .wrap { margin-top: 123px; }
 				position: absolute;
 				top: 20px;
 				overflow: hidden;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				background-position: center;
+				@media all and (max-width: 1190px) {
+					& {
+						width: 100%;
+						height: 100%;
+						top: 0;
+					}
+				}
 				img {
 					width: 100%;
 				}
@@ -182,8 +194,13 @@ body > .wrap { margin-top: 123px; }
 				float: left;
 				overflow: hidden;
 				.trs(1.5s);
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				background-position: center;
 				@media all and (max-width: 1190px) {
-					& { width: 100%; height: auto; }
+					& { width: 100%; height: auto; padding-bottom: 70%; }
 				}
 			}
 			.banner-detail-box {
@@ -572,7 +589,9 @@ body > .wrap { margin-top: 123px; }
 						position: relative;
 						margin: 0 2px;
 						background-color: #fff;
-						max-height: 520px;
+						height: 465px;
+						background-size: cover;
+						background-position: center;
 						&:hover {
 							> span {
 								height: 100%;
@@ -1271,15 +1290,24 @@ body > .wrap { margin-top: 123px; }
 									}
 								}
 								a {
-									img {
-										transition: opacity 0.3s ease;
-										&:hover { opacity: 0.8; }
+									>div {
+										padding-bottom: 60%;
+										background-size: cover;
+										background-position: center;
 										@media all and (max-width: 800px) {
 											& {
+												padding-bottom: 0;
 												width: 125px;
+												height: 75px;
+												display: inline-block;
 												margin-right: 10px;
 											}
 										}
+									}
+									img {
+										transition: opacity 0.3s ease;
+										&:hover { opacity: 0.8; }
+
 									}
 									> span {
 										padding: 10px 20px;
@@ -1300,6 +1328,8 @@ body > .wrap { margin-top: 123px; }
 											font-size: 20px;
 											font-weight: bolder;
 											margin-bottom: 5px;
+											line-height: 24px;
+											height: 48px;
 											@media all and (max-width: 800px) {
 												& {
 													position: absolute;
@@ -1365,7 +1395,12 @@ body > .wrap { margin-top: 123px; }
 										padding-top: 0;
 										border-bottom: none;
 										a {
-											img { width: 100%; }
+											>div {
+												padding-bottom: 60%;
+												width: 100%;
+												height: auto;
+												display: block;
+											}
 											>span {
 												width: 100%;
 												height: auto;
@@ -1481,6 +1516,12 @@ body > .wrap { margin-top: 123px; }
 						a {
 							display: inline;
 							position: relative;
+							>div {
+								width:100%;
+								padding-bottom: 73%;
+								background-size: cover;
+								background-position: center;
+							}
 							img {
 								display: block;
 								&:hover { opacity: 0.8; }
@@ -1665,6 +1706,16 @@ body > .wrap { margin-top: 123px; }
 							float: left;
 							background-color: #fff;
 							margin: 10px 20px 10px 0;
+							>a div {
+								width: 100%;
+								padding-bottom: 56%;
+								background-size: cover;
+								background-position: center;
+								&:hover {
+									opacity: 0.8;
+									.trs;
+								}
+							}
 							> span {
 								display: inline-block;
 								box-sizing: border-box;
@@ -1683,6 +1734,13 @@ body > .wrap { margin-top: 123px; }
 									display: -webkit-box;
 									-webkit-box-orient: vertical;
 									-webkit-line-clamp: 2;
+									a {
+										.oe;
+										white-space: normal;
+										display: -webkit-box;
+										-webkit-box-orient: vertical;
+										-webkit-line-clamp: 2;
+									}
 								}
 								.tag-box {
 									display: block;
@@ -1705,12 +1763,19 @@ body > .wrap { margin-top: 123px; }
 									color: #595959;
 									line-height: 20px;
 									margin-bottom: 10px;
-									max-height: 100px;
+									height: 100px;
 									.oe;
 									white-space: normal;
 									display: -webkit-box;
 									-webkit-box-orient: vertical;
 									-webkit-line-clamp: 5;
+									a {
+										.oe;
+										white-space: normal;
+										display: -webkit-box;
+										-webkit-box-orient: vertical;
+										-webkit-line-clamp: 5;
+									}
 								}
 								span.btn-detail {
 									display: block;
@@ -1795,15 +1860,15 @@ body > .wrap { margin-top: 123px; }
 							width: 100%;
 							.main-article {
 								width: 100%!important;
-								height: auto!important;
+								height: 100%!important;
 							}
 							.right-box {
 								width: 100%!important;
-								height: auto!important;
+								height: 70%!important;
 								margin-bottom: 30px;
 								.sub-article {
 									width: 100%!important;
-									height: auto!important;
+									height: 100%!important;
 								}
 								.other-box { display: none; }
 							}
@@ -1841,6 +1906,11 @@ body > .wrap { margin-top: 123px; }
 									margin-bottom: 0;
 								}
 							}
+							>a div {
+								height: 100%;
+								background-position: center;
+								background-size: cover;
+							}
 							.detail {
 								padding: 25px 20px;
 							}
@@ -1860,6 +1930,11 @@ body > .wrap { margin-top: 123px; }
 								@media all and (min-width: 800px) and (max-width: 1200px) {
 									& { width: 100%; }
 								}
+								>a div {
+									height: 100%;
+									background-position: center;
+									background-size: cover;
+								}
 							}
 							.other-box {
 								float: left;
@@ -1869,6 +1944,11 @@ body > .wrap { margin-top: 123px; }
 								overflow: hidden;
 								@media all and (min-width: 800px) and (max-width: 1200px) {
 									& { width: 50%; }
+								}
+								>a div {
+									height: 100%;
+									background-position: center;
+									background-size: cover;
 								}
 								.article-title {
 									max-height: 84px;
@@ -1979,6 +2059,11 @@ body > .wrap { margin-top: 123px; }
 								width: 100%;
 								height: auto;
 							}
+						}
+						>a div {
+							height: 100%;
+							background-position: center;
+							background-size: cover;
 						}
 						img {
 							.trs(1s);
@@ -2119,6 +2204,11 @@ body > .wrap { margin-top: 123px; }
 											display: none;
 										}
 									}
+									>a div {
+										height: 100%;
+										background-size: cover;
+										background-position: center;
+									}
 								}
 								.left-box.mobile {
 									display: none;
@@ -2131,6 +2221,11 @@ body > .wrap { margin-top: 123px; }
 										& {
 											display: block;
 										}
+									}
+									>a div {
+										height: 100%;
+										background-size: cover;
+										background-position: center;
 									}
 								}
 								.right-box {

@@ -311,12 +311,13 @@ body > .wrap { margin-top: 123px; }
 							width: 340px;
 							height: 360px;
 							float: left;
+							background-position: center;
+							background-size: cover;
 							.trs;
 							@media all and (max-width: 1290px) {
 								& {
 									overflow: hidden;
 									width: 40%;
-									height: auto;
 								}
 							}
 							@media all and (max-width: 800px) {
@@ -592,6 +593,11 @@ body > .wrap { margin-top: 123px; }
 					margin-bottom: 20px;
 					.focus-box {
 						width: 100%;
+						li {
+							height: 490px;
+							background-size: cover;
+							background-position: center;
+						}
 						@media all and (max-width: 800px) {
 							& { display: none; }
 						}
@@ -602,7 +608,13 @@ body > .wrap { margin-top: 123px; }
 							li {
 								margin: 0 5px;
 								outline: none;
+								padding-bottom: 3%;
+								background-size: cover;
+								background-position: center;
 								.trs;
+								@media all and (max-width: 800px) {
+									& { padding-bottom: 5%; }
+								}
 							}
 							li.slick-current {
 								img {
@@ -668,9 +680,17 @@ body > .wrap { margin-top: 123px; }
 								}
 								span:nth-child(2) {
 									width: ~"calc(100% - 145px)";
-									max-height: 52px;
 									word-break: break-all;
 									vertical-align: top;
+								}
+							}
+							li:nth-child(1) {
+								&:hover {
+									span:nth-child(2) {
+										color: #eb5f0a;
+										cursor: default;
+										.trs;
+									}
 								}
 							}
 						}

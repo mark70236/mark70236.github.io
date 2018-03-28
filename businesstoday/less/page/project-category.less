@@ -38,6 +38,11 @@ body > .wrap { margin-top: 123px; }
 			border-radius: 9px;
 			background-color: rgba(255,255,255,0.5);
 		}
+		>a div {
+			height: 100%;
+			background-position: center;
+			background-size: cover;
+		}
 		img {
 			@media all and (max-width: 800px) {
 				& { width: 130%; margin-left: -15%; }
@@ -236,6 +241,11 @@ body > .wrap { margin-top: 123px; }
 								overflow: hidden;
 								transform-origin: center;
 								img { .trs(0.8s); }
+								>div {
+									padding-bottom: 52%;
+									background-size: cover;
+									background-position: center;
+								}
 								>span {
 									position: absolute;
 									left: 0;

@@ -53,11 +53,23 @@ body > .wrap { margin-top: 123px; }
 				color: #EB5F08;
 				margin-right: 25px;
 				line-height: 24px;
+				display: inline-block;
 			}
 		}
 		.banner {
 			width: 100%;
 			overflow: hidden;
+			>div {
+				padding-bottom: 40%;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				background-position: center;
+				@media all and (max-width: 960px) {
+					& { padding-bottom: 60%; }
+				}
+			}
 			img {
 				@media all and (max-width: 1290px) {
 					& { width: 130%; margin-left: -15%; }
@@ -136,6 +148,19 @@ body > .wrap { margin-top: 123px; }
 					img,iframe {
 						max-width: 100%;
 					}
+					a {
+						display: initial;
+						width: auto;
+						height: auto;
+						color: blue;
+					}
+					h1,h2,h3,h4,h5,h6,strong {
+						font-weight: bold;
+						line-height: 1.1em;
+					}
+					h1 { font-size: 2em; }
+					h2 { font-size: 1.5em; }
+					h3 { font-size: 1.17em; }
 				}
 				.tag-box {
 					display: block;
@@ -339,6 +364,13 @@ body > .wrap { margin-top: 123px; }
 					}
 				}
 				a span {
+					padding-bottom: 75%;
+					background-position: center;
+					-webkit-background-size: cover;
+					-moz-background-size: cover;
+					-o-background-size: cover;
+					background-size: cover;
+					display: block;
 					@media all and (max-width: 640px) {
 						& {
 							display: block;

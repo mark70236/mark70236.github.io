@@ -38,6 +38,11 @@ body > .wrap { margin-top: 123px; }
 			border-radius: 9px;
 			background-color: rgba(255,255,255,0.5);
 		}
+		>a div {
+			height: 100%;
+			background-position: center;
+			background-size: cover;
+		}
 		img {
 			@media all and (max-width: 800px) {
 				& { width: 130%; margin-left: -15%; }
@@ -220,6 +225,14 @@ body > .wrap { margin-top: 123px; }
 							}
 							@media all and (max-width: 340px) {
 								& { width: 130px; }
+							}
+							>a div {
+								padding-bottom: 73%;
+								background-size: cover;
+								background-position: center;
+								@media all and (max-width: 1290px) {
+									& {padding-bottom: 88%;}
+								}
 							}
 							img {
 								@media all and (max-width: 1290px) {
