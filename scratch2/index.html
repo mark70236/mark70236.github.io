@@ -10,7 +10,19 @@
 <script src="plugin/jqueryui/1.10.3.min.js"></script>
 <script src="js/index.js"></script>
 <script>
+
+      //監聽上一頁產生的頁面
+      // window.addEventListener('pageshow', function (event) {
+      //     if (event.persisted || window.performance && window.performance.navigation.type == 2) {
+      //         checkStatus()
+      //     }
+      // })
+      //$(window).unload(function () { checkStatus() });
+      // $(window).on('beforeunload ',function() {
+      //     checkStatus()
+      // });
     $(function() {
+      alert()
       loadStorage()
       checkStatus()
       $(".col").click(function() {

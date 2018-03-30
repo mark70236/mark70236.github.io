@@ -20,7 +20,7 @@ $(function() {
 function checkStatus() {
 	$(".col").each(function(index, el) {
 		var dataList = $(this).attr('data-list');
-		if (dataList=="1") {
+		if (dataList==1) {
 			$(this).addClass('checked');
 		}
 	});
