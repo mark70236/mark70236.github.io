@@ -445,7 +445,6 @@ a {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  border: solid 1px #fff;
   z-index: 1;
 }
 .canvas {
@@ -517,6 +516,7 @@ a {
   width: 40%;
   margin: 0 5%;
   float: left;
+  cursor: pointer;
 }
 .index .wrap .line-3 {
   width: 100%;
@@ -527,6 +527,10 @@ a {
   width: 27%;
   margin: 0 3%;
   float: left;
+  cursor: pointer;
+}
+.index .wrap .col.checked {
+  cursor: not-allowed;
 }
 .index .wrap .col.checked .gray {
   display: block;
