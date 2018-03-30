@@ -12,15 +12,15 @@
 <script>
 
       //監聽上一頁產生的頁面
-      // window.addEventListener('pageshow', function (event) {
-      //     if (event.persisted || window.performance && window.performance.navigation.type == 2) {
-      //         checkStatus()
-      //     }
-      // })
+      window.addEventListener('pageshow', function (event) {
+          if (event.persisted || window.performance && window.performance.navigation.type == 2) {
+              checkStatus()
+          }
+      })
       //$(window).unload(function () { checkStatus() });
-      $(window).on('beforeunload ',function() {
-          checkStatus()
-      });
+      // $(window).on('beforeunload ',function() {
+      //     checkStatus()
+      // });
     $(function() {
       alert();
       loadStorage()
