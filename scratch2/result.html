@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>BROTHER鑽很大</title>
+<link rel="stylesheet" href="plugin/reset/min.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="plugin/jquery/1.9.1.min.js"></script>
+<script src="plugin/jqueryui/1.10.3.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/data.js"></script>
+</head>
+
+<body class="result">
+  <div class="wk-bg2"></div>
+  <div class="back-box">
+    <div class="btn-back" title="回到目錄"><a href="index.html"></a></div>
+  </div>
+  <div class="wrap">
+    <div class="scratch-container" id="js-container" title="點擊刮開">
+      <canvas class="canvas" id="js-canvas" width="525" height="511"></canvas>
+      <div class="award-box">
+          <img class="award1" src="images/award1.png">
+          <img class="award2" src="images/award2.png">
+          <img class="award3" src="images/award3.png">
+          <img class="award4" src="images/award4.png">
+          <img class="award5" src="images/award5.png">
+      </div>
+    </div>
+    <div class="frame"></div>
+  </div>
+
+
+
+
+</body>
+  <script>
+    $(window).load(function() {
+      $(".award-box").addClass('show');
+    })
+    creatCard ()
+    loadResult()
+
+    function creatCard () {
+
+      'use strict'
+
+      var isDrawing, lastPoint;
+      var container    = document.getElementById('js-container'),
+          canvas       = document.getElementById('js-canvas'),
+          canvasWidth  = canvas.width,
+          canvasHeight = canvas.height,
+          ctx          = canvas.getContext('2d'),
+          image        = new Image(),
+          brush        = new Image();
+
+      // base64 Workaround because Same-Origin-Policy
+      image.src = 'data:image/jpeg;base64,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'
+      image.onload = function() {
+        ctx.drawImage(image, 0, 0);
+        // Show the form when Image is loaded.
+        //document.querySelectorAll('.form')[0].style.visibility = 'visible'
+      };
+      brush.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAxCAYAAABNuS5SAAAKFklEQVR42u2aCXCcdRnG997NJtlkk83VJE3apEma9CQlNAR60UqrGSqW4PQSO9iiTkE8BxWtlGMqYCtYrLRQtfVGMoJaGRFliijaViwiWgQpyCEdraI1QLXG52V+n/5nzd3ENnX/M8/sJvvt933/533e81ufL7MyK7NOzuXPUDD0FQCZlVn/+xUUQhkXHny8M2TxGsq48MBjXdAhL9/7YN26dd5nI5aVRrvEc0GFEBNKhbDjwsHh3qP/FJK1EdYIedOFlFAOgREhPlICifZDYoBjTna3LYe4xcI4oSpNcf6RvHjuAJRoVszD0qFBGmgMChipZGFxbqzQkJWVZUSOF7JRX3S4LtLTeyMtkkqljMBkPzHRs2aYY5PcZH/qLY1EIo18byQ6hBytIr3WCAXcV4tQHYvFxg3w3N6+Bh3OQolEoqCoqCinlw16JzTFJSE6PYuZKqvztbC2ex7bzGxhKu+rerjJrEEq+r9ieElJSXFDQ0Mh9zYzOzu7FBUWcO4Q9xbD6HYvhXhGLccVD5ZAPyfMqaioyOrBUgEv8FZXV8caGxtz8vLykhCWTnZIKmsKhUJnEYeKcKk2YYERH41G7UYnck1/WvAPOxsdLJm2+bEY0Ay0RNeqkytXQkoBZM4U5oOaoYSUkBGRtvnesrBZK4e4F6ypqSkuLy+v4KI99ZQxkfc6vZ4jNAl1wkbhG8LrhfNBCdkxmhYacvj/GOce+3K9MHHbDHUmicOufREELRIWch/DljzMsglutr+VIJO5KjGrVfZAnpF8mnCd8G5hrnC60Cl8T/iw8C1hKd9P9eDCMcgo5HwBx8BB/g7xeRPkrBbeJ3xTeAxjvRGVV3NcshfPG1JX4tVDQae47GuVOknCi23xHr5nyrxe2C1sFlYJ7xe+Jlwm7BRulItP0ms957RzTMK1ws41jMS8eDxehopaOCYfxc3AIHcIX+K6nxW+ImyVF1i8PQ8DTuwtdC1atCja3NwcHkq5EuXmo85G+jq+yMm28V4q/zcIPxV+K9zPxnbgTi0ocybu6wX66fx/vfAB4T1gHt8xI1wlXMF5zEXnQKC56ruEjwhvEa4WrrXvK/Yt5Pt5I1UveeVKyKmT+lpG2gQ2npMmez8ZzFT3e+HXwj7hKXNf6rFZbDpJUjESLdFsFX4mfFv4Fd/7qPBm4UPCJ4RNwncwym4UfYVUtiAcDk/T+3NRmylwWzAY7BCBCwYYogZPnrJoRNm2IDc3tw4FVKXFm95UmGLzkTTFpog524WnhQPCQeGvwiPCCuFCYmk5GbEJt3tOeF54HPVeLLyXxHOv8BPhYaFLeFU4gsI7OWeZk3g+hpJNvVMGIIqhdRvy+biVISouq2TBqWxoIL1wgBhU5AR1SzJvFR4UnhX+Bl4RfsFGP0npUkTymIQ7fh8Cf4l6F0LgXkj6o3O+buGfwj+ElzGQETaNeJqPhxiahckYq8KJ9V6mP+4pTIATjsGCA8lCQVy9VbhB2CM8itu9IBxlkx6O4nbmmpcSi0KUExa3Psfn23DZC4lhlhRuIWs/R1Y9BrpR4WHcfiOq34bLl5DJm1B7BANPGO4+2OJfDcVwX+RZkL5d+DRqeRJ360IJx1CFp4w/8/lhVGXxay1xKp8asQ31rSbgz2az1aBBWCZsgKTfEFe7uM4xYus9KHWXcBv3eolwJe67hJLIN6yubMVpW1tbbllZWVxtzjRquvQe9981IG3RZHUQttH7hB8IP0cdLwp/YnNHcdsjEP1xsEruO56i2Fy3UWXMskAgYAH/EjOiCD6NDc/XZ4v12RqSy3WQ9rJD3jPClwkZz2Aoy8JnUEjPcwYWfgfHvcIW84h308mABQP4Xp02OY44M4tSZSfx7UXIewU3NpXuxw0vJzauYDP1XM8y8Ttx67fhylYrdlAMW1x7h/BF3NWI+4PwFwjbSha26/xQuBmib6HDqeI+m4m5wzrj9A/xO+O5qbm4yizcbDOKfAjVWeC/WzAFLSeI+4hN9WzQ65EvED7D8Tt4vwE33O64rIfD1JW3k6xeQoX3UN6chyG8In4tcbHuRAyKw2ktVIIM2U5XcA7t2FKy5vWQeBexbbrTpvmZiJwN6e3EwKspW/ajqBuAKfKQk8m7KIce5bgnMNQDkLWPUmkj511DSVV5HJOd417FzrDAK7RjZLMZiURigmLVFCYs5tI2PFhpcUj/n6z6sp72LwJKiU2rUdp62rA7IX4XytpJ3Weh4XfE1/0kk/uoFX8kbCHudZLld5E8vJIs2+mbT8iznaR60DHMBt0EE1DySVlSsOBvyrL6zkZG5qI2T/QSBYTHMYAlq2tw1+0MFO4kVj5GSbSbgvkA8fQQr1uIdfdD5mZ1GhZbP0XfuwlPmOp0SNkYbkQV2JdlEsq69VJS+rTER+NtZVC+TX+NRFq1XGeiHXbGUHMg6lk2/DiZ+mHU8wTueoTXLtS3F5e9l2PNZW9lyrOB5LGSmJokzMQ6OjqCA3wsMXLLhqrWoZgKe3lyZ5YtLiwsLLfMLhJL0ibW3rKa7oMQ+Ajq6gKHcMeHeP8qZcpRMvyt1J97SRabcNP1ZGsbKhSb6lF+5GR6shUnlqTSyPM7LZxV/PUqjOfTH6cvqx+XyN3aCfBPUWh3UZIcxC2/jgu/BJ7Eve/G1R/EXS9gaLCc0dgySqIm7jV4MhEYdAaN4R4eRHkBusJp3GNp56iSOscyYN0DaUch8Ai13X6yrg0PvotCO8nme0geKymBaulc1qO+NbxOOpHZtrcHR+nT6+wePvcnk8k8qv6iNBdyH4/OoGR5gXbv75D4NIX3NoruLSjtKmLlbTwCKER1NmV+QIqfS13aai0izUHsRKksAQE5g0w4fuehj9f+xb25Ym1tbcIhuw2COmkBn2cAcQAFbsclV1BTns49JZio3EQWPkgCySJpFIu8aor0UfeLigDTlUTa/8eimhRGuUiKOZPYtYNabh9EGik3Mkk+A9I8JTWoAiik/LEpzY8tY4uwWc4AJMjxQd8oXRHU8JqbW32orNyAiubZo0WR5wX9KyHrLpLD52nrxhFHa1CVV5w3081cRu/7BYichpEqfafA7/sCzhT7tVkhLZvhTeB8Gv1r6U+ty/gqtWHQCSNTcPOl9NmXM1S4hgRjBjjL1MdUJ8cx3uhe3d3dfh5Meb8qyKWsuJRidwtN/h20XEtxvTwya7tKncU8ACqmXVwLict5fy6TnFhra2uW7xT8dWk2BHptVBOx8GLKjo3g7bhrBQq1sdVsCvEkhLZIac1y/zmUSO0oO8fX/0P2Ub3cwaWpZSITnLnOpDlBWTIfMleJqFb10jXCBJUlMyORSIP14LhqNef6v/05bpZTdHulUyXKsufDNdRxZ4vIhSKwhQFG5vfLfcwZsx2X92Jhje8/P8OI+TK/oO+zeA84WTzkvI/6RuB3y6f68qf11xnyMiuzMms4178AwArmZmkkdGcAAAAASUVORK5CYII=';
+
+      canvas.addEventListener('mousedown', handleMouseDown, false);
+      canvas.addEventListener('touchstart', handleMouseDown, false);
+      canvas.addEventListener('mousemove', handleMouseMove, false);
+      canvas.addEventListener('touchmove', handleMouseMove, false);
+      canvas.addEventListener('mouseup', handleMouseUp, false);
+      canvas.addEventListener('touchend', handleMouseUp, false);
+
+      function distanceBetween(point1, point2) {
+        return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+      }
+
+      function angleBetween(point1, point2) {
+        return Math.atan2( point2.x - point1.x, point2.y - point1.y );
+      }
+
+      // Only test every `stride` pixel. `stride`x faster,
+      // but might lead to inaccuracy
+      function getFilledInPixels(stride) {
+        if (!stride || stride < 1) { stride = 1; }
+
+        var pixels   = ctx.getImageData(0, 0, canvasWidth, canvasHeight),
+            pdata    = pixels.data,
+            l        = pdata.length,
+            total    = (l / stride),
+            count    = 0;
+
+        // Iterate over all pixels
+        for(var i = count = 0; i < l; i += stride) {
+          if (parseInt(pdata[i]) === 0) {
+            count++;
+          }
+        }
+
+        return Math.round((count / total) * 100);
+      }
+
+      function getMouse(e, canvas) {
+        var offsetX = 0, offsetY = 0, mx, my;
+
+        if (canvas.offsetParent !== undefined) {
+          do {
+            offsetX += canvas.offsetLeft;
+            offsetY += canvas.offsetTop;
+          } while ((canvas = canvas.offsetParent));
+        }
+
+        mx = (e.pageX || e.touches[0].clientX) - offsetX;
+        my = (e.pageY || e.touches[0].clientY) - offsetY;
+
+        return {x: mx, y: my};
+      }
+
+      function handlePercentage(filledInPixels) {
+        filledInPixels = filledInPixels || 0;
+       //console.log(filledInPixels + '%');
+        if (filledInPixels > 70) {
+          canvas.remove()
+          //canvas.parentNode.removeChild(canvas);
+        }
+      }
+
+      function handleMouseDown(e) {
+        isDrawing = true;
+        lastPoint = getMouse(e, canvas);
+      }
+
+      function handleMouseMove(e) {
+        if (!isDrawing) { return; }
+
+        e.preventDefault();
+
+        var currentPoint = getMouse(e, canvas),
+            dist = distanceBetween(lastPoint, currentPoint),
+            angle = angleBetween(lastPoint, currentPoint),
+            x, y;
+
+        for (var i = 0; i < dist; i++) {
+          x = lastPoint.x + (Math.sin(angle) * i) - 25;
+          y = lastPoint.y + (Math.cos(angle) * i) - 25;
+          ctx.globalCompositeOperation = 'destination-out';
+          ctx.drawImage(brush, x, y);
+        }
+
+        lastPoint = currentPoint;
+        handlePercentage(getFilledInPixels(32));
+      }
+
+      function handleMouseUp(e) {
+        isDrawing = false;
+      }
+    }
+  </script>
+</html>

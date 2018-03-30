@@ -1,0 +1,152 @@
+* {
+	font-family: "微軟正黑體"!important;
+	box-sizing: border-box;
+}
+body {
+	background-color: #000;
+}
+a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.wk-bg1 {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../images/bg1.jpg');
+}
+.wk-bg2 {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../images/bg2.jpg');
+}
+.wk-bg-black {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.wrap {
+	width: 80%;
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	padding: 13.5% 0;
+}
+.frame {
+	position: relative;
+	width: 553px;
+	height: 538px;
+	top: -523px;
+	left: 0px;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-color: #404040;
+	z-index: 0;
+	background-image: url('../images/frame.png');
+}
+.scratch-container {
+	position: relative;
+	width: 525px;
+	height: 511px;
+	margin: 0 auto;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	border: solid 1px #fff;
+	z-index: 1;
+}
+
+.canvas {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.back-box {
+	width: 100%;
+	position: absolute;
+	.btn-back {
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 25px;
+		right: 20px;
+		border-radius: 7px;
+		background-color: #1b1b1b;
+		background-image: url('../images/btn-back.png');
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+.award-box {
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	img { display: none; }
+}
+.award-box.show { opacity: 1; }
+.award-box.award1 {
+	img.award1 { display: block; }
+}
+.award-box.award2 {
+	img.award2 { display: block; }
+}
+.award-box.award3 {
+	img.award3 { display: block; }
+}
+.award-box.award4 {
+	img.award4 { display: block; }
+}
+.award-box.award5 {
+	img.award5 { display: block; }
+}
+
+.index .wrap {
+	overflow: hidden;
+	.gray { display: none; }
+	.bright { display: block; }
+	.line-2 {
+		width: 70%;
+		margin: 0 auto 5% auto;
+		overflow: hidden;
+		>div {
+			width: 40%;
+			margin: 0 5%;
+			float: left;
+		}
+	}
+	.line-3 {
+		width: 100%;
+		margin: 0 auto 5% auto;
+		overflow: hidden;
+		>div {
+			width: 27%;
+			margin: 0 3%;
+			float: left;
+		}
+	}
+	.col.checked {
+		.gray { display: block; }
+		.bright { display: none; }
+	}
+}
+
+.result {
+	.wrap {
+		padding: 0;
+		padding-top: 26%;
+		max-height: 1024px;
+	}
+}
