@@ -18,11 +18,11 @@
       //     }
       // })
       //$(window).unload(function () { checkStatus() });
-      // $(window).on('beforeunload ',function() {
-      //     checkStatus()
-      // });
+      $(window).on('beforeunload ',function() {
+          checkStatus()
+      });
     $(function() {
-      alert()
+      alert();
       loadStorage()
       checkStatus()
       $(".col").click(function() {
