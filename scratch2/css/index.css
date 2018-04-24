@@ -1,6 +1,9 @@
 @charset "utf-8";
 html {
   height: 100%;
+  overflow: hidden!important;
+  overflow-x: hidden!important;
+  overflow-y: hidden!important;
 }
 html.ie7 {
   overflow-x: hidden;
@@ -17,8 +20,10 @@ body {
   font-size: 12px;
   color: #585a5c;
   background-color: #fff;
-  overflow-x: hidden;
-  height: auto !important;
+  height: 100%;
+  overflow: hidden!important;
+  overflow-x: hidden!important;
+  overflow-y: hidden!important;
 }
 body a {
   cursor: pointer;
@@ -395,7 +400,7 @@ a {
   height: 100%;
 }
 .wk-bg1 {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -403,7 +408,7 @@ a {
   background-image: url('../images/bg1.jpg');
 }
 .wk-bg2 {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   background-size: cover;
