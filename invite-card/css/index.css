@@ -103,29 +103,30 @@ th {
 }
 .wrap section {
   min-height: 200px;
-  padding-top: 20px;
-  padding-bottom: 15px;
+  padding-top: 0px;
+  padding-bottom: 20px;
   box-sizing: border-box;
   overflow: hidden;
   border-bottom: solid 1px #dadada;
 }
 .wrap section .title {
-  float: left;
-  width: 15%;
+  width: 100%;
   height: 100%;
+  padding-bottom: 10px;
   text-align: center;
   font-size: 24px;
   font-weight: 300;
-  color: #000;
+  color: #585858;
   letter-spacing: 3px;
   text-indent: 3px;
-  padding-top: 10px;
+  padding-top: 15px;
   box-sizing: border-box;
 }
 .wrap section .right-box {
-  width: 85%;
+  width: 100%;
   height: 100%;
-  float: right;
+  margin: 0 auto;
+  text-align: center;
 }
 .wrap section #uploader {
   display: none;
@@ -142,7 +143,7 @@ th {
 .wrap section.card-style .right-box ul,
 .wrap section.card-detail .right-box ul {
   display: inline-flex;
-  border: solid 2px #dadada;
+  border: solid 1px #dadada;
   padding: 0.5%;
   box-sizing: border-box;
 }
@@ -231,17 +232,26 @@ th {
   opacity: 1;
   box-shadow: 1px 2px 10px #757272,1px 2px 2px #757272;
 }
-.wrap section.card-detail .right-box {
-  min-height: 400px;
+.wrap section.card-style .right-box ul {
+  padding: 0.5% 20px;
+}
+.wrap section.card-style .right-box ul li {
+  margin: 1% 20px;
 }
 .wrap section.card-detail .right-box .cke_contents {
   height: 290px!important;
+}
+.wrap section.card-detail .right-box li.add {
+  height: 180px;
+}
+.wrap section.card-detail .right-box li.add .add-word {
+  margin-top: 60px;
 }
 .wrap section.card-data-type {
   border: none;
 }
 .wrap section.card-data-type .right-box {
-  padding-top: 10px;
+  padding-top: 25px;
 }
 .wrap section.card-data-type .right-box .select-box {
   width: 30%;
@@ -257,7 +267,9 @@ th {
 }
 .wrap section.card-data-type .right-box .select-box input {
   cursor: pointer;
-  width: 100px;
+  padding: 5px 15px;
+  box-sizing: border-box;
+  width: 165px;
   font-size: 16px;
   font-weight: 300;
   background: transparent;
@@ -275,7 +287,8 @@ th {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: #f3f3f3;
+  background: #4a4a4a;
+  color: #fff;
 }
 .wrap section.card-data-type .right-box .btn-box {
   width: 70%;

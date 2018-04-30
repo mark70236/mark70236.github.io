@@ -6,8 +6,8 @@ $(function() {
 		var type = $(".card-style .right-box ul").find('.select').attr('data-card-style');
 		var detail = $(".card-detail .right-box ul").find('.select').attr('data-card-detail');
 		var optionValue = $(".card-data-type .select-box > select").val();
-		saveToStorage(detail,type,optionValue)
-		window.open('result.html')
+		// saveToStorage(detail,type,optionValue)
+		// window.open('result.html')
 		//document.location.href="result.html";
 	});
 
@@ -19,26 +19,17 @@ $(function() {
 		$("#uploader2").click();
 	});
 
-	//新增樣式後動作
-	$("#uploader").change(function(){
-		if ($("#uploader").val()=="") {
-			$(".card-style .add-word").html(data_name);
+
+	//新增PDF後動作
+	$("#uploader2").change(function(){
+		if ($("#uploader2").val()=="") {
+			$(".card-detail .add-word").html(data_name);
 		}else {
-			data_name = $("#uploader").val();
-			$(".card-style .add-word").html(data_name);
-			$("#image-form").submit();
+			data_name = $("#uploader2").val();
+			$(".card-detail .add-word").html(data_name);
+			$("#image-form2").submit();
 		}
 	});
-
-    $("#uploader2").change(function(){
-        if ($("#uploader2").val()=="") {
-            $(".card-detail .add-word").html(data_name);
-        }else {
-            data_name = $("#uploader2").val();
-            $(".card-detail .add-word").html(data_name);
-            $("#image-form2").submit();
-        }
-    });
 
 	//點擊刪除按鈕
 	$(".card-style .right-box ul > li i").click(function() {
@@ -46,10 +37,10 @@ $(function() {
 		deleteConfirm($this);
 	})
 
-	$(".card-detail .right-box ul > li i").click(function() {
-		$this = $(this);
-		deleteConfirm2($this);
-	})
+	// $(".card-detail .right-box ul > li i").click(function() {
+	// 	$this = $(this);
+	// 	deleteConfirm2($this);
+	// })
 });
 
 function loadStorage() {
