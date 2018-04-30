@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>邀請卡</title>
+	<link rel="stylesheet" href="plugin/reset/min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="plugin/jquery/1.9.1.min.js"></script>
+	<script src="plugin/jqueryui/1.10.3.min.js"></script>
+	<script src="plugin/dom-to-image/dom-to-image.min.js"></script>
+	<script src="plugin/downloadJS/download.min.js"></script>
+	<script src="plugin/pdf3/build/pdf.js"></script>
+	<style>
+		.wrap { width: 730px; }
+		body.result .wrap .bg { margin-bottom: 30px; }
+		.target-box {
+			width: 730px;
+			height: 1090px;
+		}
+		#pdf-container {
+			width: 505px;
+			margin: 0 auto;
+			text-align: center;
+			position: absolute;
+			top: 200px;
+			left: 50%;
+			margin-left: -252px;
+		}
+		canvas {
+			width: 100%;
+		}
+		body.result .wrap .bg {
+			height: 1060px;
+			overflow: hidden;
+		}
+	</style>
+	<script>
+		var bgImgSrc = 'https://mark70236.github.io/invite-card/images/1.jpg';
+		var pdfSrc = 'https://mark70236.github.io/invite-card/test002.pdf';
+		$(".bg-img").append('<img src="'+bgImgSrc+'">');
+	</script>
+</head>
+	<body class="result">
+		<div class="wrap" id="wrap">
+			<div class="bg" id="target">
+				<div id="pdf-container"></div>
+				<div class="bg-img"><img src='https://mark70236.github.io/invite-card/images/3.jpg'></div>
+			</div>
+			<form><input class="print" name="print" type="button" value="列印此頁" onclick="varitext()"></form>
+		</div>
+	</body>
+	<script>
+		PDFJS.getDocument(pdfSrc).then(function(pdf) {
+			//alert(pdf.numPages)
+			for (var pageNum = 1; pageNum < pdf.numPages; ++pageNum) {
+				pdf.getPage(pageNum).then(function(page) {
+					// you can now use *page* here
+
+					var scale = 3;
+					var viewport = page.getViewport(scale);
+					//console.log(viewport)
+
+					var canvas = document.createElement('canvas');
+					var context = canvas.getContext('2d');
+					canvas.height = viewport.height;
+					canvas.width = viewport.width;
+
+					var renderContext = {
+						canvasContext: context,
+						viewport: viewport
+					};
+					page.render(renderContext);
+
+					document.getElementById('pdf-container').appendChild(canvas);
+				});
+			}
+		})
+		$(window).load(function() {
+			setTimeout(function() {
+				var node = document.getElementById('target');
+				domtoimage.toJpeg(document.getElementById('target'), { quality: 1 }).then(function (dataUrl) {
+					// var link = document.createElement('a');
+					// link.download = 'my-image-name.png';
+					// link.href = dataUrl;
+					// link.click();
+
+
+					downloadFile(dataUrl);
+
+					// pic = window.open(dataUrl, "a1");
+					// pic.document.execCommand("SaveAs");
+
+					// var iframe = document.createElement("iframe");
+					// iframe.src = dataUrl;
+					// iframe.style.display = "none";
+					// document.body.appendChild(iframe);
+				}).catch(function (error) {
+					console.error('oops, something went wrong!', error);
+				});
+			},2000)
+		});
+	</script>
+</html>
