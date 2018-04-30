@@ -78,7 +78,7 @@
 		$(window).load(function() {
 			setTimeout(function() {
 				var node = document.getElementById('target');
-				domtoimage.toPng(document.getElementById('target'), { quality: 1 }).then(function (dataUrl) {
+				domtoimage.toJpeg(document.getElementById('target'), { quality: 1 }).then(function (dataUrl) {
 					// var link = document.createElement('a');
 					// link.download = 'my-image-name.png';
 					// link.href = dataUrl;
