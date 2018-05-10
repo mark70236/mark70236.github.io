@@ -1,0 +1,133 @@
+@image: "../images/";
+@mc-light: #fff;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline}
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block}
+body{line-height:1; font-family:Verdana,Geneva,sans-serif,"微軟正黑體", "細明體-ExtB"}
+ol, ul{list-style:none}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after, q:before, q:after{content:''; content:none}
+table{border-collapse:collapse; border-spacing:0}
+.trs ( @target: all 0.3s ease ) { -webkit-transition:	@target;-moz-transition: @target;-o-transition: @target;-ms-transition:	 @target;transition: @target }
+.oe { white-space: nowrap;overflow: hidden;text-overflow: ellipsis }
+
+html {
+	height: 100%;
+	font-size: 20px;
+	&.ie7 {
+		overflow-x: hidden;
+		body { overflow-x: visible }
+		em { font-style: normal }
+	}
+}
+a[href^=tel] {
+	text-decoration:inherit;
+	color: inherit;
+}
+::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+body {
+	margin: 0;
+	background-repeat: no-repeat;
+	font-size: 20px;
+	color: #dcdcdc;
+	background-color: #fff;
+	overflow-x: hidden;
+	height: auto !important;
+
+	* { box-sizing: border-box; }
+
+	h1,h2,h3,h4,h5,h6,p,b,span,div,ul,ol,li,table,th,td,em,strong,a,i,input,select { font-family: "微軟正黑體"; }
+
+	a {
+		cursor: pointer;
+		text-decoration: none;
+		color: #000;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	p {
+		color: #000;
+		font-size: 1em;
+		line-height: 4em;
+	}
+
+	b { font-size: 28px; font-weight: bolder; }
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+	select::-ms-expand {
+	    display: none;
+	}
+	input {
+		border-radius: 0;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+	.text-box {
+		a {
+			display: initial;
+			display: inline-block;
+			width: auto;
+			height: auto;
+			color: blue;
+		}
+		h1,h2,h3,h4,h5,h6,strong {
+			font-weight: bold;
+			line-height: 1.1em;
+		}
+		h1 { font-size: 2em; }
+		h2 { font-size: 1.5em; }
+		h3 { font-size: 1.17em; }
+	}
+	blockquote {
+		margin: 1em 0em;
+		border-left: 4px solid #eb5f0a;
+		padding: 15px;
+		background-color: #eee;
+	}
+}
+body.mac-user {
+	h1,h2,h3,h4,h5,h6,p,b,span,div,ul,ol,li,table,th,td,a,i,select,input { font-weight: 300; }
+}
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+
+.on {
+	display: block;
+}
+.off {
+	display: none;
+	height: 0;
+}
+
+
+
+*::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #f5f5f5;
+}
+
+*::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
