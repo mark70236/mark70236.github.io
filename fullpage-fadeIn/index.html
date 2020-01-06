@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js測試頁面</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:40px 0 0 0;
+	}
+	.intro p{
+		color: #fff;
+		padding:40px 0 0 0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	footer {
+		height: 100px;
+		line-height: 100px;
+		background: #eee;
+		font-size: 20px;
+		transition: all 0.7s ease;
+	}
+	.on {
+		display: block;
+	}
+	.off {
+		display: none;
+		height: 0;
+	}
+	body {
+		background: #353535;
+	}
+	p {
+		color: #fff;
+		font-size: 32px;
+	}
+	.fullpage-wrapper.horizontal {
+		transition: none!important;
+	}
+
+	.section.horizontal.on {
+		opacity: 0;
+		visibility: hidden;
+		transition: all 2s ease;
+	}
+	.section.horizontal.on.active {
+		opacity: 1;
+		transition: all 2s ease;
+		visibility: visible;
+	}
+	.padding-box {
+		width: 100%;
+		height: 100%;
+		padding: 10% 0;
+		box-sizing: border-box;
+	}
+	.img-box {
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+	}
+	@keyframes sectioHide {
+		0% { opacity: 0; visibility: hidden; }
+		50% { opacity: 0; visibility: hidden; }
+		100% { opacity: 1; visibility: visible; }
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/jquery.fullpage.extensions.min.js"></script>
+	<script type="text/javascript" src="js/fullpage.fadingEffect.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				scrollOverflow: true,
+				fadingEffect: true,
+				// scrollHorizontally: true,
+				onLeave: function(index, nextIndex, direction){
+
+					// if (index == 1 && direction == 'down'){
+					// 	$("header").addClass('off');
+					// 	$(".section.horizontal").addClass('on');
+					// 	setTimeout(function(argument) {
+					// 		$(".fullpage-wrapper").addClass('horizontal');
+					// 	},700)
+					// }
+					// if (index == 2 && direction == 'up'){
+					// 	$("header").removeClass('off');
+					// 	$(".fullpage-wrapper").removeClass('horizontal');
+					// }
+					// if (index == 6 && direction == 'down'){
+					// 	$("footer").addClass('on');
+					// }
+					// if (index == 4 && direction == 'down'){
+					// 	$(".fullpage-wrapper").removeClass('horizontal');
+					// 	$(".section.horizontal").removeClass('on');
+					// }
+					// if (index == 5 && direction == 'up'){
+					// 	setTimeout(function(argument) {
+					// 		$(".fullpage-wrapper").addClass('horizontal');
+					// 		$(".section.horizontal").addClass('on');
+					// 	},700)
+					// }
+
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+<header>
+	<div class="te2qwe" style="font-size: 24px; text-align: center; background: #fff;">測試用header</div>
+</header>
+<div id="fullpage">
+	<div class="section" id="section0">
+		<div class="intro">
+			<h1>1Also in sections</h1>
+			<p>
+				Eu nec ferri molestie consequat, vel at alia dolore putant. Labore philosophia ut vix. In vis nostrud interesset appellantur, vis et tation feugiat scripserit. Te nec noster suavitate persecuti. Diceret erroribus cu vix, alii omnes ei sit. Sea an corrumpit patrioque, virtute accumsan nominavi et usu, ex mei dolore vocibus incorrupte.
+				Duo ea saperet tacimates. Sed possim prodesset no, per novum putent doctus ea. Eu mea magna aliquip graecis, pri corpora officiis complectitur ei, lorem saepe consetetur his ad. Meis consulatu ei vis, an altera ocurreret interesset qui.
+				Eu ponderum comprehensam his, case antiopam pri te. Mel ne partem consequat instructior. Ad dicunt malorum sea, ex qui omnes invenire gubergren. Ius cu autem aliquando, pri vide ornatus perpetua an, no has epicuri verterem. Nam at animal pertinax efficiantur.
+				Eu ponderum comprehensam his, case antiopam pri te. Mel ne partem consequat instructior. Ad dicunt malorum sea, ex qui omnes invenire gubergren. Ius cu autem aliquando, pri vide ornatus perpetua an, no has epicuri verterem. Nam at animal pertinax efficiantur.
+				Eu ponderum comprehensam his, case antiopam pri te. Mel ne partem consequat instructior. Ad dicunt malorum sea, ex qui omnes invenire gubergren. Ius cu autem aliquando, pri vide ornatus perpetua an, no has epicuri verterem. Nam at animal pertinax efficiantur.Per alienum torquatos eu.
+			</p>
+			<p>
+				Eu nec ferri molestie consequat, vel at alia dolore putant. Labore philosophia ut vix. In vis nostrud interesset appellantur, vis et tation feugiat scripserit. Te nec noster suavitate persecuti. Diceret erroribus cu vix, alii omnes ei sit. Sea an corrumpit patrioque, virtute accumsan nominavi et usu, ex mei dolore vocibus incorrupte.
+				Duo ea saperet tacimates. Sed possim prodesset no, per novum putent doctus ea. Eu mea magna aliquip graecis, pri corpora officiis complectitur ei, lorem saepe consetetur his ad. Meis consulatu ei vis, an altera ocurreret interesset qui.
+				Eu ponderum comprehensam his, case antiopam pri te. Mel ne partem consequat instructior. Ad dicunt malorum sea, ex qui omnes invenire gubergren. Ius cu autem aliquando, pri vide ornatus perpetua an, no has epicuri verterem. Nam at animal pertinax efficiantur.
+				Eu ponderum comprehensam his, case antiopam pri te. Mel ne partem consequat instructior. Ad dicunt malorum sea, ex qui omnes invenire gubergren. Ius cu autem aliquando, pri vide ornatus perpetua an, no has epicuri verterem. Nam at animal pertinax efficiantur.
+				Eu ponderum comprehensam his, case antiopam pri te. Mel ne partem consequat instructior. Ad dicunt malorum sea, ex qui omnes invenire gubergren. Ius cu autem aliquando, pri vide ornatus perpetua an, no has epicuri verterem. Nam at animal pertinax efficiantur.Per alienum torquatos eu.
+			</p>
+		</div>
+	</div>
+	<div class="section horizontal" id="section1">
+		<div class="padding-box"><div class="img-box" style="background-image: url('./imgs/iphone01.png');"></div></div>
+	</div>
+	<div class="section horizontal" id="section2">
+		<div class="padding-box"><div class="img-box" style="background-image: url('./imgs/iphone02.png');"></div></div>
+	</div>
+	<div class="section horizontal" id="section3">
+		<div class="padding-box"><div class="img-box" style="background-image: url('./imgs/iphone03.png');"></div></div>
+	</div>
+	<div class="section" id="section4">
+		<div class="intro">
+			<h1>No limitations!</h1>
+			<p>Content is a priority. Even if it is so large :)</p>
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<div class="intro">
+			<h1>No limitations!</h1>
+			<p>Even if it is so large, Content is a priority.  :)</p>
+		</div>
+	</div>
+	<div class="section test1">
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<p>test12e123123123123123</p><br><br>
+		<footer class="">
+			wakeup網路設計公司 copyright@ 2018
+		</footer>
+	</div>
+
+</div>
+
+</body>
+</html>

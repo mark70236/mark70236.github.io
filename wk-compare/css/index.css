@@ -1,0 +1,424 @@
+@charset "utf-8";
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: 1;
+  font-family: Verdana, Geneva, sans-serif, "微軟正黑體", "細明體-ExtB";
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #B9B9B9;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #B9B9B9;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #B9B9B9;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #B9B9B9;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+html.ie7 {
+  overflow-x: hidden;
+}
+html.ie7 body {
+  overflow-x: visible;
+}
+html.ie7 em {
+  font-style: normal;
+}
+body {
+  margin: 0;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  background-color: #fff;
+  overflow-x: hidden;
+  height: 100%;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../images/font/FontAwesome.woff2') format('woff2'), url('../images/font/FontAwesome.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Quentin';
+  src: url('../images/font/Quentin.woff2') format('woff2'), url('../images/font/Quentin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.wrap {
+  height: 100%;
+  position: relative;
+}
+.wrap .page {
+  z-index: 11;
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  font-size: 30px;
+}
+.wrap section {
+  width: 1280px;
+  height: 720px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -360px;
+  margin-left: -640px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wrap section .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.wrap section .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.wrap section .content .page-title {
+  z-index: 2;
+  position: absolute;
+  top: 45px;
+  left: 105px;
+}
+.wrap section .content .page-title h2 {
+  font-size: 35px;
+  color: #fff;
+}
+.wrap section .content .page-title span {
+  display: block;
+  font-size: 50px;
+  color: #FBC415;
+  font-family: 'Quentin';
+  margin-top: -5px;
+}
+.wrap section.active {
+  opacity: 1;
+  visibility: visible;
+}
+.wrap section.z10 {
+  z-index: 10;
+}
+.wrap section.page1 .bg {
+  background-image: url("../images/bg1.jpg");
+}
+.wrap section.page1 .content h1 {
+  font-family: 'Quentin';
+  font-size: 120px;
+  text-align: center;
+  color: #fff;
+  margin-top: 246px;
+}
+.wrap section.page1 .content .subtitle {
+  display: block;
+  width: 100%;
+  color: #333;
+  font-size: 40px;
+  text-align: center;
+  margin-top: -40px;
+}
+.wrap section.page1 .content .subtitle .bigger {
+  font-size: 60px;
+  font-weight: normal;
+  margin-right: 10px;
+  margin-left: 25px;
+}
+.wrap section.page2 .bg {
+  background-image: url("../images/bg2.jpg");
+}
+.wrap section.page2 .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+}
+.wrap section.page2 .content .box1,
+.wrap section.page2 .content .box3 {
+  padding: 60px 35px 35px 35px;
+}
+.wrap section.page2 .content .box1 .logo,
+.wrap section.page2 .content .box3 .logo {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.wrap section.page2 .content .box1 .company-name,
+.wrap section.page2 .content .box3 .company-name {
+  text-align: center;
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 15px;
+}
+.wrap section.page2 .content .box1 .year,
+.wrap section.page2 .content .box3 .year {
+  text-align: center;
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 15px;
+}
+.wrap section.page2 .content .box1 .year .bigger,
+.wrap section.page2 .content .box3 .year .bigger {
+  font-size: 50px;
+  margin: 0 15px;
+  vertical-align: sub;
+}
+.wrap section.page2 .content .box1 .simple-description,
+.wrap section.page2 .content .box3 .simple-description {
+  line-height: 1.3em;
+  margin-bottom: 20px;
+}
+.wrap section.page2 .content .box1 .detail,
+.wrap section.page2 .content .box3 .detail {
+  padding: 30px 0;
+  line-height: 1.3em;
+}
+.wrap section.page2 .content .box1 {
+  position: absolute;
+  bottom: 50px;
+  left: 177px;
+  width: 259px;
+  height: 519px;
+  background-image: url("../images/company-other.png");
+}
+.wrap section.page2 .content .box2 {
+  position: absolute;
+  bottom: 0px;
+  left: 310px;
+  width: 576px;
+  height: 642px;
+  background-image: url("../images/company-wakeup.png");
+}
+.wrap section.page2 .content .box3 {
+  position: absolute;
+  bottom: 50px;
+  right: 145px;
+  width: 259px;
+  height: 519px;
+  background-image: url("../images/company-other.png");
+}
+.wrap section.page3 {
+  box-shadow: 2px 3px 15px #b9b9b9;
+}
+.wrap section.page3 .bg {
+  background-image: url("../images/bg3.jpg");
+}
+.wrap section.page3 .content .page-title {
+  top: 95px;
+  left: 75px;
+}
+.wrap section.page3 .content .page-title span {
+  margin-top: 25px;
+}
+.wrap section.page3 .content .main-box {
+  float: right;
+  width: 888px;
+  height: 720px;
+  background-color: #fff;
+}
+.wrap section.page3 .content .main-box > ul {
+  overflow: hidden;
+  height: 100%;
+}
+.wrap section.page3 .content .main-box > ul > li {
+  width: 33.3%;
+  height: 100%;
+  float: left;
+  padding: 100px 30px 0 30px;
+  text-align: center;
+  background-color: #fff;
+}
+.wrap section.page3 .content .main-box > ul > li .logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  padding: 5px;
+  border-radius: 54px;
+  background-color: #FBC415;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.wrap section.page3 .content .main-box > ul > li .logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.wrap section.page3 .content .main-box > ul > li .company-name {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 50px;
+  display: block;
+}
+.wrap section.page3 .content .main-box > ul > li ul {
+  margin-bottom: 40px;
+}
+.wrap section.page3 .content .main-box > ul > li ul li {
+  margin-bottom: 20px;
+}
+.wrap section.page3 .content .main-box > ul > li .btn-more {
+  display: block;
+}
+.wrap section.page3 .content .main-box > ul > li .btn-more a {
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 30px;
+  text-decoration: none;
+  background-color: #000;
+  border-radius: 30px;
+  display: inline-block;
+}
+.wrap section.page3 .content .main-box > ul > li.wakeup {
+  background-color: #FBC415;
+}
+.wrap section.page3 .content .main-box > ul > li.wakeup .logo-box {
+  background-color: #599ce4;
+}
+.wrap section.page4 .bg {
+  background-image: url("../images/2.png");
+}

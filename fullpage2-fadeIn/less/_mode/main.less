@@ -1,0 +1,55 @@
+.overflow-box {
+	//overflow: hidden;
+}
+.fullpage-wrapper {
+	overflow: hidden;
+	z-index: 1;
+	.fp-section.fp-table, .fp-slide.fp-table {
+		display: block;
+		z-index: 1;
+	}
+	.fp-scroller {
+		height: 100%;
+	}
+	.fp-tableCell {
+		display: block;
+	}
+}
+.fullpage-wrapper.horizontal {
+	transition: none!important;
+}
+.section.active {
+	//padding-top: 90px;
+}
+.section.horizontal.active {
+	//padding-top: 45px;
+}
+.section.horizontal.on {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.7s ease;
+}
+.section.scrollable {
+	.fp-scroller {
+		height: auto;
+	}
+}
+.section.horizontal.on.active {
+	opacity: 1;
+	transition: opacity 0.7s ease;
+	visibility: visible;
+}
+.padding-box {
+	width: 100%;
+	height: 100%;
+	padding: 10% 0;
+	box-sizing: border-box;
+}
+.img-box {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
