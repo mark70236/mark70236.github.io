@@ -14,52 +14,55 @@
 </head>
 
 <body>
-	<div style="width:75%;">
+	<div class="wk-chart-box">
 		<canvas id="canvas"></canvas>
 	</div>
 
 	<script>
-		var data = {
+		var chartData = {
 			"type": "line",
-			"labels": ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+			"labels": ['一月', '二月', '三月', '四月', '五月', '六月', '七月','八月','九月','十月','十一月','十二月'],
 			"datasets": [
 				{
-					"label": "name1",
+					"label": "價格",
 					"backgroundColor": "rgb(255,99,132)",
 					"borderColor":"rgb(255,99,132)",
-					"data": [20,30,40,50,60,70,80]
+					"data": [50,25,75,200,300,250,175,275,400,300,200,300]
 				},
-				{
-					"label": "name2",
-					"backgroundColor": "rgb(54, 162, 235)",
-					"borderColor":"rgb(54, 162, 235)",
-					"data": [83,21,32,62,31,95,32]
-				}
+				// {
+				// 	"label": "價格",
+				// 	"backgroundColor": "rgb(54, 162, 235)",
+				// 	"borderColor":"rgb(54, 162, 235)",
+				// 	"data": [83,21,32,62,31,83,21,32,62,31,]
+				// }
 			]
  		}
 		var config = {
-			type: data.type,
+			type: chartData.type,
 			data: {
-				labels: data.labels,
-				datasets: [{
-					label: data.datasets[0].label,
-					backgroundColor: data.datasets[0].backgroundColor,
-					borderColor: data.datasets[0].borderColor,
-					data: data.datasets[0].data,
-					fill: false,
-				}, {
-					label: data.datasets[1].label,
-					backgroundColor: data.datasets[1].backgroundColor,
-					borderColor: data.datasets[1].borderColor,
-					data: data.datasets[1].data,
-					fill: false,
-				}]
+				labels: chartData.labels,
+				datasets: [
+					{
+						label: chartData.datasets[0].label,
+						backgroundColor: chartData.datasets[0].backgroundColor,
+						borderColor: chartData.datasets[0].borderColor,
+						data: chartData.datasets[0].data,
+						fill: false,
+					},
+					// {
+					// 	label: chartData.datasets[1].label,
+					// 	backgroundColor: chartData.datasets[1].backgroundColor,
+					// 	borderColor: chartData.datasets[1].borderColor,
+					// 	data: chartData.datasets[1].data,
+					// 	fill: false,
+					// }
+				]
 			},
 			options: {
 				responsive: true,
 				title: {
 					display: true,
-					text: 'Chart.js Line Chart'
+					//text: 'Chart.js Line Chart'
 				},
 				tooltips: {
 					mode: 'index',
@@ -74,14 +77,14 @@
 						display: true,
 						scaleLabel: {
 							display: true,
-							labelString: 'Month'
+							//labelString: 'Month'
 						}
 					}],
 					yAxes: [{
 						display: true,
 						scaleLabel: {
 							display: true,
-							labelString: 'Value'
+							//labelString: 'Value'
 						}
 					}]
 				}

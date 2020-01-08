@@ -11,7 +11,7 @@ window.chartColors = {
 };
 
 (function(global) {
-	var Months = [
+	var Months1= [
 		'January',
 		'February',
 		'March',
